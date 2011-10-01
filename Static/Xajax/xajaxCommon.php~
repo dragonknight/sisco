@@ -1,0 +1,22 @@
+<?php
+require_once ("../../Libs/xajax/xajax_core/xajax.inc.php");
+$xajax = new xajax("./xajaxFunciones.php");
+$xajax->registerFunction("Expediente");
+$xajax->registerFunction("asignaComunicacion");
+$xajax->registerFunction("ingresaComunicacion");
+$xajax->registerFunction("buscarUsuarios");
+$xajax->registerFunction("buscarUsuarios2");
+$xajax->registerFunction("resumenPendientes");
+$xajax->registerFunction("resumenAsigPendientes");
+$xajax->registerFunction("resumenInvPendientes");
+$xajax->registerFunction("resumenGPendientes");
+$xajax->registerFunction("resumenAPendientes");
+$xajax->registerFunction("resumenRespPendientes");
+$xajax->registerFunction("resumenDPendientes");
+$xajax->registerFunction("standBy");
+$xajax->registerFunction("finalizar");
+$xajax->registerFunction("APendientes");
+$xajax->registerFunction("finalizaComunicacion");
+$xajax->registerFunction("standByComunicacion");
+$xajax->registerFunction("ingresaSalidas");
+?>

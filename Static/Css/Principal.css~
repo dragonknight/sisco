@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+/* pagina de estilos para Sisco*/
+
+/* -------------------------------------------------------- Estilo General -------------------------------------------------------- */
+*
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: arial;
+}
+
+#Contenedor
+{
+	width: 70%;
+	min-width: 320px;
+	margin: 1em 15% 1em 15%; 
+}
+
+/* -------------------------------------------------------- Estilo Cabecera ------------------------------------------------------ */
+#Cabecera
+{
+	/*background: url(../Images/FondoSup.png);*/
+	background-color: #8f1717;
+	height: 6em;
+	border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+#columna1
+{
+   width:20%;
+   float: left;
+	height : 6em;
+}
+#columna1 img
+{
+	width: 6em;
+	height: 5.5em;
+	padding-top: .5em;
+	padding-left: 1em;
+}
+#columna2
+{
+   width:60%;
+   float: left;
+	height : 6em;
+	padding-top: 1em;
+}
+#TituloCabecera
+{
+   text-align: center;
+	font-size: 1.5em;
+	color: #fff;
+	text-decoration: "none";
+	font-weight: bold;
+}
+#columna3
+{
+   width:20%;
+   float: left;
+	height : 6em;
+}
+#columna3 img
+{
+	width: 7em;
+	height: 5em;
+	padding-top: .5em;
+	padding-right: 1em;
+}
+
+/* -------------------------------------------------------- Estilo menu ---------------------------------------------------------- */
+
+#Menu
+{
+	margin-top: .5em;
+	clear: both;
+}
+
+/* -------------------------------------------------------- Estilo Contenido ----------------------------------------------------- */
+
+#Contenido
+{
+	margin-top: .9em;
+	clear: both;
+	text-align: center;
+}
+#formLogin
+{
+	margin:0px auto; /*Centro el bloque*/
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	background-color: #e2e2e2;
+	width: 20em;
+	height: 6em;
+	border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+#Error
+{
+	font-size: 1em;
+}
+#datLogin
+{
+	padding-top: .8em;
+	padding-bottom: .4em;
+}
+/* -------------------------------------------------------- Estilo Powered ------------------------------------------------------ */
+
+#Powered
+{
+	margin-top: .9em;
+	clear: both;
+	text-align: left;
+	font-size: .7em;
+}
+#Pcolumna1
+{
+   width:10%;
+   float: left;
+	height : 4em;
+	margin-top: .3em;
+}
+#Pcolumna2
+{
+   width:10%;
+   float: left;
+	height : 4em;
+	margin-top: .3em;
+}
+#Pcolumna2 img
+{
+	width: 6em;
+	height: 3em;
+	padding-left: 1em;
+}
+#Pcolumna3
+{
+   width:10%;
+   float: left;
+	height : 4em;
+	margin-top: .3em;
+}
+#Pcolumna3 img
+{
+	width: 12em;
+	height: 3em;
+	padding-left: 1em;
+}
+
+/* -------------------------------------------------------- Estilo Pie --------------------------------------------------------- */
+
+#Pie
+{
+	/*background: url(../Images/FondoSup.png);*/
+	background-color: #8f1717;
+	margin-top: .3em;
+	clear: both;
+	text-align: center;
+	font-size: .8em;
+	color: #fff;
+	border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+

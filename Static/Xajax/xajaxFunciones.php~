@@ -1,0 +1,31 @@
+<?php
+
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: Conectar
+	Descripción:Función usada para establecer la conexión con bases de datos
+	Desarrollador: amperis.blogspot.com
+	Modificado: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada: ---
+	Salida: $con
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+function conectar() 
+{
+   $con = mysql_connect("localhost","root","");
+   if (!$con) {
+      die('Error de conexión: ' . mysql_error());
+   }
+   return $con;
+}
+
+	
+   $objResponse = new xajaxResponse();
+   $objResponse->Assign("mensajes","innerHTML",$txt);
+   
+   return $objResponse;
+}
+
+require("xajaxCommon.php");
+$xajax->processRequest();
+?>

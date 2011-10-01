@@ -1,0 +1,20 @@
+#############################################################################
+#                                     SISCO
+#        Sistema de Correspondencia Secretaria General del Estado Mérida
+#############################################################################
+
+Desarrollado por:
+
+Carlos J. Castillo N.
+castilloc185@hotmail.com
+@Dr4g0nKn1ght
+
+Sisco es Software Libre licenciado bajo la GPL v.2 y posteriores...
+
+Estructura de los Directorios del Proyecto:
+
+* Libs: Librerias y otro contenido importado usado para el funcionamiento de la App	
+* Site: Plantillas html y php de la App
+* Static: Contenido estatico (Imagenes,Css)
+
+
