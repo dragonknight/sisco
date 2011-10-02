@@ -1,4 +1,7 @@
-Sisco es un Proyecto Socio-Tecnologico 100% libre licenciado GPL, cuyas fuentes están disponibles en (); <br />
+<div id="SiscoImagen">
+	<img src="../Static/Images/escudo.gif" alt="Sisco" >
+</div>
+Sisco es un Proyecto Socio-Tecnológico 100% libre licenciado GPL, cuyas fuentes están disponibles en (); <br />
 El proyecto ha sido llevado a Cabo por: <br />
 <ul>
 	<li>Mora Fabiola</li>
@@ -7,7 +10,7 @@ El proyecto ha sido llevado a Cabo por: <br />
 	<li>Castillo N. Carlos</li>
 </ul>
 <br /><br />
-Bajo la Tuturia de:<br />
+Bajo la Tutoría de:<br />
 <ul>
 	<li>Richard Maggiorani (IUTE)</li>
 	<li>Claudia Gomez (Secretaria General de Gobierno)</li>

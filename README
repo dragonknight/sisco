@@ -11,10 +11,22 @@ castilloc185@hotmail.com
 
 Sisco es Software Libre licenciado bajo la GPL v.2 y posteriores...
 
+==================================================================================================================================
 Estructura de los Directorios del Proyecto:
 
 * Libs: Librerias y otro contenido importado usado para el funcionamiento de la App	
 * Site: Plantillas html y php de la App
 * Static: Contenido estatico (Imagenes,Css)
 
+==================================================================================================================================
+Estructura de la Base de datos:
+
+tablas:
+
+* tipoTransaccion: tabla para almacenar los tipos de transaccion definidos en el sistema, estos se usan para la bitacora (log) del sistema, quedando OBLIGATORIAMENTE de la siguiente manera:
+	- 1 = Inserción;
+	- 2 = Actualización;
+	- 3 = Eliminación;
+	- 4 = Error;
+	- 5 = Acceso No autorizado;
 

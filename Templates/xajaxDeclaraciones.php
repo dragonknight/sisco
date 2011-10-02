@@ -3,4 +3,5 @@
 	$xajax = new xajax("xajaxFunciones.php");
 	$xajax->registerFunction("CambiaPagina");
 	$xajax->registerFunction("Login");
+	$xajax->registerFunction("Bitacora");
 ?>

@@ -74,7 +74,6 @@
 }
 
 /* -------------------------------------------------------- Estilo menu ---------------------------------------------------------- */
-
 #Menu
 {
 	margin-top: .5em;
@@ -82,7 +81,6 @@
 }
 
 /* -------------------------------------------------------- Estilo Contenido ----------------------------------------------------- */
-
 #Contenido
 {
 	margin-top: .9em;
@@ -108,7 +106,29 @@
 }
 #Error
 {
-	font-size: 1em;
+	font-size: .5em;
+}
+#ErrorLogin
+{
+	margin:0px auto; /*Centro el bloque*/
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	background-color: #f9850b;
+	width: 50em;
+	height: 6em;
+	border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+#ErrorLogin h2
+{
+	padding-top: .5em;
+	padding-bottom: .4em;
 }
 #datLogin
 {
