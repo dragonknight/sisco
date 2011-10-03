@@ -27,6 +27,8 @@ tablas:
 	- 1 = Inserción;
 	- 2 = Actualización;
 	- 3 = Eliminación;
-	- 4 = Error;
-	- 5 = Acceso No autorizado;
+	- 4 = Consulta en el sistema;
+	- 5 = Acceso de un usuario;
+	- 6 = Intento de acceso con credenciales no validas;
+	- 7 = Llamada a una URL Restringida (intento de escalar privilegios);
 

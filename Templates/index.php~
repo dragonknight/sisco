@@ -27,11 +27,6 @@
 				xajax_CambiaPagina(archivo,id_capa)
 
 			}
-			function login(autentif)
-			{
-				xajax_Login(xajax.getFormValues('autentif'))
-
-			}
 		</script>
 	</head>
 	<div id="Contenedor">
