@@ -14,7 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="../Libs/ddlevelsfiles/ddlevelsmenu-base.css" />
 		<link rel="stylesheet" type="text/css" href="../Libs/ddlevelsfiles/ddlevelsmenu-topbar.css" />
 		
-		<script type="text/javascript" src="./Libs/ddlevelsfiles/ddlevelsmenu.js">
+		<script type="text/javascript" src="../Libs/ddlevelsfiles/ddlevelsmenu.js">
 			/***********************************************
 			* All Levels Navigational Menu- (c) Dynamic Drive DHTML code library (http://www.dynamicdrive.com)
 			* This notice MUST stay intact for legal use
@@ -24,12 +24,36 @@
 		<script>
 			function llamar_codigo(archivo,id_capa)
 			{
-				xajax_CambiaPagina(archivo,id_capa)
+				xajax_CambiaPagina(archivo,id_capa);
 
 			}
+			function modal()
+			{
+				document.getElementById('fade').style.display='block';
+				document.getElementById('light').style.display='block';				
+			}
+			function actuaLogin()
+			{
+				llamar_codigo('menuAutentif.php','Menu');
+				llamar_codigo('escritorios.php','Contendio');
+				document.getElementById('light').style.display='none';
+				document.getElementById('fade').style.display='none';
+			}
+			function bitacora(mensaje,idtrans)
+			{
+				xajax_Bitacora(mensaje,idTrans);
+
+			}			
 		</script>
 	</head>
 	<div id="Contenedor">
+<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- --> 
+ 
+    	<div id="fade" class="overlay"></div>
+		<div id="light" class="modal">
+    		<p>Bienvenido al Sistema... <a href = "javascript:void(0)" onclick = "javascript:actuaLogin()">Aceptar</a></p>
+    	</div>
+<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- -->
 		<div id="Cabecera">
 			<div id="columna1">
 				<img src="../Static/Images/escudo.gif" alt="EscudoMerida" >
@@ -54,6 +78,9 @@
 			<?php 
 				include ("./principal.php");
 			?>
+			<script type="text/javascript"> 
+				modal();
+			</script>
 		</div>
 		<div id="Powered">
 			<hr>
@@ -69,7 +96,7 @@
 		</div>
 		<div id="Pie">
 			Secretaria General de Gobierno <br />
-			Entre Av. 3 y 4, Edificion del Palacio de Gobierno, Piso 1 <br />
+			Entre Av. 3 y 4, Edificio del Palacio de Gobierno, Piso 1 <br />
 			Teléfonos:			
 		</div>
 	</div>

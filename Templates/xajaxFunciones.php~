@@ -94,15 +94,17 @@
 					$_SESSION['idCargo']=$row['idCargo'];
 					$_SESSION['idUsuario']=$row['idPersona'];
 				
-				//Bloqueamos la pantalla
-				//llamamos a la función para actualizar menú				
-				//llamamos a la función para actualizar contenido
+				//Bloqueamos la pantalla y desde alli actulizamos 
+				$txt = '<script type="text/javascript"> 
+								modal();
+						  </script>
+						  <script language="javascript"> alert("haciendo la llamada a modal")</script>';
 				//registramos el login succed en la bitácora
-				$idTrans ="4";
-		   	$bitacora= Bitacora("El usuario: ".$row['login']. " accedio al Sisco",$idTrans);
+				//$idTrans ="4";
+		   	//$bitacora= Bitacora("El usuario: ".$row['login']. " accedió a Sisco",$idTrans);
 				// 
 		     	$objResponse = new xajaxResponse();
-	   		//$objResponse->Redirect('./centroAuten.php',1);
+	   		$objResponse->Assign("Contenido","innerHTML",$txt);
 	   		
 	   		return $objResponse;
 		      

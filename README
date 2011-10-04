@@ -11,6 +11,10 @@ castilloc185@hotmail.com
 
 Sisco es Software Libre licenciado bajo la GPL v.2 y posteriores...
 
+
+A continuación se describirán los aspectos mas importantes del sistema Sisco, si ud es administrador de esta plataforma, o desarrollador que aplica cambios o ejecuta mantenimiento 
+por favor, lea con mucha atención los apartados siguientes pues constituyen la base de este sistema:
+
 ==================================================================================================================================
 Estructura de los Directorios del Proyecto:
 
@@ -19,7 +23,21 @@ Estructura de los Directorios del Proyecto:
 * Static: Contenido estatico (Imagenes,Css)
 
 ==================================================================================================================================
-Estructura de la Base de datos:
+Gerarquia de los Usuarios del sistema:
+
+      Nivel |  Titulo                   |  Menu:          
+------------------------------------------------------------------------------------------
+	- 0 | Administrador;            |  menuAdministrador()
+	- 1 | Secretario General;       |  menuCompleto()
+	- 2 | Coordinador de Despacho;  |  menuCompleto()
+	- 3 | Encargado de Gacetas;     |  menuGacetas()
+	- 4 | Encargado de Audiencias;  |  menuAudiencias()
+	- 5 | Asistentes;               |  menuAsistSecr
+	- 6 | Secretarias;              |  menuAsistSecr
+	- 7 | Recepcionistas;           |  menuRecepcionista
+
+==================================================================================================================================
+Constantes en la Base de datos:
 
 tablas:
 
