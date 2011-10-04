@@ -35,7 +35,7 @@
 			function actuaLogin()
 			{
 				llamar_codigo('menuAutentif.php','Menu');
-				llamar_codigo('escritorios.php','Contendio');
+				llamar_codigo('escritorios.php','Contenido');
 				document.getElementById('light').style.display='none';
 				document.getElementById('fade').style.display='none';
 			}

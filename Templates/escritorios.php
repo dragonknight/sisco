@@ -52,6 +52,7 @@
 		</div>
 		<script type="text/javascript"> 
 			bitacora('Llamada a una URL restringinada','7');
+			llamar_codigo('principal.php', 'Contenido')
 		</script>			 
 <?php
 	} 

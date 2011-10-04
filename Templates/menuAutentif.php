@@ -43,17 +43,5 @@
 			menuRecepcionista();
 		}
 	}
-	else
-	{ 
-?>
-		<div id="errorPrivilegios">
-			Error: No has accedido al sistema o tu sesión a caducado <br>
-			Esta pagina es restringida, por lo que se guardara registro de este suceso.... <br>
-		</div>
-		<script type="text/javascript"> 
-			bitacora('Llamada a una URL restringinada','7');
-		</script>			 
-<?php
-	} 
 ?>
 	
