@@ -94,17 +94,14 @@
 					$_SESSION['idCargo']=$row['idCargo'];
 					$_SESSION['idUsuario']=$row['idPersona'];
 				
-				//Bloqueamos la pantalla y desde alli actulizamos 
-				$txt = '<script type="text/javascript"> 
-								modal();
-						  </script>
-						  <script language="javascript"> alert("haciendo la llamada a modal")</script>';
 				//registramos el login succed en la bitácora
-				//$idTrans ="4";
-		   	//$bitacora= Bitacora("El usuario: ".$row['login']. " accedió a Sisco",$idTrans);
-				// 
+				$idTrans ="4";
+		   	$bitacora= Bitacora("El usuario: ".$row['login']. " accedió a Sisco",$idTrans);
+
 		     	$objResponse = new xajaxResponse();
-	   		$objResponse->Assign("Contenido","innerHTML",$txt);
+	   		//Bloqueamos la pantalla y desde allí actualizamos
+	   		$objResponse->script("modal();");
+
 	   		
 	   		return $objResponse;
 		      
