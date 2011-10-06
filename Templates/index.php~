@@ -1,13 +1,11 @@
 <?php 
 	session_start();
+	require("xajaxDeclaraciones.php"); //Invoco el archivo de declaración de Funciones
+	$xajax->printJavascript('../Libs/xajax/');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 	<head>
-		<?php
-			require("xajaxDeclaraciones.php"); //Invoco el archivo de declaración de Funciones
-			$xajax->printJavascript('../Libs/xajax/'); 
-		?>
 		<title>Sistema de Correspondencia -- SISCO -- </title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<meta http-equiv="Cache-Control" content="max-age=86400" />
@@ -49,11 +47,13 @@
 		</script>
 	</head>
 	<div id="Contenedor">
+		<div id="variables">
+		</div>
 <!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- --> 
  
     	<div id="fade" class="overlay"></div>
 		<div id="light" class="modal">
-    		<p>Bienvenido al Sistema <?php $_SESSION['usuario'] ?> ... <br />
+    		<p>Bienvenido al Sistema <?php echo $_SESSION['usuario'] ?> ... <br /><br />
     		<a href = "javascript:void(0)" onclick = "javascript:actuaLogin()">Aceptar</a></p>
     	</div>
 <!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- -->

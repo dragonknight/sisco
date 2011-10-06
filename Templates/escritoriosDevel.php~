@@ -7,11 +7,10 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 function escritorioAdministrador()
 {
-
 }
 							
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: escritorioAdministrador
+	función: escritorioSG
 	Descripción:Función que muestra el escritorio del secretario general.
 	Desarrollador: Carlos Castillo
 --------------------------------------------------------------------------------------------------------------------------------*/
@@ -20,8 +19,8 @@ function escritorioSG()
 }
 							
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: escritorioAdministrador
-	Descripción:Función que muestra el escritorio del secretario general.
+	función: escritorioCoordinador
+	Descripción:Función que muestra el escritorio de coordinador.
 	Desarrollador: Carlos Castillo
 --------------------------------------------------------------------------------------------------------------------------------*/
 function escritorioCoordinador()
@@ -29,13 +28,9 @@ function escritorioCoordinador()
 }
 							
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Menú completo
-	Descripción:Función que muestra el menú de usuario completo en el sistema (secretario general o coordinadora).
-	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
-	Modificado: 
-	
-	Parámetros entrada: ---
-	Salida: ---
+	función: escritorioGacetas
+	Descripción:Función que muestra el escritorio de encargado de Gacetas.
+	Desarrollador: Carlos Castillo
 --------------------------------------------------------------------------------------------------------------------------------*/
 function escritorioGacetas()
 {

@@ -88,21 +88,14 @@
 		   //si existe entonces:
 		   if (($row["idPersona"]!= "") && ($row["login"]!= "") && ($row["password"]!= ""))
 		   {
-		   	
-		   	//cargo los parámetros necesarios para la autentificación:
-		      	$_SESSION['usuario']=$row['login']; 
-					$_SESSION['idCargo']=$row['idCargo'];
-					$_SESSION['idUsuario']=$row['idPersona'];
 				
-				//registramos el login succed en la bitácora
-				$idTrans ="5";
-		   	$bitacora= Bitacora("El usuario: ".$row['login']. " accedió a Sisco",$idTrans);
-
 		     	$objResponse = new xajaxResponse();
-	   		//Bloqueamos la pantalla y desde allí actualizamos
-	   		$objResponse->script("modal();");
-
+		     	
+				//cargo los parámetros de la sesión:	   		
+	   		$objResponse->script('<?php $_SESSION[\'usuario\']='.$row['login'].'; $_SESSION[\'idCargo\']='. $row['idCargo'].'; $_SESSION[\'idUsuario\']='.$row['idUsuario'].'; ?>');
 	   		
+	   		//Bloqueamos la pantalla y lanzamos la funcion para actualizar y cargar el menu y el escritorio del usuario:
+	   		$objResponse->script("modal();");	
 	   		return $objResponse;
 		      
 		   }
