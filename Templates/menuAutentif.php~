@@ -8,7 +8,8 @@
 		*/ 
 		
 		//incluyo el archivo de menu's (menu.php)
-		include ("menu.php");
+		echo "esto funciona";
+		include ("./menu.php");
 		
 		if($_SESSION['idCargo']==0) 
 		{							

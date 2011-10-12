@@ -5,7 +5,7 @@
 <div id="formLogin">
 	<form id="autentif">
 		<div id="datLogin">
-			Usuario: <input type="text" name="login" id="login" value="" size="20">
+			Usuario: <input type="text" name="login" id="login" value="" size="20"> <br />
 			Contraseña: <input type="password" name="password" id="password" value="" size="20">
 		</div>
 		<input type="button" value="Ingresar" onclick="xajax_Login(xajax.getFormValues('autentif'))">

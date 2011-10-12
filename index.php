@@ -9,6 +9,6 @@
 	<!-- Defino los sectores de los que se compondrán la plataforma -->
 
 	<frameset rows="100%" frameborder="0" framespacing="0" border="0">
-		<frame name="contenido" src="./Templates/noAutentif.php" scrolling="auto" >
+		<frame name="contenido" src="./Templates/noAuntentif.php" scrolling="auto" >
 	</frameset> 
 </html>

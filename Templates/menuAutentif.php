@@ -8,7 +8,8 @@
 		*/ 
 		
 		//incluyo el archivo de menu's (menu.php)
-		include ("menu.php");
+		echo "esto funciona";
+		include ("./menu.php");
 		
 		if($_SESSION['idCargo']==0) 
 		{							
@@ -41,6 +42,42 @@
 		if($_SESSION['idCargo']==7) 
 		{							
 			menuRecepcionista();
+		}
+
+		//incluyo el archivo de menu's (menu.php)
+		include ("escritoriosDevel.php");
+		
+		if($_SESSION['idCargo']==0) 
+		{							
+			escritorioAdministrador();
+		}
+		if($_SESSION['idCargo']==1) 
+		{							
+			escritorioSG();
+		}
+		if($_SESSION['idCargo']==2) 
+		{							
+			escritorioCoordinador();
+		}
+		if($_SESSION['idCargo']==3) 
+		{							
+			escritorioGacetas();
+		}
+		if($_SESSION['idCargo']==4) 
+		{							
+			escritorioAudiencias();
+		}
+		if($_SESSION['idCargo']==5) 
+		{							
+			escritorioAsist();
+		}
+		if($_SESSION['idCargo']==6) 
+		{							
+			escritorioSecr();
+		}
+		if($_SESSION['idCargo']==7) 
+		{							
+			escritorioRecepcionista();
 		}
 	}
 ?>

@@ -1,6 +1,54 @@
 <?php
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: Menú no autentificado
+	Descripción: Función que muestra el menú de usuario previa autentificacion en el sistema.
+	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
+	Modificado: 
+	
+	Parámetros entrada: ---
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+function menuNoAutent()
+	{
+
+		echo '
+				<div id="ddtopmenubar" class="mattblackmenu">
+					<ul>
+						<li><a href="javascript:llamar_codigo(\'principal.php\', \'Contenido\')">Principal</a></li>
+						<li><a href="javascript:llamar_codigo(\'autentificacion.php\', \'Contenido\')">Ingresar</a></li>
+						<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Desarrolladores</a></li>
+					</ul>
+				</div>
+		';
+	}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: Menú administrador
+	Descripción: Función que muestra el menú del usuario Administrador (previa autentificación en el sistema).
+	Desarrollador: Carlos Castillo, menu extraido de http://www.dynamicdrive.com 
+	Modificado: 
+	
+	Parámetros entrada: ---
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+function menuAdministrador()
+	{
+
+		echo '
+				<div id="ddtopmenubar" class="mattblackmenu">
+					<ul>
+						<li><a href="javascript:llamar_codigo(\'principal.php\', \'Contenido\')">Principal</a></li>
+						<li><a href="javascript:llamar_codigo(\'autentificacion.php\', \'Contenido\')">Ingresar</a></li>
+						<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Desarrolladores</a></li>
+					</ul>
+				</div>
+		';
+	}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: Menú completo
 	Descripción:Función que muestra el menú de usuario completo en el sistema (secretario general o coordinadora).
 	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
@@ -232,30 +280,6 @@ function menuAsistSecr()
 									</ul>
 								</li>
 							</ul>
-		';
-	}
-
-/*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Menú no autentificado
-	Descripción: Función que muestra el menú de usuario previa autentificacion en el sistema.
-	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
-	Modificado: 
-	
-	Parámetros entrada: ---
-	Salida: ---
---------------------------------------------------------------------------------------------------------------------------------*/
-	
-function menuNoAutent()
-	{
-
-		echo '
-				<div id="ddtopmenubar" class="mattblackmenu">
-					<ul>
-						<li><a href="javascript:llamar_codigo(\'principal.php\', \'Contenido\')">Principal</a></li>
-						<li><a href="javascript:llamar_codigo(\'autentificacion.php\', \'Contenido\')">Ingresar</a></li>
-						<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Desarrolladores</a></li>
-					</ul>
-				</div>
 		';
 	}
 	

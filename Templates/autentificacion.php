@@ -1,3 +1,6 @@
+<?php 
+	session_start();
+?>
 <div id="Notificación">
 	Has ingresado al área de autenticación de la Plataforma.
 	Por favor introduzca sus credenciales para continuar:

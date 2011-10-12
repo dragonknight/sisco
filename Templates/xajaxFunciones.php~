@@ -1,5 +1,5 @@
 <?php
-
+	session_start();
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: CambiaPagina
@@ -91,11 +91,14 @@
 				
 		     	$objResponse = new xajaxResponse();
 		     	
-				//cargo los parámetros de la sesión:	   		
-	   		$objResponse->script('<?php $_SESSION[\'usuario\']='.$row['login'].'; $_SESSION[\'idCargo\']='. $row['idCargo'].'; $_SESSION[\'idUsuario\']='.$row['idUsuario'].'; ?>');
+			//cargo los parámetros de la sesión:
+			$_SESSION['usuario']=$row['login'];
+			$_SESSION['idCargo']=$row['idCargo'];
+			$_SESSION['idUsuario']=$row['idPersona'];
 	   		
-	   		//Bloqueamos la pantalla y desde allí actualizamos
+	   		//Bloqueamos la pantalla y lanzamos la funcion para actualizar y cargar el menu y el escritorio del usuario:
 	   		$objResponse->script("modal();");	
+			$objResponse->redirect("./menuAutentif.php",2);
 	   		return $objResponse;
 		      
 		   }
