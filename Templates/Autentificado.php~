@@ -33,16 +33,14 @@
 						xajax_CambiaPagina(archivo,id_capa);
 
 					}
-					function modal()
+					function iniciaModal()
 					{
 						document.getElementById('fade').style.display='block';
 						document.getElementById('light').style.display='block';				
 					}
-					function actuaLogin()
+					function terminaModal()
 					{
 						document.getElementById('fade').style.display='none';
-						llamar_codigo('menuAutentif.php','Menu');
-						llamar_codigo('escritorios.php','Contenido');
 						document.getElementById('light').style.display='none';
 					}
 					function bitacora(mensaje,idtrans)
@@ -59,7 +57,7 @@
 		 
 		    	<div id="fade" class="overlay"></div>
 				<div id="light" class="modal">
-		    		<p>Bienvenido al Sistema <?php echo $_SESSION['usuario'] ?> ... <br /><br />
+		    		<p><?php echo $mensaje ?> <br /><br />
 		    		<a href = "javascript:void(0)" onclick = "javascript:actuaLogin()">Aceptar</a></p>
 		    	</div>
 		<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- -->
@@ -119,7 +117,7 @@
 				<div id="Contenido">
 					<?php 
 						//incluyo el archivo de menu's (menu.php)
-						include ("escritoriosDevel.php");
+						include ("escritorios.php");
 		
 						if($_SESSION['idCargo']==0) 
 						{							
@@ -174,7 +172,7 @@
 				</div>
 			</div>
 		</html>
-
+<?php
 		
 	}
 ?>

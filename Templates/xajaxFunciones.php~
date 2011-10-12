@@ -98,7 +98,7 @@
 	   		
 	   		//Bloqueamos la pantalla y lanzamos la funcion para actualizar y cargar el menu y el escritorio del usuario:
 	   		$objResponse->script("modal();");	
-			$objResponse->redirect("./menuAutentif.php",2);
+			$objResponse->redirect("./Autentificado.php",2);
 	   		return $objResponse;
 		      
 		   }

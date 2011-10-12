@@ -33,16 +33,14 @@
 						xajax_CambiaPagina(archivo,id_capa);
 
 					}
-					function modal()
+					function iniciaModal()
 					{
 						document.getElementById('fade').style.display='block';
 						document.getElementById('light').style.display='block';				
 					}
-					function actuaLogin()
+					function terminaModal()
 					{
 						document.getElementById('fade').style.display='none';
-						llamar_codigo('menuAutentif.php','Menu');
-						llamar_codigo('escritorios.php','Contenido');
 						document.getElementById('light').style.display='none';
 					}
 					function bitacora(mensaje,idtrans)
@@ -59,8 +57,8 @@
 		 
 		    	<div id="fade" class="overlay"></div>
 				<div id="light" class="modal">
-		    		<p>Bienvenido al Sistema <?php echo $_SESSION['usuario'] ?> ... <br /><br />
-		    		<a href = "javascript:void(0)" onclick = "javascript:actuaLogin()">Aceptar</a></p>
+		    		<p><?php echo $mensaje ?> <br /><br />
+		    		<a href = "javascript:void(0)" onclick = "javascript:terminaModal()">Aceptar</a></p>
 		    	</div>
 		<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- -->
 				<div id="Cabecera">

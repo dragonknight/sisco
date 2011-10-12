@@ -65,7 +65,7 @@
 		if(empty($autentificacion["login"]) || empty($autentificacion["password"]))
 		{
 			$idTrans ="6";
-		   $bitacora= Bitacora("Intento de Login sin Credenciales",$idTrans);
+		   	$bitacora= Bitacora("Intento de Login sin Credenciales",$idTrans);
 			$txt = "<div id=\"ErrorLogin\"> <h2> Error: Debes ingresar todos los Datos solicitados para acceder </h2></div>";
 			
 			$objResponse = new xajaxResponse();
@@ -96,6 +96,10 @@
 			$_SESSION['idCargo']=$row['idCargo'];
 			$_SESSION['idUsuario']=$row['idPersona'];
 	   		
+			//Almaceno en bitácora el acceso correcto al sistema:
+			$idTrans ="5";
+		   	$bitacora= Bitacora("El usuario: ".$row['login']." accedio al Sisco",$idTrans);
+
 	   		//Bloqueamos la pantalla y lanzamos la funcion para actualizar y cargar el menu y el escritorio del usuario:
 	   		$objResponse->script("modal();");	
 			$objResponse->redirect("./Autentificado.php",2);

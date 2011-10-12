@@ -26,16 +26,16 @@ Estructura de los Directorios del Proyecto:
 ==================================================================================================================================
 Gerarquia de los Usuarios del sistema:
 
-      Nivel |  Titulo                   |  Menu:                  |  Escritorio:
+      Nivel |  Titulo                   |  Menu:          
 ------------------------------------------------------------------------------------------
-	- 0 | Administrador;            |  menuAdministrador()    |  escritorioAdministrador()
-	- 1 | Secretario General;       |  menuCompleto()         |  escritorioSG()
-	- 2 | Coordinador de Despacho;  |  menuCompleto()         |  escritorioCoordinador()
-	- 3 | Encargado de Gacetas;     |  menuGacetas()          |  escritorioGacetas()
-	- 4 | Encargado de Audiencias;  |  menuAudiencias()       |  escritorioAudiencias()
-	- 5 | Asistentes;               |  menuAsistSecr()        |  escritorioAsist() 
-	- 6 | Secretarias;              |  menuAsistSecr()        |  escritorioSecr()
-	- 7 | Recepcionistas;           |  menuRecepcionista()    |  escritorioRecepcionista()
+	- 0 | Administrador;            |  menuAdministrador()
+	- 1 | Secretario General;       |  menuCompleto()
+	- 2 | Coordinador de Despacho;  |  menuCompleto()
+	- 3 | Encargado de Gacetas;     |  menuGacetas()
+	- 4 | Encargado de Audiencias;  |  menuAudiencias()
+	- 5 | Asistentes;               |  menuAsistSecr
+	- 6 | Secretarias;              |  menuAsistSecr
+	- 7 | Recepcionistas;           |  menuRecepcionista
 
 ==================================================================================================================================
 Constantes en la Base de datos:
