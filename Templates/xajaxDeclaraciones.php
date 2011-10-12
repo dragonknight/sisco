@@ -4,4 +4,5 @@
 	$xajax->registerFunction("CambiaPagina");
 	$xajax->registerFunction("Login");
 	$xajax->registerFunction("Bitacora");
+	$xajax->registerFunction("ConsultaBit");
 ?>

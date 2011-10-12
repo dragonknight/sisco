@@ -80,8 +80,7 @@
 		   mysql_select_db("sisco", $con);
 		   $sql = "select * from usuarios where login='".$autentificacion["login"]."' and password='".$autentificacion["password"]."'";
 		   $result = mysql_query($sql,$con);
-		   
-		   $txt = "";   
+		      
 		   $row = mysql_fetch_array($result);
 		   
 		   //ya ejecutada la consulta, revisamos si se encontró un usuario con esas credenciales:
@@ -166,23 +165,28 @@
 	}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: ventanaError
-	Descripción: Función que permite mostrar un mensaje de notificación usando Javascript
+	función: ConsultaBit
+	Descripción:Función usada para consultar al log del sistema (Bitacora)
 	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
-	Parámetros entrada:
-	Salida:
+	Parámetros entrada: 
+				$condicion = Valor de la Condición SQL
+				$divResp = id del div donde se enviara la respuesta
+	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ventanaError($mensaje)
+	function ConsultaBit($campos,$condicion,$divResp)
 	{
-		$error='<script language="javascript"> alert("'.$mensaje.'")</script>';
-	
-	
-	$objResponse = new xajaxResponse();
-   $objResponse->Assign("Error","innerHTML",$error);
-   
-   return $objResponse;
+		$con = conectar();
+		mysql_select_db("sisco", $con);
+		$txt = "";		
+		//Consultamos la BD:
+		$sql = "select ".$campos." from bitacora ".$condicion;
+		$result = mysql_query($sql);
+		$row = mysql_fetch_array($result);
+
+		$objResponse = new xajaxResponse();
+	   	$objResponse->Assign($divResp,"innerHTML",$row);
 	}
 	
 	require("xajaxDeclaraciones.php");

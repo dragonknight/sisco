@@ -27,28 +27,7 @@
 					* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
 					***********************************************/
 				</script>		
-				<script>
-					function llamar_codigo(archivo,id_capa)
-					{
-						xajax_CambiaPagina(archivo,id_capa);
-
-					}
-					function iniciaModal()
-					{
-						document.getElementById('fade').style.display='block';
-						document.getElementById('light').style.display='block';				
-					}
-					function terminaModal()
-					{
-						document.getElementById('fade').style.display='none';
-						document.getElementById('light').style.display='none';
-					}
-					function bitacora(mensaje,idtrans)
-					{
-						xajax_Bitacora(mensaje,idTrans);
-
-					}			
-				</script>
+				<script type="text/javascript" src="../Static/Js/funciones.js"></script> <! -- Funciones js del sistema -- >
 			</head>
 			<div id="Contenedor">
 				<div id="variables">
@@ -58,7 +37,7 @@
 		    	<div id="fade" class="overlay"></div>
 				<div id="light" class="modal">
 		    		<p><?php echo $mensaje ?> <br /><br />
-		    		<a href = "javascript:void(0)" onclick = "javascript:actuaLogin()">Aceptar</a></p>
+		    		<a href = "javascript:void(0)" onclick = "javascript:terminaModal()">Aceptar</a></p>
 		    	</div>
 		<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- -->
 				<div id="Cabecera">

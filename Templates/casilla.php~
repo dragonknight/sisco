@@ -1,0 +1,7 @@
+<?php 
+	session_start();
+?>
+<div id="casillaLogin">
+	Usuario:<?php echo " ".$_SESSION['usuario'] ?> <br />
+	Nivel:<?php echo " ".$_SESSION['idCargo'] ?> 
+</div>

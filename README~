@@ -18,24 +18,32 @@ por favor, lea con mucha atención los apartados siguientes pues constituyen la 
 ==================================================================================================================================
 Estructura de los Directorios del Proyecto:
 
-* Libs: Librerias y otro contenido importado usado para el funcionamiento de la App	
-* Site: Plantillas html y php de la App
-* Static: Contenido estatico (Imagenes,Css)
+* Libs: Librerias y otro contenido importado usado para el funcionamiento de la App;
+	- ddlevelsfiles = Libreria del menu.
+	- xajax = Framework para ajax.
+	
+* Site: Plantillas php de la App
+
+* Static: Contenido estatico:
+	- Css = principal.css (Hoja de estilos para el sistema)
+	- Images = galeria de imagenes usadas en el sistema
+	- Js = funciones.js (Archivo de Funciones JavaScript)
+
 * DB: En este directorio se almacena el sql de la bd del sistema
 
 ==================================================================================================================================
 Gerarquia de los Usuarios del sistema:
 
-      Nivel |  Titulo                   |  Menu:          
+      Nivel |  Titulo                   |  Menu:                  |  Escritorio:
 ------------------------------------------------------------------------------------------
-	- 0 | Administrador;            |  menuAdministrador()
-	- 1 | Secretario General;       |  menuCompleto()
-	- 2 | Coordinador de Despacho;  |  menuCompleto()
-	- 3 | Encargado de Gacetas;     |  menuGacetas()
-	- 4 | Encargado de Audiencias;  |  menuAudiencias()
-	- 5 | Asistentes;               |  menuAsistSecr
-	- 6 | Secretarias;              |  menuAsistSecr
-	- 7 | Recepcionistas;           |  menuRecepcionista
+	- 0 | Administrador;            |  menuAdministrador()    |  escritorioAdministrador()
+	- 1 | Secretario General;       |  menuCompleto()         |  escritorioSG()
+	- 2 | Coordinador de Despacho;  |  menuCompleto()         |  escritorioCoordinador()
+	- 3 | Encargado de Gacetas;     |  menuGacetas()          |  escritorioGacetas()
+	- 4 | Encargado de Audiencias;  |  menuAudiencias()       |  escritorioAudiencias()
+	- 5 | Asistentes;               |  menuAsistSecr()        |  escritorioAsist() 
+	- 6 | Secretarias;              |  menuAsistSecr()        |  escritorioSecr()
+	- 7 | Recepcionistas;           |  menuRecepcionista()    |  escritorioRecepcionista()
 
 ==================================================================================================================================
 Constantes en la Base de datos:

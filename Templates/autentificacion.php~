@@ -1,8 +1,11 @@
+<?php 
+	session_start();
+?>
 <div id="Notificación">
 	Has ingresado al área de autenticación de la Plataforma.
 	Por favor introduzca sus credenciales para continuar:
 </div>
-<div id="formLogin">
+<div id="CasillaId">
 	<form id="autentif">
 		<div id="datLogin">
 			Usuario: <input type="text" name="login" id="login" value="" size="20"> <br />
