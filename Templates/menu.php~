@@ -41,8 +41,8 @@ function menuAdministrador()
 				<div id="ddtopmenubar" class="mattblackmenu">
 					<ul>
 						<li><a href="javascript:llamar_codigo(\'principal.php\', \'Contenido\')">Principal</a></li>
-						<li><a href="javascript:llamar_codigo(\'autentificacion.php\', \'Contenido\')">Ingresar</a></li>
-						<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Desarrolladores</a></li>
+						<li><a href="javascript:llamar_codigo(\'autentificacion.php\', \'Contenido\')">Logs del Sistema</a></li>
+						<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Usuarios</a></li>
 					</ul>
 				</div>
 		';

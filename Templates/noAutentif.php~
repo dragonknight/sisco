@@ -1,5 +1,5 @@
 <?php 
-	session_start();
+	//session_start();
 	require("xajaxDeclaraciones.php"); //Invoco el archivo de declaración de Funciones
 	$xajax->printJavascript('../Libs/xajax/');
 ?>

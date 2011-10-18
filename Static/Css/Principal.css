@@ -39,6 +39,7 @@
 }
 #columna1 img
 {
+	float: left;
 	width: 6em;
 	height: 5.5em;
 	padding-top: .5em;
@@ -67,6 +68,7 @@
 }
 #columna3 img
 {
+	float: right;
 	width: 7em;
 	height: 5em;
 	padding-top: .5em;
@@ -193,6 +195,7 @@
 	padding-bottom: .4em;
 }
 /* -------------------------------------------------------- Estilos Autenticados ----------------------------------------------- */
+
 #CasillaId
 {
 	float: right;
@@ -208,34 +211,9 @@
    	box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
    		-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
-#resumen
-{
-	text-align: center;
-	margin-top: 2em;
-	margin-bottom: 2em;
-	background-color: #333;
-	border-radius: 10px;
-    		-ms-border-radius: 10px;
-    		-moz-border-radius: 10px;
-    		-webkit-border-radius: 10px;
-    		-khtml-border-radius: 10px;
-   	box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-   		-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-}
-#resumenFecha
-{
-	float: right;
-	text-align: left;
-	margin-top: .3em;
-	margin-bottom: 2em;
-	padding-right: 1em;
-}
 #resumenTit
 {
 	clear: both;
-	margin:0px auto; /*Centro el bloque*/
-	margin-right: 1em;
-	margin-left: 1em;
 	text-align: center;
 	background-color: #e2e2e2;
 	border-radius: 10px;
@@ -245,15 +223,13 @@
     		-khtml-border-radius: 10px;
    	box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
    		-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+   margin: 1em;
+	padding: .5em;
 }
 #resumenCont
 {
 	clear: both;
-	margin:0px auto; /*Centro el bloque*/
 	text-align: center;
-	margin-right: 1em;
-	margin-left: 1em;;
-	padding: 1em;
 	background-color: #e2e2e2;
 	border-radius: 10px;
     		-ms-border-radius: 10px;
@@ -262,7 +238,8 @@
     		-khtml-border-radius: 10px;
    	box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
    		-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-	min-height: 3em;
+   margin: 1em;
+	padding: .5em;
 }
 /* -------------------------------------------------------- Estilo Powered ------------------------------------------------------ */
 
@@ -311,7 +288,6 @@
 
 #Pie
 {
-	/*background: url(../Images/FondoSup.png);*/
 	background-color: #8f1717;
 	margin-top: .3em;
 	clear: both;
