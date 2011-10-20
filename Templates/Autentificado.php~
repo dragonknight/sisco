@@ -110,8 +110,9 @@
 							
 						}
 						if($_SESSION['idCargo']==3) 
-						{							
-							
+						{
+													
+						}	
 						if($_SESSION['idCargo']==4) 
 						{							
 							

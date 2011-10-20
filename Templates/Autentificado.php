@@ -14,7 +14,6 @@
 			<head>
 				<title>Sistema de Correspondencia -- SISCO -- </title>
 				<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
-				<meta http-equiv="Cache-Control" content="max-age=86400" />
 				<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
 				<link rel="stylesheet" type="text/css" href="../Static/Css/Principal.css" media="all" />
 				<link rel="stylesheet" type="text/css" href="../Libs/ddlevelsfiles/ddlevelsmenu-base.css" />
