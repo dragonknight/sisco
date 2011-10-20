@@ -3,5 +3,7 @@
 	$xajax = new xajax("xajaxFunciones.php");
 	$xajax->registerFunction("CambiaPagina");
 	$xajax->registerFunction("Login");
+	$xajax->registerFunction("logOut");
 	$xajax->registerFunction("Bitacora");
+	$xajax->registerFunction("ConsultaBit");
 ?>

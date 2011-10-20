@@ -43,7 +43,7 @@ function menuAdministrador()
 						<li><a href="javascript:llamar_codigo(\'escAdmin.php\', \'Contenido\')">Principal</a></li>
 						<li><a href="javascript:llamar_codigo(\'autentificacion.php\', \'Contenido\')">Logs del Sistema</a></li>
 						<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Usuarios</a></li>
-						<li><a href="javascript:llamar_codigo(\'logOut.php\', \'Contenido\')">Salir</a></li>
+						<li><a href="javascript:logOut()">Salir</a></li>
 					</ul>
 				</div>
 		';

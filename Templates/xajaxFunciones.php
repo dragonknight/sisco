@@ -50,7 +50,7 @@
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: Login
-	Descripción:Función usada para establecer la conexión con bases de datos
+	Descripción:Función usada para establecer la sesion
 	Desarrollador: amperis.blogspot.com
 	Modificado: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
@@ -90,18 +90,18 @@
 				
 		     	$objResponse = new xajaxResponse();
 		     	
-			//cargo los parámetros de la sesión:
-			$_SESSION['usuario']=$row['login'];
-			$_SESSION['idCargo']=$row['idCargo'];
-			$_SESSION['idUsuario']=$row['idPersona'];
+				//cargo los parámetros de la sesión:
+				$_SESSION['usuario']=$row['login'];
+				$_SESSION['idCargo']=$row['idCargo'];
+				$_SESSION['idUsuario']=$row['idPersona'];
 	   		
-			//Almaceno en bitácora el acceso correcto al sistema:
-			$idTrans ="5";
+				//Almaceno en bitácora el acceso correcto al sistema:
+				$idTrans ="5";
 		   	$bitacora= Bitacora("El usuario: ".$row['login']." accedio al Sisco",$idTrans);
 
 	   		//Bloqueamos la pantalla y lanzamos la funcion para actualizar y cargar el menu y el escritorio del usuario:
 	   		$objResponse->script("modal();");	
-			$objResponse->redirect("./Autentificado.php",2);
+				$objResponse->redirect("./Autentificado.php",2);
 	   		return $objResponse;
 		      
 		   }
@@ -124,6 +124,34 @@
 	     
 	}
 
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: LogOut
+	Descripción:Función usada para cerrar la sesión
+	Desarrollador: amperis.blogspot.com
+	Modificado: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada: ---
+	Salida: $con
+--------------------------------------------------------------------------------------------------------------------------------*/
+	function LogOut() 
+	{
+		//Almaceno en bitácora la salida del sistema:
+		$idTrans ="8";
+   	$bitacora= Bitacora("El usuario: ".$_SESSION['usuario']." cerro sesión en Sisco",$idTrans);
+   	
+		unset($_SESSION['usuario']);
+		unset($_SESSION['idCargo']);
+		unset($_SESSION['idUsuario']);
+		session_destroy();
+
+		//Bloqueamos la pantalla notificamos el cierre de sesion y cargamos la pagina de cierre:
+		$mensaje="Su sesión el el sistema de Correspondencia Sisco ha finalizado";
+		$objResponse = new xajaxResponse();
+		$objResponse->script("modal();");	
+		$objResponse->redirect("./noAutentif.php",2);
+		return $objResponse;
+	}
+	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: ip
 	Descripción: Función usada para obtener la ip del cliente (usada en la Bitacora)

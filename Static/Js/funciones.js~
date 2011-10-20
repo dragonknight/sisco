@@ -18,7 +18,7 @@ function bitacora(mensaje,idtrans)
 {
 	xajax_Bitacora(mensaje,idTrans);
 }
-function consultaBit(condicion,divResp)
+function consultaBit(campos,condicion,divResp)
 {
-	xajax_ConsultaBit(condicion,divResp);
+	xajax_ConsultaBit(campos,condicion,divResp);
 }

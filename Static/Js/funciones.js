@@ -22,3 +22,7 @@ function consultaBit(campos,condicion,divResp)
 {
 	xajax_ConsultaBit(campos,condicion,divResp);
 }
+function logOut()
+{
+	xajax_logOut();
+}

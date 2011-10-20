@@ -40,9 +40,10 @@ function menuAdministrador()
 		echo '
 				<div id="ddtopmenubar" class="mattblackmenu">
 					<ul>
-						<li><a href="javascript:llamar_codigo(\'principal.php\', \'Contenido\')">Principal</a></li>
+						<li><a href="javascript:llamar_codigo(\'escAdmin.php\', \'Contenido\')">Principal</a></li>
 						<li><a href="javascript:llamar_codigo(\'autentificacion.php\', \'Contenido\')">Logs del Sistema</a></li>
 						<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Usuarios</a></li>
+						<li><a href="javascript:logOut()">Salir</a></li>
 					</ul>
 				</div>
 		';

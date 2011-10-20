@@ -58,4 +58,5 @@ tablas:
 	- 5 = Acceso de un usuario;
 	- 6 = Intento de acceso con credenciales no validas;
 	- 7 = Llamada a una URL Restringida (intento de escalar privilegios);
+	- 8 = Cierre de sesion de usuario;
 
