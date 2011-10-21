@@ -94,8 +94,7 @@
 				</div>
 				<div id="Contenido">
 					<?php 
-						//incluyo
-		
+
 						if($_SESSION['idCargo']==0) 
 						{							
 							include ("escAdmin.php");

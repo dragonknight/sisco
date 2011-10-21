@@ -35,8 +35,6 @@
 		 
 		    	<div id="fade" class="overlay"></div>
 				<div id="light" class="modal">
-		    		<p><?php echo $mensaje ?> <br /><br />
-		    		<a href = "javascript:void(0)" onclick = "javascript:terminaModal()">Aceptar</a></p>
 		    	</div>
 		<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- -->
 				<div id="Cabecera">

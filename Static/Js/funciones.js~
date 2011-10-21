@@ -10,8 +10,6 @@ function modal()
 function actuaLogin()
 {
 	document.getElementById('fade').style.display='none';
-	llamar_codigo('menuAutentif.php','Menu');
-	llamar_codigo('escritorios.php','Contenido');
 	document.getElementById('light').style.display='none';
 }
 function bitacora(mensaje,idtrans)
@@ -21,4 +19,8 @@ function bitacora(mensaje,idtrans)
 function consultaBit(campos,condicion,divResp)
 {
 	xajax_ConsultaBit(campos,condicion,divResp);
+}
+function logOut()
+{
+	xajax_logOut();
 }

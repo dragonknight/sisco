@@ -10,8 +10,6 @@ function modal()
 function actuaLogin()
 {
 	document.getElementById('fade').style.display='none';
-	llamar_codigo('menuAutentif.php','Menu');
-	llamar_codigo('escritorios.php','Contenido');
 	document.getElementById('light').style.display='none';
 }
 function bitacora(mensaje,idtrans)

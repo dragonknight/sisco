@@ -1,6 +1,5 @@
-<div id="CasillaId">
-		<p>
-			Usuario:<?php echo " ".$_SESSION['usuario'] ?> <br />
-			Nivel:<?php echo " ".$_SESSION['idCargo'] ?> 
-		</p>
-</div>
+<p>
+	Su sesión en el Sistema de Correspondencia Sisco ha Finalizado<br />
+	Tenga un Lindo Día...<br /><br />
+	<a href = "javascript:void(0)" onclick = "javascript:terminaModal()">Aceptar</a>
+</p>

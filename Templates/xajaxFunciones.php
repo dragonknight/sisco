@@ -145,10 +145,10 @@
 		session_destroy();
 
 		//Bloqueamos la pantalla notificamos el cierre de sesion y cargamos la pagina de cierre:
-		$mensaje="Su sesión el el sistema de Correspondencia Sisco ha finalizado";
 		$objResponse = new xajaxResponse();
-		$objResponse->script("modal();");	
-		$objResponse->redirect("./noAutentif.php",2);
+		$objResponse->script("llamar_codigo('./logOut.php', 'light');");
+		$objResponse->script("modal();");
+		$objResponse->redirect("./noAutentif.php",10);
 		return $objResponse;
 	}
 	
