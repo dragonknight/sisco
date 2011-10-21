@@ -94,7 +94,9 @@
 				$_SESSION['usuario']=$row['login'];
 				$_SESSION['idCargo']=$row['idCargo'];
 				$_SESSION['idUsuario']=$row['idPersona'];
-	   		
+	   		$_SESSION["Acceso"]= date("Y-n-j H:i:s"); //defino la fecha y hora de inicio de sesión en formato aaaa-mm-dd hh:mm:ss
+	   		$_SESSION["maxTemp"]="180"; //Defino el tiempo para la caducidad de la sesión por inactividad
+    
 				//Almaceno en bitácora el acceso correcto al sistema:
 				$idTrans ="5";
 		   	$bitacora= Bitacora("El usuario: ".$row['login']." accedio al Sisco",$idTrans);
@@ -148,7 +150,7 @@
 		$objResponse = new xajaxResponse();
 		$objResponse->script("llamar_codigo('./logOut.php', 'light');");
 		$objResponse->script("modal();");
-		$objResponse->redirect("./noAutentif.php",10);
+		$objResponse->redirect("./noAutentif.php",2);
 		return $objResponse;
 	}
 	

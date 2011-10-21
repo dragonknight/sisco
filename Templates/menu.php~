@@ -41,11 +41,23 @@ function menuAdministrador()
 				<div id="ddtopmenubar" class="mattblackmenu">
 					<ul>
 						<li><a href="javascript:llamar_codigo(\'escAdmin.php\', \'Contenido\')">Principal</a></li>
-						<li><a href="javascript:llamar_codigo(\'autentificacion.php\', \'Contenido\')">Logs del Sistema</a></li>
+						<li><a href="#" rel="ddsubmenu1">Logs</a></li>
 						<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Usuarios</a></li>
 						<li><a href="javascript:logOut()">Salir</a></li>
 					</ul>
 				</div>
+				
+				<script type="text/javascript">
+					../Libs/ddlevelsfiles/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
+				</script>
+				
+				<!--Top Drop Down Menu 1 HTML-->						
+				<ul id="ddsubmenu1" class="ddsubmenustyle">
+					<li><a href="javascript:llamar_codigo(\'logGeneral.php\', \'Contenido\')">General</a></li>
+					<li><a href="javascript:llamar_codigo(\'logUsuario.php\', \'Contenido\')">Por Usuario</a></li>
+					<li><a href="javascript:llamar_codigo(\'logFecha.php\', \'Contenido\')">Por Fecha</a></li>
+					<li><a href="javascript:llamar_codigo(\'logEvento.php\', \'Contenido\')">Por tipo de Evento</a></li>
+				</ul>
 		';
 	}
 
@@ -76,7 +88,7 @@ function menuCompleto()
 				</div>
 	
 				<script type="text/javascript">
-					../Libs/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
+					../Libs/ddlevelsfiles/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
 				</script>
 	
 				<!--HTML for the Drop Down Menus associated with Top Menu Bar-->
@@ -184,7 +196,7 @@ function menuRecepcionista()
 							</div>
 				
 							<script type="text/javascript">
-								../Libs/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
+								../Libs/ddlevelsfiles/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
 							</script>
 				
 							<!--HTML for the Drop Down Menus associated with Top Menu Bar-->
@@ -225,7 +237,7 @@ function menuAsistSecr()
 							</div>
 				
 							<script type="text/javascript">
-								../Libs/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
+								../Libs/ddlevelsfiles/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
 							</script>
 				
 							<!--HTML for the Drop Down Menus associated with Top Menu Bar-->
@@ -310,7 +322,7 @@ function menuEAudiecias()
 							</div>
 				
 							<script type="text/javascript">
-								../Libs/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
+								../Libs/ddlevelsfiles/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
 							</script>
 				
 							<!--HTML for the Drop Down Menus associated with Top Menu Bar-->
@@ -402,7 +414,7 @@ function menuEGacetas()
 							</div>
 				
 							<script type="text/javascript">
-								../Libs/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
+								../Libs/ddlevelsfiles/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
 							</script>
 				
 							<!--HTML for the Drop Down Menus associated with Top Menu Bar-->

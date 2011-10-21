@@ -8,6 +8,26 @@
 		*/ 
 		require("xajaxDeclaraciones.php"); //Invoco el archivo de declaración de Funciones
 		$xajax->printJavascript('../Libs/xajax/');
+		
+		//Ejecuto el calculo del tiempo de la sesión, para hacerla caducar de ser necesario:
+		$ultimaTrans = $_SESSION["Acceso"]; //registro la variable de la ultima transacción hecha
+	   $ahora = date("Y-n-j H:i:s"); //registro la hora actual
+   	$tiempo_transcurrido = (strtotime($ahora)-strtotime($ultimaTrans)); //calculo el tiempo transcurrido
+    	
+    	//comparamos el tiempo transcurrido
+     	if($tiempo_transcurrido >= $_SESSION["maxTemp"]) 
+     	{
+     		//si paso mas tiempo del indicado para caducar la sesión entonces invoco el js de cerrar sesión
+?>   	 
+      	<script type="text/javascript">
+				logOut();
+			</script>
+<?php	
+    	}
+    	else
+    	{
+    		$_SESSION["ultimoAcceso"] = $ahora;
+   	} 
 ?>
 		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 		<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
@@ -25,7 +45,7 @@
 					* This notice MUST stay intact for legal use
 					* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
 					***********************************************/
-				</script>		
+				</script>	
 				<script type="text/javascript" src="../Static/Js/funciones.js"></script> <! -- Funciones js del sistema -- >
 			</head>
 			<div id="Contenedor">
