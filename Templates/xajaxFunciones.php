@@ -25,7 +25,6 @@
 	
 	   $objResponse = new xajaxResponse();
 	   $objResponse->Assign($id,"innerHTML",$res);
-	   
 	   return $objResponse;
 	}
 
@@ -96,6 +95,7 @@
 				$_SESSION['idUsuario']=$row['idPersona'];
 	   		$_SESSION["Acceso"]= date("Y-n-j H:i:s"); //defino la fecha y hora de inicio de sesión en formato aaaa-mm-dd hh:mm:ss
 	   		$_SESSION["maxTemp"]="180"; //Defino el tiempo para la caducidad de la sesión por inactividad
+	   		global $_SESSION;
     
 				//Almaceno en bitácora el acceso correcto al sistema:
 				$idTrans ="5";

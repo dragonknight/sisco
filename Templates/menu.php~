@@ -10,19 +10,19 @@
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-function menuNoAutent()
-	{
-
-		echo '
-				<div id="ddtopmenubar" class="mattblackmenu">
-					<ul>
-						<li><a href="javascript:llamar_codigo(\'principal.php\', \'Contenido\')">Principal</a></li>
-						<li><a href="javascript:llamar_codigo(\'autentificacion.php\', \'Contenido\')">Ingresar</a></li>
-						<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Desarrolladores</a></li>
-					</ul>
-				</div>
-		';
-	}
+	function menuNoAutent()
+		{
+	
+			echo '
+					<div id="ddtopmenubar" class="mattblackmenu">
+						<ul>
+							<li><a href="javascript:llamar_codigo(\'principal.php\', \'Contenido\')">Principal</a></li>
+							<li><a href="javascript:llamar_codigo(\'autentificacion.php\', \'Contenido\')">Ingresar</a></li>
+							<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Desarrolladores</a></li>
+						</ul>
+					</div>
+			';
+		}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: Menú administrador
@@ -34,32 +34,26 @@ function menuNoAutent()
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-function menuAdministrador()
-	{
-
-		echo '
-				<div id="ddtopmenubar" class="mattblackmenu">
-					<ul>
-						<li><a href="javascript:llamar_codigo(\'escAdmin.php\', \'Contenido\')">Principal</a></li>
-						<li><a href="#" rel="ddsubmenu1">Logs</a></li>
-						<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Usuarios</a></li>
-						<li><a href="javascript:logOut()">Salir</a></li>
+	function menuAdministrador()
+		{
+	
+			echo '
+					<div id="ddtopmenubar" class="mattblackmenu">
+						<ul>
+							<li><a href="#" rel="ddsubmenu1">Logs</a></li>
+							<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Usuarios</a></li>
+							<li><a href="javascript:logOut()">Salir</a></li>
+						</ul>
+					</div>
+					<!--Top Drop Down Menu 1 HTML-->						
+					<ul id="ddsubmenu1" class="ddsubmenustyle">
+						<li><a href="javascript:llamar_codigo(\'logGeneral.php\', \'Contenido\')">General</a></li>
+						<li><a href="javascript:llamar_codigo(\'logUsuario.php\', \'Contenido\')">Por Usuario</a></li>
+						<li><a href="javascript:llamar_codigo(\'logFecha.php\', \'Contenido\')">Por Fecha</a></li>
+						<li><a href="javascript:llamar_codigo(\'logEvento.php\', \'Contenido\')">Por tipo de Evento</a></li>
 					</ul>
-				</div>
-				
-				<script type="text/javascript">
-					../Libs/ddlevelsfiles/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
-				</script>
-				
-				<!--Top Drop Down Menu 1 HTML-->						
-				<ul id="ddsubmenu1" class="ddsubmenustyle">
-					<li><a href="javascript:llamar_codigo(\'logGeneral.php\', \'Contenido\')">General</a></li>
-					<li><a href="javascript:llamar_codigo(\'logUsuario.php\', \'Contenido\')">Por Usuario</a></li>
-					<li><a href="javascript:llamar_codigo(\'logFecha.php\', \'Contenido\')">Por Fecha</a></li>
-					<li><a href="javascript:llamar_codigo(\'logEvento.php\', \'Contenido\')">Por tipo de Evento</a></li>
-				</ul>
-		';
-	}
+			';
+		}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: Menú completo
@@ -86,15 +80,7 @@ function menuCompleto()
 						<li><a href="../Paginas/logout.php" target="contenido">Salir</a></li>
 					</ul>
 				</div>
-	
-				<script type="text/javascript">
-					../Libs/ddlevelsfiles/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
-				</script>
-	
-				<!--HTML for the Drop Down Menus associated with Top Menu Bar-->
-				<!--They should be inserted OUTSIDE any element other than the BODY tag itself-->
-				<!--A good location would be the end of the Paginase (right above "</BODY>")-->
-				
+			
 				<!--Top Drop Down Menu 1 HTML-->						
 				<ul id="ddsubmenu1" class="ddsubmenustyle">
 					
@@ -194,15 +180,7 @@ function menuRecepcionista()
 									<li><a href="../Paginas/logout.php" target="contenido">Salir</a></li>
 								</ul>
 							</div>
-				
-							<script type="text/javascript">
-								../Libs/ddlevelsfiles/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
-							</script>
-				
-							<!--HTML for the Drop Down Menus associated with Top Menu Bar-->
-							<!--They should be inserted OUTSIDE any element other than the BODY tag itself-->
-							<!--A good location would be the end of the Paginase (right above "</BODY>")-->
-							
+						
 							<!--Top Drop Down Menu 1 HTML-->						
 							<ul id="ddsubmenu1" class="ddsubmenustyle">
 								<li><a href="../Paginas/entrantes.php" target="contenido">Entrantes</a></li>
@@ -235,17 +213,6 @@ function menuAsistSecr()
 									<li><a href="../Paginas/logout.php" target="contenido">Salir</a></li>
 								</ul>
 							</div>
-				
-							<script type="text/javascript">
-								../Libs/ddlevelsfiles/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
-							</script>
-				
-							<!--HTML for the Drop Down Menus associated with Top Menu Bar-->
-							<!--They should be inserted OUTSIDE any element other than the BODY tag itself-->
-							<!--A good location would be the end of the Paginase (right above "</BODY>")-->
-							
-							<!--Top Drop Down Menu 1 HTML-->						
-							<ul id="ddsubmenu1" class="ddsubmenustyle">
 								
 								<li><a href="#">Entrantes:</a>
 									<ul>
@@ -320,14 +287,6 @@ function menuEAudiecias()
 									<li><a href="../Paginas/logout.php" target="contenido">Salir</a></li>
 								</ul>
 							</div>
-				
-							<script type="text/javascript">
-								../Libs/ddlevelsfiles/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
-							</script>
-				
-							<!--HTML for the Drop Down Menus associated with Top Menu Bar-->
-							<!--They should be inserted OUTSIDE any element other than the BODY tag itself-->
-							<!--A good location would be the end of the Paginase (right above "</BODY>")-->
 							
 							<!--Top Drop Down Menu 1 HTML-->						
 							<ul id="ddsubmenu1" class="ddsubmenustyle">
@@ -412,14 +371,6 @@ function menuEGacetas()
 									<li><a href="../Paginas/logout.php" target="contenido">Salir</a></li>
 								</ul>
 							</div>
-				
-							<script type="text/javascript">
-								../Libs/ddlevelsfiles/ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
-							</script>
-				
-							<!--HTML for the Drop Down Menus associated with Top Menu Bar-->
-							<!--They should be inserted OUTSIDE any element other than the BODY tag itself-->
-							<!--A good location would be the end of the Paginase (right above "</BODY>")-->
 							
 							<!--Top Drop Down Menu 1 HTML-->						
 							<ul id="ddsubmenu1" class="ddsubmenustyle">
