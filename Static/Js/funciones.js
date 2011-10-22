@@ -24,3 +24,7 @@ function logOut()
 {
 	xajax_logOut();
 }
+function incluir(opcion,pagina)
+{
+	xajax_Incluir(opcion,pagina);
+}

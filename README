@@ -16,6 +16,16 @@ A continuación se describirán los aspectos mas importantes del sistema Sisco, 
 por favor, lea con mucha atención los apartados siguientes pues constituyen la base de este sistema:
 
 ==================================================================================================================================
+Usando Sisco por primera vez:
+
+Una vez tenga la fuente del sistema es necesario montar la BD del sistema, para ello se debe realizar el siguiente procedimiento:
+
+	1.- Cree la Bd del sistema, apartir del archivo sisco.sql localizado en el subdirectorio DB
+	2.- Ajuste los parametros de la conexión Mysql en el archivo xajaxFunciones.php localizado en el subdirectorio Templates
+	3.- Acceda al sistema como administrador (Usuario: admin; Contraseña: 4dm1n).
+	4.- Cree los usuarios del sistema.
+
+==================================================================================================================================
 Estructura de los Directorios del Proyecto:
 
 * Libs: Librerias y otro contenido importado usado para el funcionamiento de la App;
@@ -59,4 +69,5 @@ tablas:
 	- 6 = Intento de acceso con credenciales no validas;
 	- 7 = Llamada a una URL Restringida (intento de escalar privilegios);
 	- 8 = Cierre de sesion de usuario;
+	- 9 = Llamada a URL (Acceso a una de las opciones del sistema.);
 

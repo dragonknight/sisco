@@ -46,10 +46,10 @@
 					* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
 					***********************************************/
 				</script>
+				<script type="text/javascript" src="../Static/Js/funciones.js"></script> <! -- Funciones js del sistema -- >
 				<script type="text/javascript">
 					ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
 				</script>
-				<script type="text/javascript" src="../Static/Js/funciones.js"></script> <! -- Funciones js del sistema -- >
 			</head>
 			<div id="Contenedor">
 				<div id="variables">

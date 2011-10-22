@@ -26,7 +26,7 @@
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: Menú administrador
-	Descripción: Función que muestra el menú del usuario Administrador (previa autentificación en el sistema).
+	Descripción: Función que muestra el menú del usuario Administrador (previa autenticación en el sistema).
 	Desarrollador: Carlos Castillo, menu extraido de http://www.dynamicdrive.com 
 	Modificado: 
 	
@@ -47,8 +47,8 @@
 					</div>
 					<!--Top Drop Down Menu 1 HTML-->						
 					<ul id="ddsubmenu1" class="ddsubmenustyle">
-						<li><a href="javascript:llamar_codigo(\'logGeneral.php\', \'Contenido\')">General</a></li>
-						<li><a href="javascript:llamar_codigo(\'logUsuario.php\', \'Contenido\')">Por Usuario</a></li>
+						<li><a href="javascript:incluir(\'Log General\', \'logGeneral.php\')">General</a></li>
+						<li><a href="javascript:llamar_codigo(\'logGeneral.php\', \'Contenido\')">Por Usuario</a></li>
 						<li><a href="javascript:llamar_codigo(\'logFecha.php\', \'Contenido\')">Por Fecha</a></li>
 						<li><a href="javascript:llamar_codigo(\'logEvento.php\', \'Contenido\')">Por tipo de Evento</a></li>
 					</ul>
