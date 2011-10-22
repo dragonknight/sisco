@@ -1,0 +1,35 @@
+<?php 
+
+	if($_SESSION['idCargo']==0) 
+	{							
+		include ("escAdmin.php");
+	}
+	if($_SESSION['idCargo']==1) 
+	{							
+		
+	}
+	if($_SESSION['idCargo']==2) 
+	{							
+		
+	}
+	if($_SESSION['idCargo']==3) 
+	{
+								
+	}	
+	if($_SESSION['idCargo']==4) 
+	{							
+		
+	}
+	if($_SESSION['idCargo']==5) 
+	{							
+		
+	}
+	if($_SESSION['idCargo']==6) 
+	{							
+		
+	}
+	if($_SESSION['idCargo']==7) 
+	{							
+
+	}
+?>
