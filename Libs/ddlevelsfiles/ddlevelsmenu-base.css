@@ -4,26 +4,36 @@
 .ddsubmenustyle, .ddsubmenustyle ul{ /*topmost and sub ULs, respectively*/
 font: normal 13px Verdana;
 margin: 0;
-padding: 0;
+padding: .5em;
 position: absolute;
 left: 0;
 top: 0;
 list-style-type: none;
-background: white;
-border: 1px solid black;
-border-bottom-width: 0;
+/*background: white;*/
+/*border: 1px solid black;*/
+/*border-bottom-width: 0;*/
 visibility: hidden;
 z-index: 100;
+border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
 }
 
 .ddsubmenustyle li a{
 display: block;
 width: 160px; /*width of menu (not including side paddings)*/
-color: black;
-background-color: lightyellow;
+color: white;
+background-color: #555;
 text-decoration: none;
 padding: 4px 5px;
 border-bottom: 1px solid black;
+border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
 }
 
 * html .ddsubmenustyle li{ /*IE6 CSS hack*/
