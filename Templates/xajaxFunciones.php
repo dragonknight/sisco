@@ -1,13 +1,15 @@
+<!-- â€œThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.â€œ. -->
+
 <?php
 	session_start();
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: CambiaPagina
-	Descripción:Función usada para navegar en el site, permite llamar a los templates y mostrarlos
+	funciÃ³n: CambiaPagina
+	DescripciÃ³n:FunciÃ³n usada para navegar en el site, permite llamar a los templates y mostrarlos
 	Desarrollador: fernand... (http://www.desarrolloweb.com/articulos/incluir-archivo-html-xajax.html)
 	Modificado: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
-	Parámetros entrada: $archivo, $id
+	ParÃ¡metros entrada: $archivo, $id
 	Salida: $res
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
@@ -29,12 +31,12 @@
 	}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Conectar
-	Descripción:Función usada para establecer la conexión con bases de datos
+	funciÃ³n: Conectar
+	DescripciÃ³n:FunciÃ³n usada para establecer la conexiÃ³n con bases de datos
 	Desarrollador: amperis.blogspot.com
 	Modificado: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
-	Parámetros entrada: ---
+	ParÃ¡metros entrada: ---
 	Salida: $con
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
@@ -42,18 +44,18 @@
 	{
 	   $con = mysql_connect("localhost","root","dr31c0");
 	   if (!$con) {
-	      die('Error de conexión: ' . mysql_error());
+	      die('Error de conexiÃ³n: ' . mysql_error());
 	   }
 	   return $con;
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Login
-	Descripción:Función usada para establecer la sesion
+	funciÃ³n: Login
+	DescripciÃ³n:FunciÃ³n usada para establecer la sesion
 	Desarrollador: amperis.blogspot.com
 	Modificado: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
-	Parámetros entrada: ---
+	ParÃ¡metros entrada: ---
 	Salida: $con
 --------------------------------------------------------------------------------------------------------------------------------*/
 	function Login($autentificacion) 
@@ -72,7 +74,7 @@
 	   
 	   	return $objResponse;
 		}	
-		// si los campos están llenos, entonces hay que validar que contengan los datos correctos:
+		// si los campos estÃ¡n llenos, entonces hay que validar que contengan los datos correctos:
 		else 
 		{  
 		   $con = conectar();
@@ -82,22 +84,22 @@
 		      
 		   $row = mysql_fetch_array($result);
 		   
-		   //ya ejecutada la consulta, revisamos si se encontró un usuario con esas credenciales:
+		   //ya ejecutada la consulta, revisamos si se encontrÃ³ un usuario con esas credenciales:
 		   //si existe entonces:
 		   if (($row["idPersona"]!= "") && ($row["login"]!= "") && ($row["password"]!= ""))
 		   {
 				
 		     	$objResponse = new xajaxResponse();
 		     	
-				//cargo los parámetros de la sesión:
+				//cargo los parÃ¡metros de la sesiÃ³n:
 				$_SESSION['usuario']=$row['login'];
 				$_SESSION['idCargo']=$row['idCargo'];
 				$_SESSION['idUsuario']=$row['idPersona'];
-	   		$_SESSION["Acceso"]= date("Y-n-j H:i:s"); //defino la fecha y hora de inicio de sesión en formato aaaa-mm-dd hh:mm:ss
-	   		$_SESSION["maxTemp"]="180"; //Defino el tiempo para la caducidad de la sesión por inactividad
+	   		$_SESSION["Acceso"]= date("Y-n-j H:i:s"); //defino la fecha y hora de inicio de sesiÃ³n en formato aaaa-mm-dd hh:mm:ss
+	   		$_SESSION["maxTemp"]="180"; //Defino el tiempo para la caducidad de la sesiÃ³n por inactividad
 	   		global $_SESSION;
     
-				//Almaceno en bitácora el acceso correcto al sistema:
+				//Almaceno en bitÃ¡cora el acceso correcto al sistema:
 				$idTrans ="5";
 		   	$bitacora= Bitacora("El usuario: ".$row['login']." accedio al Sisco",$idTrans);
 
@@ -127,19 +129,19 @@
 	}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: LogOut
-	Descripción:Función usada para cerrar la sesión
+	funciÃ³n: LogOut
+	DescripciÃ³n:FunciÃ³n usada para cerrar la sesiÃ³n
 	Desarrollador: amperis.blogspot.com
 	Modificado: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
-	Parámetros entrada: ---
+	ParÃ¡metros entrada: ---
 	Salida: $con
 --------------------------------------------------------------------------------------------------------------------------------*/
 	function LogOut() 
 	{
-		//Almaceno en bitácora la salida del sistema:
+		//Almaceno en bitÃ¡cora la salida del sistema:
 		$idTrans ="8";
-   	$bitacora= Bitacora("El usuario: ".$_SESSION['usuario']." cerro sesión en Sisco",$idTrans);
+   	$bitacora= Bitacora("El usuario: ".$_SESSION['usuario']." cerro sesiÃ³n en Sisco",$idTrans);
    	
 		unset($_SESSION['usuario']);
 		unset($_SESSION['idCargo']);
@@ -155,11 +157,11 @@
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: ip
-	Descripción: Función usada para obtener la ip del cliente (usada en la Bitacora)
+	funciÃ³n: ip
+	DescripciÃ³n: FunciÃ³n usada para obtener la ip del cliente (usada en la Bitacora)
 	Desarrollador: http://blog.unijimpe.net/obtener-direccion-ip-con-php/
 	
-	Parámetros entrada: $mensaje
+	ParÃ¡metros entrada: $mensaje
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/	
 	function ip() 
@@ -174,11 +176,11 @@
 	 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Bitacora
-	Descripción:Función usada para agregar eventos al log del sistema (Bitacora)
+	funciÃ³n: Bitacora
+	DescripciÃ³n:FunciÃ³n usada para agregar eventos al log del sistema (Bitacora)
 	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
-	Parámetros entrada: $mensaje
+	ParÃ¡metros entrada: $mensaje
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
@@ -195,12 +197,12 @@
 	}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: ConsultaBit
-	Descripción:Función usada para consultar al log del sistema (Bitacora)
+	funciÃ³n: ConsultaBit
+	DescripciÃ³n:FunciÃ³n usada para consultar al log del sistema (Bitacora)
 	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
-	Parámetros entrada: 
-				$condicion = Valor de la Condición SQL
+	ParÃ¡metros entrada: 
+				$condicion = Valor de la CondiciÃ³n SQL
 				$divResp = id del div donde se enviara la respuesta
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
@@ -220,22 +222,22 @@
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Incluir
-	Descripción:Función usada para actualizar el contenido mostrado incluyendo nuevos php's
+	funciÃ³n: Incluir
+	DescripciÃ³n:FunciÃ³n usada para actualizar el contenido mostrado incluyendo nuevos php's
 	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
-	Parámetros entrada: 
+	ParÃ¡metros entrada: 
 				$pagina
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
 	function Incluir($opcion,$pagina)
 	{
-		//Almaceno en bitácora la llamada a la opción: 
+		//Almaceno en bitÃ¡cora la llamada a la opciÃ³n: 
 		$idTrans ="9";
-   	$bitacora= Bitacora("El usuario: ".$_SESSION['usuario']." accedió a ".$opcion,$idTrans);
+   	$bitacora= Bitacora("El usuario: ".$_SESSION['usuario']." accediÃ³ a ".$opcion,$idTrans);
 
-		//Bloqueamos la pantalla y mostramos la URL solicitada para la operación:
+		//Bloqueamos la pantalla y mostramos la URL solicitada para la operaciÃ³n:
 		$prueba=include("./logGeneral.php");
 		$objResponse = new xajaxResponse();
 		$objResponse->script("llamar_codigo('./logGeneral.php', 'light');");
@@ -247,3 +249,4 @@
 	require("xajaxDeclaraciones.php");
 	$xajax->processRequest();
 ?>
+

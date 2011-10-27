@@ -1,8 +1,10 @@
 <div id="SiscoImagen">
 	<img src="../Static/Images/escudo.gif" alt="Sisco" >
 </div>
+<div id="Texto">
 Sisco es un Proyecto Socio-Tecnológico 100% libre licenciado GPL, cuyas fuentes están disponibles en (); <br />
 El proyecto ha sido llevado a Cabo por: <br />
+</div>
 <ul>
 	<li>Mora Fabiola</li>
 	<li>Peña Leonardo</li>
