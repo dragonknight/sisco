@@ -196,6 +196,13 @@
 	padding-top: .8em;
 	padding-bottom: .4em;
 }
+/* -------------------------------------------------------- Estilo Desarrolladore ---------------------------------------------- */
+#SiscoImagen img
+{
+	width: 1em;
+	height: 2em;
+	padding-top: .5em;
+}
 /* -------------------------------------------------------- Estilos Autenticados ----------------------------------------------- */
 
 #CasillaId
