@@ -16,17 +16,15 @@
 		</div>
 		<div id="resumenCont">
 			<p id="subTitulo">Log del sistema:</p> 
-			<script type="text/javascript" src="../Static/Js/funciones.js"> 
-				bitacora('Intento de escalar privilegios','7');
-			</script>
-			<script type="text/javascript" src="../Static/Js/funciones.js"> 
-				bitacora('*','','bitCont');
+			<script language="javascript" type="text/JavaScript">
+				bitacora(Intento de escalar privilegios, 7);
+				alert('No esta pasando por el sistema');
 			</script>
 			<div id="bitCont">
 			</div>
 		</div>
 <?php
-	} 
+	}
 	else 
 	{
 		// si no posee los privilegios necesarios, alertamos un intento de escalada de privilegios de un usuario debidamente logeado:

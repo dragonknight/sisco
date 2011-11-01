@@ -167,7 +167,8 @@
 				<div id="Pie">
 					Secretaria General de Gobierno <br />
 					Entre Av. 3 y 4, Edificio del Palacio de Gobierno, Piso 1 <br />
-					Teléfonos:			
+					Teléfonos:<br />
+					Copyright 2011 Carlos J. Castillo N. ©			
 				</div>
 			</div>
 		</html>
@@ -241,7 +242,8 @@
 				<div id="Pie">
 					Secretaria General de Gobierno <br />
 					Entre Av. 3 y 4, Edificio del Palacio de Gobierno, Piso 1 <br />
-					Teléfonos:			
+					Teléfonos:<br />
+					Copyright 2011 Carlos J. Castillo N. ©			
 				</div>
 			</div>
 		</html>

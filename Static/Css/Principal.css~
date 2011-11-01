@@ -115,8 +115,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+
 	background: #000;
 	z-index:1001;
 		opacity:.75;
@@ -199,11 +198,9 @@
 /* -------------------------------------------------------- Estilo Desarrolladore ---------------------------------------------- */
 #SiscoImagen img
 {
-	float: right;
 	width: 1em;
 	height: 2em;
 	padding-top: .5em;
-	padding-right: 1em;
 }
 /* -------------------------------------------------------- Estilos Autenticados ----------------------------------------------- */
 

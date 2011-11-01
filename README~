@@ -3,17 +3,33 @@
 #        Sistema de Correspondencia Secretaria General del Estado Mérida
 #############################################################################
 
+    Copyright (C)  2007  Carlos J. Castillo N.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
+
 Desarrollado por:
 
 Carlos J. Castillo N.
 castilloc185@hotmail.com
 @Dr4g0nKn1ght
 
-Sisco es Software Libre licenciado bajo la GPL v.2 y posteriores...
-
-
 A continuación se describirán los aspectos mas importantes del sistema Sisco, si ud es administrador de esta plataforma, o desarrollador que aplica cambios o ejecuta mantenimiento 
 por favor, lea con mucha atención los apartados siguientes pues constituyen la base de este sistema:
+
+==================================================================================================================================
+Usando Sisco por primera vez:
+
+Una vez tenga la fuente del sistema es necesario montar la BD del sistema, para ello se debe realizar el siguiente procedimiento:
+
+	1.- Cree la Bd del sistema, apartir del archivo sisco.sql localizado en el subdirectorio DB
+	2.- Ajuste los parametros de la conexión Mysql en el archivo xajaxFunciones.php localizado en el subdirectorio Templates
+	3.- Ajuste la variable patch de la funcion CambiaPagina de acuerdo a sus directorios (xajaxFunciones.php en el subdirectorio Templates)
+	4.- Acceda al sistema como administrador (Usuario: admin; Contraseña: 4dm1n).
+	5.- Cree los usuarios del sistema.
 
 ==================================================================================================================================
 Estructura de los Directorios del Proyecto:
@@ -58,4 +74,6 @@ tablas:
 	- 5 = Acceso de un usuario;
 	- 6 = Intento de acceso con credenciales no validas;
 	- 7 = Llamada a una URL Restringida (intento de escalar privilegios);
+	- 8 = Cierre de sesion de usuario;
+	- 9 = Llamada a URL (Acceso a una de las opciones del sistema.);
 
