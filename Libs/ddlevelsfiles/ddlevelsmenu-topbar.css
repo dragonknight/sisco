@@ -19,6 +19,11 @@ border-radius: 10px;
 .mattblackmenu li{
 display: inline;
 margin: 0;
+border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
 }
 
 .mattblackmenu li a{

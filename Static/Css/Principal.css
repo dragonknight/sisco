@@ -148,6 +148,7 @@
    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
+/* -------------------------------------------------------- Estilo Login ------------------------------------------------------ */
 #formLogin
 {
 	margin:0px auto; /*Centro el bloque*/
@@ -196,15 +197,14 @@
 	padding-top: .8em;
 	padding-bottom: .4em;
 }
-/* -------------------------------------------------------- Estilo Desarrolladore ---------------------------------------------- */
+/* -------------------------------------------------------- Estilo Desarrolladores --------------------------------------------- */
 #SiscoImagen img
 {
-	width: 1em;
-	height: 2em;
+	width: 5em;
+	height: 7em;
 	padding-top: .5em;
 }
 /* -------------------------------------------------------- Estilos Autenticados ----------------------------------------------- */
-
 #CasillaId
 {
 	float: right;
@@ -250,8 +250,23 @@
    margin: 1em;
 	padding: .5em;
 }
+/* -------------------------------------------------------- Estilo Form Usuarios ------------------------------------------------- */
+#formUser
+{
+	margin:0px auto; /*Centro el bloque*/
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	background-color: #e2e2e2;
+	border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
 /* -------------------------------------------------------- Estilo Powered ------------------------------------------------------ */
-
 #Powered
 {
 	margin-top: .9em;

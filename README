@@ -30,6 +30,10 @@ Una vez tenga la fuente del sistema es necesario montar la BD del sistema, para 
 	3.- Ajuste la variable patch de la funcion CambiaPagina de acuerdo a sus directorios (xajaxFunciones.php en el subdirectorio Templates)
 	4.- Acceda al sistema como administrador (Usuario: admin; Contraseña: 4dm1n).
 	5.- Cree los usuarios del sistema.
+==================================================================================================================================
+Notas:
+ 
+	* Para la correcta visualización del sistema, es necesario que ajuste la configuración del Navegador de sus clientes a Español
 
 ==================================================================================================================================
 Estructura de los Directorios del Proyecto:

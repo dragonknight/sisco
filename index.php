@@ -6,11 +6,10 @@
 		<link rel="shortcut icon" href="./Static/Images/mensajero.gif" type="image/x-gif" />
 		<title>Sistema de Correspondencia -- SISCO -- </title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
-		<meta http-equiv="Cache-Control" content="max-age=86400" />
+		<!-- <meta http-equiv="Cache-Control" content="max-age=86400" />  -->
 	</head>
-
-	<!-- Defino los sectores de los que se compondrán la plataforma -->
-
+	<!-- 	Defino los sectores de los que se compondrán la plataforma, en este caso uno solo
+		 	los frames se estan aplicando para ocultar el URL en la Barra de Direcciones -->
 	<frameset rows="100%" frameborder="0" framespacing="0" border="0">
 		<frame name="contenido" src="./Templates/noAutentif.php" scrolling="auto" >
 	</frameset> 

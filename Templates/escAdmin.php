@@ -15,13 +15,10 @@
 			<h2>Resumen de Operaciones:</h2>
 		</div>
 		<div id="resumenCont">
-			<p id="subTitulo">Log del sistema:</p> 
-			<script language="javascript" type="text/JavaScript">
-				bitacora(Intento de escalar privilegios, 7);
-				alert('No esta pasando por el sistema');
-			</script>
-			<div id="bitCont">
-			</div>
+			<?php
+				include ("./logBitacora.php");
+				bitTacoraCompleta();
+			?>
 		</div>
 <?php
 	}
@@ -29,10 +26,9 @@
 	{
 		// si no posee los privilegios necesarios, alertamos un intento de escalada de privilegios de un usuario debidamente logeado:
 ?>
-		<script type="text/javascript" src="../Static/Js/funciones.js"> 
-			bitacora('Intento de escalar privilegios','7');
+		<script type="text/javascript"> 
+			xajax_Bitacora('Intento de escalar privilegios','7'); //alternativamente podemos colocar language="JavaScript"
 		</script> 
-		
 		<p>
 			Error, la pagina que ha solicitado no esta disponible para su nivel de acceso, <br />
 			Este incidente ha sido reportado al administrador del sistema...

@@ -1,0 +1,27 @@
+<?php
+
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: creaUsuario
+	Descripción: Función que ensambla el formulario para la creación de usuario.
+	Desarrollador: Carlos Castillo
+	Modificado: 
+	
+	Parámetros entrada: ---
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function creaUsuario()
+		{
+	
+?>
+					<p id="subTitulo">Agregar Nuevo Usuario al Sistema:</p> 			
+					<div id="Cont">
+							<?php 
+								include ("./entidades.php");
+								persona();
+								direccion();
+							?>
+					</div>
+<?php
+		}
+?>

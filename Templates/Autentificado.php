@@ -224,9 +224,13 @@
 					<div id="errorLogin">
 						<p>
 							Error, no ha iniciado Sesión, o su Sesión en el sistema de Correspondencia Sisco a caducado;
+							Este incidente sera notificado al administrador del sistema...
 						</p>
 					</div>
 				</div>
+				<script type="text/javascript"> 
+					xajax_Bitacora('Intento de escalar privilegios','7'); //alternativamente podemos colocar language="JavaScript"
+				</script> 
 				<div id="Powered">
 					<hr>
 					<div id="Pcolumna1">

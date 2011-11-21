@@ -41,16 +41,23 @@
 					<div id="ddtopmenubar" class="mattblackmenu">
 						<ul>
 							<li><a href="#" rel="ddsubmenu1">Logs</a></li>
-							<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Usuarios</a></li>
+							<li><a href="#" rel="ddsubmenu2">Usuarios</a></li>
 							<li><a href="javascript:logOut()">Salir</a></li>
 						</ul>
 					</div>
 					<!--Top Drop Down Menu 1 HTML-->						
 					<ul id="ddsubmenu1" class="ddsubmenustyle">
-						<li><a href="javascript:incluir(\'Log General\', \'logGeneral.php\')">General</a></li>
+						<li><a href="javascript:llamar_codigo(\'logGeneral.php\', \'logGeneral.php\')">General</a></li>
 						<li><a href="javascript:llamar_codigo(\'logGeneral.php\', \'Contenido\')">Por Usuario</a></li>
 						<li><a href="javascript:llamar_codigo(\'logFecha.php\', \'Contenido\')">Por Fecha</a></li>
 						<li><a href="javascript:llamar_codigo(\'logEvento.php\', \'Contenido\')">Por tipo de Evento</a></li>
+					</ul>
+					<!--Top Drop Down Menu 2 HTML-->						
+					<ul id="ddsubmenu2" class="ddsubmenustyle">
+						<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Crear Nuevo</a></li>
+						<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Editar Existente</a></li>
+						<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Desactivar Usuario</a></li>
+						<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Buscar</a></li>
 					</ul>
 			';
 		}

@@ -17,12 +17,12 @@ function actuaLogin()
 	document.getElementById('light').style.display='none';
 }
 
-function bitacora(mensaje,idtrans)
+function ingresa_bitacora(mensaje,idtrans)
 {
 	xajax_Bitacora(mensaje,idTrans);
 }
 
-function consultaBit(campos,condicion,divResp)
+function consulta_bitacora(campos,condicion,divResp)
 {
 	xajax_ConsultaBit(campos,condicion,divResp);
 }

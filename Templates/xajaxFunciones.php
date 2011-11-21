@@ -14,7 +14,7 @@
 	function CambiaPagina($archivo, $id)
 	{
 		$path = "http://localhost/Sisco/Templates/".$archivo;
-		$fp = fopen ($path,'r');
+		$fp = fopen ($path,'rb');
 		$codigo="";
 		while ($linea = fgets($fp,1024))
 		{
@@ -216,16 +216,17 @@
 		$row = mysql_fetch_array($result);
 
 		$objResponse = new xajaxResponse();
-	   	$objResponse->Assign($divResp,"innerHTML",$row);
+	   $objResponse->Assign($divResp,"innerHTML",$row);
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: Incluir
-	Descripción:Función usada para actualizar el contenido mostrado incluyendo nuevos php's
+	Descripción:Función usada para mostrar formularios en forma modal
 	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
 	Parámetros entrada: 
-				$pagina
+								$opcion = Opción del menu a la que ingreso el usuario
+								$pagina = pagina que será mostrada en el modal
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
@@ -236,13 +237,46 @@
    	$bitacora= Bitacora("El usuario: ".$_SESSION['usuario']." accedió a ".$opcion,$idTrans);
 
 		//Bloqueamos la pantalla y mostramos la URL solicitada para la operación:
-		$prueba=include("./logGeneral.php");
+		$includ=include($pagina);
 		$objResponse = new xajaxResponse();
-		$objResponse->script("llamar_codigo('./logGeneral.php', 'light');");
-		//$objResponse->Assign("light","innerHTML",$prueba);
-		$objResponse->script("modal();");
+		$objResponse->Assign("light","innerHTML",$prueba);
 		return $objResponse;
 	}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: comboPrincipal
+	Descripción: Función llenar y mostrar los combos que inician el efecto ajedrez en las direcciones
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada: 
+								$
+								$
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function comboPrincipal($campos, $tabla, $nombreSelect, $div)
+	{
+		//conectamos a la Bd, ejecutamos la consulta y armamos un arreglo con los valores obtenidos
+		$con = conectar();
+		mysql_select_db("sisco", $con);
+		$sql = "select ".$campos." from " .$tabla;
+		$result = mysql_query($sql);
+		$row = mysql_fetch_array($result);
+		
+		$combo="<select name='".$nobreSelect."'>";
+		
+		foreach($row[0] as $opc)
+		{
+   	 	$combo= $combo. "<option value=".$opc[0].">".$opc[0]."</option>";
+	   }
+		
+		$combo = "</select>";		
+		
+		$objResponse = new xajaxResponse();
+		$objResponse->Assign($div,"innerHTML",$combo);
+		return $objResponse;
+	}	
+	
 	
 	require("xajaxDeclaraciones.php");
 	$xajax->processRequest();

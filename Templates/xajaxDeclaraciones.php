@@ -6,5 +6,5 @@
 	$xajax->registerFunction("logOut");
 	$xajax->registerFunction("Bitacora");
 	$xajax->registerFunction("ConsultaBit");
-	$xajax->registerFunction("Incluir");
+	$xajax->registerFunction("comboPrincipal");
 ?>
