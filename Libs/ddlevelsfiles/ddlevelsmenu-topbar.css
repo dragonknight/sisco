@@ -35,16 +35,36 @@ padding: 6px 8px; /*padding inside each tab*/
 border-right: 1px solid white; /*right divider between tabs*/
 color: white;
 background: #414141;
+border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
 }
 
 .mattblackmenu li a:visited{
 color: white;
+border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
 }
 
 .mattblackmenu li a:hover{
 background: black; /*background of tabs for hover state */
+border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
 }
 
 .mattblackmenu a.selected{
 background: black; /*background of tab with "selected" class assigned to its LI */
+border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
 }
