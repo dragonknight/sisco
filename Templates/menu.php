@@ -40,7 +40,7 @@
 			echo '
 					<div id="ddtopmenubar" class="mattblackmenu">
 						<ul>
-							<li><a href="javascript:llamar_codigo(\'escAdmin.php\', \'Contenido\')">Principal</a></li>	
+							<li><a href="Autentificado.php" target="contenido">Principal</a></li>	
 							<li><a href="#" rel="ddsubmenu1">Logs</a></li>
 							<li><a href="#" rel="ddsubmenu2">Usuarios</a></li>
 							<li><a href="javascript:logOut()">Salir</a></li>

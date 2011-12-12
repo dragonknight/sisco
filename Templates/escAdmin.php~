@@ -1,8 +1,5 @@
 <?php
 	session_start();
-	//verificamos que el usuario que llama tenga los privilegios necesarios:
-	if($_SESSION['idCargo']=='0')
-	{
 ?>
 
 		<div id="CasillaId">
@@ -45,19 +42,3 @@
 				<?php echo $resumen[0][$i][4]; ?> <br />
 			</div>		
 		</div>
-<?php
-	}
-	else 
-	{
-		// si no posee los privilegios necesarios, alertamos un intento de escalada de privilegios de un usuario debidamente logeado:
-?>
-		<script type="text/javascript"> 
-			xajax_Bitacora('Intento de escalar privilegios','7'); //alternativamente podemos colocar language="JavaScript"
-		</script> 
-		<p>
-			Error, la pagina que ha solicitado no esta disponible para su nivel de acceso, <br />
-			Este incidente ha sido reportado al administrador del sistema...
-		</p>
-<?php
-	}
-?>
