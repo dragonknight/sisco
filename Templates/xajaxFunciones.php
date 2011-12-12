@@ -64,7 +64,7 @@
 		if(empty($autentificacion["login"]) || empty($autentificacion["password"]))
 		{
 			$idTrans ="6";
-		   	$bitacora= Bitacora("Intento de Login sin Credenciales",$idTrans);
+		   $bitacora= Bitacora("Intento de Login sin Credenciales",$idTrans);
 			$txt = "<div id=\"ErrorLogin\"> <h2> Error: Debes ingresar todos los Datos solicitados para acceder </h2></div>";
 			
 			$objResponse = new xajaxResponse();
@@ -205,18 +205,27 @@
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ConsultaBit($campos,$condicion,$divResp)
+	function ConsultaBit()
 	{
 		$con = conectar();
-		mysql_select_db("sisco", $con);
-		$txt = "";		
-		//Consultamos la BD:
-		$sql = "select ".$campos." from bitacora ".$condicion;
-		$result = mysql_query($sql);
-		$row = mysql_fetch_array($result);
-
+   	mysql_select_db("sisco", $con);
+   	$sql = "select * from bitacora ";
+   	$result = mysql_query($sql,$con);
+   
+	   $i=0;
+   	$txt = "Esto es una prueba";
+   	
+   	while($row = mysql_fetch_array($result))
+  		{
+  			$i=$i+1;
+   		$txt = $txt .	'Transacción '.$row["idTransaccion"].'</ br>';
+      	$txt = $txt .  'Tipo: "'.$row["tipoTransaccion"].'"</ br>';
+      	$txt = $txt .  'Detalles: "'.$row["detalle"].'"</ br>';
+      	$txt = $txt .  'Ip: "'.$row["ip"].'"</ br> ';
+      	$txt = $txt .  'Fecha: "'.$row["fecha"].'"</ br></ br>';
+		}
 		$objResponse = new xajaxResponse();
-	   $objResponse->Assign($divResp,"innerHTML",$row);
+	   $objResponse->Assign("bitCont","innerHTML",$txt);
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 

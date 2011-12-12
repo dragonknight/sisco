@@ -17,14 +17,19 @@ function actuaLogin()
 	document.getElementById('light').style.display='none';
 }
 
+function limpiaError()
+{
+	document.getElementById('Error').style.display='none';
+}
+
 function ingresa_bitacora(mensaje,idtrans)
 {
 	xajax_Bitacora(mensaje,idTrans);
 }
 
-function consulta_bitacora(campos,condicion,divResp)
+function consulta_bitacora()
 {
-	xajax_ConsultaBit(campos,condicion,divResp);
+	xajax_ConsultaBit();
 }
 
 function logOut()

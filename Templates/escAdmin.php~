@@ -28,10 +28,7 @@
 ?>
 		<script type="text/javascript"> 
 			xajax_Bitacora('Intento de escalar privilegios','7'); //alternativamente podemos colocar language="JavaScript"
-		</script> <script type="text/javascript"> 
-			xajax_Bitacora('Intento de escalar privilegios','7'); //alternativamente podemos colocar language="JavaScript"
 		</script> 
-		
 		<p>
 			Error, la pagina que ha solicitado no esta disponible para su nivel de acceso, <br />
 			Este incidente ha sido reportado al administrador del sistema...

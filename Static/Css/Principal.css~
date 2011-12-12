@@ -249,6 +249,39 @@
    		-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
    margin: 1em;
 	padding: .5em;
+	height: 10em;
+}
+/* -------------------------------------------------------- Estilo presentación Bitacora ----------------------------------------- */
+#izq
+{
+   float: right;
+   text-align: right;
+}
+#bitCol1
+{
+	clear: both;
+   width:10%;
+   float: left;
+}
+#bitCol2
+{
+   width:5%;
+   float: left;
+}
+#bitCol3
+{
+   width:55%;
+   float: left;
+}
+#bitCol4
+{
+   width:5%;
+   float: left;
+}
+#bitCol5
+{
+   width:25%;
+   float: left;
 }
 /* -------------------------------------------------------- Estilo Form Usuarios ------------------------------------------------- */
 #formUser
@@ -258,8 +291,6 @@
 	margin-top: 2em;
 	margin-bottom: 2em;
 	background-color: #e2e2e2;
-	width: 20em;
-	height: 6em;
 	border-radius: 10px;
     -ms-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -268,7 +299,7 @@
    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
-/* -------------------------------------------------------- Estilo Powered ------------------------------------------------------ */
+/* -------------------------------------------------------- Estilo Powered ------------------------------------------------------- */
 #Powered
 {
 	margin-top: .9em;

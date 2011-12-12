@@ -1,18 +1,17 @@
-#############################################################################
-#                                     SISCO
-#        Sistema de Correspondencia Secretaria General del Estado Mérida
-#############################################################################
+	#############################################################################
+	#                                     SISCO                                 #
+	#        Sistema de Correspondencia Secretaria General del Estado Mérida    #
+	#############################################################################
 
-    Copyright (C)  2007  Carlos J. Castillo N.
-    Permission is granted to copy, distribute and/or modify this document
-    under the terms of the GNU Free Documentation License, Version 1.3
-    or any later version published by the Free Software Foundation;
-    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
-    A copy of the license is included in the section entitled "GNU
-    Free Documentation License".
+	Copyright (C)  2007  Carlos J. Castillo N.
+	Permission is granted to copy, distribute and/or modify this document
+	under the terms of the GNU Free Documentation License, Version 1.3
+	or any later version published by the Free Software Foundation;
+	with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+	A copy of the license is included in the section entitled "GNU
+	Free Documentation License".
 
 Desarrollado por:
-
 Carlos J. Castillo N.
 castilloc185@hotmail.com
 @Dr4g0nKn1ght
@@ -20,22 +19,27 @@ castilloc185@hotmail.com
 A continuación se describirán los aspectos mas importantes del sistema Sisco, si ud es administrador de esta plataforma, o desarrollador que aplica cambios o ejecuta mantenimiento 
 por favor, lea con mucha atención los apartados siguientes pues constituyen la base de este sistema:
 
-==================================================================================================================================
+====================================================================================================================================================================================
+
 Usando Sisco por primera vez:
 
 Una vez tenga la fuente del sistema es necesario montar la BD del sistema, para ello se debe realizar el siguiente procedimiento:
 
 	1.- Cree la Bd del sistema, apartir del archivo sisco.sql localizado en el subdirectorio DB
-	2.- Ajuste los parametros de la conexión Mysql en el archivo xajaxFunciones.php localizado en el subdirectorio Templates
-	3.- Ajuste la variable patch de la funcion CambiaPagina de acuerdo a sus directorios (xajaxFunciones.php en el subdirectorio Templates)
-	4.- Acceda al sistema como administrador (Usuario: admin; Contraseña: 4dm1n).
-	5.- Cree los usuarios del sistema.
-==================================================================================================================================
+	2.- Ajuste los parametros de la conexión Mysql en los archivos xajaxFunciones.php y funciones.php localizados en el subdirectorio Templates
+	3.- Primeramente, ajuste la variable patch de la funcion CambiaPagina de acuerdo a sus directorios (xajaxFunciones.php en el subdirectorio Templates)
+	4.- Seguidamente, ajuste las variables de conexión de acuerdo a su instalación de Mysql en ambos archivos (xajaxFunciones.php y funciones.php)
+	5.- Acceda al sistema como administrador (Usuario: admin; Contraseña: 4dm1n).
+	6.- Cambie la contraseña de administrador de su sistema
+	7.- Cree los usuarios del sistema.
+======================================================================================================================================================================================
+
 Notas:
  
 	* Para la correcta visualización del sistema, es necesario que ajuste la configuración del Navegador de sus clientes a Español
 
-==================================================================================================================================
+======================================================================================================================================================================================
+
 Estructura de los Directorios del Proyecto:
 
 * Libs: Librerias y otro contenido importado usado para el funcionamiento de la App;
@@ -66,6 +70,7 @@ Gerarquia de los Usuarios del sistema:
 	- 7 | Recepcionistas;           |  menuRecepcionista()    |  escritorioRecepcionista()
 
 ==================================================================================================================================
+
 Constantes en la Base de datos:
 
 tablas:

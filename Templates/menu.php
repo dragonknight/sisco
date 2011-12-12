@@ -47,7 +47,7 @@
 					</div>
 					<!--Top Drop Down Menu 1 HTML-->						
 					<ul id="ddsubmenu1" class="ddsubmenustyle">
-						<li><a href="javascript:llamar_codigo(\'logGeneral.php\', \'logGeneral.php\')">General</a></li>
+						<li><a href="javascript:consulta_bitacora()">General</a></li>
 						<li><a href="javascript:llamar_codigo(\'logGeneral.php\', \'Contenido\')">Por Usuario</a></li>
 						<li><a href="javascript:llamar_codigo(\'logFecha.php\', \'Contenido\')">Por Fecha</a></li>
 						<li><a href="javascript:llamar_codigo(\'logEvento.php\', \'Contenido\')">Por tipo de Evento</a></li>
