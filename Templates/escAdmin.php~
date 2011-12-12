@@ -7,8 +7,8 @@
 
 		<div id="CasillaId">
 			<p>
-				Usuario:<?php echo " ".$_SESSION['usuario'] ?> <br />
-				Nivel:<?php echo " ".$_SESSION['idCargo'] ?> 
+				<strong> Usuario: </strong> <?php echo " ".$_SESSION['usuario'] ?> <br />
+				<strong> Nivel:</strong> <?php echo " ".$_SESSION['idCargo'] ?> 
 			</p>
 		</div>
 		<div id="resumenTit">
@@ -17,7 +17,7 @@
 		<div id="resumenCont">
 			<?php
 				include ("./logBitacora.php");
-				bitTacoraCompleta();
+				resumenBitacora();
 			?>
 		</div>
 <?php
