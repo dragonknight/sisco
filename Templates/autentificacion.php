@@ -7,12 +7,12 @@
 	Por favor introduzca sus credenciales para continuar:
 </div>
 <div id="formLogin">
-	<form id="autentif">
+	<form id="autentif" action="javascript:void(null);" onsubmit="autenticar();">
 		<div id="datLogin">
 			Usuario: <input type="text" name="login" id="login" value="" size="20" onchange="javascript:limpiaError()"> <br /> <!-- El evento onfocus limpia los mensajes de error (si hay alguno) -->
 			Contraseña: <input type="password" name="password" id="password" value="" size="20" onchange="javascript:limpiaError()"> <!-- El evento onfocus limpia los mensajes de error (si hay alguno) -->
 		</div>
-		<input type="button" value="Ingresar" onclick="xajax_Login(xajax.getFormValues('autentif'))">
+		<input id="submitButton" type="submit" value="ingresar"/>
 	</form>
 </div>
 <div id="Error">
