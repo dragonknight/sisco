@@ -46,31 +46,7 @@
 		mysql_close($conexion);
 	}
 	
-	
 	/*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: combo Comunicaciones
-	Descripción: Función para crear combobox con listado de las comunicaciones Entrantes
-	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
-	Modificado: 
-	
-	Parámetros entrada:
-	Salida:
-	--------------------------------------------------------------------------------------------------------------------------------*/
-	
-	function comboComunicacion () 
-	{
-		//invoco la consulta para traer todos los campos de la tabla
-		$consultaComunica=consulta("*","cEntrante","","idComunicacion");
-		
-		// a partir de la consulta entonces monto las opciones del select		
-		foreach($consultaPersona[0] as $persona)
-		{
-   	 	echo "<option value=".$persona[0].">".$persona[0]."</option>";
-	   }
-	   
-	}
-	
-		/*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: consulta
 	Descripción: Función de consulta a la Bd
 	Desarrollador:
@@ -146,5 +122,24 @@
 		$salida = mysql_fetch_array($result);
 		
 		return $salida;
+	}
+	
+	/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: combo
+	Descripción: Función para crear combobox
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	Modificado: 
+	
+	Parámetros entrada:
+	Salida:
+	--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function combo($campos, $tabla, $condicion, $orden ) 
+	{
+		//invoco la consulta para traer todos los campos de la tabla
+		$consul = consulta($campos,$tabla,'',$orden);
+		
+		// a partir de la consulta entonces monto las opciones del select		
+		echo "<option value=". $consul[0][229][0] .">". $consul[0][229][1] ."</option>";
 	}
 ?>

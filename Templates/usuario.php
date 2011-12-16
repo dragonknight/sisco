@@ -1,20 +1,31 @@
 <?php
 	include ("./entidades.php");
+	include ("./funciones.php");
 ?>
 	<div id="formUser">
-	<h3>Crear nuevo usuario</h3><br>
-	<h4>Datos de la Persona:</h4><br>
+		<form id="formIngUser" action="javascript:void(null);" onsubmit="ingUser();">
+			<h3>Crear nuevo usuario</h3><br>
+			<div id="userSel">
+				<select id="comboPersonas" name="comboPersonas" onchange="muestraFormPersona(this)"> <!-- hay que agregar el evento onchange="funcion()" para mostrar los datos de la persona seleccionada -->
+					<option value=""> -- Seleccione -- </option>
+					<option value="0"> -- Agregar Nueva -- </option>
+					<?php combo('*','personas','','cedula'); ?>
+				</select>
+			</div>
+			<div id="nvaPersona" style="display:none">
 <?php
-	persona();
+				persona();
 ?>
-	<br>
-	<h4>Datos de Vivienda:</h4><br>
+				<br>
 <?php
-	direccion();
+				direccion();
 ?>
-	<br>
-	<h4>Datos del Usuario:</h4><br>
+			</div>
 <?php
-	usuario();
+			usuario();
 ?>
+			<input id="submitButton" type="submit" value="Ingresar"/>
+		</form>
+	</div>
+	<div id="Error">
 	</div>

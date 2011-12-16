@@ -298,6 +298,88 @@
     -khtml-border-radius: 10px;
    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+   margin: 1em;
+	padding: .5em;
+}
+#persona
+{
+	clear: both;
+	margin-left: 4em;
+	margin-right: 4em;
+	padding: .5em;
+}
+#usrCol1
+{
+   width:15%;
+   float: left;
+   text-align: left;
+}
+#usrCol2
+{
+   width:35%;
+   float: left;
+   text-align: left;
+}
+#usrCol3
+{
+   width:15%;
+   float: left;
+   text-align: left;
+}
+#usrCol4
+{
+   width:35%;
+   float: left;
+   text-align: left;
+}
+#direccion
+{
+	margin:0px auto; /*Centro el bloque*/
+	clear: both;
+	margin-left: 2em;
+	margin-right: 2em;
+	padding: .5em;
+}
+#pais
+{
+   width:50%;
+   float: left;
+}
+#ciudad
+{
+   width:50%;
+   float: left;
+}
+#municipio
+{
+   width:50%;
+   float: left;
+}
+#parroquia
+{
+   width:50%;
+   float: left;
+}
+#comDir
+{
+	clear: both;
+	margin-left: 4em;
+	margin-right: 4em;
+	padding: .5em;
+}
+#ente
+{
+	clear: both;
+	margin-left: 4em;
+	margin-right: 4em;
+	padding: .5em;
+}
+#usuario
+{
+	clear: both;
+	margin-left: 4em;
+	margin-right: 4em;
+	padding: .5em;
 }
 /* -------------------------------------------------------- Estilo Powered ------------------------------------------------------- */
 #Powered

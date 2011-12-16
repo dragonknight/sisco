@@ -5,6 +5,5 @@
 	$xajax->registerFunction("Login");
 	$xajax->registerFunction("logOut");
 	$xajax->registerFunction("Bitacora");
-	$xajax->registerFunction("ConsultaBit");
-	$xajax->registerFunction("comboPrincipal");
+	$xajax->registerFunction("guardaUsuario");
 ?>

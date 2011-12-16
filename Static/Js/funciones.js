@@ -7,6 +7,14 @@ function autenticar()
 	xajax_Login(xajax.getFormValues("autentif"));
 	return false;
 }
+
+function ingUser()
+{
+	xajax.$('submitButton').disabled=true;
+	xajax.$('submitButton').value="Ingresando Datos, Espere";
+	xajax_guardaUsuario(xajax.getFormValues("formIngUser"));
+	return false;
+}
 		
 function llamar_codigo(archivo,id_capa)
 {

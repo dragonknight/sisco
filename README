@@ -30,7 +30,7 @@ Una vez tenga la fuente del sistema es necesario montar la BD del sistema, para 
 	3.- Primeramente, ajuste la variable patch de la funcion CambiaPagina de acuerdo a sus directorios (xajaxFunciones.php en el subdirectorio Templates)
 	4.- Seguidamente, ajuste las variables de conexión de acuerdo a su instalación de Mysql en ambos archivos (xajaxFunciones.php y funciones.php)
 	5.- Acceda al sistema como administrador (Usuario: admin; Contraseña: 4dm1n).
-	6.- Cambie la contraseña de administrador de su sistema
+	6.- Cambie la contraseña de administrador del sistema
 	7.- Cree los usuarios del sistema.
 ======================================================================================================================================================================================
 
@@ -76,13 +76,16 @@ Constantes en la Base de datos:
 tablas:
 
 * tipoTransaccion: tabla para almacenar los tipos de transaccion definidos en el sistema, estos se usan para la bitacora (log) del sistema, quedando OBLIGATORIAMENTE de la siguiente manera:
-	- 1 = Inserción;
-	- 2 = Actualización;
-	- 3 = Eliminación;
-	- 4 = Consulta en el sistema;
-	- 5 = Acceso de un usuario;
-	- 6 = Intento de acceso con credenciales no validas;
-	- 7 = Llamada a una URL Restringida (intento de escalar privilegios);
-	- 8 = Cierre de sesion de usuario;
-	- 9 = Llamada a URL (Acceso a una de las opciones del sistema.);
+	- 1  = Inserción de datos;
+	- 2  = Intento de Inserción no fructifero
+	- 3  = Actualización de datos;
+	- 4  = Intento de Actualización no fructifero
+	- 5  = Eliminación de datis;
+	- 6  = Intento de Eliminación no fructifero
+	- 7  = Consulta en el sistema;
+	- 8  = Acceso de un usuario;
+	- 9  = Intento de acceso con credenciales no validas;
+	- 10 = Llamada a una URL Restringida (intento de escalar privilegios);
+	- 11 = Cierre de sesion de usuario;
+	- 12 = Llamada a URL (Acceso a una de las opciones del sistema.);
 

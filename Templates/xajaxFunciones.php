@@ -69,6 +69,8 @@
 			
 			$objResponse = new xajaxResponse();
 	   	$objResponse->Assign("Error","innerHTML",$txt);
+	   	$objResponse->assign("submitButton","value","Ingresar");
+			$objResponse->assign("submitButton","disabled",false);
 	   
 	   	return $objResponse;
 		}	
@@ -114,9 +116,10 @@
 		   	$idTrans ="6";
 		   	$bitacora= Bitacora("Intento de Login con Credenciales Invalidas",$idTrans);
 		   	$txt = "<div id=\"ErrorLogin\"> <h2> Error: Los datos ingresados no corresponden, verificarlos por favor </h2></div>";
-		   	
 		   	$objResponse = new xajaxResponse();
-	   		$objResponse->Assign("Error","innerHTML",$txt);
+	   		$objResponse->assign("Error","innerHTML",$txt);
+	   		$objResponse->assign("submitButton","value","Ingresar");
+				$objResponse->assign("submitButton","disabled",false);
 	   
 	   		return $objResponse;
 		   }
@@ -140,7 +143,6 @@
 		//Almaceno en bitácora la salida del sistema:
 		$idTrans ="8";
    	$bitacora= Bitacora("El usuario: ".$_SESSION['usuario']." cerro sesión en Sisco",$idTrans);
-   	
 		unset($_SESSION['usuario']);
 		unset($_SESSION['idCargo']);
 		unset($_SESSION['idUsuario']);
@@ -193,40 +195,6 @@
 		$sql = "insert into bitacora (tipoTransaccion, detalle, ip) values ('" . $idTrans . "','" . $mensaje . "','" . $ip . "')";
 		mysql_query($sql);
 	}
-
-/*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: ConsultaBit
-	Descripción:Función usada para consultar al log del sistema (Bitacora)
-	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
-	
-	Parámetros entrada: 
-				$condicion = Valor de la Condición SQL
-				$divResp = id del div donde se enviara la respuesta
-	Salida: ---
---------------------------------------------------------------------------------------------------------------------------------*/
-	
-	function ConsultaBit()
-	{
-		$con = conectar();
-   	mysql_select_db("sisco", $con);
-   	$sql = "select * from bitacora ";
-   	$result = mysql_query($sql,$con);
-   
-	   $i=0;
-   	$txt = "Esto es una prueba";
-   	
-   	while($row = mysql_fetch_array($result))
-  		{
-  			$i=$i+1;
-   		$txt = $txt .	'Transacción '.$row["idTransaccion"].'</ br>';
-      	$txt = $txt .  'Tipo: "'.$row["tipoTransaccion"].'"</ br>';
-      	$txt = $txt .  'Detalles: "'.$row["detalle"].'"</ br>';
-      	$txt = $txt .  'Ip: "'.$row["ip"].'"</ br> ';
-      	$txt = $txt .  'Fecha: "'.$row["fecha"].'"</ br></ br>';
-		}
-		$objResponse = new xajaxResponse();
-	   $objResponse->Assign("bitCont","innerHTML",$txt);
-	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: Incluir
@@ -253,40 +221,66 @@
 	}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: comboPrincipal
-	Descripción: Función llenar y mostrar los combos que inician el efecto ajedrez en las direcciones
+	función: guardaPersona
+	Descripción:Función usada para agregar personas en la bd.
 	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
-	Parámetros entrada: 
-								$
-								$
+	Parámetros entrada:
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function comboPrincipal($campos, $tabla, $nombreSelect, $div)
+	function guardaPersona($formUsuario)
 	{
-		//conectamos a la Bd, ejecutamos la consulta y armamos un arreglo con los valores obtenidos
 		$con = conectar();
 		mysql_select_db("sisco", $con);
-		$sql = "select ".$campos." from " .$tabla;
-		$result = mysql_query($sql);
-		$row = mysql_fetch_array($result);
 		
-		$combo="<select name='".$nobreSelect."'>";
-		
-		foreach($row[0] as $opc)
+		// ingresamos a la B.D. los detalles de la persona:
+		$sql = "insert into personas (cedula, apellidos, nombres, sexo, telefono, correo, direccion, pais, ciudad, municipio, parroquia) values ('" . $formUsuario["Cedula"] . "','" . $formUsuario["Apellidos"] . "','" . $formUsuario["Nombres"] . "','" . $formUsuario["Sexo"] . "','" . $formUsuario["Telefono"] . "','" . $formUsuario["Correo"] . "','" . $formUsuario["Direccion"] . "','" . $formUsuario["Pais"] . "','" . $formUsuario["Ciudad"] . "','" . $formUsuario["Municipio"] . "','" . $formUsuario["Parroquia"] . "')";
+		mysql_query($sql);
+	}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: guardaUsuario
+	Descripción:Función usada para agregar eventos al log del sistema (Bitacora)
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada: $mensaje
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function guardaUsuario($formUsuario)
+	{
+		$con = conectar();
+		mysql_select_db("sisco", $con);
+		// Revisamos si se selecciono una persona o se agrego una nueva
+		// si se agrego una nueva persona
+		if ($formUsuario["comboPersonas"]=="0")
 		{
-   	 	$combo= $combo. "<option value=".$opc[0].">".$opc[0]."</option>";
-	   }
-		
-		$combo = "</select>";		
+			// llamamos a la Funcion que guarda los datos de las personas,
+			$persona = guardaPersona ($formUsuario);
+			// guardamos los datos del usuario:
+			$sql = "insert into usuarios (idPersona, idCargo, login, password) values ('" . $formUsuario['Cedula'] . "','" . $formUsuario['Cargo'] . "','" . $formUsuario['usrLogin'] . "','" . $formUsuario['usrPassword'] . "')";
+			mysql_query($sql);
+		}
+		// si se selecciono una persona, entonces solo hay que agregar los datos de usuario
+		else
+		{			 
+			// ingresamos a la B.D. los detalles del ahora usuario:
+			$sql = "insert into usuarios (idPersona, idCargo, login, password) values ('" . $formUsuario['Cedula'] . "','" . $formUsuario['Cargo'] . "','" . $formUsuario['usrLogin'] . "','" . $formUsuario['usrPassword'] . "')";
+			mysql_query($sql);
+		}
+		// si el proceso de ingreso se llevo a cabo con exito, registramos el evento en la bitacora
+		// primeramente definimos la ip del cliente:		
+		$bitacora= Bitacora("Se Agrego al usuario: ". $formUsuario['usrLogin'] ." al Sisco","1");
 		
 		$objResponse = new xajaxResponse();
-		$objResponse->Assign($div,"innerHTML",$combo);
+		$objResponse->assign("submitButton","value","Ingresar");
+		$objResponse->assign("submitButton","disabled",false);
 		return $objResponse;
-	}	
+	}
 	
-	
+/*--------------------------------------------------- Disparador de salida -----------------------------------------------------*/
+
 	require("xajaxDeclaraciones.php");
 	$xajax->processRequest();
 ?>

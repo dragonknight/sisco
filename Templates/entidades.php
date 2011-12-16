@@ -1,4 +1,5 @@
 <?php
+
 /* --------------------------------------------------------------------------------------------------------------------------------
 	
 	Esta pagina implementa los formulariós basicos definidos para cada una de las entidades que componen el sistema:
@@ -7,7 +8,6 @@
 	* Entes	
 	
 -------------------------------------------------------------------------------------------------------------------------------- */
-
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: persona
@@ -20,24 +20,57 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
 	function persona()
-		{
-	
+	{
+
 ?> 			
-					<div id="persona">
-						<p>
-							Apellidos: <input type="text" name="persApellido" id="persApellido" value="" size="20"> <br />
-							Nombres: <input type="text" name="persNombre" id="persNombre" value="" size="20"> <br />
-							Cedula: <input type="text" name="perCedula" id="perCedula" value="" size="20"> <br />
-							Sexo:<br />
-							Telefono: <input type="text" name="perTelefono" id="perTelefono" value="" size="20"> <br />
-							Correo: <input type="text" name="perCorreo" id="perCorreo" value="" size="20"> <br />
-						</p>
-					</div>
+		<div id="persona">
+			<h4>Datos de la Persona:</h4><br>
+			<div id="usrCol1">
+				Apellidos: 
+			</div>
+			<div id="usrCol2">
+				<input type="text" name="Apellidos" id="Apellidos" value="" size="20"> <br />
+			</div>
+			<div id="usrCol3">
+				Nombres:
+			</div>
+			<div id="usrCol4">
+				<input type="text" name="Nombres" id="Nombres" value="" size="20"> <br />
+			</div>
+			<div id="usrCol1">
+				Cedula:
+			</div>
+			<div id="usrCol2">
+				<input type="text" name="Cedula" id="Cedula" value="" size="20"> <br />
+			</div>
+			<div id="usrCol3">
+				Sexo:
+			</div>
+			<div id="usrCol4">
+				<select id="Sexo" name="Sexo"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
+					<option value=""> -- Seleccione -- </option>
+					<option value="M"> Masculino </option>	
+					<option value="F"> Femenino </option>
+				</select>
+			</div>
+			<div id="usrCol1">
+				Telefono:
+			</div>
+			<div id="usrCol2">
+				<input type="text" name="Telefono" id="Telefono" value="" size="20"> <br />
+			</div>
+			<div id="usrCol3">
+				Correo:
+			</div>
+			<div id="usrCol4">
+				<input type="text" name="Correo" id="Correo" value="" size="20"> <br />
+			</div>
+		</div>
 <?php
-		}
+	}
 		
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: persona
+	función: direccion
 	Descripción: Función que implementa el formulario con los datos de las personas
 	Desarrollador: Carlos Castillo
 	Modificado: 
@@ -47,19 +80,42 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
 	function direccion()
-		{
+	{
 ?> 		
-			<!-- <script language="javascript" type="text/javascript">xajax_Login('Name', 'Country', 'pais', 'pais')</script> -->
-			<input type="button" value="Ingresar" onclick="xajax_comboPrincipal('*', 'Country', 'pais', 'pais')">
-			<div id="dirección">
-				Pais:<div id="pais"></div>
-				Ciudad:<br />
-				Municipio:<br />
-				Parroquia:<br />
-				Dirección:<br />
+		<div id="direccion">
+			<h4>Localidad:</h4><br>
+			<div id="pais">
+				<select id="Pais" name="Pais"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
+					<option value=""> -- Seleccione Pais -- </option>
+					<?php combo('*','Country','','Name'); ?>
+				</select>
+								
 			</div>
+			<div id="ciudad">
+				<select id="Ciudad" name="Ciudad"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
+					<option value=""> -- Seleccione Ciudad -- </option>
+					<?php combo('*','City','','Name'); ?>
+				</select>
+				
+			</div>
+			<div id="municipio">
+				<select id="Municipio" name="Municipio"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
+					<option value=""> -- Seleccione Municipio -- </option>
+					<?php combo('*','Country','','Name'); ?>
+				</select>
+			</div>
+			<div id="parroquia">
+				<select id="Parroquia" name="Parroquia"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
+					<option value=""> -- Seleccione Parroquia -- </option>
+					<?php combo('*','Country','','Name'); ?>
+				</select>
+			</div>
+			<div id="comDir">
+				Dirección: <input type="text" name="Direccion" id="Direccion" value="" size="40"> <br />
+			</div>
+		</div>
 <?php
-		}
+	}
 		
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: persona
@@ -72,14 +128,14 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
 	function Ente()
-		{
-	
+	{
+
 ?> 			
-					<div id="ente">
-						
-					</div>
+		<div id="ente">
+			
+		</div>
 <?php
-		}
+	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: Usuario
 	Descripción: Función que implementa el formulario con los datos referentes a un usuario
@@ -91,14 +147,19 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
 	function usuario()
-		{
-	
+	{
+
 ?> 			
-					<div id="ente">
-						Cargo:
-						Usuario: <input type="text" name="usrLogin" id="perTelefono" value="" size="20"> <br />
-						Contraseña: <input type="password" name="usrPassword" id="usrPassword" value="" size="20">					
-					</div>
+		<div id="usuario">
+			<h4>Datos del Usuario:</h4><br>
+			Cargo:
+			<select id="Cargo" name="Cargo"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
+				<option value=""> -- Seleccione cargo -- </option>
+				<?php combo('*','cargos','','idCargo'); ?>
+			</select> <br />
+			Usuario: <input type="text" name="usrLogin" id="usrLogin" value="" size="20"> <br />
+			Contraseña: <input type="password" name="usrPassword" id="usrPassword" value="" size="20">					
+		</div>
 <?php
-		}
+	}
 ?>

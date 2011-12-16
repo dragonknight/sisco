@@ -12,7 +12,7 @@
 			Usuario: <input type="text" name="login" id="login" value="" size="20" onchange="javascript:limpiaError()"> <br /> <!-- El evento onfocus limpia los mensajes de error (si hay alguno) -->
 			Contraseña: <input type="password" name="password" id="password" value="" size="20" onchange="javascript:limpiaError()"> <!-- El evento onfocus limpia los mensajes de error (si hay alguno) -->
 		</div>
-		<input id="submitButton" type="submit" value="ingresar"/>
+		<input id="submitButton" type="submit" value="Ingresar"/>
 	</form>
 </div>
 <div id="Error">
