@@ -15,6 +15,14 @@ function ingUser()
 	xajax_guardaUsuario(xajax.getFormValues("formIngUser"));
 	return false;
 }
+
+function comEntrante()
+{
+	xajax.$('submitButton').disabled=true;
+	xajax.$('submitButton').value="Espere";
+	xajax_comEntrante(xajax.getFormValues("autentif"));
+	return false;
+}
 		
 function llamar_codigo(archivo,id_capa)
 {

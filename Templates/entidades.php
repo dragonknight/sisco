@@ -96,7 +96,6 @@
 					<option value=""> -- Seleccione Ciudad -- </option>
 					<?php combo('*','City','','Name'); ?>
 				</select>
-				
 			</div>
 			<div id="municipio">
 				<select id="Municipio" name="Municipio"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
@@ -118,7 +117,7 @@
 	}
 		
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: persona
+	función: ente
 	Descripción: Función que implementa el formulario con los datos de las personas
 	Desarrollador: Carlos Castillo
 	Modificado: 
@@ -127,17 +126,55 @@
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function Ente()
+	function ente()
 	{
 
 ?> 			
 		<div id="ente">
-			
+			<h4>Datos de la Persona:</h4><br>
+			<div id="usrCol1">
+				Rif o Id: 
+			</div>
+			<div id="usrCol2">
+				<input type="text" name="Id" id="Id" value="" size="20"> <br />
+			</div>
+			<div id="usrCol3">
+				Nombre:
+			</div>
+			<div id="usrCol4">
+				<input type="text" name="Nombre" id="Nombre" value="" size="20"> <br />
+			</div>
+			<div id="usrCol1">
+				Tipo Persona:
+			</div>
+			<div id="usrCol2">
+				<select id="TipoPersonaNNat" name="TipoPersonaNNat"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
+					<option value=""> -- Seleccione -- </option>
+					<option value="M"> Masculino </option>	
+					<option value="F"> Femenino </option>
+				</select>
+			</div>
+			<div id="usrCol3">
+				Telefono:
+			</div>
+			<div id="usrCol4">
+				<input type="text" name="Telefono" id="Telefono" value="" size="20"> <br />
+			</div>
+			<div id="usrCol1">
+				Correo:
+			</div>
+			<div id="usrCol2">
+				<input type="text" name="Correo" id="Correo" value="" size="20"> <br />
+			</div>
+			<div id="usrCol3">
+			</div>
+			<div id="usrCol4">
+			</div>
 		</div>
 <?php
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Usuario
+	función: usuario
 	Descripción: Función que implementa el formulario con los datos referentes a un usuario
 	Desarrollador: Carlos Castillo
 	Modificado: 

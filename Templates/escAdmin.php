@@ -1,4 +1,3 @@
-
 		<div id="CasillaId">
 			<p>
 				<strong> Usuario: </strong> <?php echo " ".$_SESSION['usuario'] ?> <br />

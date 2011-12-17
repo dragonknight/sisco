@@ -1,15 +1,16 @@
-	#############################################################################
-	#                                     SISCO                                 #
-	#        Sistema de Correspondencia Secretaria General del Estado Mérida    #
-	#############################################################################
+						#############################################################################
+						#                                     SISCO                                 #
+						#        Sistema de Correspondencia Secretaria General del Estado Mérida    #
+						#############################################################################
 
-	Copyright (C)  2007  Carlos J. Castillo N.
-	Permission is granted to copy, distribute and/or modify this document
-	under the terms of the GNU Free Documentation License, Version 1.3
-	or any later version published by the Free Software Foundation;
-	with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
-	A copy of the license is included in the section entitled "GNU
-	Free Documentation License".
+
+Copyright (C)  2007  Carlos J. Castillo N.
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU
+Free Documentation License".
 
 Desarrollado por:
 Carlos J. Castillo N.
@@ -75,13 +76,23 @@ Constantes en la Base de datos:
 
 tablas:
 
+* tipoComunicaciones: tabla para almacenar los tipos de comunicaciones que se manejan dentro de la secretaria.
+
+	- 1 = Comunicación Estandar   | Carta, puede venir de persona natural o juridica
+	- 2 = Gaceta del Estado       | Comunicaciones (Entrantes o salientes), que versan sobre Gacetas oficiles (Solicitud de publicación, informe de publicación)
+	- 3 = Audiencia               | Con o sin soporte (Carta), se puede solicitar hablar con el Secretario General y estas solicitudes se tramitan por esta via
+	- 4 = Invitación              | Carta,
+	- 5 = Denuncia                | Con o sin soporte (Carta),cualquier comunicación que sea recibida pero cuya respuesta no se encuentra dentro de las obligaciones de la Secretaria, 
+				      | si ya ha sido presentada al organismos correspondiente y no ha sido procesada por este, ingresa a la Secretaria como una denuncia y es obligacion
+				      | solicitar al organo o ente encargado una respuesta por escrito asi como explicación de porque no se habia presentado antes.
+
 * tipoTransaccion: tabla para almacenar los tipos de transaccion definidos en el sistema, estos se usan para la bitacora (log) del sistema, quedando OBLIGATORIAMENTE de la siguiente manera:
 	- 1  = Inserción de datos;
 	- 2  = Intento de Inserción no fructifero
 	- 3  = Actualización de datos;
 	- 4  = Intento de Actualización no fructifero
 	- 5  = Eliminación de datis;
-	- 6  = Intento de Eliminación no fructifero
+	- 6  = Intento de Eliminación no fructifero6
 	- 7  = Consulta en el sistema;
 	- 8  = Acceso de un usuario;
 	- 9  = Intento de acceso con credenciales no validas;

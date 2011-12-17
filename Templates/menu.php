@@ -35,34 +35,63 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
 	function menuAdministrador()
-		{
-	
-			echo '
-					<div id="ddtopmenubar" class="mattblackmenu">
-						<ul>
-							<li><a href="Autentificado.php" target="contenido">Principal</a></li>	
-							<li><a href="#" rel="ddsubmenu1">Logs</a></li>
-							<li><a href="#" rel="ddsubmenu2">Usuarios</a></li>
-							<li><a href="javascript:logOut()">Salir</a></li>
-						</ul>
-					</div>
-					<!--Top Drop Down Menu 1 HTML-->						
-					<ul id="ddsubmenu1" class="ddsubmenustyle">
-						<li><a href="javascript:llamar_codigo(\'logGeneral.php\', \'Contenido\')">General</a></li>
-						<li><a href="javascript:llamar_codigo(\'logUsuario.php\', \'Contenido\')">Por Usuario</a></li>
-						<li><a href="javascript:llamar_codigo(\'logFecha.php\', \'Contenido\')">Por Fecha</a></li>
-						<li><a href="javascript:llamar_codigo(\'logEvento.php\', \'Contenido\')">Por tipo de Evento</a></li>
-					</ul>
-					<!--Top Drop Down Menu 2 HTML-->						
-					<ul id="ddsubmenu2" class="ddsubmenustyle">
-						<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Crear Nuevo</a></li>
-						<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Editar Existente</a></li>
-						<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Desactivar Usuario</a></li>
-						<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Buscar</a></li>
-					</ul>
-			';
-		}
+	{
 
+		echo '
+				<div id="ddtopmenubar" class="mattblackmenu">
+					<ul>
+						<li><a href="Autentificado.php" target="contenido">Principal</a></li>	
+						<li><a href="#" rel="ddsubmenu1">Logs</a></li>
+						<li><a href="#" rel="ddsubmenu2">Usuarios</a></li>
+						<li><a href="javascript:logOut()">Salir</a></li>
+					</ul>
+				</div>
+				<!--Top Drop Down Menu 1 HTML-->						
+				<ul id="ddsubmenu1" class="ddsubmenustyle">
+					<li><a href="javascript:llamar_codigo(\'logGeneral.php\', \'Contenido\')">General</a></li>
+					<li><a href="javascript:llamar_codigo(\'logUsuario.php\', \'Contenido\')">Por Usuario</a></li>
+					<li><a href="javascript:llamar_codigo(\'logFecha.php\', \'Contenido\')">Por Fecha</a></li>
+					<li><a href="javascript:llamar_codigo(\'logEvento.php\', \'Contenido\')">Por tipo de Evento</a></li>
+				</ul>
+				<!--Top Drop Down Menu 2 HTML-->						
+				<ul id="ddsubmenu2" class="ddsubmenustyle">
+					<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Crear Nuevo</a></li>
+					<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Editar Existente</a></li>
+					<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Desactivar Usuario</a></li>
+					<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Buscar</a></li>
+				</ul>
+		';
+	}
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: Menú Recepcionista
+	Descripción: Función que muestra el menú de usuario con acceso recepcionista.
+	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
+	Modificado: 
+	
+	Parámetros entrada: ---
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function menuRecepcionista()
+	{
+
+		echo '
+						<div id="ddtopmenubar" class="mattblackmenu">
+							<ul>
+								<li><a href="Autentificado.php" target="contenido">Principal</a></li>
+								<li><a href="#" rel="ddsubmenu1">Comunicaciones</a></li>
+								<li><a href="javascript:logOut()">Salir</a></li>
+							</ul>
+						</div>
+					
+						<!--Top Drop Down Menu 1 HTML-->						
+						<ul id="ddsubmenu1" class="ddsubmenustyle">
+							<li><a href="javascript:llamar_codigo(\'entrantes.php\', \'Contenido\')">Registrar Entrantes</a></li>
+							<li><a href="javascript:llamar_codigo(\'buscar.php\', \'Contenido\')">Buscar</a></li>							
+						</ul>
+		';
+	}
+	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: Menú completo
 	Descripción:Función que muestra el menú de usuario completo en el sistema (secretario general o coordinadora).
@@ -163,37 +192,6 @@ function menuCompleto()
 					<li><a href="../Paginas/.php" target="contenido">Eliminar</a></li>
 					<li><a href="../Paginas/busquedas.php" target="contenido">Buscar</a></li>
 				</ul>
-		';
-	}
-
-/*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Menú Recepcionista
-	Descripción: Función que muestra el menú de usuario con acceso recepcionista.
-	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
-	Modificado: 
-	
-	Parámetros entrada: ---
-	Salida: ---
---------------------------------------------------------------------------------------------------------------------------------*/
-	
-function menuRecepcionista()
-	{
-
-		echo '
-							<div id="ddtopmenubar" class="mattblackmenu">
-								<ul>
-									<li><a href="../Paginas/centroAuten.php" target="contenido">Principal</a></li>
-									<li><a href="#" rel="ddsubmenu1">Comunicaciones</a></li>
-									<li><a href="../Paginas/Desarrolladores.php" target="contenido">Desarrolladores</a></li>
-									<li><a href="../Paginas/logout.php" target="contenido">Salir</a></li>
-								</ul>
-							</div>
-						
-							<!--Top Drop Down Menu 1 HTML-->						
-							<ul id="ddsubmenu1" class="ddsubmenustyle">
-								<li><a href="../Paginas/entrantes.php" target="contenido">Entrantes</a></li>
-								<li><a href="../Paginas/busquedas.php" target="contenido">Buscar</a></li>
-							</ul>
 		';
 	}
 	

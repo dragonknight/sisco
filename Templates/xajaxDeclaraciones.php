@@ -6,4 +6,5 @@
 	$xajax->registerFunction("logOut");
 	$xajax->registerFunction("Bitacora");
 	$xajax->registerFunction("guardaUsuario");
+	$xajax->registerFunction("comEntrante");
 ?>

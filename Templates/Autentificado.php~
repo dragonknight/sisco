@@ -125,31 +125,31 @@
 						}
 						if($_SESSION['idCargo']==1) 
 						{							
-							
+							include ("escAdmin.php");
 						}
 						if($_SESSION['idCargo']==2) 
 						{							
-							
+							include ("escAdmin.php");
 						}
 						if($_SESSION['idCargo']==3) 
 						{
-													
+							include ("escAdmin.php");				
 						}	
 						if($_SESSION['idCargo']==4) 
 						{							
-							
+							include ("escAdmin.php");
 						}
 						if($_SESSION['idCargo']==5) 
 						{							
-							
+							include ("escAdmin.php");
 						}
 						if($_SESSION['idCargo']==6) 
 						{							
-							
+							include ("escAdmin.php");
 						}
 						if($_SESSION['idCargo']==7) 
 						{							
-
+							include ("escAdmin.php");
 						}
 					?>
 				</div>
