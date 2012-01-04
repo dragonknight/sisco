@@ -11,6 +11,7 @@
 			<?php
 				audiencia();
 			?>
+			<input id="submitButton" type="submit" value="Ingresar"/>
 		</form>
 		<div id="Error">
 		</div>

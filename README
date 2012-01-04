@@ -56,6 +56,10 @@ Estructura de los Directorios del Proyecto:
 
 * DB: En este directorio se almacena el sql de la bd del sistema
 
+* TODO: Archivo de Texto simple que Muestra las tareas Planteadas para ser realizadas en el sistema (Modificaciones, Adiciones, Mejoras)
+
+* CHANGELOG: Archivo que Muestra los cambios realizados en el proyecto fecha por fecha.
+
 ==================================================================================================================================
 Gerarquia de los Usuarios del sistema:
 
