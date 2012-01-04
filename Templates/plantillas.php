@@ -167,9 +167,11 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	function cEstandar()
 	{
+		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = '1'");
+		$comunicacion=$comunicacion[0]+1;
 ?>
 		<strong>Datos de la Comunicación</strong><br /><br />
-		Nº Interno para la comunicación: <br /><br />
+		Nº Interno para la comunicación: <?php echo '<input name="eComId" type="text" id="eComId" value="SG-E-E-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
 		Procedencia de la comunicación:<br /><br />
 		<?php tpersona(); ?>
 		<div id="rCol1">

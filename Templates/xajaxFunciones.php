@@ -281,6 +281,26 @@
 		return $objResponse;
 	}
 	
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: comEntrante
+	Descripción:Función usada para agregar comunicaciones en la bd.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada:
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function comEntrante($formComunicacion)
+	{
+		$con = conectar();
+		mysql_select_db("sisco", $con);
+		
+		// Determinamos el tipo de persona que entrega
+		// Determinamos si se selecciono una persona o se agrego una nueva
+		// Almacenamos los detalles de la comunicacion
+		// Registramos la Transaccion en la Bitacora
+		
+	}
 /*--------------------------------------------------- Disparador de salida -----------------------------------------------------*/
 
 	require("xajaxDeclaraciones.php");

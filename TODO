@@ -33,3 +33,5 @@ Lista De Tareas Pendientes En sisco:
 * estudiar a fondo el problema del firefox en español (revisar si la conexión a internet tiene que ver en algo)
 * la solucion al problema del modal puede estar si determino el tamaño de la pantalla....
 * Es necesario corregir la forma en la que se manejan los combos (funcion consulta), si no hay mas de un registro en la tabla da problemas
+* Modificar los items del menu, para poder mostrar Comunicaciones entrantes y Salientes (Asitentes y Secretarias)
+* Crear tabla tipo Comunicacion segun normativa del README
