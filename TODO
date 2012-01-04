@@ -35,3 +35,6 @@ Lista De Tareas Pendientes En sisco:
 * Es necesario corregir la forma en la que se manejan los combos (funcion consulta), si no hay mas de un registro en la tabla da problemas
 * Modificar los items del menu, para poder mostrar Comunicaciones entrantes y Salientes (Asitentes y Secretarias)
 * Crear tabla tipo Comunicacion segun normativa del README
+* Buscar que los campos tipo Comunicacion y Numero interno (Comunicaciones estandares), esten deshabilitados para edicion -Que solo muestren datos y no permitan escribir-
+* Agregar la funcion que registra que el usuario accedio a una opcion (Puede ser en el menu o puede ser en el onload de la pagina)
+* Definir un estilo para los Botones en el sistema (Centrados)
