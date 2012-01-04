@@ -86,7 +86,7 @@
 					
 						<!--Top Drop Down Menu 1 HTML-->						
 						<ul id="ddsubmenu1" class="ddsubmenustyle">
-							<li><a href="javascript:llamar_codigo(\'entrantes.php\', \'Contenido\')">Entrantes</a></li>
+							<li><a href="javascript:llamar_codigo(\'entrantes.php\', \'Contenido\')">Registrar Entrantes</a></li>
 							<li><a href="javascript:llamar_codigo(\'buscar.php\', \'Contenido\')">Buscar</a></li>							
 						</ul>
 		';

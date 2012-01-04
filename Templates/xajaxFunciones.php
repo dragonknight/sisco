@@ -194,6 +194,7 @@
 		//ingresamos a la B.D. el detalle del login infructuoso:
 		$sql = "insert into bitacora (tipoTransaccion, detalle, ip) values ('" . $idTrans . "','" . $mensaje . "','" . $ip . "')";
 		mysql_query($sql);
+		mysql_close($con);
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
@@ -237,6 +238,7 @@
 		// ingresamos a la B.D. los detalles de la persona:
 		$sql = "insert into personas (cedula, apellidos, nombres, sexo, telefono, correo, direccion, pais, ciudad, municipio, parroquia) values ('" . $formUsuario["Cedula"] . "','" . $formUsuario["Apellidos"] . "','" . $formUsuario["Nombres"] . "','" . $formUsuario["Sexo"] . "','" . $formUsuario["Telefono"] . "','" . $formUsuario["Correo"] . "','" . $formUsuario["Direccion"] . "','" . $formUsuario["Pais"] . "','" . $formUsuario["Ciudad"] . "','" . $formUsuario["Municipio"] . "','" . $formUsuario["Parroquia"] . "')";
 		mysql_query($sql);
+		mysql_close($con);
 	}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
@@ -272,7 +274,7 @@
 		// si el proceso de ingreso se llevo a cabo con exito, registramos el evento en la bitacora
 		// primeramente definimos la ip del cliente:		
 		$bitacora= Bitacora("Se Agrego al usuario: ". $formUsuario['usrLogin'] ." al Sisco","1");
-		
+		mysql_close($con);
 		$objResponse = new xajaxResponse();
 		$objResponse->assign("submitButton","value","Ingresar");
 		$objResponse->assign("submitButton","disabled",false);

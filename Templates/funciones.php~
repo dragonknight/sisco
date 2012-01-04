@@ -120,7 +120,7 @@
 		mysql_select_db("sisco");
 		$result = mysql_query($query,$conec) or die("Error al realizar la consulta: ". mysql_error());
 		$salida = mysql_fetch_array($result);
-		
+		desconectar($conec);
 		return $salida;
 	}
 	
@@ -137,9 +137,32 @@
 	function combo($campos, $tabla, $condicion, $orden ) 
 	{
 		//invoco la consulta para traer todos los campos de la tabla
-		$consul = consulta($campos,$tabla,'',$orden);
+		$consul=consulta($campos,$tabla,'',$orden);
+		for ($i=0;$i<=$consul[1]-1;$i++)
+		{
+			echo "<option value=". $consul[0][$i][0] .">". $consul[0][$i][1] ."</option>";
+		}
 		
-		// a partir de la consulta entonces monto las opciones del select		
-		echo "<option value=". $consul[0][229][0] .">". $consul[0][229][1] ."</option>";
+	}
+	
+	/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: combo
+	Descripción: Función para crear combobox
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	Modificado: 
+	
+	Parámetros entrada:
+	Salida:
+	--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function comboPersonas($campos, $tabla, $condicion, $orden) 
+	{
+		//invoco la consulta para traer todos los campos de la tabla
+		$consul=consulta($campos,$tabla,'',$orden);
+		for ($i=0;$i<=$consul[1]-1;$i++)
+		{
+			echo "<option value=". $consul[0][$i][0] .">". $consul[0][$i][1] . ", ". $consul[0][$i][2] . ", ". $consul[0][$i][0] . "</option>";
+		}
+		
 	}
 ?>

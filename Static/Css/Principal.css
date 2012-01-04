@@ -387,6 +387,7 @@
    width:25%;
    float: left;
    text-align: center;
+   clear: both;
 }
 #rCol2
 {

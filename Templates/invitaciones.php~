@@ -1,0 +1,17 @@
+<?php
+	include ("./entidades.php");
+	include ("./funciones.php");
+	include ("./plantillas.php");
+?>
+<div id="Invitacion">
+	<strong>Invitación</strong>
+	<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
+		<?php
+			invitacion();
+		?>
+		Procedencia de la comunicación:<br /><br />
+		<?php tpersona(); ?>
+	</form>
+	<div id="Error">
+	</div>
+</div>

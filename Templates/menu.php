@@ -86,7 +86,11 @@
 					
 						<!--Top Drop Down Menu 1 HTML-->						
 						<ul id="ddsubmenu1" class="ddsubmenustyle">
-							<li><a href="javascript:llamar_codigo(\'entrantes.php\', \'Contenido\')">Registrar Entrantes</a></li>
+							<li><a href="javascript:llamar_codigo(\'cEstandar.php\', \'Contenido\')">Comunicación Estandar</a></li>
+							<li><a href="javascript:llamar_codigo(\'gaceta.php\', \'Contenido\')">Gacetas</a></li>
+							<li><a href="javascript:llamar_codigo(\'audiencia.php\', \'Contenido\')">Audiencias</a></li>
+							<li><a href="javascript:llamar_codigo(\'invitacion.php\', \'Contenido\')">Invitaciones</a></li>
+							<li><a href="javascript:llamar_codigo(\'denuncia.php\', \'Contenido\')">Denuncias</a></li>
 							<li><a href="javascript:llamar_codigo(\'buscar.php\', \'Contenido\')">Buscar</a></li>							
 						</ul>
 		';

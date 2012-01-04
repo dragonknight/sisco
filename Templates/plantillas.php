@@ -38,7 +38,7 @@
 ?>
 		<div id="perNatural" style="display:none">
 			<strong>Persona Natural</strong><br />
-				<?php combPersonas(); ?>
+				<?php combPersonas(); // llamo a la función local que arma el combo con las personas ?> 
 				<div id="nvaPersona" style="display:none">
 				<?php
 					persona();
@@ -94,7 +94,7 @@
 		<select id="comboPersonas" name="comboPersonas" onchange="muestraFormPersona(this)">
 			<option value=""> -- Seleccione -- </option>
 			<option value="0"> -- Agregar Nueva -- </option>
-			<?php combo('*','personas','','cedula'); ?>
+			<?php comboPersonas('*','personas','','cedula'); ?>
 		</select>
 <?php
 	}
@@ -126,20 +126,76 @@
 	Parámetros entrada: ---
 	Salida: $conexion
 --------------------------------------------------------------------------------------------------------------------------------*/
+	function caracterCom()
+	{
+?>
+		<select id="Caracter" name="Caracter">
+			<option value=""> -- Seleccione -- </option>
+			<?php combo('*','caracterCom','','id'); ?>
+		</select>
+<?php
+	}
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: cEstandar
+	Descripción: Función que llama a las entidades Persona Natural y no Natural
+	Desarrollador: Carlos J. Castillo N.
+	Modificado: 
+	
+	Parámetros entrada: ---
+	Salida: $conexion
+--------------------------------------------------------------------------------------------------------------------------------*/
 	function cEstandar()
 	{
 ?>
 		<strong>Datos de la Comunicación</strong><br /><br />
 		Nº Interno para la comunicación: <br /><br />
 		Procedencia de la comunicación:<br /><br />
-		<?php tpersona(); ?> 
-		Nº Comunicación<br /><br />
-		Fecha:<br /><br />
-		Sintesis:<br /><br />
-		Caracter:<br /><br />
-		Prioridad:<br /><br />
-		Resumen:<br /><br />
-		
+		<?php tpersona(); ?>
+		<div id="rCol1">
+			Nº Comunicación<br />
+		</div>
+		<div id="rCol2">
+			<input type="text" name="" id="" value="" size="20" /><br />
+		</div>
+		<div id="rCol3">
+			Fecha:<br />
+		</div>
+		<div id="rCol4">
+			<!-- Mostramos un combos para la seleccion de fechas -->
+			<!-- Concatenamos la fecha en un campo oculto -->		
+			<input type="text" name="" id="" value="" size="20" /><br />
+		</div>
+		<div id="rCol1">
+			Sintesis:<br />
+		</div>
+		<div id="rCol2">
+			<input type="text" name="" id="" value="" size="20" /><br />
+		</div>
+		<div id="rCol3">
+			Caracter:<br />
+		</div>
+		<div id="rCol4">
+			<!-- Combo Caracter -->
+			<?php caracterCom(); ?>
+		</div>
+		<div id="rCol1">
+			Prioridad:<br />
+		</div>
+		<div id="rCol2">
+			<!-- Combo Prioridades -->
+			<select id="Sexo" name="Sexo"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
+				<option value=""> -- Seleccione -- </option>
+				<option value="1"> Alto </option>	
+				<option value="2"> Medio </option>
+				<option value="3"> Bajo </option>
+			</select>
+		</div><br />
+		<div id="rCol3">
+			Resumen:<br />
+		</div>
+		<div id="rCol4">
+			<input type="text" name="" id="" value="" size="20" /><br />
+		</div>
 <?php
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
@@ -157,12 +213,44 @@
 		<strong>Datos de la Comunicación</strong><br /><br />
 		Nº Interno para la comunicación: <br /><br />
 		Procedencia de la comunicación:<br /><br />
-		<?php perNoNatural(); ?> <!-- Hay que cambiar el display luego de llamarlo :S -->
-		Nº Comunicación<br /><br />
-		Fecha:<br /><br />
-		Sintesis:<br /><br />
-		Caracter:<br /><br />
-		Prioridad:<br /><br />
+		<?php perNoNatural(); ?>
+		<div id="usrCol1">
+			Nº Comunicación<br /><br />
+		</div>
+		<div id="usrCol2">
+			<input type="text" name="" id="" value="" size="20" /><br />
+		</div>
+		<div id="usrCol3">
+			Fecha:<br /><br />
+		</div>
+		<div id="usrCol4">
+			<!-- Mostramos un combos para la seleccion de fechas -->
+			<!-- Concatenamos la fecha en un campo oculto -->		
+			<input type="text" name="" id="" value="" size="20" />
+		</div>
+		<div id="usrCol1">
+			Sintesis:<br /><br />
+		</div>
+		<div id="usrCol2">
+			<input type="text" name="" id="" value="" size="20" /><br />
+		</div>
+		<div id="usrCol3">
+			Caracter:<br /><br />
+		</div>
+		<div id="usrCol4">
+			<!-- Combo Caracter -->
+			<?php caracterCom(); ?><br />
+		</div>
+		<div id="usrCol1">
+			Prioridad:<br /><br />
+		</div>
+		<div id="usrCol2">
+			<!-- Combo Prioridades -->
+		</div>
+		<div id="usrCol3">
+		</div>
+		<div id="usrCol4">
+		</div>
 <?php
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
@@ -181,12 +269,46 @@
 		Nº Interno para la comunicación: <br /><br />
 		Procedencia de la comunicación:<br /><br />
 		<?php tpersona(); ?>
-		Nº Comunicación (Si la Hay):<br /><br />
-		Fecha:<br /><br />
-		Sintesis:<br /><br />
-		Caracter:<br /><br />
-		Prioridad:<br /><br />
-		Resumen:<br /><br />
+		<div id="usrCol1">
+			Nº Comunicación (Si la hay)<br /><br />
+		</div>
+		<div id="usrCol2">
+			<input type="text" name="" id="" value="" size="20" /> <br />
+		</div>
+		<div id="usrCol3">
+			Fecha:<br /><br />
+		</div>
+		<div id="usrCol4">
+			<!-- Mostramos un combos para la seleccion de fechas -->
+			<!-- Concatenamos la fecha en un campo oculto -->		
+			<input type="text" name="" id="" value="" size="20" />
+		</div>
+		<br />
+		<div id="usrCol1">
+			Sintesis:<br /><br />
+		</div>
+		<div id="usrCol2">
+			<input type="text" name="" id="" value="" size="20" /> <br />
+		</div>
+		<div id="usrCol3">
+			Caracter:<br /><br />
+		</div>
+		<div id="usrCol4">
+			<!-- Combo Caracter -->
+			<?php caracterCom(); ?>
+		</div>
+		<div id="usrCol1">
+			Prioridad:<br /><br />
+		</div>
+		<div id="usrCol2">
+			<!-- Combo Prioridades -->
+		</div>
+		<div id="usrCol3">
+			Resumen:<br /><br />
+		</div>
+		<div id="usrCol4">
+			<input type="text" name="" id="" value="" size="20" /> <br />
+		</div>
 <?php
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
@@ -205,12 +327,45 @@
 		Nº Interno: <br /><br />
 		Procedencia de la comunicación:<br /><br />
 		<?php tpersona(); ?>
-		Nº Comunicación (Si la Hay):<br /><br />
-		Fecha:<br /><br />
-		Sintesis:<br /><br />
-		Caracter:<br /><br />
-		Prioridad:<br /><br />
-		Resumen (Indique aqui todos los datos de la invitación):<br /><br />
+				<div id="usrCol1">
+			Nº Comunicación<br /><br />
+		</div>
+		<div id="usrCol2">
+			<input type="text" name="" id="" value="" size="20" /> <br />
+		</div>
+		<div id="usrCol3">
+			Fecha:<br /><br />
+		</div>
+		<div id="usrCol4">
+			<!-- Mostramos un combos para la seleccion de fechas -->
+			<!-- Concatenamos la fecha en un campo oculto -->		
+			<input type="text" name="" id="" value="" size="20" />
+		</div>
+		<div id="usrCol1">
+			Sintesis:<br /><br />
+		</div>
+		<div id="usrCol2">
+			<input type="text" name="" id="" value="" size="20" /> <br />
+		</div>
+		<div id="usrCol3">
+			Caracter:<br /><br />
+		</div>
+		<div id="usrCol4">
+			<!-- Combo Caracter -->
+			<?php caracterCom(); ?>
+		</div>
+		<div id="usrCol1">
+			Prioridad:<br /><br />
+		</div>
+		<div id="usrCol2">
+			<!-- Combo Prioridades -->
+		</div>
+		<div id="usrCol3">
+			Resumen: (Indique aqui todos los datos de la Invitación)<br /><br />
+		</div>
+		<div id="usrCol4">
+			<input type="text" name="" id="" value="" size="20" /> <br />
+		</div>
 <?php
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
@@ -229,12 +384,45 @@
 		Nº Interno: <br /><br />
 		Procedencia de la denuncia:<br /><br />
 		<?php tpersona(); ?>
-		Nº Comunicación (Si la Hay):<br /><br />
-		Fecha:<br /><br />
-		Sintesis:<br /><br />
-		Caracter:<br /><br />
-		Prioridad:<br /><br />
-		Resumen (Relate aca todos los sucesos):<br /><br />
+		<div id="usrCol1">
+			Nº Comunicación (Si la hay)<br /><br />
+		</div>
+		<div id="usrCol2">
+			<input type="text" name="" id="" value="" size="20" /> <br />
+		</div>
+		<div id="usrCol3">
+			Fecha:<br /><br />
+		</div>
+		<div id="usrCol4">
+			<!-- Mostramos un combos para la seleccion de fechas -->
+			<!-- Concatenamos la fecha en un campo oculto -->		
+			<input type="text" name="" id="" value="" size="20" />
+		</div>
+		<div id="usrCol1">
+			Sintesis:<br /><br />
+		</div>
+		<div id="usrCol2">
+			<input type="text" name="" id="" value="" size="20" /> <br />
+		</div>
+		<div id="usrCol3">
+			Caracter:<br /><br />
+		</div>
+		<div id="usrCol4">
+			<!-- Combo Caracter -->
+			<?php caracterCom(); ?>
+		</div>
+		<div id="usrCol1">
+			Prioridad:<br /><br />
+		</div>
+		<div id="usrCol2">
+			<!-- Combo Prioridades -->
+		</div>
+		<div id="usrCol3">
+			Resumen: (Relate aca todos los echos)<br /><br />
+		</div>
+		<div id="usrCol4">
+			<input type="text" name="" id="" value="" size="20" /> <br />
+		</div>
 <?php
 	}
 ?>

@@ -1,0 +1,15 @@
+<?php
+	include ("./entidades.php");
+	include ("./funciones.php");
+	include ("./plantillas.php");
+?>
+<div id="gaceta">
+	<strong>Denuncia</strong>
+	<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
+		<?php
+			denuncia();
+		?>
+	</form>
+	<div id="Error">
+	</div>
+</div>

@@ -10,17 +10,11 @@
 				<?php combPersonas(); ?>
 			</div>
 			<div id="nvaPersona" style="display:none">
-<?php
-				persona();
-?>
+				<?php persona();?>
 				<br>
-<?php
-				direccion();
-?>
+				<?php direccion(); ?>
 			</div>
-<?php
-			usuario();
-?>
+			<?php usuario();?>
 			<input id="submitButton" type="submit" value="Ingresar"/>
 		</form>
 	</div>
