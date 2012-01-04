@@ -61,14 +61,14 @@ Gerarquia de los Usuarios del sistema:
 
       Nivel |  Titulo                   |  Menu:                  |  Escritorio:
 ------------------------------------------------------------------------------------------
-	- 0 | Administrador;            |  menuAdministrador()    |  escritorioAdministrador()
-	- 1 | Secretario General;       |  menuCompleto()         |  escritorioSG()
-	- 2 | Coordinador de Despacho;  |  menuCompleto()         |  escritorioCoordinador()
-	- 3 | Encargado de Gacetas;     |  menuGacetas()          |  escritorioGacetas()
-	- 4 | Encargado de Audiencias;  |  menuAudiencias()       |  escritorioAudiencias()
-	- 5 | Asistentes;               |  menuAsistSecr()        |  escritorioAsist() 
-	- 6 | Secretarias;              |  menuAsistSecr()        |  escritorioSecr()
-	- 7 | Recepcionistas;           |  menuRecepcionista()    |  escritorioRecepcionista()
+	- 0 | Administrador;            |  menuAdministrador()    |  escAdmin()
+	- 1 | Secretario General;       |  menuCompleto()         |  escSG()
+	- 2 | Coordinador de Despacho;  |  menuCompleto()         |  escCoordinador()
+	- 3 | Encargado de Gacetas;     |  menuGacetas()          |  escGacetas()
+	- 4 | Encargado de Audiencias;  |  menuAudiencias()       |  escAudiencias()
+	- 5 | Asistentes;               |  menuAsistSecr()        |  escoAsistSecr() 
+	- 6 | Secretarias;              |  menuAsistSecr()        |  escoAsistSecr()
+	- 7 | Recepcionistas;           |  menuRecepcionista()    |  escRecepcionista()
 
 ==================================================================================================================================
 

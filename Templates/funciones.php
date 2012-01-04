@@ -165,4 +165,35 @@
 		}
 		
 	}
+	
+	/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: Cuenta registros
+	Descripción:Función para la creación de Tumb (imagen en Miniatura)
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	Modificado: 
+	
+	Parámetros entrada:
+	Salida:
+	--------------------------------------------------------------------------------------------------------------------------------*/
+	function cuenta_reg($tabla,$campo,$condicion)
+	{
+	 global $dbname;
+	 
+	 $conec = conectar();
+	 mysql_select_db("$dbname");
+	 if($condicion==null)  //Si no tiene condicion la consulta, es decir no necesita una clausula where
+	 {
+	 		$query="SELECT COUNT(*)FROM ".$tabla;
+	 }
+	 else 
+	 {
+			$query="SELECT COUNT(*)FROM ".$tabla." where ".$condicion;		
+	 }
+	 //andamiaje comentado....
+	 //ventana_error($query);
+	 $result = mysql_query($query,$conec) or die("Error al realizar la consulta: ".mysql_error());
+	 $salida = mysql_fetch_array($result);
+	 
+	 return $salida; 
+	}
 ?>

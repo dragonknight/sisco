@@ -117,6 +117,27 @@
 		</select>
 <?php
 	}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: combPrioridad
+	Descripción: Funcion que Muestra el Combo de las Prioridades
+	Desarrollador: Carlos J. Castillo N.
+	Modificado: 
+	
+	Parámetros entrada: ---
+	Salida: $conexion
+--------------------------------------------------------------------------------------------------------------------------------*/
+	function combPrioridad()
+	{
+?>
+		<select id="Prioridad" name="Prioridad">
+			<option value=""> -- Seleccione -- </option>
+			<option value="1"> Alto </option>	
+			<option value="2"> Medio </option>
+			<option value="3"> Bajo </option>
+		</select>
+<?php
+	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: cEstandar
 	Descripción: Función que llama a las entidades Persona Natural y no Natural
@@ -152,13 +173,13 @@
 		Procedencia de la comunicación:<br /><br />
 		<?php tpersona(); ?>
 		<div id="rCol1">
-			Nº Comunicación<br /><br />
+			Nº Comunicación<br />
 		</div>
 		<div id="rCol2">
 			<input type="text" name="" id="" value="" size="20" /><br />
 		</div>
 		<div id="rCol3">
-			Fecha:<br /><br />
+			Fecha:<br />
 		</div>
 		<div id="rCol4">
 			<!-- Mostramos un combos para la seleccion de fechas -->
@@ -166,35 +187,30 @@
 			<input type="text" name="" id="" value="" size="20" /><br />
 		</div>
 		<div id="rCol1">
-			Sintesis:<br /><br />
+			Sintesis:<br />
 		</div>
 		<div id="rCol2">
 			<input type="text" name="" id="" value="" size="20" /><br />
 		</div>
 		<div id="rCol3">
-			Caracter:<br /><br />
+			Caracter:<br />
 		</div>
 		<div id="rCol4">
 			<!-- Combo Caracter -->
 			<?php caracterCom(); ?>
 		</div>
 		<div id="rCol1">
-			Prioridad:<br /><br />
+			Prioridad:<br />
 		</div>
 		<div id="rCol2">
 			<!-- Combo Prioridades -->
-			<select id="Sexo" name="Sexo"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
-				<option value=""> -- Seleccione -- </option>
-				<option value="1"> Alto </option>	
-				<option value="2"> Medio </option>
-				<option value="3"> Bajo </option>
-			</select>
-		</div>
+			<?php combPrioridad(); ?>
+		</div><br />
 		<div id="rCol3">
-			Resumen:<br /><br />
+			Resumen:<br />
 		</div>
 		<div id="rCol4">
-			<input type="text" name="" id="" value="" size="20" /> <br />
+			<input type="text" name="" id="" value="" size="20" /><br />
 		</div>
 <?php
 	}

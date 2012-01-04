@@ -11,26 +11,29 @@
 			<h4>Comunicaciones Recibidas:</h4><br />
 <?php
 				include ("./funciones.php");
-				$hoy = cuenta_reg('comunicaciones','*','TDirec = \'E\''); //La condicion es que Tdirec = E && fecha = hoy
-				$semana = cuenta_reg('comunicaciones','*','TDirec = \'E\''); //La condicion es que Tdirec = E && fecha = hoy
-				$mes = cuenta_reg('comunicaciones','*','TDirec = \'E\''); //La condicion es que Tdirec = E && fecha = hoy
-				$total = cuenta_reg('comunicaciones','*','TDirec = \'E\''); //La condicion es que Tdirec = E
-				
+				$resumen = consulta('*','bitacora','','idTransaccion');
+				$i = $resumen[1]-1;
 ?>
 			<div id="rCol1">
 				<strong> Hoy: </strong><br />
-				<?php echo $hoy[0]; ?>
+				<?php echo $resumen[1]; ?>
 			</div>
 			<div id="rCol2">
 				<strong> Semana: </strong><br />
-				<?php echo $semana[0]; ?>
+				<?php echo $resumen[0][$i][1]; ?>
 			</div>
 			<div id="rCol3">
 				<strong> Mes: </strong><br />
-				<?php echo $mes[0]; ?>
+				<?php echo $resumen[0][$i][2]; ?>
 			</div>
 			<div id="rCol4">
 				<strong> Total: </strong><br />
-				<?php echo $total[0]; ?>
+				<?php echo $resumen[0][$i][3]; ?>
 			</div>
+		</div>
+		<div id="resumenTit">
+			<h2>Resumen de Trabajo:</h2>
+		</div>
+		<div id="resumenCont">
+			<h4>Comunicaciones Asignadas:</h4><br />
 		</div>

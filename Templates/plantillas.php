@@ -117,6 +117,27 @@
 		</select>
 <?php
 	}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: combPrioridad
+	Descripción: Funcion que Muestra el Combo de las Prioridades
+	Desarrollador: Carlos J. Castillo N.
+	Modificado: 
+	
+	Parámetros entrada: ---
+	Salida: $conexion
+--------------------------------------------------------------------------------------------------------------------------------*/
+	function combPrioridad()
+	{
+?>
+		<select id="Prioridad" name="Prioridad">
+			<option value=""> -- Seleccione -- </option>
+			<option value="1"> Alto </option>	
+			<option value="2"> Medio </option>
+			<option value="3"> Bajo </option>
+		</select>
+<?php
+	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: cEstandar
 	Descripción: Función que llama a las entidades Persona Natural y no Natural
@@ -183,12 +204,7 @@
 		</div>
 		<div id="rCol2">
 			<!-- Combo Prioridades -->
-			<select id="Sexo" name="Sexo"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
-				<option value=""> -- Seleccione -- </option>
-				<option value="1"> Alto </option>	
-				<option value="2"> Medio </option>
-				<option value="3"> Bajo </option>
-			</select>
+			<?php combPrioridad(); ?>
 		</div><br />
 		<div id="rCol3">
 			Resumen:<br />
@@ -254,7 +270,7 @@
 <?php
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: cEstandar
+	función: audiencia
 	Descripción: Función que llama a las entidades Persona Natural y no Natural
 	Desarrollador: Carlos J. Castillo N.
 	Modificado: 
@@ -312,7 +328,7 @@
 <?php
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: cEstandar
+	función: invitacion
 	Descripción: Función que llama a las entidades Persona Natural y no Natural
 	Desarrollador: Carlos J. Castillo N.
 	Modificado: 
