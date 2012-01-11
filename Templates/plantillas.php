@@ -168,7 +168,7 @@
 	function cEstandar()
 	{
 		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = '1'");
-		$comunicacion=$comunicacion[0]+1;
+		$comunicacion = $comunicacion[0]+1;
 ?>
 		<strong>Datos de la Comunicación</strong><br /><br />
 		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Estandar" size"5"> <br /><br />
@@ -179,7 +179,7 @@
 			Nº Comunicación<br />
 		</div>
 		<div id="rCol2">
-			<input type="text" name="" id="" value="" size="20" /><br />
+			<input type="text" name="NumCom" id="NumCom" value="" size="20" /><br />
 		</div>
 		<div id="rCol3">
 			Fecha:<br />
@@ -187,13 +187,13 @@
 		<div id="rCol4">
 			<!-- Mostramos un combos para la seleccion de fechas -->
 			<!-- Concatenamos la fecha en un campo oculto -->		
-			<input type="text" name="" id="" value="" size="20" /><br />
+			<input type="text" name="Fecha" id="Fecha" value="" size="20" /><br />
 		</div>
 		<div id="rCol1">
 			Sintesis:<br />
 		</div>
 		<div id="rCol2">
-			<input type="text" name="" id="" value="" size="20" /><br />
+			<input type="text" name="Sintesis" id="Sintesis" value="" size="20" /><br />
 		</div>
 		<div id="rCol3">
 			Caracter:<br />
@@ -213,7 +213,7 @@
 			Resumen:<br />
 		</div>
 		<div id="rCol4">
-			<input type="text" name="" id="" value="" size="20" /><br />
+			<input type="text" name="Resumen" id="Resumen" value="" size="20" /><br />
 		</div>
 <?php
 	}
@@ -230,14 +230,14 @@
 	{
 ?>
 		<strong>Datos de la Comunicación</strong><br /><br />
-		Nº Interno para la comunicación: <br /><br />
-		Procedencia de la comunicación:<br /><br />
+		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Gaceta" size"5"> <br /><br />
+		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-E-G-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
 		<?php perNoNatural(); ?>
 		<div id="usrCol1">
 			Nº Comunicación<br /><br />
 		</div>
 		<div id="usrCol2">
-			<input type="text" name="" id="" value="" size="20" /><br />
+			<input type="text" name="NumCom" id="NumCom" value="" size="20" /><br />
 		</div>
 		<div id="usrCol3">
 			Fecha:<br /><br />
@@ -245,7 +245,7 @@
 		<div id="usrCol4">
 			<!-- Mostramos un combos para la seleccion de fechas -->
 			<!-- Concatenamos la fecha en un campo oculto -->		
-			<input type="text" name="" id="" value="" size="20" />
+			<input type="text" name="Fecha" id="Fecha" value="" size="20" />
 		</div>
 		<div id="usrCol1">
 			Sintesis:<br /><br />
@@ -265,6 +265,7 @@
 		</div>
 		<div id="usrCol2">
 			<!-- Combo Prioridades -->
+			<?php combPrioridad(); ?>
 		</div>
 		<div id="usrCol3">
 		</div>
@@ -285,14 +286,14 @@
 	{
 ?>
 		<strong>Datos de la Solicitud</strong><br /><br />
-		Nº Interno para la comunicación: <br /><br />
-		Procedencia de la comunicación:<br /><br />
+		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Audiencia" size"5"> <br /><br />
+		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-E-A-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
 		<?php tpersona(); ?>
 		<div id="usrCol1">
 			Nº Comunicación (Si la hay)<br /><br />
 		</div>
 		<div id="usrCol2">
-			<input type="text" name="" id="" value="" size="20" /> <br />
+			<input type="text" name="NumCom" id="" value="NumCom" size="20" /> <br />
 		</div>
 		<div id="usrCol3">
 			Fecha:<br /><br />
@@ -300,14 +301,14 @@
 		<div id="usrCol4">
 			<!-- Mostramos un combos para la seleccion de fechas -->
 			<!-- Concatenamos la fecha en un campo oculto -->		
-			<input type="text" name="" id="" value="" size="20" />
+			<input type="text" name="Fecha" id="Fecha" value="" size="20" />
 		</div>
 		<br />
 		<div id="usrCol1">
 			Sintesis:<br /><br />
 		</div>
 		<div id="usrCol2">
-			<input type="text" name="" id="" value="" size="20" /> <br />
+			<input type="text" name="Sintesis" id="Sintesis" value="" size="20" /> <br />
 		</div>
 		<div id="usrCol3">
 			Caracter:<br /><br />
@@ -321,12 +322,13 @@
 		</div>
 		<div id="usrCol2">
 			<!-- Combo Prioridades -->
+			<?php combPrioridad(); ?>
 		</div>
 		<div id="usrCol3">
 			Resumen:<br /><br />
 		</div>
 		<div id="usrCol4">
-			<input type="text" name="" id="" value="" size="20" /> <br />
+			<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />
 		</div>
 <?php
 	}
@@ -343,14 +345,15 @@
 	{
 ?>
 		<strong>Datos de la Invitación</strong><br /><br />
-		Nº Interno: <br /><br />
+		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Invitacion" size"5"> <br /><br />
+		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-E-I-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
 		Procedencia de la comunicación:<br /><br />
 		<?php tpersona(); ?>
 				<div id="usrCol1">
 			Nº Comunicación<br /><br />
 		</div>
 		<div id="usrCol2">
-			<input type="text" name="" id="" value="" size="20" /> <br />
+			<input type="text" name="NumCom" id="NumCom" value="" size="20" /> <br />
 		</div>
 		<div id="usrCol3">
 			Fecha:<br /><br />
@@ -358,13 +361,13 @@
 		<div id="usrCol4">
 			<!-- Mostramos un combos para la seleccion de fechas -->
 			<!-- Concatenamos la fecha en un campo oculto -->		
-			<input type="text" name="" id="" value="" size="20" />
+			<input type="text" name="Fecha" id="Fecha" value="" size="20" />
 		</div>
 		<div id="usrCol1">
 			Sintesis:<br /><br />
 		</div>
 		<div id="usrCol2">
-			<input type="text" name="" id="" value="" size="20" /> <br />
+			<input type="text" name="Sintesis" id="Sintesis" value="" size="20" /> <br />
 		</div>
 		<div id="usrCol3">
 			Caracter:<br /><br />
@@ -378,12 +381,13 @@
 		</div>
 		<div id="usrCol2">
 			<!-- Combo Prioridades -->
+			<?php combPrioridad(); ?>
 		</div>
 		<div id="usrCol3">
 			Resumen: (Indique aqui todos los datos de la Invitación)<br /><br />
 		</div>
 		<div id="usrCol4">
-			<input type="text" name="" id="" value="" size="20" /> <br />
+			<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />
 		</div>
 <?php
 	}
@@ -400,14 +404,15 @@
 	{
 ?>
 		<strong>Datos de la Denuncia</strong><br /><br />
-		Nº Interno: <br /><br />
+		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Denuncia" size"5"> <br /><br />
+		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-E-D-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
 		Procedencia de la denuncia:<br /><br />
 		<?php tpersona(); ?>
 		<div id="usrCol1">
 			Nº Comunicación (Si la hay)<br /><br />
 		</div>
 		<div id="usrCol2">
-			<input type="text" name="" id="" value="" size="20" /> <br />
+			<input type="text" name="NumCom" id="NumCom" value="" size="20" /> <br />
 		</div>
 		<div id="usrCol3">
 			Fecha:<br /><br />
@@ -415,13 +420,13 @@
 		<div id="usrCol4">
 			<!-- Mostramos un combos para la seleccion de fechas -->
 			<!-- Concatenamos la fecha en un campo oculto -->		
-			<input type="text" name="" id="" value="" size="20" />
+			<input type="text" name="Fecha" id="Fecha" value="" size="20" />
 		</div>
 		<div id="usrCol1">
 			Sintesis:<br /><br />
 		</div>
 		<div id="usrCol2">
-			<input type="text" name="" id="" value="" size="20" /> <br />
+			<input type="text" name="Sintesis" id="" value="Sintesis" size="20" /> <br />
 		</div>
 		<div id="usrCol3">
 			Caracter:<br /><br />
@@ -435,12 +440,13 @@
 		</div>
 		<div id="usrCol2">
 			<!-- Combo Prioridades -->
+			<?php combPrioridad(); ?>
 		</div>
 		<div id="usrCol3">
 			Resumen: (Relate aca todos los echos)<br /><br />
 		</div>
 		<div id="usrCol4">
-			<input type="text" name="" id="" value="" size="20" /> <br />
+			<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />
 		</div>
 <?php
 	}

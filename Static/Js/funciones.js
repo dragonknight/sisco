@@ -20,7 +20,7 @@ function comEntrante()
 {
 	xajax.$('submitButton').disabled=true;
 	xajax.$('submitButton').value="Espere";
-	xajax_comEntrante(xajax.getFormValues("autentif"));
+	xajax_comEntrante(xajax.getFormValues("comEntrante"));
 	return false;
 }
 		

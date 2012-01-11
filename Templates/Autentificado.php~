@@ -82,35 +82,35 @@
 						//incluyo el archivo de menu's (menu.php)
 						include ("./menu.php");
 		
-						if($_SESSION['idCargo']==0) 
+						if($_SESSION['idCargo']==0) //administrador
 						{							
 							menuAdministrador();
 						}
-						if($_SESSION['idCargo']==1) 
+						if($_SESSION['idCargo']==1) //secretario general
 						{							
 							menuCompleto();
 						}
-						if($_SESSION['idCargo']==2) 
+						if($_SESSION['idCargo']==2) //coordinador
 						{							
 							menuCompleto();
 						}
-						if($_SESSION['idCargo']==3) 
+						if($_SESSION['idCargo']==3) //encargado gacetas
 						{							
 							menuGacetas();
 						}
-						if($_SESSION['idCargo']==4) 
+						if($_SESSION['idCargo']==4) //encargado audiencias
 						{							
 							menuAudiencias();
 						}
-						if($_SESSION['idCargo']==5) 
+						if($_SESSION['idCargo']==5) //asistentes
 						{							
 							menuAsistSecr();
 						}
-						if($_SESSION['idCargo']==6) 
+						if($_SESSION['idCargo']==6) //secretarias
 						{							
 							menuAsistSecr();
 						}
-						if($_SESSION['idCargo']==7) 
+						if($_SESSION['idCargo']==7) //recepcionistas
 						{							
 							menuRecepcionista();
 						}
@@ -119,37 +119,37 @@
 				<div id="Contenido">
 					<?php 
 
-						if($_SESSION['idCargo']==0) 
+						if($_SESSION['idCargo']==0) //administrador
 						{							
 							include ("escAdmin.php");
 						}
-						if($_SESSION['idCargo']==1) 
+						if($_SESSION['idCargo']==1) //secretario general
 						{							
 							include ("escAdmin.php");
 						}
-						if($_SESSION['idCargo']==2) 
+						if($_SESSION['idCargo']==2) //coordinador
 						{							
-							include ("escAdmin.php");
+							include ("escCoord.php");
 						}
-						if($_SESSION['idCargo']==3) 
+						if($_SESSION['idCargo']==3) //encargado gacetas
 						{
 							include ("escAdmin.php");				
 						}	
-						if($_SESSION['idCargo']==4) 
+						if($_SESSION['idCargo']==4) //encargado audiencias
 						{							
 							include ("escAdmin.php");
 						}
-						if($_SESSION['idCargo']==5) 
+						if($_SESSION['idCargo']==5) //asistentes
 						{							
 							include ("escAdmin.php");
 						}
-						if($_SESSION['idCargo']==6) 
+						if($_SESSION['idCargo']==6) //secretarias
 						{							
 							include ("escAdmin.php");
 						}
-						if($_SESSION['idCargo']==7) 
+						if($_SESSION['idCargo']==7) //recepcionistas
 						{							
-							include ("escAdmin.php");
+							include ("escRecep.php");
 						}
 					?>
 				</div>

@@ -174,7 +174,7 @@
 <?php
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Usuario
+	función: usuario
 	Descripción: Función que implementa el formulario con los datos referentes a un usuario
 	Desarrollador: Carlos Castillo
 	Modificado: 

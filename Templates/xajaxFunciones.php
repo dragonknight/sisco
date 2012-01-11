@@ -13,7 +13,8 @@
 	
 	function CambiaPagina($archivo, $id)
 	{
-		$path = "http://localhost/Sisco/Templates/".$archivo;
+		$ip = "192.168.10.196";
+		$path = "http://".$ip."/Sisco/Templates/".$archivo;
 		$fp = fopen ($path,'rb');
 		$codigo="";
 		while ($linea = fgets($fp,1024))
@@ -194,7 +195,6 @@
 		//ingresamos a la B.D. el detalle del login infructuoso:
 		$sql = "insert into bitacora (tipoTransaccion, detalle, ip) values ('" . $idTrans . "','" . $mensaje . "','" . $ip . "')";
 		mysql_query($sql);
-		mysql_close($con);
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
@@ -230,6 +230,25 @@
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
+	function guardaPersonaNoNat($formUsuario)
+	{
+		$con = conectar();
+		mysql_select_db("sisco", $con);
+		
+		// ingresamos a la B.D. los detalles de la persona:
+		$sql = "insert into noNat (id, nombre, tipo, telefono, correo, direccion, pais, ciudad, municipio, parroquia) values ('" . $formUsuario["Id"] . "','" . $formUsuario["Nombre"] . "','" . $formUsuario["TipoPersonaNNat"] . "','" . $formUsuario["Telefono"] . "','" . $formUsuario["Correo"] . "','" . $formUsuario["Direccion"] . "','" . $formUsuario["Pais"] . "','" . $formUsuario["Ciudad"] . "','" . $formUsuario["Municipio"] . "','" . $formUsuario["Parroquia"] . "')";
+		mysql_query($sql);
+	}
+	
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: guardaPersona
+	Descripción:Función usada para agregar personas en la bd.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada:
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
 	function guardaPersona($formUsuario)
 	{
 		$con = conectar();
@@ -238,7 +257,6 @@
 		// ingresamos a la B.D. los detalles de la persona:
 		$sql = "insert into personas (cedula, apellidos, nombres, sexo, telefono, correo, direccion, pais, ciudad, municipio, parroquia) values ('" . $formUsuario["Cedula"] . "','" . $formUsuario["Apellidos"] . "','" . $formUsuario["Nombres"] . "','" . $formUsuario["Sexo"] . "','" . $formUsuario["Telefono"] . "','" . $formUsuario["Correo"] . "','" . $formUsuario["Direccion"] . "','" . $formUsuario["Pais"] . "','" . $formUsuario["Ciudad"] . "','" . $formUsuario["Municipio"] . "','" . $formUsuario["Parroquia"] . "')";
 		mysql_query($sql);
-		mysql_close($con);
 	}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
@@ -272,15 +290,16 @@
 			mysql_query($sql);
 		}
 		// si el proceso de ingreso se llevo a cabo con exito, registramos el evento en la bitacora
-		// primeramente definimos la ip del cliente:		
+		// primeramente definimos la ip del cliente:
 		$bitacora= Bitacora("Se Agrego al usuario: ". $formUsuario['usrLogin'] ." al Sisco","1");
 		mysql_close($con);
+		
 		$objResponse = new xajaxResponse();
 		$objResponse->assign("submitButton","value","Ingresar");
 		$objResponse->assign("submitButton","disabled",false);
 		return $objResponse;
 	}
-	
+
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: comEntrante
 	Descripción:Función usada para agregar comunicaciones en la bd.
@@ -291,15 +310,40 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
 	function comEntrante($formComunicacion)
-	{
+	{	
+		// Determinamos el tipo de persona que entrega
+		// ---> Determinamos si se selecciono una persona o se agrego una nueva:
+		
+		if ($formComunicacion["cTipPersona"]=="1") // Persona Natural
+		{
+			if ($formComunicacion["comboPersonas"]=="0") // Se agrego una nueva persona
+			{
+				$persona = guardaPersona($formComunicacion);
+				$id = $formComunicacion['Cedula'];
+			}
+		}
+		elseif($formComunicacion["cTipPersona"]=="2") // Persona Juridica
+		{
+			if ($formComunicacion["comboPersonasNoNat"]=="0") // Se agrego una nueva persona
+			{
+				$persona = guardaPersonaNoNat($formComunicacion);
+				$id = $formComunicacion['Id'];
+			}
+		}
 		$con = conectar();
 		mysql_select_db("sisco", $con);
-		
-		// Determinamos el tipo de persona que entrega
-		// Determinamos si se selecciono una persona o se agrego una nueva
+			
 		// Almacenamos los detalles de la comunicacion
-		// Registramos la Transaccion en la Bitacora
+		$sql = "insert into comunicaciones (numInterno, tProced, idProced, nComun, fecha, sintesis, caracter prioridad, Resumen, tDirec, tCom) values ('" . $formComunicacion['numInterno'] . "','" . $formComunicacion['cTipPersona'] . "','" . $id . "','" . $formComunicacion['NumCom'] . "','" . $formComunicacion['Fecha'] . "','" . $formComunicacion['Sintesis'] . "','" . $formComunicacion['Caracter'] . "','" . $formComunicacion['Prioridad'] . "','" . $formComunicacion['Resumen'] . "','Entrante','" . $formComunicacion['tipCom'] . "')";
+		mysql_query($sql) or die("Error al realizar la consulta: ". mysql_error());
 		
+		// Registramos la Transaccion en la Bitacora
+		$bitacora= Bitacora("El usuario: ".$row['login']." Ingreso la comunicación ".$formComunicacion['numInterno']." ",'1');
+		mysql_close($con);
+		$objResponse = new xajaxResponse();
+		$objResponse->assign("submitButton","value","Ingresar");
+		$objResponse->assign("submitButton","disabled",false);
+		return $objResponse;
 	}
 /*--------------------------------------------------- Disparador de salida -----------------------------------------------------*/
 

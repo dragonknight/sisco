@@ -148,7 +148,7 @@
 				Tipo Persona:
 			</div>
 			<div id="usrCol2">
-				<select id="TipoPersonaNNat" name="TipoPersonaNNat"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
+				<select id="TipoPersonaNNat" name="TipoPersonaNNat">
 					<option value=""> -- Seleccione -- </option>
 					<option value="M"> Masculino </option>	
 					<option value="F"> Femenino </option>
