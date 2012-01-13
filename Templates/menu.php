@@ -16,8 +16,8 @@
 			echo '
 					<div id="ddtopmenubar" class="mattblackmenu">
 						<ul>
-							<li><a href="javascript:llamar_codigo(\'principal.php\', \'Contenido\')">Principal</a></li>
-							<li><a href="javascript:llamar_codigo(\'autentificacion.php\', \'Contenido\')">Ingresar</a></li>
+							<li><a href="./noAutentif.php" target="contenido">Principal</a></li>
+							<li><a href="./autentificacion.php" target="contenido">Ingresar</a></li>
 							<li><a href="javascript:llamar_codigo(\'Desarrolladores.php\', \'Contenido\')">Desarrolladores</a></li>
 						</ul>
 					</div>

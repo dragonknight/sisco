@@ -5,7 +5,7 @@
 		<link rel="icon" href="./Static/Images/mensajero.gif" type="image/x-gif" />
 		<link rel="shortcut icon" href="./Static/Images/mensajero.gif" type="image/x-gif" />
 		<title>Sistema de Correspondencia -- SISCO -- </title>
-		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
 		<!-- <meta http-equiv="Cache-Control" content="max-age=86400" />  -->
 	</head>
 	<!-- 	Defino los sectores de los que se compondrán la plataforma, en este caso uno solo

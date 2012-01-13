@@ -5,8 +5,21 @@
 		<link rel="icon" href="./Static/Images/mensajero.gif" type="image/x-gif" />
 		<link rel="shortcut icon" href="./Static/Images/mensajero.gif" type="image/x-gif" />
 		<title>Sistema de Correspondencia -- SISCO -- </title>
-		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
 		<!-- <meta http-equiv="Cache-Control" content="max-age=86400" />  -->
+		<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+		<link rel="stylesheet" type="text/css" href="./Static/Css/Principal.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="./Libs/ddlevelsfiles/ddlevelsmenu-base.css" />
+		<link rel="stylesheet" type="text/css" href="./Libs/ddlevelsfiles/ddlevelsmenu-topbar.css" />
+		
+		<script type="text/javascript" src="./Libs/ddlevelsfiles/ddlevelsmenu.js">
+			/***********************************************
+			* All Levels Navigational Menu- (c) Dynamic Drive DHTML code library (http://www.dynamicdrive.com)
+			* This notice MUST stay intact for legal use
+			* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+			***********************************************/
+		</script>
+		<script type="text/javascript" src="./Static/Js/funciones.js"></script> <! -- Funciones js del sistema -- >
 	</head>
 	<!-- 	Defino los sectores de los que se compondrán la plataforma, en este caso uno solo
 		 	los frames se estan aplicando para ocultar el URL en la Barra de Direcciones -->
