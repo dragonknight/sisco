@@ -41,7 +41,7 @@
 	
 	function conectar() 
 	{
-	   $con = mysql_connect("localhost","root","mysql");
+	   $con = mysql_connect("localhost","root","");
 	   if (!$con) {
 	      die('Error de conexión: ' . mysql_error());
 	   }
