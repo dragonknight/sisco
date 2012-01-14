@@ -1,5 +1,4 @@
 <?php
-
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	funci贸n: Men煤 no autentificado
 	Descripci贸n: Funci贸n que muestra el men煤 de usuario previa autenticaci贸n en el sistema.
@@ -48,17 +47,17 @@
 				</div>
 				<!--Top Drop Down Menu 1 HTML-->						
 				<ul id="ddsubmenu1" class="ddsubmenustyle">
-					<li><a href="javascript:llamar_codigo(\'logGeneral.php\', \'Contenido\')">General</a></li>
-					<li><a href="javascript:llamar_codigo(\'logUsuario.php\', \'Contenido\')">Por Usuario</a></li>
-					<li><a href="javascript:llamar_codigo(\'logFecha.php\', \'Contenido\')">Por Fecha</a></li>
-					<li><a href="javascript:llamar_codigo(\'logEvento.php\', \'Contenido\')">Por tipo de Evento</a></li>
+					<li><a href="./logGeneral.php" target="contenido">General</a></li>
+					<li><a href="./logUsuario.php" target="contenido">Por Usuario</a></li>
+					<li><a href="./logFecha.php" target="contenido">Por Fecha</a></li>
+					<li><a href="./logEvento.php" target="contenido">Evento</a></li>
 				</ul>
 				<!--Top Drop Down Menu 2 HTML-->						
 				<ul id="ddsubmenu2" class="ddsubmenustyle">
-					<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Crear Nuevo</a></li>
-					<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Editar Existente</a></li>
-					<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Desactivar Usuario</a></li>
-					<li><a href="javascript:llamar_codigo(\'usuario.php\', \'Contenido\')">Buscar</a></li>
+					<li><a href="./usuario.php" target="contenido">Crear Nuevo</a></li>
+					<li><a href="./usuario.php" target="contenido">Crear Nuevo</a></li>
+					<li><a href="./usuario.php" target="contenido">Crear Nuevo</a></li>
+					<li><a href="./usuario.php" target="contenido">Crear Nuevo</a></li>
 				</ul>
 		';
 	}
@@ -86,12 +85,12 @@
 					
 						<!--Top Drop Down Menu 1 HTML-->						
 						<ul id="ddsubmenu1" class="ddsubmenustyle">
-							<li><a href="javascript:llamar_codigo(\'cEstandar.php\', \'Contenido\')">Comunicaci贸n Estandar</a></li>
-							<li><a href="javascript:llamar_codigo(\'gaceta.php\', \'Contenido\')">Gacetas</a></li>
-							<li><a href="javascript:llamar_codigo(\'audiencia.php\', \'Contenido\')">Audiencias</a></li>
-							<li><a href="javascript:llamar_codigo(\'invitacion.php\', \'Contenido\')">Invitaciones</a></li>
-							<li><a href="javascript:llamar_codigo(\'denuncia.php\', \'Contenido\')">Denuncias</a></li>
-							<li><a href="javascript:llamar_codigo(\'buscar.php\', \'Contenido\')">Buscar</a></li>							
+							<li><a href="./cEstandar.php" target="contenido">Comunicaci髇 Est醤dar</a>
+							<li><a href="./gaceta.php" target="contenido">Gaceta</a></li>
+							<li><a href="./audiencia.php" target="contenido">Audiencia</a></li>
+							<li><a href="./invitacion.php" target="contenido">Invitaci髇</a></li>
+							<li><a href="./denuncia.php" target="contenido">Denuncia</a></li>
+							<li><a href="./buscar.php" target="contenido">Buscar</a></li>							
 						</ul>
 		';
 	}
@@ -445,5 +444,4 @@ function menuEGacetas()
 							</ul>
 		';
 	}
-
 ?>
