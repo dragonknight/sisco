@@ -13,7 +13,8 @@
 	
 	function CambiaPagina($archivo, $id)
 	{
-		$path = "http://localhost/Sisco/Templates/".$archivo;
+		$ip = "192.168.10.196";
+		$path = "http://".$ip."/Sisco/Templates/".$archivo;
 		$fp = fopen ($path,'rb');
 		$codigo="";
 		while ($linea = fgets($fp,1024))

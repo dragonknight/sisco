@@ -17,7 +17,7 @@
 	 	</div>
 		<div id="Contenedor">
 			<?php 
-				include ("./cabecera.html");
+				include ("./Base/cabecera.html");
 			?>
 			<div id="Menu">
 				<?php 
@@ -43,8 +43,8 @@
 				</div>
 			</div>
 				<?php 
-					include ("./powered.html");
-					include ("./pie.html");
+					include ("./Base/powered.html");
+					include ("./Base/pie.html");
 				?>
 		</div>
 	</body>
