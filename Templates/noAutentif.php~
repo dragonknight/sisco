@@ -5,7 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 	<?php 
-		include ("./head.html");
+		include ("./Base/head.html");
 	?>
 <!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- -->
 	<body>
@@ -16,7 +16,7 @@
 	 	</div>
 		<div id="Contenedor">
 			<?php 
-				include ("./cabecera.html");
+				include ("./Base/cabecera.html");
 			?>
 			<div id="Menu">
 				<?php 
@@ -30,8 +30,8 @@
 				?>
 			</div>
 				<?php 
-					include ("./powered.html");
-					include ("./pie.html");
+					include ("./Base/powered.html");
+					include ("./Base/pie.html");
 				?>
 		</div>
 	</body>
