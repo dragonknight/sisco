@@ -19,29 +19,8 @@ castilloc185@hotmail.com
 
 Lista De Tareas Pendientes En sisco:
 
-* Agregar en el formulario autentificacion, el evento onfocus para que se borren los mensajes de error automaticamente
-* Analisar, agregar campos a la bitacora del sistema....
-* desabilitar los botones de los formularios y habilitarlos solo cuando se llenen todos los datos...
-* actualizar los indices para la bitacora del sistema
-* revisar la codificación del sistema
-* Agregar un mensaje de que los datos fueron agregados y borrar el formulario
-* Aplicar funcion que cambie todo a mayuscula
-* Aplicar funcion que valide al terminar de escribir
-* Pensar una Tabla de Representantes para las personas No Naturales
-* Normalizar la bd (Campos, tipos, nombres)
-* hay que incluir los detalles de la ventana modal cuando ocurra el login de error (Mejorar)...
-* estudiar a fondo el problema del firefox en español (revisar si la conexión a internet tiene que ver en algo)
-* la solucion al problema del modal puede estar si determino el tamaño de la pantalla....
-* Es necesario corregir la forma en la que se manejan los combos (funcion consulta), si no hay mas de un registro en la tabla da problemas
-* Modificar los items del menu, para poder mostrar Comunicaciones entrantes y Salientes (Asitentes y Secretarias)
-* Crear tabla tipo Comunicacion segun normativa del README
-* Buscar que los campos tipo Comunicacion y Numero interno (Comunicaciones estandares), esten deshabilitados para edicion -Que solo muestren datos y no permitan escribir-
-* Agregar la funcion que registra que el usuario accedio a una opcion (Puede ser en el menu o puede ser en el onload de la pagina)
-* Definir un estilo para los Botones en el sistema (Centrados)
-* Mejorar las funciones de almacenamiento encadenadas agregando un return (true o false).
-* Analisar los cierres de sesiones de la bd (Si cierro antes de tiempo la pongo)
-
-======================================================================================================================================================================================
-
-* Crear tabla con la Definicion de los tipos de personas juridicas
-* Modificar el combo de tipo personas
+* Crear tabla con la Definicion de los tipos de personas juridicas.
+* Mejorar la Funcion de Combos.
+* Agregar Mensajes de Inserción.
+* Agregar Validación.
+* Completar el Ciclo de la Comunicación.

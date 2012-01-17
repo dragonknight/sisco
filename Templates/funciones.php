@@ -7,7 +7,7 @@
 	$host    ='localhost';  //Nombre del servidor al que se desea conectar
 	$dbname  ='sisco';  		//Nombre de la base de datos
 	$userDB  ='root';			//Nombre del usuario remoto de la base de datos
-	$pass    ='dr31c0';     	//De poseer una contraseóa asignada a este usuario debe ser colocada acá
+	$pass    ='mysql';     	//De poseer una contraseóa asignada a este usuario debe ser colocada acá
 
 	/*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: conectar
@@ -26,7 +26,7 @@
 		global $user;   
 		global $pass;
 		   
-		$conexion = mysql_connect("localhost","root","dr31c0") or die('Error de conexión: ' . mysql_error());
+		$conexion = mysql_connect("localhost","root","mysql") or die('Error de conexión: ' . mysql_error());
 
 		return $conexion;
 	}

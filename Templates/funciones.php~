@@ -7,7 +7,7 @@
 	$host    ='localhost';  //Nombre del servidor al que se desea conectar
 	$dbname  ='sisco';  		//Nombre de la base de datos
 	$userDB  ='root';			//Nombre del usuario remoto de la base de datos
-	$pass    ='dr31c0';     	//De poseer una contraseóa asignada a este usuario debe ser colocada acá
+	$pass    ='mysql';     	//De poseer una contraseóa asignada a este usuario debe ser colocada acá
 
 	/*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: conectar
@@ -164,5 +164,36 @@
 			echo "<option value=". $consul[0][$i][0] .">". $consul[0][$i][1] . ", ". $consul[0][$i][2] . ", ". $consul[0][$i][0] . "</option>";
 		}
 		
+	}
+	
+	/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: Cuenta registros
+	Descripción:Función para la creación de Tumb (imagen en Miniatura)
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	Modificado: 
+	
+	Parámetros entrada:
+	Salida:
+	--------------------------------------------------------------------------------------------------------------------------------*/
+	function cuenta_reg($tabla,$campo,$condicion)
+	{
+	 global $dbname;
+	 
+	 $conec = conectar();
+	 mysql_select_db("$dbname");
+	 if($condicion==null)  //Si no tiene condicion la consulta, es decir no necesita una clausula where
+	 {
+	 		$query="SELECT COUNT(*)FROM ".$tabla;
+	 }
+	 else 
+	 {
+			$query="SELECT COUNT(*)FROM ".$tabla." where ".$condicion;		
+	 }
+	 //andamiaje comentado....
+	 //ventana_error($query);
+	 $result = mysql_query($query,$conec) or die("Error al realizar la consulta: ".mysql_error());
+	 $salida = mysql_fetch_array($result);
+	 
+	 return $salida; 
 	}
 ?>

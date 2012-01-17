@@ -19,7 +19,9 @@ castilloc185@hotmail.com
 
 Listado de Cambios de la Versión:
 
-Fecha:
+Fecha: 17/01/2012
 
-	*)
+	*) Corregidos problemas en la inserción de Comunicaciones.
+	*) Cambiados Tipos de Campos en la BD.
+	*) Eliminado el paso de la configuración Ip en la funcion CambiaPagina (xajaxFunciones.php)
 

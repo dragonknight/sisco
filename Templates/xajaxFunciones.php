@@ -41,7 +41,7 @@
 	
 	function conectar() 
 	{
-	   $con = mysql_connect("localhost","root","");
+	   $con = mysql_connect("localhost","root","mysql");
 	   if (!$con) {
 	      die('Error de conexión: ' . mysql_error());
 	   }
@@ -332,9 +332,9 @@
 		}
 		$con = conectar();
 		mysql_select_db("sisco", $con);
-			
+		
 		// Almacenamos los detalles de la comunicacion
-		$sql = "insert into comunicaciones (numInterno, tProced, idProced, nComun, fecha, sintesis, caracter prioridad, Resumen, tDirec, tCom) values ('" . $formComunicacion['numInterno'] . "','" . $formComunicacion['cTipPersona'] . "','" . $id . "','" . $formComunicacion['NumCom'] . "','" . $formComunicacion['Fecha'] . "','" . $formComunicacion['Sintesis'] . "','" . $formComunicacion['Caracter'] . "','" . $formComunicacion['Prioridad'] . "','" . $formComunicacion['Resumen'] . "','Entrante','" . $formComunicacion['tipCom'] . "')";
+		$sql = "insert into comunicaciones (numInterno, tProced, idProced, nComun, fecha, sintesis, caracter, prioridad, Resumen, tDirec, tCom) values ('" . $formComunicacion['numInterno'] . "','" . $formComunicacion['cTipPersona'] . "','" . $id . "','" . $formComunicacion['NumCom'] . "','" . $formComunicacion['Fecha'] . "','" . $formComunicacion['Sintesis'] . "','" . $formComunicacion['Caracter'] . "','" . $formComunicacion['Prioridad'] . "','" . $formComunicacion['Resumen'] . "','Entrante','" . $formComunicacion['tipCom'] . "')";
 		mysql_query($sql) or die("Error al realizar la consulta: ". mysql_error());
 		
 		// Registramos la Transaccion en la Bitacora

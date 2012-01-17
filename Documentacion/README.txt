@@ -43,14 +43,13 @@ Una vez tenga la fuente del sistema es necesario montar la BD del sistema, para 
 2.- Ajuste los parametros de la conexión Mysql en los archivos xajaxFunciones.php y funciones.php localizados en el subdirectorio Templates
 
 	* Primeramente, ajuste la variable patch de la funcion CambiaPagina de acuerdo a sus directorios (xajaxFunciones.php en el subdirectorio                        Templates)
-		* Seguidamente, ajuste las variables de conexión de acuerdo a su instalación de Mysql en ambos archivos (xajaxFunciones.php y funciones.php)
+	* Seguidamente, ajuste las variables de conexión de acuerdo a su instalación de Mysql en ambos archivos (xajaxFunciones.php y funciones.php)
 
-3.- Ajuste el parametro ip de la funcion cambiaPagina en el archivo xajaxFunciones.php localizado en el subdirectorio Templates; Este parametro, debe     contener la direccion ip del servidor web que corre sisco.
-4.- Acceda al sistema como administrador (Usuario: admin; Contraseña: 4dm1n).
+3.- Acceda al sistema como administrador (Usuario: admin; Contraseña: 4dm1n).
 
-5.- Cambie la contraseña de administrador del sistema
+4.- Cambie la contraseña de administrador del sistema
 
-6.- Cree los usuarios del sistema.
+5.- Cree los usuarios del sistema.
 =============================================================================================================================================================
 
 
