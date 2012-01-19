@@ -167,7 +167,7 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	function cEstandar()
 	{
-		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = '1'");
+		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = 'Estandar'");
 		$comunicacion = $comunicacion[0]+1;
 ?>
 		<strong>Datos de la Comunicación</strong><br /><br />

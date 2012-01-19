@@ -24,3 +24,5 @@ Lista De Tareas Pendientes En sisco:
 * Agregar Mensajes de Inserción.
 * Agregar Validación.
 * Completar el Ciclo de la Comunicación.
+* Modificar el procedimiento de Guardar Usuario (el id puede ser por el combo o el tex asi que que eso debe pensarse como en guarda comunic).
+* Agregar banderas de Verificación, que retornen las funciones y permitan adaptar los mensajes y las acciones del sistema (almacenamiento).
