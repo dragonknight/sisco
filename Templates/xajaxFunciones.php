@@ -291,11 +291,12 @@
 		// primeramente definimos la ip del cliente:
 		$bitacora= Bitacora("Se Agrego al usuario: ". $formUsuario['usrLogin'] ." al Sisco","1");
 		mysql_close($con);
+		
 		$objResponse = new xajaxResponse();
 		$objResponse->assign("submitButton","value","Ingresar");
 		$objResponse->assign("submitButton","disabled",false);
-		$objResponse->alert("Se Ha procesado el Registro con exito");
-		$objResponse->redirect("./autentificado.php",5);
+		$objResponse->alert("Se Ha procesado el Registro con éxito");
+		//$objResponse->redirect("./autentificado.php",5);
 		return $objResponse;
 	}
 
@@ -339,11 +340,12 @@
 		// Registramos la Transaccion en la Bitacora
 		$bitacora= Bitacora("El usuario: ".$row['login']." Ingreso la comunicación ".$formComunicacion['numInterno']." ",'1');
 		mysql_close($con);
+
 		$objResponse = new xajaxResponse();
 		$objResponse->assign("submitButton","value","Ingresar");
 		$objResponse->assign("submitButton","disabled",false);
 		$objResponse->alert("La Comunicación a sido almacenada correctamente");
-		$objResponse->redirect("./autentificado.php",5);
+		//$objResponse->redirect("./autentificado.php",5);
 		return $objResponse;
 	}
 /*--------------------------------------------------- Disparador de salida -----------------------------------------------------*/

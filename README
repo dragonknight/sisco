@@ -27,12 +27,13 @@ Usando Sisco por primera vez:
 Una vez tenga la fuente del sistema es necesario montar la BD del sistema, para ello se debe realizar el siguiente procedimiento:
 
 	1.- Cree la Bd del sistema, apartir del archivo sisco.sql localizado en el subdirectorio DB
-	2.- Ajuste los parametros de la conexión Mysql en los archivos xajaxFunciones.php y funciones.php localizados en el subdirectorio Templates
-	3.- Primeramente, ajuste la variable patch de la funcion CambiaPagina de acuerdo a sus directorios (xajaxFunciones.php en el subdirectorio Templates)
-	4.- Seguidamente, ajuste las variables de conexión de acuerdo a su instalación de Mysql en ambos archivos (xajaxFunciones.php y funciones.php)
-	5.- Acceda al sistema como administrador (Usuario: admin; Contraseña: 4dm1n).
-	6.- Cambie la contraseña de administrador del sistema
-	7.- Cree los usuarios del sistema.
+	2.- Ajuste los parametros de conexión (Mysql), patch e ip en los archivos xajaxFunciones.php y funciones.php localizados en el subdirectorio Templates
+		- Primeramente, ajuste la variable patch de la funcion CambiaPagina de acuerdo a sus directorios (xajaxFunciones.php en el subdirectorio Templates)
+		- Seguidamente, ajuste la variable ip (con la direccion Ip del servidor donde se aloja el sistema.
+		- Finalmente, ajuste las variables de conexión de acuerdo a su instalación de Mysql en ambos archivos (xajaxFunciones.php y funciones.php)
+	3.- Acceda al sistema como administrador (Usuario: admin; Contraseña: 4dm1n).
+	4.- Cambie la contraseña de administrador del sistema
+	5.- Cree los usuarios del sistema.
 ======================================================================================================================================================================================
 
 Notas:

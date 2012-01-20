@@ -228,6 +228,8 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	function gaceta()
 	{
+		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = 'Gaceta'");
+		$comunicacion = $comunicacion[0]+1;
 ?>
 		<strong>Datos de la Comunicación</strong><br /><br />
 		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Gaceta" size"5"> <br /><br />
@@ -284,6 +286,8 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	function audiencia()
 	{
+		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = 'Audiencia'");
+		$comunicacion = $comunicacion[0]+1;
 ?>
 		<strong>Datos de la Solicitud</strong><br /><br />
 		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Audiencia" size"5"> <br /><br />
@@ -343,9 +347,11 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	function invitacion()
 	{
+		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = 'Invitación'");
+		$comunicacion = $comunicacion[0]+1;
 ?>
 		<strong>Datos de la Invitación</strong><br /><br />
-		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Invitacion" size"5"> <br /><br />
+		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Invitación" size"5"> <br /><br />
 		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-E-I-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
 		Procedencia de la comunicación:<br /><br />
 		<?php tpersona(); ?>

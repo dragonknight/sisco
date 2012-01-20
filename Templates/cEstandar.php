@@ -37,16 +37,16 @@
 				include ("./Base/head.html");
 			?>
 			<body>
+<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- --> 
+			 
+		    	<div id="fade" class="overlay"></div>
+				<div id="light" class="modal">
+		    	</div>
+			   
 				<div id="Contenedor">
 					<?php 
 						include ("./Base/cabecera.html");
 					?>
-			<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- --> 
-			 
-			    	<div id="fade" class="overlay"></div>
-					<div id="light" class="modal">
-			    	</div>
-			<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- -->
 					
 					<div id="Menu">
 						<?php 
