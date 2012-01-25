@@ -338,7 +338,7 @@
 		mysql_query($sql) or die("Error al realizar la consulta: ". mysql_error());
 		
 		// Registramos la Transaccion en la Bitacora
-		$bitacora= Bitacora("El usuario: ".$row['login']." Ingreso la comunicación ".$formComunicacion['numInterno']." ",'1');
+		$bitacora= Bitacora("El usuario: ".$_SESSION['usuario'].". Ingreso la comunicación ".$formComunicacion['numInterno']." ",'1');
 		mysql_close($con);
 
 		$objResponse = new xajaxResponse();
