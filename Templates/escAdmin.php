@@ -17,18 +17,12 @@
 				<?php echo 'Número de entradas en el log: '. $resumen[1] . '<br /><br />'; ?>
 			</div>
 			<div id="bitCol1">
-				<strong> Nº: </strong><br />
-			</div>
-			<div id="bitCol2">
-				<strong> Tipo: </strong><br />
-			</div>
-			<div id="bitCol3">
 				<strong> Detalle: </strong><br />
 			</div>
-			<div id="bitCol4">
+			<div id="bitCol2">
 				<strong> IP: </strong><br />
 			</div>
-			<div id="bitCol5">
+			<div id="bitCol3">
 				<strong> Fecha: </strong><br />
 			</div>
 <?php
@@ -36,18 +30,12 @@
 			{
 ?>
 				<div id="bitCol1">
-					<?php echo $resumen[0][$i][0]; ?> <br />
-				</div>
-				<div id="bitCol2">
-					<?php echo $resumen[0][$i][1]; ?> <br />
-				</div>
-				<div id="bitCol3">
 					<?php echo $resumen[0][$i][2]; ?> <br />
 				</div>
-				<div id="bitCol4">
+				<div id="bitCol2">
 					<?php echo $resumen[0][$i][3]; ?> <br />
 				</div>
-				<div id="bitCol5">
+				<div id="bitCol3">
 					<?php echo $resumen[0][$i][4]; ?> <br />
 				</div>
 <?php	

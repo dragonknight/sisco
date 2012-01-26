@@ -239,17 +239,8 @@
 {
 	clear: both;
 	text-align: center;
-	background-color: #e2e2e2;
-	border-radius: 10px;
-    		-ms-border-radius: 10px;
-    		-moz-border-radius: 10px;
-    		-webkit-border-radius: 10px;
-    		-khtml-border-radius: 10px;
-   	box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-   		-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
    margin: 1em;
 	padding: .5em;
-	height: 10em;
 }
 /* -------------------------------------------------------- Estilo presentación Bitacora ----------------------------------------- */
 #izq
@@ -260,27 +251,17 @@
 #bitCol1
 {
 	clear: both;
-   width:10%;
+   width:50%;
    float: left;
 }
 #bitCol2
 {
-   width:5%;
+   width:20%;
    float: left;
 }
 #bitCol3
 {
-   width:55%;
-   float: left;
-}
-#bitCol4
-{
-   width:5%;
-   float: left;
-}
-#bitCol5
-{
-   width:25%;
+   width:30%;
    float: left;
 }
 /* -------------------------------------------------------- Estilo Form Usuarios ------------------------------------------------- */
@@ -290,15 +271,6 @@
 	text-align: center;
 	margin-top: 2em;
 	margin-bottom: 2em;
-	background-color: #e2e2e2;
-	border-radius: 10px;
-    -ms-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -khtml-border-radius: 10px;
-   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-   margin: 1em;
 	padding: .5em;
 }
 #persona
