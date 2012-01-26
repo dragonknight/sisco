@@ -171,9 +171,9 @@
 		$comunicacion = $comunicacion[0]+1;
 ?>
 		<strong>Datos de la Comunicación</strong><br /><br />
-		Tipo Comunicación: <?php echo '<input name="tipCom" type="text" id="tipCom" value="'.$tCom.'" size"5">'; ?> <br /><br />
-		Direccionalidad: <?php echo '<input name="Via" type="text" id="Via" value="'.$direc.'" size"5">'; ?> <br /><br />
-		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-'.$inicD.'-'.$inic.'-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
+		Tipo Comunicación: <?php echo '<input name="tipCom" type="text" id="tipCom" value="'.$tCom.'" size"5" readonly="readonly">'; ?> <br /><br />
+		Direccionalidad: <?php echo '<input name="Via" type="text" id="Via" value="'.$direc.'" size"5" readonly="readonly">'; ?> <br /><br />
+		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-'.$inicD.'-'.$inic.'-2012-' .$comunicacion.'" size"5" readonly="readonly"> '; ?> <br /><br />
 <?php
 	}
 	
@@ -202,9 +202,7 @@
 			Fecha:<br />
 		</div>
 		<div id="rCol4">
-			<!-- Mostramos un combos para la seleccion de fechas -->
-			<!-- Concatenamos la fecha en un campo oculto -->		
-			<input type="text" name="Fecha" id="Fecha" value="" size="20" /><br />
+			<input type="text" name="Fecha" id="Fecha" size="20" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" /><br />
 		</div>
 		<div id="rCol1">
 			Sintesis:<br />
@@ -257,10 +255,8 @@
 		<div id="usrCol3">
 			Fecha:<br /><br />
 		</div>
-		<div id="usrCol4">
-			<!-- Mostramos un combos para la seleccion de fechas -->
-			<!-- Concatenamos la fecha en un campo oculto -->		
-			<input type="text" name="Fecha" id="Fecha" value="" size="20" />
+		<div id="usrCol4">	
+			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
 		</div>
 		<div id="usrCol1">
 			Sintesis:<br /><br />
@@ -311,10 +307,8 @@
 		<div id="usrCol3">
 			Fecha:<br /><br />
 		</div>
-		<div id="usrCol4">
-			<!-- Mostramos un combos para la seleccion de fechas -->
-			<!-- Concatenamos la fecha en un campo oculto -->		
-			<input type="text" name="Fecha" id="Fecha" value="" size="20" />
+		<div id="usrCol4">	
+			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
 		</div>
 		<br />
 		<div id="usrCol1">
@@ -369,10 +363,8 @@
 		<div id="usrCol3">
 			Fecha:<br /><br />
 		</div>
-		<div id="usrCol4">
-			<!-- Mostramos un combos para la seleccion de fechas -->
-			<!-- Concatenamos la fecha en un campo oculto -->		
-			<input type="text" name="Fecha" id="Fecha" value="" size="20" />
+		<div id="usrCol4">		
+			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
 		</div>
 		<div id="usrCol1">
 			Sintesis:<br /><br />
@@ -427,10 +419,8 @@
 		<div id="usrCol3">
 			Fecha:<br /><br />
 		</div>
-		<div id="usrCol4">
-			<!-- Mostramos un combos para la seleccion de fechas -->
-			<!-- Concatenamos la fecha en un campo oculto -->		
-			<input type="text" name="Fecha" id="Fecha" value="" size="20" />
+		<div id="usrCol4">		
+			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
 		</div>
 		<div id="usrCol1">
 			Sintesis:<br /><br />
