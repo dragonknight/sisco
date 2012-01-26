@@ -7,7 +7,7 @@
 	Modificado: 
 
 	Parámetros entrada: ---
-	Salida: $conexion
+	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
 	function tpersona()
@@ -165,14 +165,31 @@
 	Parámetros entrada: ---
 	Salida: $conexion
 --------------------------------------------------------------------------------------------------------------------------------*/
-	function cEstandar()
+	function Direcc( $tCom, $inic, $direc, $inicD)
 	{
-		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = 'Estandar'");
+		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = '".$tCom."' && tDirec = 'Entrante'");
 		$comunicacion = $comunicacion[0]+1;
 ?>
 		<strong>Datos de la Comunicación</strong><br /><br />
-		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Estandar" size"5"> <br /><br />
-		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-E-E-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
+		Tipo Comunicación: <?php echo '<input name="tipCom" type="text" id="tipCom" value="'.$tCom.'" size"5">'; ?> <br /><br />
+		Direccionalidad: <?php echo '<input name="Via" type="text" id="Via" value="'.$direc.'" size"5">'; ?> <br /><br />
+		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-'.$inicD.'-'.$inic.'-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
+<?php
+	}
+	
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: cEstandar
+	Descripción: Función que llama a las entidades Persona Natural y no Natural
+	Desarrollador: Carlos J. Castillo N.
+	Modificado: 
+	
+	Parámetros entrada: ---
+	Salida: $conexion
+--------------------------------------------------------------------------------------------------------------------------------*/
+	function cEstandar($tCom, $inic, $direc, $inicD)
+	{
+		Direcc($tCom, $inic, $direc, $inicD);
+?>
 		Procedencia de la comunicación:<br /><br />
 		<?php tpersona(); ?>
 		<div id="rCol1">
@@ -226,14 +243,10 @@
 	Parámetros entrada: ---
 	Salida: $conexion
 --------------------------------------------------------------------------------------------------------------------------------*/
-	function gaceta()
+	function gaceta($tCom, $inic, $direc, $inicD)
 	{
-		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = 'Gaceta'");
-		$comunicacion = $comunicacion[0]+1;
+		Direcc($tCom, $inic, $direc, $inicD);
 ?>
-		<strong>Datos de la Comunicación</strong><br /><br />
-		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Gaceta" size"5"> <br /><br />
-		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-E-G-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
 		<?php perNoNatural(); ?>
 		<div id="usrCol1">
 			Nº Comunicación<br /><br />
@@ -284,14 +297,10 @@
 	Parámetros entrada: ---
 	Salida: $conexion
 --------------------------------------------------------------------------------------------------------------------------------*/
-	function audiencia()
+	function audiencia($tCom, $inic, $direc, $inicD)
 	{
-		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = 'Audiencia'");
-		$comunicacion = $comunicacion[0]+1;
+		Direcc($tCom, $inic, $direc, $inicD);
 ?>
-		<strong>Datos de la Solicitud</strong><br /><br />
-		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Audiencia" size"5"> <br /><br />
-		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-E-A-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
 		<?php tpersona(); ?>
 		<div id="usrCol1">
 			Nº Comunicación (Si la hay)<br /><br />
@@ -345,14 +354,10 @@
 	Parámetros entrada: ---
 	Salida: $conexion
 --------------------------------------------------------------------------------------------------------------------------------*/
-	function invitacion()
+	function invitacion($tCom, $inic, $direc, $inicD)
 	{
-		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = 'Invitación'");
-		$comunicacion = $comunicacion[0]+1;
+		Direcc($tCom, $inic, $direc, $inicD);
 ?>
-		<strong>Datos de la Invitación</strong><br /><br />
-		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Invitación" size"5"> <br /><br />
-		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-E-I-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
 		Procedencia de la comunicación:<br /><br />
 		<?php tpersona(); ?>
 				<div id="usrCol1">
@@ -390,7 +395,7 @@
 			<?php combPrioridad(); ?>
 		</div>
 		<div id="usrCol3">
-			Resumen: (Indique aqui todos los datos de la Invitación)<br /><br />
+			Resumen: (Indique aquí todos los datos de la Invitación)<br /><br />
 		</div>
 		<div id="usrCol4">
 			<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />
@@ -406,12 +411,11 @@
 	Parámetros entrada: ---
 	Salida: $conexion
 --------------------------------------------------------------------------------------------------------------------------------*/
-	function denuncia()
+	function denuncia($tCom, $inic, $direc, $inicD)
 	{
+		Direcc($tCom, $inic, $direc, $inicD);
 ?>
 		<strong>Datos de la Denuncia</strong><br /><br />
-		Tipo Comunicación: <input name="tipCom" type="text" id="tipCom" value="Denuncia" size"5"> <br /><br />
-		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-E-D-2012-' .$comunicacion.'" size"5"> '; ?> <br /><br />
 		Procedencia de la denuncia:<br /><br />
 		<?php tpersona(); ?>
 		<div id="usrCol1">
@@ -449,7 +453,7 @@
 			<?php combPrioridad(); ?>
 		</div>
 		<div id="usrCol3">
-			Resumen: (Relate aca todos los echos)<br /><br />
+			Resumen: (Relate acá todos los hechos)<br /><br />
 		</div>
 		<div id="usrCol4">
 			<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />

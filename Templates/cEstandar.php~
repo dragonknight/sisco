@@ -42,7 +42,7 @@
 		    	<div id="fade" class="overlay"></div>
 				<div id="light" class="modal">
 		    	</div>
-			    	
+			   
 				<div id="Contenedor">
 					<?php 
 						include ("./Base/cabecera.html");
@@ -98,7 +98,7 @@
 							<div id="cEstandar">
 								<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php
-										cEstandar();
+										cEstandar('Estandar', 'E', 'Entrante');
 									?>
 									<br />
 									<input id="submitButton" type="submit" value="Ingresar"/>

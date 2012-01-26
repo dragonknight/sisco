@@ -98,7 +98,7 @@
 							<div id="audiencia">
 								<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php
-										audiencia();
+										audiencia('Audiencia', 'A', 'Entrante');
 									?>
 									<br />
 									<input id="submitButton" type="submit" value="Ingresar"/>
@@ -128,33 +128,35 @@
 			<?php 
 				include ("./Base/head.html");
 			?>
-			<div id="Contenedor">
-				<?php 
-					include ("./Base/cabecera.html");
-				?>
-				<div id="Menu">
+			</body>
+				<div id="Contenedor">
 					<?php 
-						//incluyo el archivo de menu's (menu.php)
-						include ("./menu.php");	
-						menuNoAutent();
+						include ("./Base/cabecera.html");
+					?>
+					<div id="Menu">
+						<?php 
+							//incluyo el archivo de menu's (menu.php)
+							include ("./menu.php");	
+							menuNoAutent();
+						?>
+					</div>
+					<div id="Contenido">
+						<div id="errorLogin">
+							<p>
+								Error, no ha iniciado Sesión, o su Sesión en el sistema de Correspondencia Sisco a caducado;
+								Este incidente sera notificado al administrador del sistema...
+							</p>
+						</div>
+					</div>
+					<script type="text/javascript"> 
+						xajax_Bitacora('Intento de escalar privilegios','7'); //alternativamente podemos colocar language="JavaScript"
+					</script> 
+					<?php 
+						include ("./Base/powered.html");
+						include ("./Base/pie.html");
 					?>
 				</div>
-				<div id="Contenido">
-					<div id="errorLogin">
-						<p>
-							Error, no ha iniciado Sesión, o su Sesión en el sistema de Correspondencia Sisco a caducado;
-							Este incidente sera notificado al administrador del sistema...
-						</p>
-					</div>
-				</div>
-				<script type="text/javascript"> 
-					xajax_Bitacora('Intento de escalar privilegios','7'); //alternativamente podemos colocar language="JavaScript"
-				</script> 
-				<?php 
-					include ("./Base/powered.html");
-					include ("./Base/pie.html");
-				?>
-			</div>
+			</body>
 		</html>
 <?php		
 	}

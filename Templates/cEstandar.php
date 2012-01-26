@@ -98,7 +98,7 @@
 							<div id="cEstandar">
 								<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php
-										cEstandar();
+										cEstandar('Estandar', 'E', 'Entrante', 'E');
 									?>
 									<br />
 									<input id="submitButton" type="submit" value="Ingresar"/>

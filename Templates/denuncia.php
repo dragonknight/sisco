@@ -98,7 +98,7 @@
 							<div id="gaceta">
 								<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php
-										denuncia();
+										denuncia('Denuncia', 'D', 'Entrante', 'E');
 									?>
 									<br />
 									<input id="submitButton" type="submit" value="Ingresar"/>

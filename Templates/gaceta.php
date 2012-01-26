@@ -98,7 +98,7 @@
 							<div id="audiencia">
 								<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php
-										audiencia();
+										gaceta('Gaceta', 'G', 'Entrante', 'E');
 									?>
 									<br />
 									<input id="submitButton" type="submit" value="Ingresar"/>

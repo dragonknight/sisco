@@ -318,27 +318,27 @@
 		{
 			if ($formComunicacion["comboPersonas"]=="0") // Se agrego una nueva persona
 			{
-				$persona = guardaPersona($formComunicacion);
 				$id = $formComunicacion['Cedula'];
+				$persona = guardaPersona($formComunicacion);
 			}
 		}
-		elseif($formComunicacion["cTipPersona"]=="2") // Persona Juridica
+		elseif($formComunicacion["cTipPersona"]=="2") // Persona Jurídica
 		{
 			if ($formComunicacion["comboPersonasNoNat"]=="0") // Se agrego una nueva persona
 			{
-				$persona = guardaPersonaNoNat($formComunicacion);
 				$id = $formComunicacion['Id'];
+				$persona = guardaPersonaNoNat($formComunicacion);
 			}
 		}
 		$con = conectar();
 		mysql_select_db("sisco", $con);
 		
 		// Almacenamos los detalles de la comunicacion
-		$sql = "insert into comunicaciones (numInterno, tProced, idProced, nComun, fecha, sintesis, caracter, prioridad, Resumen, tDirec, tCom) values ('" . $formComunicacion['numInterno'] . "','" . $formComunicacion['cTipPersona'] . "','" . $id . "','" . $formComunicacion['NumCom'] . "','" . $formComunicacion['Fecha'] . "','" . $formComunicacion['Sintesis'] . "','" . $formComunicacion['Caracter'] . "','" . $formComunicacion['Prioridad'] . "','" . $formComunicacion['Resumen'] . "','Entrante','" . $formComunicacion['tipCom'] . "')";
+		$sql = "insert into comunicaciones (numInterno, tProced, idProced, nComun, fecha, sintesis, caracter, prioridad, Resumen, tDirec, tCom) values ('" . $formComunicacion['numInterno'] . "','" . $formComunicacion['cTipPersona'] . "','" . $id . "','" . $formComunicacion['NumCom'] . "','" . $formComunicacion['Fecha'] . "','" . $formComunicacion['Sintesis'] . "','" . $formComunicacion['Caracter'] . "','" . $formComunicacion['Prioridad'] . "','" . $formComunicacion['Resumen'] . "','" . $formComunicacion['Via'] . "','" . $formComunicacion['tipCom'] . "')";
 		mysql_query($sql) or die("Error al realizar la consulta: ". mysql_error());
 		
 		// Registramos la Transaccion en la Bitacora
-		$bitacora= Bitacora("El usuario: ".$_SESSION['usuario']." Ingreso la comunicación ".$formComunicacion['numInterno']." ",'1');
+		$bitacora= Bitacora("El usuario: ".$_SESSION['usuario'].". Ingreso la comunicación ".$formComunicacion['numInterno']." ",'1');
 		mysql_close($con);
 
 		$objResponse = new xajaxResponse();

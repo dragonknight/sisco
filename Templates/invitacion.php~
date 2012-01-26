@@ -98,7 +98,7 @@
 							<div id="cEstandar">
 								<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php
-										cEstandar();
+										invitacion('Invitación', 'I', 'Entrante');
 									?>
 									<br />
 									<input id="submitButton" type="submit" value="Ingresar"/>
@@ -107,3 +107,18 @@
 								</div>
 							</div>
 						</div>
+					</div>
+					<?php 
+						include ("./Base/powered.html");
+						include ("./Base/pie.html");
+					?>
+				</div>
+			</body>
+		</html>
+<?php		
+	}
+	else 
+	{
+		include ("./Base/paginaError.php");
+	}
+?>	
