@@ -344,10 +344,10 @@
 		mysql_close($con);
 
 		$objResponse = new xajaxResponse();
+		$objResponse->alert("Datos Agregados.");
 		$objResponse->assign("submitButton","value","Ingresar");
 		$objResponse->assign("submitButton","disabled",false);
-		$objResponse->alert("La Comunicación a sido almacenada correctamente");
-		//$objResponse->redirect("./autentificado.php",5);
+		$objResponse->redirect("./autentificado.php",2);
 		return $objResponse;
 	}
 /*--------------------------------------------------- Disparador de salida -----------------------------------------------------*/
