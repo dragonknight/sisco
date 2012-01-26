@@ -237,6 +237,7 @@
 		
 		// ingresamos a la B.D. los detalles de la persona:
 		$sql = "insert into noNat (id, nombre, tipo, telefono, correo, direccion, pais, ciudad, municipio, parroquia) values ('" . $formUsuario["Id"] . "','" . $formUsuario["Nombre"] . "','" . $formUsuario["TipoPersonaNNat"] . "','" . $formUsuario["Telefono"] . "','" . $formUsuario["Correo"] . "','" . $formUsuario["Direccion"] . "','" . $formUsuario["Pais"] . "','" . $formUsuario["Ciudad"] . "','" . $formUsuario["Municipio"] . "','" . $formUsuario["Parroquia"] . "')";
+		mysql_query($sql) or die("Error al realizar la inserción ". mysql_error());
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
@@ -255,6 +256,7 @@
 		
 		// ingresamos a la B.D. los detalles de la persona:
 		$sql = "insert into personas (cedula, apellidos, nombres, sexo, telefono, correo, direccion, pais, ciudad, municipio, parroquia) values ('" . $formUsuario["Cedula"] . "','" . $formUsuario["Apellidos"] . "','" . $formUsuario["Nombres"] . "','" . $formUsuario["Sexo"] . "','" . $formUsuario["Telefono"] . "','" . $formUsuario["Correo"] . "','" . $formUsuario["Direccion"] . "','" . $formUsuario["Pais"] . "','" . $formUsuario["Ciudad"] . "','" . $formUsuario["Municipio"] . "','" . $formUsuario["Parroquia"] . "')";
+		mysql_query($sql) or die("Error al realizar la inserción ". mysql_error());
 	}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
@@ -278,14 +280,14 @@
 			$persona = guardaPersona ($formUsuario);
 			// guardamos los datos del usuario:
 			$sql = "insert into usuarios (idPersona, idCargo, login, password) values ('" . $formUsuario['Cedula'] . "','" . $formUsuario['Cargo'] . "','" . $formUsuario['usrLogin'] . "','" . $formUsuario['usrPassword'] . "')";
-			mysql_query($sql);	
+			mysql_query($sql) or die("Error al realizar la inserción ". mysql_error());
 		}
 		// si se selecciono una persona, entonces solo hay que agregar los datos de usuario
 		else
 		{			 
 			// ingresamos a la B.D. los detalles del ahora usuario:
 			$sql = "insert into usuarios (idPersona, idCargo, login, password) values ('" . $formUsuario['Cedula'] . "','" . $formUsuario['Cargo'] . "','" . $formUsuario['usrLogin'] . "','" . $formUsuario['usrPassword'] . "')";
-			mysql_query($sql); 			 
+			mysql_query($sql) or die("Error al realizar la inserción ". mysql_error()); 			 
 		}
 		// si el proceso de ingreso se llevo a cabo con exito, registramos el evento en la bitacora
 		// primeramente definimos la ip del cliente:
@@ -293,10 +295,10 @@
 		mysql_close($con);
 		
 		$objResponse = new xajaxResponse();
+		$objResponse->alert("Datos Agregados.");
 		$objResponse->assign("submitButton","value","Ingresar");
 		$objResponse->assign("submitButton","disabled",false);
-		$objResponse->alert("Se Ha procesado el Registro con éxito");
-		//$objResponse->redirect("./autentificado.php",5);
+		$objResponse->redirect("./Autentificado.php",2);
 		return $objResponse;
 	}
 
