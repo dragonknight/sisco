@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-01-2012 a las 09:59:32
+-- Tiempo de generación: 26-01-2012 a las 17:35:42
 -- Versión del servidor: 5.1.49
 -- Versión de PHP: 5.3.3-7+squeeze3
 
@@ -32,60 +32,13 @@ CREATE TABLE IF NOT EXISTS `bitacora` (
   `ip` varchar(15) COLLATE utf8_spanish2_ci DEFAULT NULL COMMENT 'ip del cliente que ejecuto la transaccion',
   `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idTransaccion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci COMMENT='Log del sistema sisco' AUTO_INCREMENT=799 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci COMMENT='Log del sistema sisco' AUTO_INCREMENT=836 ;
 
 --
 -- Volcar la base de datos para la tabla `bitacora`
 --
 
-INSERT INTO `bitacora` (`idTransaccion`, `tipoTransaccion`, `detalle`, `ip`, `fecha`) VALUES
-(752, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-01-14 13:14:48'),
-(753, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-01-14 13:15:15'),
-(754, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-01-14 16:31:48'),
-(755, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-01-14 16:33:24'),
-(756, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-01-14 16:33:52'),
-(757, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-01-14 16:34:14'),
-(758, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-01-14 16:34:44'),
-(759, 1, 'Se Agrego al usuario: palejandra al Sisco', '127.0.0.1', '2012-01-14 16:36:44'),
-(760, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-01-14 16:36:52'),
-(761, 5, 'El usuario: palejandra accedio al Sisco', '127.0.0.1', '2012-01-14 16:37:27'),
-(762, 5, 'El usuario: admin accedio al Sisco', '192.168.10.196', '2012-01-14 16:41:16'),
-(763, 8, 'El usuario: admin cerro sesión en Sisco', '192.168.10.196', '2012-01-14 16:41:33'),
-(764, 5, 'El usuario: admin accedio al Sisco', '192.168.10.196', '2012-01-14 17:46:09'),
-(765, 1, 'Se Agrego al usuario: ngladiz al Sisco', '192.168.10.196', '2012-01-14 17:48:56'),
-(766, 8, 'El usuario: admin cerro sesión en Sisco', '192.168.10.196', '2012-01-14 17:49:10'),
-(767, 5, 'El usuario: ngladiz accedio al Sisco', '192.168.10.196', '2012-01-14 17:49:43'),
-(768, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-01-17 14:19:31'),
-(769, 7, 'Intento de escalar privilegios', '127.0.0.1', '2012-01-17 16:18:55'),
-(770, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-01-17 16:19:06'),
-(771, 1, 'El usuario:  Ingreso la comunicación SG-E-E-2012-1 ', '127.0.0.1', '2012-01-17 16:19:53'),
-(772, 8, 'El usuario: ngladiz cerro sesión en Sisco', '127.0.0.1', '2012-01-19 14:25:29'),
-(773, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-01-19 14:26:58'),
-(774, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-01-19 14:27:04'),
-(775, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-01-19 14:34:54'),
-(776, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-01-19 14:42:05'),
-(777, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-01-19 14:42:17'),
-(778, 1, 'Se Agrego al usuario: cjcastillo al Sisco', '127.0.0.1', '2012-01-19 14:42:46'),
-(779, 1, 'Se Agrego al usuario: cjcastillo al Sisco', '127.0.0.1', '2012-01-19 14:46:40'),
-(780, 1, 'Se Agrego al usuario: cjcastillo al Sisco', '127.0.0.1', '2012-01-19 14:49:51'),
-(781, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-01-19 14:50:15'),
-(782, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-01-19 14:55:29'),
-(783, 1, 'El usuario:  Ingreso la comunicación SG-E-E-2012-1 ', '127.0.0.1', '2012-01-19 14:56:21'),
-(784, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-01-19 15:00:33'),
-(785, 1, 'El usuario:  Ingreso la comunicación SG-E-E-2012-2 ', '127.0.0.1', '2012-01-19 15:11:17'),
-(786, 1, 'El usuario:  Ingreso la comunicación SG-E-E-2012-3 ', '127.0.0.1', '2012-01-19 15:17:01'),
-(787, 1, 'El usuario:  Ingreso la comunicación SG-E-A-2012-1 ', '127.0.0.1', '2012-01-19 15:21:20'),
-(788, 8, 'El usuario: ngladiz cerro sesión en Sisco', '127.0.0.1', '2012-01-19 15:22:58'),
-(789, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-01-19 15:24:39'),
-(790, 8, 'El usuario: ngladiz cerro sesión en Sisco', '127.0.0.1', '2012-01-19 15:25:01'),
-(791, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-01-19 15:26:37'),
-(792, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-01-19 15:27:03'),
-(793, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-01-19 15:27:23'),
-(794, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-01-19 15:27:30'),
-(795, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-01-19 15:28:55'),
-(796, 7, 'Intento de escalar privilegios', '127.0.0.1', '2012-01-19 18:05:31'),
-(797, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-01-19 18:05:50'),
-(798, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-01-19 18:09:16');
+
 
 -- --------------------------------------------------------
 
@@ -4264,12 +4217,6 @@ CREATE TABLE IF NOT EXISTS `comunicaciones` (
 -- Volcar la base de datos para la tabla `comunicaciones`
 --
 
-INSERT INTO `comunicaciones` (`numInterno`, `tProced`, `idProced`, `nComun`, `fecha`, `sintesis`, `caracter`, `prioridad`, `Resumen`, `tDirec`, `tCom`) VALUES
-('0', 1, '', '001', '17/01/2012', '0', 2, '3', 'prueba', '0', '0'),
-('SG-E-E-2012-1', 1, '', '002', '19/01/2012', '0', 2, '3', 'Esto es solo una prueba', 'Entrante', 'Estandar'),
-('SG-E-E-2012-2', 1, '', '003', '19/01/2012', '0', 2, '3', 'prueba', 'Entrante', 'Estandar'),
-('SG-E-E-2012-3', 1, '', '003', '19/01/2012', '0', 2, '3', 'prueba', 'Entrante', 'Estandar'),
-('SG-E-A-2012-1', 1, '', '005', '19/01/2012', 'prueba', 2, '2', 'prueba', 'Entrante', 'Audiencia');
 
 -- --------------------------------------------------------
 
@@ -4573,7 +4520,7 @@ CREATE TABLE IF NOT EXISTS `noNat` (
 --
 
 CREATE TABLE IF NOT EXISTS `personas` (
-  `cedula` int(8) NOT NULL DEFAULT '0',
+  `cedula` varchar(8) NOT NULL DEFAULT '0',
   `apellidos` varchar(35) NOT NULL,
   `nombres` varchar(35) NOT NULL,
   `sexo` char(1) NOT NULL,
@@ -4591,11 +4538,6 @@ CREATE TABLE IF NOT EXISTS `personas` (
 -- Volcar la base de datos para la tabla `personas`
 --
 
-INSERT INTO `personas` (`cedula`, `apellidos`, `nombres`, `sexo`, `telefono`, `correo`, `direccion`, `pais`, `ciudad`, `municipio`, `parroquia`) VALUES
-(19000001, 'Padilla Garcia', 'Joshebett Alejandra', 'F', 2147483647, 'ella@ella.com', 'la De su casa.....', 'VEN', '356', 'VEN', 'VEN'),
-(6000001, 'Nino', 'Gladiz', 'F', 2147483647, '', 'la de su casa', 'VEN', '356', 'VEN', 'VEN'),
-(61111111, 'castillo', 'carlos', 'M', 0, '', '', '', '', '', ''),
-(17234567, 'Carlos', 'Castillo', 'M', 0, '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -4622,7 +4564,7 @@ CREATE TABLE IF NOT EXISTS `tipoNoNat` (
 --
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `idPersona` int(8) NOT NULL,
+  `idPersona` varchar(8) COLLATE utf8_spanish2_ci NOT NULL,
   `idCargo` int(2) NOT NULL,
   `login` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
   `password` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
@@ -4634,7 +4576,4 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`idPersona`, `idCargo`, `login`, `password`) VALUES
-(0, 1, 'ccastillo', 'ccastillo'),
-(1, 0, 'admin', '4dm1n'),
-(6000001, 7, 'ngladiz', '654321'),
-(19000001, 2, 'palejandra', '123456');
+('1', 0, 'admin', '4dm1n');
