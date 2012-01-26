@@ -30,3 +30,4 @@ Lista De Tareas Pendientes En sisco:
 * Crear los Formularios Comunicación saliente, y restructurar la plantilla de los tipos de comunicacion (caso entrante, saliente).
 * Hacer que la condicion de Saliente incluya esa direccionalidad en la condicion de busqueda
 * Ocultar el Campo de direccionalidad del Formulario de comunicaciones al terminar las pruebas
+* Revisar y ajustar la codificación de cada uno de los archivos del sistema, para evitar el error de los caracteres
