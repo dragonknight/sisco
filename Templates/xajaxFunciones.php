@@ -66,11 +66,11 @@
 		{
 			$idTrans ="6";
 		   $bitacora= Bitacora("Intento de Login sin Credenciales",$idTrans);
-			$txt = "<div id=\"ErrorLogin\"> <h2> Error: Debes ingresar todos los Datos solicitados para acceder </h2></div>";
-			
-			$objResponse = new xajaxResponse();
-	   	$objResponse->Assign("Error","innerHTML",$txt);
-	   	$objResponse->assign("submitButton","value","Ingresar");
+		   $objResponse = new xajaxResponse();
+			$objResponse->alert("Error: Debes ingresar todos los Datos solicitados para acceder.");
+			$objResponse->assign("login","value","");
+		   $objResponse->assign("password","value","");
+	   	$objResponse->assign("submitButton","value","Reintentar");
 			$objResponse->assign("submitButton","disabled",false);
 	   
 	   	return $objResponse;
@@ -116,10 +116,12 @@
 		   {
 		   	$idTrans ="6";
 		   	$bitacora= Bitacora("Intento de Login con Credenciales Invalidas",$idTrans);
-		   	$txt = "<div id=\"ErrorLogin\"> <h2> Error: Los datos ingresados no corresponden, verificarlos por favor </h2></div>";
 		   	$objResponse = new xajaxResponse();
-	   		$objResponse->assign("Error","innerHTML",$txt);
-	   		$objResponse->assign("submitButton","value","Ingresar");
+		   	$objResponse->alert("Error: Los datos ingresados no corresponden, verificarlos por favor.");
+		   	$objResponse->assign("login","value","");
+		   	$objResponse->assign("password","value","");
+		   	$objResponse->assign("submitButton","value","Reintentar");
+	   		$objResponse->assign("submitButton","value","Reintentar");
 				$objResponse->assign("submitButton","disabled",false);
 	   
 	   		return $objResponse;
