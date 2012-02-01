@@ -224,6 +224,91 @@
 	}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: ValidaTextSimp
+	Descripción:Función usada para Validar los Campos en el sistema.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada: $campo
+	Salida: 
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function ValidaTextSimp($campo)
+	{
+		$objResponse = new xajaxResponse();
+		if (trim($campo) == "")
+		{
+			$objResponse->assign($campo,"style.backgroundColor","rgb(67,97,149)");
+			$objResponse->assign("submitButton","value","Error en Formulario");
+			$objResponse->assign("submitButton","disabled",true);
+		}
+		return $objResponse;
+	}
+	
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: ValidaTextComp
+	Descripción:Función usada para Validar los Campos en el sistema.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada: $campo
+	Salida: 
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function ValidaTextComp($campo)
+	{
+		$objResponse = new xajaxResponse();
+		if ($campo==" ")
+		{
+			$objResponse->alert("El valor ingresado no es valido")			
+		}
+		return $objResponse;
+	}
+	
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: ValidaEmail
+	Descripción:Función usada para Validar los Campos en el sistema.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada: $campo
+	Salida: 
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function ValidaEmail($campo)
+	{
+		$objResponse = new xajaxResponse();
+		if (!eregi("^[a-zA-Z0-9]+[_a-zA-Z0-9-]*(\.[_a-z0-9-]+)*@[a-z??????0-9]+(-[a-z??????0-9]+)*(\.[a-z??????0-9-]+)*(\.[a-z]{2,4})$", $campo))
+		{
+			$objResponse->alert("El valor ". $campo. " ingresado no es valido");
+		}
+		return $objResponse;
+	}
+	
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: ValidaTextComp
+	Descripción:Función usada para Validar los Campos en el sistema.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada: $campo
+	Salida: 
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function ValidaCombo($campo)
+	{	
+	}
+	
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: ValidaTextComp
+	Descripción:Función usada para Validar los Campos en el sistema.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada: $campo
+	Salida: 
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function ValidaNumeros($campo)
+	{	
+	}
+	
+/*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: guardaPersona
 	Descripción:Función usada para agregar personas en la bd.
 	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght

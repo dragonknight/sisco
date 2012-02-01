@@ -5,5 +5,8 @@
 	$xajax->registerFunction("Login");
 	$xajax->registerFunction("logOut");
 	$xajax->registerFunction("Bitacora");
+	$xajax->registerFunction("ValidaTextComp");
+	$xajax->registerFunction("ValidaEmail");
 	$xajax->registerFunction("guardaUsuario");
+	$xajax->registerFunction("comEntrante");
 ?>

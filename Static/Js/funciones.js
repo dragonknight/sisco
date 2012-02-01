@@ -65,3 +65,13 @@ function incluir(opcion,pagina)
 {
 	xajax_Incluir(opcion,pagina);
 }
+
+function validaTextComp(campo)
+{
+	xajax_ValidaTextComp(campo);
+}
+
+function validaEmail(campo)
+{
+	xajax_ValidaEmail(campo);
+}

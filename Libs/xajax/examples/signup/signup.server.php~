@@ -75,7 +75,7 @@ function processAccountData($aFormValues)
 		$sForm .="</form>";
 		$objResponse->assign("formDiv","innerHTML",$sForm);
 		$objResponse->assign("formWrapper","style.backgroundColor", "rgb(67,149,97)");
-		$objResponse->assign("outputDiv","innerHTML","\$_SESSION:<pre>".var_export($_SESSION,true)."</pre>");
+		$objResponse->assign("outputDiv","innerHTML","\$_SESSION:<pre>".var_export($_SESSION)."</pre>");
 	}
 	else
 	{

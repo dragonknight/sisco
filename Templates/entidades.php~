@@ -29,7 +29,7 @@
 				Apellidos: 
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Apellidos" id="Apellidos" value="" size="20"> <br />
+				<input type="text" name="Apellidos" id="Apellidos" value="" size="20" onchange="validaTextComp(this)"> <br />
 			</div>
 			<div id="usrCol3">
 				Nombres:
@@ -63,7 +63,7 @@
 				Correo:
 			</div>
 			<div id="usrCol4">
-				<input type="text" name="Correo" id="Correo" value="" size="20"> <br />
+				<input type="text" name="Correo" id="Correo" value="" size="20" onchange="validaEmail(this.value)"> <br />
 			</div>
 		</div>
 <?php
@@ -148,7 +148,7 @@
 				Tipo Persona:
 			</div>
 			<div id="usrCol2">
-				<select id="TipoPersonaNNat" name="TipoPersonaNNat"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
+				<select id="TipoPersonaNNat" name="TipoPersonaNNat">
 					<option value=""> -- Seleccione -- </option>
 					<option value="M"> Masculino </option>	
 					<option value="F"> Femenino </option>
