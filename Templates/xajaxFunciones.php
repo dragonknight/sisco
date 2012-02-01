@@ -258,7 +258,7 @@
 		$objResponse = new xajaxResponse();
 		if ($campo==" ")
 		{
-			$objResponse->alert("El valor ingresado no es valido")			
+			$objResponse->alert("El valor ingresado no es valido");		
 		}
 		return $objResponse;
 	}
@@ -272,12 +272,13 @@
 	Salida: 
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ValidaEmail($campo)
+	function ValidaEmail($campo,$valor)
 	{
 		$objResponse = new xajaxResponse();
-		if (!eregi("^[a-zA-Z0-9]+[_a-zA-Z0-9-]*(\.[_a-z0-9-]+)*@[a-z??????0-9]+(-[a-z??????0-9]+)*(\.[a-z??????0-9-]+)*(\.[a-z]{2,4})$", $campo))
+		if (!eregi("^[a-zA-Z0-9]+[_a-zA-Z0-9-]*(\.[_a-z0-9-]+)*@[a-z??????0-9]+(-[a-z??????0-9]+)*(\.[a-z??????0-9-]+)*(\.[a-z]{2,4})$", $valor))
 		{
-			$objResponse->alert("El valor ". $campo. " ingresado no es valido");
+			$objResponse->alert("El valor ".$valor. " ingresado en el campo" .$campo." no es valido");
+			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
 		}
 		return $objResponse;
 	}

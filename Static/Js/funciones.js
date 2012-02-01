@@ -71,7 +71,7 @@ function validaTextComp(campo)
 	xajax_ValidaTextComp(campo);
 }
 
-function validaEmail(campo)
+function validaEmail(campo, valor)
 {
-	xajax_ValidaEmail(campo);
+	xajax_ValidaEmail(campo, valor);
 }

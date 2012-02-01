@@ -29,7 +29,7 @@
 				Apellidos: 
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Apellidos" id="Apellidos" value="" size="20" onchange="validaTextComp(this)"> <br />
+				<input type="text" name="Apellidos" id="Apellidos" value="" size="20" onchange="validaTextComp(this.value)"> <br />
 			</div>
 			<div id="usrCol3">
 				Nombres:
