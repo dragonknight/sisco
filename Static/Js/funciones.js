@@ -66,12 +66,17 @@ function incluir(opcion,pagina)
 	xajax_Incluir(opcion,pagina);
 }
 
-function validaTextComp(campo)
+function validaTextComp(campo,valor)
 {
-	xajax_ValidaTextComp(campo);
+	xajax_ValidaTextComp(campo,valor);
 }
 
-function validaEmail(campo, valor)
+function validaEmail(campo,valor)
 {
-	xajax_ValidaEmail(campo, valor);
+	xajax_ValidaEmail(campo,valor);
+}
+
+function validaNumeros(campo,valor)
+{
+	xajax_ValidaNumeros(campo,valor);
 }

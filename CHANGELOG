@@ -25,3 +25,8 @@ Fecha: 17/01/2012
 	*) Cambiados Tipos de Campos en la BD.
 	*) Eliminado el paso de la configuración Ip en la funcion CambiaPagina (xajaxFunciones.php)
 
+Fecha: 06/02/2012
+
+	*) Reinstaurado el uso de la función CambiaPagina (xajaxFunciones.php)
+	*) Aplicada primera versión del sistema de validación
+

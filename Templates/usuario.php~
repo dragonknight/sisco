@@ -106,6 +106,7 @@
 								</div>
 								<?php usuario();?>
 								<input id="submitButton" type="submit" value="Ingresar"/>
+								Error: <input name="validaError" type="text" id="validaError" value="" size"5" readonly="readonly" onchange="alert('aqui no se mostrarial el boton')"><br /><br />
 							</form>
 						</div>
 						<div id="Error">

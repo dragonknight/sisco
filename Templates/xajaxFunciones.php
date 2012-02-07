@@ -237,8 +237,8 @@
 		$objResponse = new xajaxResponse();
 		if (trim($campo) == "")
 		{
-			$objResponse->assign($campo,"style.backgroundColor","rgb(67,97,149)");
-			$objResponse->assign("submitButton","value","Error en Formulario");
+			$objResponse->alert("El ".$campo." no admite espacios en Blanco");
+			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
 			$objResponse->assign("submitButton","disabled",true);
 		}
 		return $objResponse;
@@ -253,12 +253,14 @@
 	Salida: 
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ValidaTextComp($campo)
+	function ValidaTextComp($campo,$valor)
 	{
 		$objResponse = new xajaxResponse();
-		if ($campo==" ")
+		if (!eregi("^[a-zA-Z0-9]+[_a-zA-Z0-9-]*(\.[_a-z0-9-]+)*@[a-z??????0-9]+(-[a-z??????0-9]+)*(\.[a-z??????0-9-]+)*(\.[a-z]{2,4})$", $valor))
 		{
-			$objResponse->alert("El valor ingresado no es valido");		
+			$objResponse->alert("El valor ingresado no es valido");
+			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
+			$objResponse->assign("validaError","value","1");	
 		}
 		return $objResponse;
 	}
@@ -279,6 +281,7 @@
 		{
 			$objResponse->alert("El valor ".$valor. " ingresado en el campo" .$campo." no es valido");
 			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
+			$objResponse->assign("validaError","value","1");
 		}
 		return $objResponse;
 	}
@@ -305,8 +308,16 @@
 	Salida: 
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ValidaNumeros($campo)
-	{	
+	function ValidaNumeros($campo,$valor)
+	{
+		$objResponse = new xajaxResponse();
+		if ($valor == "")
+		{
+			$objResponse->alert("El valor ".$valor. " ingresado en el campo" .$campo." no es valido");
+			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
+			$objResponse->assign("validaError","value","1");
+		}
+		return $objResponse;	
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 

@@ -19,15 +19,26 @@ castilloc185@hotmail.com
 
 Lista De Tareas Pendientes En sisco:
 
-* Crear tabla con la Definicion de los tipos de personas juridicas.
-* Mejorar la Funcion de Combos.
-* Agregar Mensajes de Inserción.
-* Agregar Validación.
-* Completar el Ciclo de la Comunicación.
-* Modificar el procedimiento de Guardar Usuario (el id puede ser por el combo o el tex asi que que eso debe pensarse como en guarda comunic).
-* Agregar banderas de Verificación, que retornen las funciones y permitan adaptar los mensajes y las acciones del sistema (almacenamiento).
-* Crear una tabla tipo Comunicación y migrar ese valor en el codigo (plantillas)
-* Crear los Formularios Comunicación saliente, y restructurar la plantilla de los tipos de comunicacion (caso entrante, saliente).
-* Hacer que la condicion de Saliente incluya esa direccionalidad en la condicion de busqueda
-* Ocultar el Campo de direccionalidad del Formulario de comunicaciones al terminar las pruebas
-* Revisar y ajustar la codificación de cada uno de los archivos del sistema, para evitar el error de los caracteres
+BD
+
+	* Crear tabla con la Definicion de los tipos de personas juridicas.
+
+Programación:
+
+	* Mejorar la Funcion de Combos.
+	* Agregar Mensajes de Inserción.
+	* Mejorar la Validación:
+		- Mejorar las condiciones para error
+	* Completar el Ciclo de la Comunicación.
+	* Modificar el procedimiento de Guardar Usuario (el id puede ser por el combo o el tex asi que que eso debe pensarse como en guarda comunic).
+	* Agregar banderas de Verificación, que retornen las funciones y permitan adaptar los mensajes y las acciones del sistema (almacenamiento).
+	* Crear una tabla tipo Comunicación y migrar ese valor en el codigo (plantillas)
+	* Crear los Formularios Comunicación saliente, y restructurar la plantilla de los tipos de comunicacion (caso entrante, saliente).
+	* Hacer que la condicion de Saliente incluya esa direccionalidad en la condicion de busqueda
+	* Ocultar el Campo de direccionalidad del Formulario de comunicaciones al terminar las pruebas
+	* Revisar y ajustar la codificación de cada uno de los archivos del sistema, para evitar el error de los caracteres
+
+Diseño:
+
+	* Definir tamaño minimo del sistema y agregarlo a los CSS
+	* Eliminar las Etiquetas < /br> en el sistema y hacer todos los saltos por CSS
