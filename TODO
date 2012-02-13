@@ -37,12 +37,14 @@ Programación:
 	* Hacer que la condicion de Saliente incluya esa direccionalidad en la condicion de busqueda
 	* Ocultar el Campo de direccionalidad del Formulario de comunicaciones al terminar las pruebas
 	* Revisar y ajustar la codificación de cada uno de los archivos del sistema, para evitar el error de los caracteres
+	* Crear la Función para validar campos vacios
 
 Diseño:
 
 	* Definir tamaño minimo del sistema y agregarlo a los CSS
 	* Eliminar las Etiquetas < /br> en el sistema y hacer todos los saltos por CSS
+	* Definir el color de Fondo para los campos que tengan error
 
 Normalización:
 
-	* Actualizar los Encabezados de Funciones del sistema
+	* Actualizar los Encabezados de Funciones del sistema, ajustando la utilidad del sistema, parametros de entrada y de salida

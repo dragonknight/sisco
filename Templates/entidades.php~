@@ -29,7 +29,7 @@
 				Apellidos: 
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Apellidos" id="Apellidos" size="20" onchange="validaTextComp(this.id, this.value)"> <br />
+				<input type="text" name="Apellidos" id="Apellidos" size="20" onchange="validaTextComp(this.id,this.value)"> <br />
 			</div>
 			<div id="usrCol3">
 				Nombres:
@@ -41,7 +41,7 @@
 				Cedula:
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Cedula" id="Cedula" value="" size="20"> <br />
+				<input type="text" name="Cedula" id="Cedula" value="" size="20" onchange="validaNoDupli(this.id, this.value)"> <br />
 			</div>
 			<div id="usrCol3">
 				Sexo:
@@ -136,7 +136,7 @@
 				Rif o Id: 
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Id" id="Id" value="" size="20" onchange="validaTextComp(this.id, this.value )"> <br />
+				<input type="text" name="Id" id="Id" value="" size="20" onchange="validaNoDupli(this.id, this.value)"> <br />
 			</div>
 			<div id="usrCol3">
 				Nombre:
@@ -158,13 +158,13 @@
 				Telefono:
 			</div>
 			<div id="usrCol4">
-				<input type="text" name="Telefono" id="Telefono" value="" size="20" onchange="validaTextComp(this.id, this.value )"> <br />
+				<input type="text" name="Telefono" id="Telefono" value="" size="20" onchange="validaNumeros(this.id, this.value )"> <br />
 			</div>
 			<div id="usrCol1">
 				Correo:
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Correo" id="Correo" value="" size="20" onchange="validaTextComp(this.id, this.value )"> <br />
+				<input type="text" name="Correo" id="Correo" value="" size="20" onchange="validaEmail(this.id, this.value )"> <br />
 			</div>
 			<div id="usrCol3">
 			</div>
@@ -194,8 +194,8 @@
 				<option value=""> -- Seleccione cargo -- </option>
 				<?php combo('*','cargos','','idCargo'); ?>
 			</select> <br />
-			Usuario: <input type="text" name="usrLogin" id="usrLogin" size="20" onchange="validaTextComp(this.id, this.value )"> <br />
-			Contraseña: <input type="password" name="usrPassword" id="usrPassword" size="20" onchange="validaTextComp(this.id, this.value )">					
+			Usuario: <input type="text" name="usrLogin" id="usrLogin" size="20" onchange="validaNoDupli(this.id, this.value)"> <br />
+			Contraseña: <input type="password" name="usrPassword" id="usrPassword" size="20" onchange="validaNoDupli(this.id, this.value)">					
 		</div>
 <?php
 	}
