@@ -232,14 +232,20 @@
 	Salida: 
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ValidaTextSimp($campo)
+	function ValidaTextSimp($campo,$valor,$error)
 	{
 		$objResponse = new xajaxResponse();
 		if (trim($campo) == "")
 		{
 			$objResponse->alert("El ".$campo." no admite espacios en Blanco");
 			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
-			$objResponse->assign("submitButton","disabled",true);
+			$error = $error + 1;
+			$objResponse->assign("validaError","value",$error);
+		}
+		else 
+		{
+			$error = $error - 1;
+			$objResponse->assign("validaError","value",$error);
 		}
 		return $objResponse;
 	}
@@ -253,14 +259,20 @@
 	Salida: 
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ValidaTextComp($campo,$valor)
+	function ValidaTextComp($campo,$valor,$error)
 	{
 		$objResponse = new xajaxResponse();
 		if (!eregi("^[a-zA-Z0-9]+[_a-zA-Z0-9-]*(\.[_a-z0-9-]+)*@[a-z??????0-9]+(-[a-z??????0-9]+)*(\.[a-z??????0-9-]+)*(\.[a-z]{2,4})$", $valor))
 		{
 			$objResponse->alert("El valor ingresado no es valido");
 			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
-			$objResponse->assign("validaError","value","1");	
+			$error = $error + 1;
+			$objResponse->assign("validaError","value",$error);
+		}
+		else 
+		{
+			$error = $error - 1;
+			$objResponse->assign("validaError","value",$error);
 		}
 		return $objResponse;
 	}
@@ -274,20 +286,26 @@
 	Salida: 
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ValidaEmail($campo,$valor)
+	function ValidaEmail($campo,$valor,$error)
 	{
 		$objResponse = new xajaxResponse();
 		if (!eregi("^[a-zA-Z0-9]+[_a-zA-Z0-9-]*(\.[_a-z0-9-]+)*@[a-z??????0-9]+(-[a-z??????0-9]+)*(\.[a-z??????0-9-]+)*(\.[a-z]{2,4})$", $valor))
 		{
 			$objResponse->alert("El valor ".$valor. " ingresado en el campo" .$campo." no es valido");
 			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
-			$objResponse->assign("validaError","value","1");
+			$error = $error + 1;
+			$objResponse->assign("validaError","value",$error);
+		}
+		else 
+		{
+			$error = $error - 1;
+			$objResponse->assign("validaError","value",$error);
 		}
 		return $objResponse;
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: ValidaTextComp
+	función: ValidaCombo
 	Descripción:Función usada para Validar los Campos en el sistema.
 	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
@@ -308,14 +326,20 @@
 	Salida: 
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ValidaNumeros($campo,$valor)
+	function ValidaNumeros($campo,$valor,$error)
 	{
 		$objResponse = new xajaxResponse();
 		if ($valor == "")
 		{
 			$objResponse->alert("El valor ".$valor. " ingresado en el campo" .$campo." no es valido");
 			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
-			$objResponse->assign("validaError","value","1");
+			$error = $error + 1;
+			$objResponse->assign("validaError","value",$error);
+		}
+		else 
+		{
+			$error = $error - 1;
+			$objResponse->assign("validaError","value",$error);
 		}
 		return $objResponse;	
 	}
@@ -369,36 +393,47 @@
 	
 	function guardaUsuario($formUsuario)
 	{
-		$con = conectar();
-		mysql_select_db("sisco", $con);
-		// Revisamos si se selecciono una persona o se agrego una nueva
-		// si se agrego una nueva persona
-		if ($formUsuario["comboPersonas"]=="0")
-		{
-			// llamamos a la Funcion que guarda los datos de las personas,
-			$persona = guardaPersona ($formUsuario);
-			// guardamos los datos del usuario:
-			$sql = "insert into usuarios (idPersona, idCargo, login, password) values ('" . $formUsuario['Cedula'] . "','" . $formUsuario['Cargo'] . "','" . $formUsuario['usrLogin'] . "','" . $formUsuario['usrPassword'] . "')";
-			mysql_query($sql) or die("Error al realizar la inserción ". mysql_error());
-		}
-		// si se selecciono una persona, entonces solo hay que agregar los datos de usuario
-		else
-		{			 
-			// ingresamos a la B.D. los detalles del ahora usuario:
-			$sql = "insert into usuarios (idPersona, idCargo, login, password) values ('" . $formUsuario['Cedula'] . "','" . $formUsuario['Cargo'] . "','" . $formUsuario['usrLogin'] . "','" . $formUsuario['usrPassword'] . "')";
-			mysql_query($sql) or die("Error al realizar la inserción ". mysql_error()); 			 
-		}
-		// si el proceso de ingreso se llevo a cabo con exito, registramos el evento en la bitacora
-		// primeramente definimos la ip del cliente:
-		$bitacora= Bitacora("Se Agrego al usuario: ". $formUsuario['usrLogin'] ." al Sisco","1");
-		mysql_close($con);
-		
 		$objResponse = new xajaxResponse();
-		$objResponse->alert("Datos Agregados.");
-		$objResponse->assign("submitButton","value","Ingresar");
-		$objResponse->assign("submitButton","disabled",false);
-		$objResponse->redirect("./Autentificado.php",2);
+		
+		if ($formUsuario["validaError"]=="0")
+		{
+			$con = conectar();
+			mysql_select_db("sisco", $con);
+			// Revisamos si se selecciono una persona o se agrego una nueva
+			// si se agrego una nueva persona
+			if ($formUsuario["comboPersonas"]=="0")
+			{
+				// llamamos a la Funcion que guarda los datos de las personas,
+				$persona = guardaPersona ($formUsuario);
+				// guardamos los datos del usuario:
+				$sql = "insert into usuarios (idPersona, idCargo, login, password) values ('" . $formUsuario['Cedula'] . "','" . $formUsuario['Cargo'] . "','" . $formUsuario['usrLogin'] . "','" . $formUsuario['usrPassword'] . "')";
+				mysql_query($sql) or die("Error al realizar la inserción ". mysql_error());
+			}
+			// si se selecciono una persona, entonces solo hay que agregar los datos de usuario
+			else
+			{			 
+				// ingresamos a la B.D. los detalles del ahora usuario:
+				$sql = "insert into usuarios (idPersona, idCargo, login, password) values ('" . $formUsuario['Cedula'] . "','" . $formUsuario['Cargo'] . "','" . $formUsuario['usrLogin'] . "','" . $formUsuario['usrPassword'] . "')";
+				mysql_query($sql) or die("Error al realizar la inserción ". mysql_error()); 			 
+			}
+			// si el proceso de ingreso se llevo a cabo con exito, registramos el evento en la bitacora
+			// primeramente definimos la ip del cliente:
+			$bitacora= Bitacora("Se Agrego al usuario: ". $formUsuario['usrLogin'] ." al Sisco","1");
+			mysql_close($con);
+			
+			$objResponse->alert("Datos Agregados.");
+			$objResponse->assign("submitButton","value","Ingresar");
+			$objResponse->assign("submitButton","disabled",false);
+			$objResponse->redirect("./Autentificado.php",2);
+		}
+		else 
+		{
+			$objResponse->alert("Existen errores en el Formulario, Verifique e intente de nuevo.");
+			$objResponse->assign("submitButton","value","Re - Ingresar");
+			$objResponse->assign("submitButton","disabled",false);
+		}
 		return $objResponse;
+	
 	}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 

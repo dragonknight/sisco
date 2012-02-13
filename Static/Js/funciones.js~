@@ -73,7 +73,8 @@ function validaTextComp(campo,valor)
 
 function validaEmail(campo,valor)
 {
-	xajax_ValidaEmail(campo,valor);
+	error = document.getElementById("validaError").value;
+	xajax_ValidaEmail(campo,valor,error);
 }
 
 function validaNumeros(campo,valor)

@@ -29,7 +29,7 @@
 				Apellidos: 
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Apellidos" id="Apellidos" size="20" onchange="validaTextComp(this.id, this.value)"> <br />
+				<input type="text" name="Apellidos" id="Apellidos" size="20" onchange="validaTextComp(this.id,this.value)"> <br />
 			</div>
 			<div id="usrCol3">
 				Nombres:
@@ -63,7 +63,7 @@
 				Correo:
 			</div>
 			<div id="usrCol4">
-				<input type="text" name="Correo" id="Correo" value="" size="20" onchange="validaEmail(this.id, this.value )"> <br />
+				<input type="text" name="Correo" id="Correo" value="" size="20" onchange="validaEmail(this.id, this.value)"> <br />
 			</div>
 		</div>
 <?php

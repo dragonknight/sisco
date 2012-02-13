@@ -68,15 +68,18 @@ function incluir(opcion,pagina)
 
 function validaTextComp(campo,valor)
 {
-	xajax_ValidaTextComp(campo,valor);
+	error = document.getElementById("validaError").value;
+	xajax_ValidaTextComp(campo,valor,error);
 }
 
 function validaEmail(campo,valor)
 {
-	xajax_ValidaEmail(campo,valor);
+	error = document.getElementById("validaError").value;
+	xajax_ValidaEmail(campo,valor,error);
 }
 
 function validaNumeros(campo,valor)
 {
-	xajax_ValidaNumeros(campo,valor);
+	error = document.getElementById("validaError").value;
+	xajax_ValidaNumeros(campo,valor,error);
 }
