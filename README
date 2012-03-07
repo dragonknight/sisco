@@ -107,3 +107,8 @@ tablas:
 	- 11 = Cierre de sesion de usuario;
 	- 12 = Llamada a URL (Acceso a una de las opciones del sistema.);
 
+Reiniciando los indices:
+
+	Tabla bitacora 		idTransaccion
+	Tabla caracterCom	id
+

@@ -38,10 +38,10 @@
 				<input type="text" name="Nombres" id="Nombres" size="20" onchange="validaTextComp(this.id, this.value)"> <br />
 			</div>
 			<div id="usrCol1">
-				Cedula:
+				Cédula:
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Cedula" id="Cedula" value="" size="20" onchange="validaNoDupli(this.id, this.value)"> <br />
+				<input type="text" name="Cedula" id="Cedula" value="" size="20"> <br />
 			</div>
 			<div id="usrCol3">
 				Sexo:
@@ -54,7 +54,7 @@
 				</select>
 			</div>
 			<div id="usrCol1">
-				Telefono:
+				Teléfono:
 			</div>
 			<div id="usrCol2">
 				<input type="text" name="Telefono" id="Telefono" size="20" onchange="validaNumeros(this.id, this.value)"> <br />
@@ -136,7 +136,7 @@
 				Rif o Id: 
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Id" id="Id" value="" size="20" onchange="validaNoDupli(this.id, this.value)"> <br />
+				<input type="text" name="Id" id="Id" value="" size="20"> <br />
 			</div>
 			<div id="usrCol3">
 				Nombre:

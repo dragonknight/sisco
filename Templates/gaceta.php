@@ -102,6 +102,7 @@
 									?>
 									<br />
 									<input id="submitButton" type="submit" value="Ingresar"/>
+									Error: <input name="validaError" id="validaError"  type="text" size="5" readonly="readonly"><br /><br />
 								</form>
 								<div id="Error">
 								</div>

@@ -244,8 +244,11 @@
 		}
 		else 
 		{
-			$error = $error - 1;
-			$objResponse->assign("validaError","value",$error);
+			if($error>0) 
+			{
+				$error = $error - 1;
+				$objResponse->assign("validaError","value",$error);
+			}
 		}
 		return $objResponse;
 	}
@@ -262,7 +265,7 @@
 	function ValidaTextComp($campo,$valor,$error)
 	{
 		$objResponse = new xajaxResponse();
-		if (!eregi("^[a-zA-Z0-9]+[_a-zA-Z0-9-]*(\.[_a-z0-9-]+)*@[a-z??????0-9]+(-[a-z??????0-9]+)*(\.[a-z??????0-9-]+)*(\.[a-z]{2,4})$", $valor))
+		if (!eregi("^[a-zA-Z]{2,250}$", $valor))
 		{
 			$objResponse->alert("El valor ingresado no es valido");
 			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
@@ -271,12 +274,45 @@
 		}
 		else 
 		{
-			$error = $error - 1;
-			$objResponse->assign("validaError","value",$error);
+			if($error>0) 
+			{
+				$error = $error - 1;
+				$objResponse->assign("validaError","value",$error);
+			}
 		}
 		return $objResponse;
 	}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: ValidaTextComp
+	Descripción:Función usada para Validar los Campos en el sistema.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
 	
+	Parámetros entrada: $campo
+	Salida: 
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function ValidaNumeros($campo,$valor,$error)
+	{
+		$objResponse = new xajaxResponse();
+		if (!eregi("^[0-9]{2,20}$", $valor))
+		{
+			$objResponse->alert("El valor ".$valor. " ingresado en el campo" .$campo." no es valido");
+			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
+			$error = $error + 1;
+			$objResponse->assign("validaError","value",$error);
+		}
+		else 
+		{
+			if($error>0) 
+			{
+				$error = $error - 1;
+				$objResponse->assign("validaError","value",$error);
+			}
+		}
+		return $objResponse;	
+	}
+		
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: ValidaEmail
 	Descripción:Función usada para Validar los Campos en el sistema.
@@ -298,9 +334,37 @@
 		}
 		else 
 		{
-			$error = $error - 1;
-			$objResponse->assign("validaError","value",$error);
+			if($error>0) 
+			{
+				$error = $error - 1;
+				$objResponse->assign("validaError","value",$error);
+			}
 		}
+		return $objResponse;
+	}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: ValidaCombo
+	Descripción:Función usada para Validar los Campos en el sistema.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada: $campo
+	Salida: 
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function ValidaCedula($campo,$valor,$error)
+	{	
+		$con = conectar();
+		mysql_select_db("sisco", $con);
+				
+		//Buscamos en la bd, que no exista un registro anterior
+		$sql = "select count(*) from `personas` where `cedula` = ".$valor;
+		$numero = mysql_query($sql);
+		$result=mysql_fetch_array($numero);
+		
+		$objResponse = new xajaxResponse();
+		$objResponse->alert("valor del sql " .$numero);
+			
 		return $objResponse;
 	}
 	
@@ -317,32 +381,6 @@
 	{	
 	}
 	
-/*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: ValidaTextComp
-	Descripción:Función usada para Validar los Campos en el sistema.
-	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
-	
-	Parámetros entrada: $campo
-	Salida: 
---------------------------------------------------------------------------------------------------------------------------------*/
-	
-	function ValidaNumeros($campo,$valor,$error)
-	{
-		$objResponse = new xajaxResponse();
-		if ($valor == "")
-		{
-			$objResponse->alert("El valor ".$valor. " ingresado en el campo" .$campo." no es valido");
-			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
-			$error = $error + 1;
-			$objResponse->assign("validaError","value",$error);
-		}
-		else 
-		{
-			$error = $error - 1;
-			$objResponse->assign("validaError","value",$error);
-		}
-		return $objResponse;	
-	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: guardaPersona

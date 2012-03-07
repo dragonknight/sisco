@@ -19,10 +19,7 @@
 			<option value="2"> Persona no Natural </option>
 		</select><br /><br />
 <?php
-		perNatural();
-		perNoNatural();
 	}
-	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: tpersona
 	Descripción: Función que llama a las entidades Persona Natural y no Natural
@@ -32,7 +29,6 @@
 	Parámetros entrada: ---
 	Salida: $conexion
 --------------------------------------------------------------------------------------------------------------------------------*/
-	
 	function perNatural()
 	{
 ?>
@@ -191,7 +187,11 @@
 		Direcc($tCom, $inic, $direc, $inicD);
 ?>
 		Procedencia de la comunicación:<br /><br />
-		<?php tpersona(); ?>
+		<?php 
+			tpersona();
+			perNatural();
+			perNoNatural();
+		?>
 		<div id="rCol1">
 			Nº Comunicación<br />
 		</div>

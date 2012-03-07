@@ -71,15 +71,19 @@ function validaTextComp(campo,valor)
 	error = document.getElementById("validaError").value;
 	xajax_ValidaTextComp(campo,valor,error);
 }
-
+function validaNumeros(campo,valor)
+{
+	error = document.getElementById("validaError").value;
+	xajax_ValidaNumeros(campo,valor,error);
+}
 function validaEmail(campo,valor)
 {
 	error = document.getElementById("validaError").value;
 	xajax_ValidaEmail(campo,valor,error);
 }
-
-function validaNumeros(campo,valor)
+function validaCedula(campo,valor)
 {
+	alert("aqui pasa");
 	error = document.getElementById("validaError").value;
-	xajax_ValidaNumeros(campo,valor,error);
+	xajax_ValidaCedula(campo,valor,error);
 }
