@@ -238,7 +238,7 @@
 		if (trim($campo) == "")
 		{
 			$objResponse->alert("El ".$campo." no admite espacios en Blanco");
-			$objResponse->assign($campo,"style.backgroundColor","#FF6633");
+			$objResponse->assign($campo,"style.backgroundColor","#FF3300");
 		}
 		else 
 		{
@@ -262,7 +262,7 @@
 		if (!eregi("^[a-zA-Z0-9]{2,250}$", $valor))
 		{
 			$objResponse->alert("El valor ingresado no es valido");
-			$objResponse->assign($campo,"style.backgroundColor","#FF6633");
+			$objResponse->assign($campo,"style.backgroundColor","#FF3300");
 		}
 		else 
 		{
@@ -286,7 +286,7 @@
 		if (!eregi("^[0-9]{2,20}$", $valor))
 		{
 			$objResponse->alert("El valor ".$valor. " ingresado en el campo" .$campo." no es valido");
-			$objResponse->assign($campo,"style.backgroundColor","#FF6633");
+			$objResponse->assign($campo,"style.backgroundColor","#FF3300");
 		}
 		else 
 		{
@@ -310,7 +310,7 @@
 		if (!eregi("^[a-zA-Z0-9]+[_a-zA-Z0-9-]*(\.[_a-z0-9-]+)*@[a-z??????0-9]+(-[a-z??????0-9]+)*(\.[a-z??????0-9-]+)*(\.[a-z]{2,4})$", $valor))
 		{
 			$objResponse->alert("El valor ".$valor. " ingresado en el campo" .$campo." no es valido");
-			$objResponse->assign($campo,"style.backgroundColor","#FF6633");
+			$objResponse->assign($campo,"style.backgroundColor","#FF3300");
 		}
 		else 
 		{
