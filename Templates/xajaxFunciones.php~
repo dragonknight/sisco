@@ -232,23 +232,17 @@
 	Salida: 
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ValidaTextSimp($campo,$valor,$error)
+	function ValidaTextSimp($campo,$valor)
 	{
 		$objResponse = new xajaxResponse();
 		if (trim($campo) == "")
 		{
 			$objResponse->alert("El ".$campo." no admite espacios en Blanco");
 			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
-			$error = $error + 1;
-			$objResponse->assign("validaError","value",$error);
 		}
 		else 
 		{
-			if($error>0) 
-			{
-				$error = $error - 1;
-				$objResponse->assign("validaError","value",$error);
-			}
+			
 		}
 		return $objResponse;
 	}
@@ -262,23 +256,17 @@
 	Salida: 
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ValidaTextComp($campo,$valor,$error)
+	function ValidaTextComp($campo,$valor)
 	{
 		$objResponse = new xajaxResponse();
-		if (!eregi("^[a-zA-Z]{2,250}$", $valor))
+		if (!eregi("^[a-zA-Z0-9]{2,250}$", $valor))
 		{
 			$objResponse->alert("El valor ingresado no es valido");
 			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
-			$error = $error + 1;
-			$objResponse->assign("validaError","value",$error);
 		}
 		else 
 		{
-			if($error>0) 
-			{
-				$error = $error - 1;
-				$objResponse->assign("validaError","value",$error);
-			}
+			
 		}
 		return $objResponse;
 	}
@@ -292,23 +280,17 @@
 	Salida: 
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ValidaNumeros($campo,$valor,$error)
+	function ValidaNumeros($campo,$valor)
 	{
 		$objResponse = new xajaxResponse();
 		if (!eregi("^[0-9]{2,20}$", $valor))
 		{
 			$objResponse->alert("El valor ".$valor. " ingresado en el campo" .$campo." no es valido");
 			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
-			$error = $error + 1;
-			$objResponse->assign("validaError","value",$error);
 		}
 		else 
 		{
-			if($error>0) 
-			{
-				$error = $error - 1;
-				$objResponse->assign("validaError","value",$error);
-			}
+			
 		}
 		return $objResponse;	
 	}
@@ -322,23 +304,16 @@
 	Salida: 
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function ValidaEmail($campo,$valor,$error)
+	function ValidaEmail($campo,$valor)
 	{
 		$objResponse = new xajaxResponse();
 		if (!eregi("^[a-zA-Z0-9]+[_a-zA-Z0-9-]*(\.[_a-z0-9-]+)*@[a-z??????0-9]+(-[a-z??????0-9]+)*(\.[a-z??????0-9-]+)*(\.[a-z]{2,4})$", $valor))
 		{
 			$objResponse->alert("El valor ".$valor. " ingresado en el campo" .$campo." no es valido");
 			$objResponse->assign($campo,"style.backgroundColor","#8f1717");
-			$error = $error + 1;
-			$objResponse->assign("validaError","value",$error);
 		}
 		else 
 		{
-			if($error>0) 
-			{
-				$error = $error - 1;
-				$objResponse->assign("validaError","value",$error);
-			}
 		}
 		return $objResponse;
 	}
@@ -363,7 +338,7 @@
 		$result=mysql_fetch_array($numero);
 		
 		$objResponse = new xajaxResponse();
-		$objResponse->alert("valor del sql " .$result);
+		$objResponse->alert("valor del sql " .$numero);
 			
 		return $objResponse;
 	}

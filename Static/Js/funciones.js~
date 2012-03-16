@@ -68,22 +68,17 @@ function incluir(opcion,pagina)
 
 function validaTextComp(campo,valor)
 {
-	error = document.getElementById("validaError").value;
-	xajax_ValidaTextComp(campo,valor,error);
+	xajax_ValidaTextComp(campo,valor);
 }
 function validaNumeros(campo,valor)
 {
-	error = document.getElementById("validaError").value;
-	xajax_ValidaNumeros(campo,valor,error);
+	xajax_ValidaNumeros(campo,valor);
 }
 function validaEmail(campo,valor)
 {
-	error = document.getElementById("validaError").value;
-	xajax_ValidaEmail(campo,valor,error);
+	xajax_ValidaEmail(campo,valor);
 }
 function validaCedula(campo,valor)
 {
-	alert("aqui pasa")
-	error = document.getElementById("validaError").value;
-	xajax_ValidaCedula(campo,valor,error);
+	xajax_ValidaCedula(campo,valor);
 }
