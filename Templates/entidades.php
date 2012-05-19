@@ -41,7 +41,7 @@
 				Cédula:
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Cedula" id="Cedula" value="" size="20"> <br />
+				<input type="text" name="Cedula" id="Cedula" value="" size="20" onchange="validaCedula(this.id, this.value)"> <br />
 			</div>
 			<div id="usrCol3">
 				Sexo:
@@ -110,7 +110,7 @@
 				</select>
 			</div>
 			<div id="comDir">
-				Dirección: <input type="text" name="Direccion" id="Direccion" value="" size="40" onchange="validaTextComp(this.id, this.value )"> <br />
+				Dirección: <input type="text" name="Direccion" id="Direccion" value="" size="40"> <br />
 			</div>
 		</div>
 <?php
@@ -142,7 +142,7 @@
 				Nombre:
 			</div>
 			<div id="usrCol4">
-				<input type="text" name="Nombre" id="Nombre" value="" size="20" onchange="validaTextComp(this.id, this.value )"> <br />
+				<input type="text" name="Nombre" id="Nombre" value="" size="20" > <br />
 			</div>
 			<div id="usrCol1">
 				Tipo Persona:
@@ -194,7 +194,7 @@
 				<option value=""> -- Seleccione cargo -- </option>
 				<?php combo('*','cargos','','idCargo'); ?>
 			</select> <br />
-			Usuario: <input type="text" name="usrLogin" id="usrLogin" size="20"> <br />
+			Usuario: <input type="text" name="usrLogin" id="usrLogin" size="20" onchange="validaUsuario(this.id, this.value )"> <br />
 			Contraseña: <input type="password" name="usrPassword" id="usrPassword" size="20">					
 		</div>
 <?php

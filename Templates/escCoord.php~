@@ -129,4 +129,3 @@
 				<?php echo $trpHoy[0]; ?>
 			</div>
 		</div>
-		<br />

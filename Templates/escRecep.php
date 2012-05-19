@@ -11,12 +11,12 @@
 			<h4>Comunicaciones Recibidas:</h4><br />
 <?php
 				include ("./funciones.php");
-				$estandar = cuenta_reg('comunicaciones','*','tDirec = \'Entrante\' && tCom = \'Estandar\' ');
-				$gacetas = cuenta_reg('comunicaciones','*','tDirec = \'Entrante\' && tCom = \'Gaceta\' ');
-				$audiencias = cuenta_reg('comunicaciones','*','tDirec = \'Entrante\' && tCom = \'Audiencia\' ');
-				$invitaciones = cuenta_reg('comunicaciones','*','tDirec = \'Entrante\' && tCom = \'Invitación\' ');
-				$denuncias = cuenta_reg('comunicaciones','*','tDirec = \'Entrante\' && tCom = \'Denuncia\' ');
-				$total = cuenta_reg('comunicaciones','*','tDirec = \'Entrante\'');
+				$estandar = cuenta_reg('comunicaciones','tDirec = \'Entrante\' && tCom = \'Estandar\' ');
+				$gacetas = cuenta_reg('comunicaciones','tDirec = \'Entrante\' && tCom = \'Gaceta\' ');
+				$audiencias = cuenta_reg('comunicaciones','tDirec = \'Entrante\' && tCom = \'Audiencia\' ');
+				$invitaciones = cuenta_reg('comunicaciones','tDirec = \'Entrante\' && tCom = \'Invitación\' ');
+				$denuncias = cuenta_reg('comunicaciones','tDirec = \'Entrante\' && tCom = \'Denuncia\' ');
+				$total = cuenta_reg('comunicaciones','tDirec = \'Entrante\'');
 				
 ?>
 			<div id="rCol1">
@@ -36,7 +36,8 @@
 			<div id="rCol4">
 				<strong> Invitación: </strong><br />
 				<?php echo $invitaciones[0]; ?><br /><br /><br /><br /><br />
+				<hr>
 				<strong> Total: </strong><br />
-				<?php echo $total[0]; ?>
+				<?php echo $total[0]; ?><br /><br />
 			</div>
 		</div>

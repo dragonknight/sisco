@@ -165,6 +165,27 @@
 		}
 		
 	}
+
+	/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: combo
+	Descripción: Función para crear combobox
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	Modificado: 
+	
+	Parámetros entrada:
+	Salida:
+	--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function comboPersonasNoNat($campos, $tabla, $condicion, $orden) 
+	{
+		//invoco la consulta para traer todos los campos de la tabla
+		$consul=consulta($campos,$tabla,'',$orden);
+		for ($i=0;$i<=$consul[1]-1;$i++)
+		{
+			echo "<option value=". $consul[0][$i][0] .">". $consul[0][$i][1] . ", ". $consul[0][$i][2] . ", ". $consul[0][$i][0] . "</option>";
+		}
+		
+	}
 	
 	/*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: Cuenta registros
@@ -175,7 +196,7 @@
 	Parámetros entrada:
 	Salida:
 	--------------------------------------------------------------------------------------------------------------------------------*/
-	function cuenta_reg($tabla,$campo,$condicion)
+	function cuenta_reg($tabla,$condicion)
 	{
 	 global $dbname;
 	 

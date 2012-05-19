@@ -63,13 +63,13 @@
 			<strong>Persona No Natural</strong><br />
 				<?php combPersonasNoNat(); ?>
 				<div id="nvaPersonaNoNat" style="display:none">
-				<?php
-					ente();
-				?>
-					<br>
-				<?php
-					direccion();
-				?>
+					<?php
+						ente();
+					?>
+						<br>
+					<?php
+						direccion();
+					?>
 				</div>
 		</div>
 <?php
@@ -88,10 +88,12 @@
 	{
 ?>
 		<select id="comboPersonas" name="comboPersonas" onchange="muestraFormPersona(this)">
-			<option value=""> -- Seleccione -- </option>
+			<option value=""> -- Seleccione Persona o Agrege Nueva -- </option>
 			<option value="0"> -- Agregar Nueva -- </option>
 			<?php comboPersonas('*','personas','','cedula'); ?>
 		</select>
+		<br />
+		<br />
 <?php
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
@@ -107,10 +109,12 @@
 	{
 ?>
 		<select id="comboPersonasNoNat" name="comboPersonasNoNat" onchange="muestraFormPersonaNoNat(this)">
-			<option value=""> -- Seleccione -- </option>
+			<option value=""> -- Seleccione Persona o Agrege Nueva -- </option>
 			<option value="0"> -- Agregar Nueva -- </option>
-			<?php combo('*','noNat','','id'); ?>
+			<?php comboPersonasNoNat('*','noNat','','id'); ?>
 		</select>
+		<br />
+		<br />
 <?php
 	}
 
@@ -163,13 +167,14 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	function Direcc( $tCom, $inic, $direc, $inicD)
 	{
-		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = '".$tCom."' && tDirec = 'Entrante'");
+		$comunicacion = cuenta_reg("comunicaciones", "tCom = '".$tCom."' && tDirec = 'Entrante'");
 		$comunicacion = $comunicacion[0]+1;
 ?>
 		<strong>Datos de la Comunicación</strong><br /><br />
 		Tipo Comunicación: <?php echo '<input name="tipCom" type="text" id="tipCom" value="'.$tCom.'" size"5" readonly="readonly">'; ?> <br /><br />
 		Direccionalidad: <?php echo '<input name="Via" type="text" id="Via" value="'.$direc.'" size"5" readonly="readonly">'; ?> <br /><br />
 		Nº Interno para la comunicación: <?php echo '<input name="numInterno" type="text" id="numInterno" value="SG-'.$inicD.'-'.$inic.'-2012-' .$comunicacion.'" size"5" readonly="readonly"> '; ?> <br /><br />
+		<hr>
 <?php
 	}
 	
@@ -186,12 +191,15 @@
 	{
 		Direcc($tCom, $inic, $direc, $inicD);
 ?>
+		<br />
 		Procedencia de la comunicación:<br /><br />
 		<?php 
 			tpersona();
 			perNatural();
 			perNoNatural();
 		?>
+		<hr>
+		<br />
 		<div id="rCol1">
 			Nº Comunicación<br />
 		</div>
@@ -245,42 +253,58 @@
 	{
 		Direcc($tCom, $inic, $direc, $inicD);
 ?>
-		<?php perNoNatural(); ?>
+		<br />
+		Procedencia de la comunicación:<br /><br />
+		<?php
+			combPersonasNoNat();
+		 ?>
+		 <div id="nvaPersonaNoNat" style="display:none">
+			<?php
+				ente();
+			?>
+				<br>
+			<?php
+				direccion();
+			?>
+		</div>
+		<br>
+		<hr>
+		<br>
 		<div id="usrCol1">
-			Nº Comunicación<br /><br />
+			Nº Comunicación<br />
 		</div>
 		<div id="usrCol2">
 			<input type="text" name="NumCom" id="NumCom" value="" size="20" /><br />
 		</div>
 		<div id="usrCol3">
-			Fecha:<br /><br />
+			Fecha:<br />
 		</div>
 		<div id="usrCol4">	
-			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
+			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" /><br />
 		</div>
 		<div id="usrCol1">
-			Sintesis:<br /><br />
+			Sintesis:<br />
 		</div>
 		<div id="usrCol2">
 			<input type="text" name="" id="" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
 		</div>
 		<div id="usrCol3">
-			Caracter:<br /><br />
+			Caracter:<br />
 		</div>
 		<div id="usrCol4">
-			<!-- Combo Caracter -->
 			<?php caracterCom(); ?><br />
 		</div>
 		<div id="usrCol1">
-			Prioridad:<br /><br />
+			Prioridad:<br />
 		</div>
 		<div id="usrCol2">
-			<!-- Combo Prioridades -->
-			<?php combPrioridad(); ?>
+			<?php combPrioridad(); ?><br />
 		</div>
 		<div id="usrCol3">
+			<br />
 		</div>
 		<div id="usrCol4">
+			<br />
 		</div>
 <?php
 	}
@@ -297,42 +321,50 @@
 	{
 		Direcc($tCom, $inic, $direc, $inicD);
 ?>
-		<?php tpersona(); ?>
+		<br />
+		Procedencia de la comunicación:<br /><br />
+		<?php 
+			tpersona();
+			perNatural();
+			perNoNatural();
+		?>
+		<hr>
+		<br />
 		<div id="usrCol1">
-			Nº Comunicación (Si la hay)<br /><br />
+			Nº Comunicación: <br />
 		</div>
 		<div id="usrCol2">
-			<input type="text" name="NumCom" id="" value="NumCom" size="20" /> <br />
+			<input type="text" name="NumCom" id="" size="20" /> <br />
 		</div>
 		<div id="usrCol3">
-			Fecha:<br /><br />
+			Fecha:<br />
 		</div>
 		<div id="usrCol4">	
 			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
 		</div>
 		<br />
 		<div id="usrCol1">
-			Sintesis:<br /><br />
+			Sintesis:<br />
 		</div>
 		<div id="usrCol2">
 			<input type="text" name="Sintesis" id="Sintesis" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
 		</div>
 		<div id="usrCol3">
-			Caracter:<br /><br />
+			Caracter:<br />
 		</div>
 		<div id="usrCol4">
 			<!-- Combo Caracter -->
 			<?php caracterCom(); ?>
 		</div>
 		<div id="usrCol1">
-			Prioridad:<br /><br />
+			Prioridad:<br />
 		</div>
 		<div id="usrCol2">
 			<!-- Combo Prioridades -->
-			<?php combPrioridad(); ?>
+			<?php combPrioridad(); ?><br />
 		</div>
 		<div id="usrCol3">
-			Resumen:<br /><br />
+			Resumen:<br />
 		</div>
 		<div id="usrCol4">
 			<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
@@ -352,45 +384,52 @@
 	{
 		Direcc($tCom, $inic, $direc, $inicD);
 ?>
+		<br />
 		Procedencia de la comunicación:<br /><br />
-		<?php tpersona(); ?>
-				<div id="usrCol1">
-			Nº Comunicación<br /><br />
+		<?php 
+			tpersona();
+			perNatural();
+			perNoNatural();
+		?>
+		<hr>
+		<br />
+		<div id="usrCol1">
+			Nº Comunicación<br />
 		</div>
 		<div id="usrCol2">
 			<input type="text" name="NumCom" id="NumCom" value="" size="20" /> <br />
 		</div>
 		<div id="usrCol3">
-			Fecha:<br /><br />
+			Fecha:<br />
 		</div>
 		<div id="usrCol4">		
 			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
 		</div>
 		<div id="usrCol1">
-			Sintesis:<br /><br />
+			Sintesis:<br />
 		</div>
 		<div id="usrCol2">
 			<input type="text" name="Sintesis" id="Sintesis" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
 		</div>
 		<div id="usrCol3">
-			Caracter:<br /><br />
+			Caracter:<br />
 		</div>
 		<div id="usrCol4">
 			<!-- Combo Caracter -->
-			<?php caracterCom(); ?>
+			<?php caracterCom(); ?><br />
 		</div>
 		<div id="usrCol1">
-			Prioridad:<br /><br />
+			Prioridad:<br />
 		</div>
 		<div id="usrCol2">
 			<!-- Combo Prioridades -->
-			<?php combPrioridad(); ?>
+			<?php combPrioridad(); ?><br />
 		</div>
 		<div id="usrCol3">
-			Resumen: (Indique aquí todos los datos de la Invitación)<br /><br />
+			Resumen:<br />
 		</div>
 		<div id="usrCol4">
-			<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			<input type="text" name="Resumen" id="Resumen" value="Indique aquí todos los datos de la Invitación" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
 		</div>
 <?php
 	}
@@ -407,43 +446,49 @@
 	{
 		Direcc($tCom, $inic, $direc, $inicD);
 ?>
-		<strong>Datos de la Denuncia</strong><br /><br />
-		Procedencia de la denuncia:<br /><br />
-		<?php tpersona(); ?>
+		<br />
+		Procedencia de la comunicación:<br /><br />
+		<?php 
+			tpersona();
+			perNatural();
+			perNoNatural();
+		?>
+		<hr>
+		<br />
 		<div id="usrCol1">
-			Nº Comunicación (Si la hay)<br /><br />
+			Nº Comunicación<br />
 		</div>
 		<div id="usrCol2">
-			<input type="text" name="NumCom" id="NumCom" value="" size="20" /> <br />
+			<input type="text" value="Si la hay" name="NumCom" id="NumCom" value="" size="20" /> <br />
 		</div>
 		<div id="usrCol3">
-			Fecha:<br /><br />
+			Fecha:<br />
 		</div>
 		<div id="usrCol4">		
 			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
 		</div>
 		<div id="usrCol1">
-			Sintesis:<br /><br />
+			Sintesis:<br />
 		</div>
 		<div id="usrCol2">
 			<input type="text" name="Sintesis" id="" value="Sintesis" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
 		</div>
 		<div id="usrCol3">
-			Caracter:<br /><br />
+			Caracter:<br />
 		</div>
 		<div id="usrCol4">
 			<!-- Combo Caracter -->
-			<?php caracterCom(); ?>
+			<?php caracterCom(); ?><br />
 		</div>
 		<div id="usrCol1">
-			Prioridad:<br /><br />
+			Prioridad:<br />
 		</div>
 		<div id="usrCol2">
 			<!-- Combo Prioridades -->
-			<?php combPrioridad(); ?>
+			<?php combPrioridad(); ?><br />
 		</div>
 		<div id="usrCol3">
-			Resumen: (Relate acá todos los hechos)<br /><br />
+			Resumen: (Relate acá todos los hechos)<br />
 		</div>
 		<div id="usrCol4">
 			<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />

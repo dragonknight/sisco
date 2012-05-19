@@ -65,7 +65,6 @@ function incluir(opcion,pagina)
 {
 	xajax_Incluir(opcion,pagina);
 }
-
 function validaTextComp(campo,valor)
 {
 	xajax_ValidaTextComp(campo,valor);
@@ -74,6 +73,14 @@ function validaNumeros(campo,valor)
 {
 	xajax_ValidaNumeros(campo,valor);
 }
+function validaUsuario(campo,valor)
+{
+	xajax_ValidaUsuario(campo,valor);
+}
+function validaContra(campo,valor)
+{
+	xajax_ValidaContra(campo,valor);
+}
 function validaEmail(campo,valor)
 {
 	xajax_ValidaEmail(campo,valor);
@@ -81,4 +88,33 @@ function validaEmail(campo,valor)
 function validaCedula(campo,valor)
 {
 	xajax_ValidaCedula(campo,valor);
+}
+function buscaComu()
+{
+	xajax_buscaComu(xajax.getFormValues("comunic"));
+}
+function buscaExp()
+{
+	xajax_buscaExp(xajax.getFormValues("expediente"));
+}
+function buscaXAsig()
+{
+	xajax_buscaXAsig(xajax.getFormValues("asignar"));
+}
+function activaCombAsig(valor) 
+{
+	if(valor.value=="A") 
+	{
+		alert("Seleccione el Usuario");
+		document.getElementById('funcionario').disabled=false;
+		document.getElementById('submitButton').disabled=true;
+		xajax.$('submitButton').value="Asignar";
+	}
+	else
+	{
+		alert("La comunicación sera marcada como procesada");
+		document.getElementById('funcionario').disabled=true;
+		document.getElementById('submitButton').disabled=true;
+		xajax.$('submitButton').value="Procesada";
+	}
 }

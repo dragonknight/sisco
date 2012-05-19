@@ -101,6 +101,7 @@
 										audiencia('Audiencia', 'A', 'Entrante', 'E');
 									?>
 									<br />
+									<br />
 									<input id="submitButton" type="submit" value="Ingresar"/>
 								</form>
 								<div id="Error">

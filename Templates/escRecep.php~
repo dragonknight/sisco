@@ -36,7 +36,8 @@
 			<div id="rCol4">
 				<strong> Invitación: </strong><br />
 				<?php echo $invitaciones[0]; ?><br /><br /><br /><br /><br />
+				<hr>
 				<strong> Total: </strong><br />
-				<?php echo $total[0]; ?>
+				<?php echo $total[0]; ?><br /><br />
 			</div>
 		</div>

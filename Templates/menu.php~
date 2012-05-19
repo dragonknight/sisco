@@ -1,5 +1,4 @@
 <?php
-
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	funci贸n: Men煤 no autentificado
 	Descripci贸n: Funci贸n que muestra el men煤 de usuario previa autenticaci贸n en el sistema.
@@ -49,15 +48,9 @@
 				<!--Top Drop Down Menu 1 HTML-->						
 				<ul id="ddsubmenu1" class="ddsubmenustyle">
 					<li><a href="./logGeneral.php" target="contenido">General</a></li>
-					<li><a href="./logUsuario.php" target="contenido">Por Usuario</a></li>
-					<li><a href="./logFecha.php" target="contenido">Por Fecha</a></li>
-					<li><a href="./logEvento.php" target="contenido">Evento</a></li>
 				</ul>
 				<!--Top Drop Down Menu 2 HTML-->						
 				<ul id="ddsubmenu2" class="ddsubmenustyle">
-					<li><a href="./usuario.php" target="contenido">Crear Nuevo</a></li>
-					<li><a href="./usuario.php" target="contenido">Crear Nuevo</a></li>
-					<li><a href="./usuario.php" target="contenido">Crear Nuevo</a></li>
 					<li><a href="./usuario.php" target="contenido">Crear Nuevo</a></li>
 				</ul>
 		';
@@ -112,16 +105,136 @@ function menuCompleto()
 		echo '
 				<div id="ddtopmenubar" class="mattblackmenu">
 					<ul>
-						<li><a href="../Paginas/centroAuten.php" target="contenido">Principal</a></li>
+						<li><a href="Autentificado.php" target="contenido">Principal</a></li>
 						<li><a href="#" rel="ddsubmenu1">Comunicaciones</a></li>
-						<li><a href="#" rel="ddsubmenu2">Status</a></li>
+						<li><a href="#" rel="ddsubmenu2">Operaciones</a></li>
 						<li><a href="#" rel="ddsubmenu3">Consultas</a></li>
-						<!--  <li><a href="#" rel="ddsubmenu4">Reportes y Estad铆sticas</a></li>-->
-						<li><a href="#" rel="ddsubmenu5">Usuarios</a></li>
-						<li><a href="../Paginas/logout.php" target="contenido">Salir</a></li>
+						<li><a href="#" rel="ddsubmenu4">Usuarios</a></li>
+						<li><a href="javascript:logOut()">Salir</a></li>
 					</ul>
 				</div>
 			
+				<!--Top Drop Down Menu 1 HTML-->						
+				<ul id="ddsubmenu1" class="ddsubmenustyle">
+					
+					<li><a href="#">Entrantes:</a>
+						<ul id="ddsubmenu1" class="ddsubmenustyle">
+							<li><a href="./cEstandar.php" target="contenido">Comunicaci髇 Est醤dar</a>
+							<li><a href="./gaceta.php" target="contenido">Gaceta</a></li>
+							<li><a href="./audiencia.php" target="contenido">Audiencia</a></li>
+							<li><a href="./invitacion.php" target="contenido">Invitaci髇</a></li>
+							<li><a href="./denuncia.php" target="contenido">Denuncia</a></li>						
+						</ul>
+					</li>
+				</ul>
+				
+				<!--Top Drop Down Menu 2 HTML-->						
+				<ul id="ddsubmenu2" class="ddsubmenustyle">
+					<li><a href="./asignar.php" target="contenido">Asignar</a></li>
+				</ul>
+				
+				<!--Top Drop Down Menu 3 HTML-->		
+				<ul id="ddsubmenu3" class="ddsubmenustyle">
+					<li><a href="./expediente.php" target="contenido">Expediente</a></li>
+					<li><a href="#">Buscar Comunicacion</a>
+						<ul>
+							<li><a href="./buscar.php" target="contenido">Busqueda Simple</a></li>	
+						</ul>
+					</li>
+				</ul>
+				
+				<!--Top Drop Down Menu 4 HTML-->								
+				<ul id="ddsubmenu4" class="ddsubmenustyle">
+					<li><a href="./usuario.php" target="contenido">Crear Nuevo</a></li>
+				</ul>
+		';
+	}
+	
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	funci贸n: Men煤 Asistente o secretaria
+	Descripci贸n:Funci贸n que muestra el men煤 de usuario con acceso asistente o secretaria
+	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
+	Modificado: 
+	
+	Par谩metros entrada: ---
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+function menuAsistSecr()
+	{
+
+		echo '
+				<div id="ddtopmenubar" class="mattblackmenu">
+					<ul>
+						<li><a href="Autentificado.php" target="contenido">Principal</a></li>
+						<li><a href="#" rel="ddsubmenu1">Comunicaciones</a></li>
+						<li><a href="./asignar.php" target="contenido">Asignaciones</a></li>
+						<li><a href="#" rel="ddsubmenu3">Consultas</a></li>
+						<li><a href="javascript:logOut()">Salir</a></li>
+					</ul>
+				</div>
+			
+				<!--Top Drop Down Menu 1 HTML-->						
+				<ul id="ddsubmenu1" class="ddsubmenustyle">
+					
+					<li><a href="#">Entrantes:</a>
+						<ul id="ddsubmenu1" class="ddsubmenustyle">
+							<li><a href="./cEstandar.php" target="contenido">Comunicaci髇 Est醤dar</a>
+							<li><a href="./gaceta.php" target="contenido">Gaceta</a></li>
+							<li><a href="./audiencia.php" target="contenido">Audiencia</a></li>
+							<li><a href="./invitacion.php" target="contenido">Invitaci髇</a></li>
+							<li><a href="./denuncia.php" target="contenido">Denuncia</a></li>						
+						</ul>
+					</li>
+				</ul>
+				
+				<!--Top Drop Down Menu 2 HTML-->						
+				<ul id="ddsubmenu2" class="ddsubmenustyle">
+					<li><a href="./asignar.php" target="contenido">Asignar</a></li>
+				</ul>
+				
+				<!--Top Drop Down Menu 3 HTML-->		
+				<ul id="ddsubmenu3" class="ddsubmenustyle">
+					<li><a href="./expediente.php" target="contenido">Expediente</a></li>
+					<li><a href="#">Buscar Comunicacion</a>
+						<ul>
+							<li><a href="./buscar.php" target="contenido">Busqueda Simple</a></li>	
+						</ul>
+					</li>
+				</ul>
+				
+				<!--Top Drop Down Menu 4 HTML-->								
+				<ul id="ddsubmenu4" class="ddsubmenustyle">
+					<li><a href="./usuario.php" target="contenido">Crear Nuevo</a></li>
+				</ul>
+		';
+	}
+	
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	funci贸n: Men煤 Asistente o secretaria
+	Descripci贸n:Funci贸n que muestra el men煤 de usuario con acceso asistente o secretaria
+	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
+	Modificado: 
+	
+	Par谩metros entrada: ---
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+function menuEAudiecias()
+	{
+
+		echo '
+				<div id="ddtopmenubar" class="mattblackmenu">
+					<ul>
+						<li><a href="../Paginas/centroAuten.php" target="contenido">Principal</a></li>
+						<li><a href="#" rel="ddsubmenu1">Comunicaciones</a></li>
+						<li><a href="#" rel="ddsubmenu2">Asignaciones</a></li>
+						<li><a href="#" rel="ddsubmenu3">Consultas</a></li>
+						<li><a href="#" rel="ddsubmenu4">Reportes y Estadisticas</a></li>
+						<li><a href="../Paginas/logout.php" target="contenido">Salir</a></li>
+					</ul>
+				</div>
+				
 				<!--Top Drop Down Menu 1 HTML-->						
 				<ul id="ddsubmenu1" class="ddsubmenustyle">
 					
@@ -138,12 +251,10 @@ function menuCompleto()
 				<ul id="ddsubmenu2" class="ddsubmenustyle">
 					<li><a href="#">Pendientes</a>
 						<ul>
-							<li><a href="../Paginas/asignar.php" target="contenido">Por Asignar</a></li>
-							<li><a href="../Paginas/asignarResp.php" target="contenido">Respuestas</a></li>
+							<li><a href="../Paginas/CheckAsignaciones.php" target="contenido">Asignaciones</a></li>
+							<li><a href="../Paginas/.php" target="contenido">Respuestas a Enviadas</a></li>
 						</ul>
 					</li>
-					<li><a href="../Paginas/finalizar.php" target="contenido">Finalizar Correspondencia</a></li>
-					<li><a href="../Paginas/standby.php" target="contenido">Poner en StandBy</a></li>
 					<li><a href="#">Audiencias</a>
 						<ul>
 							<li><a href="../Paginas/audienciasFechas.php" target="contenido">Concertar Fecha</a></li>
@@ -167,14 +278,6 @@ function menuCompleto()
 				
 				<!--Top Drop Down Menu 4 HTML-->		
 				<ul id="ddsubmenu4" class="ddsubmenustyle">
-					<li><a href="#">Alertas</a>
-						<ul>
-							<li><a href="../Paginas/aInvitaciones.php" target="contenido">Invitaciones</a></li>
-							<li><a href="../Paginas/aGacetas.php" target="contenido">Gacetas</a></li>
-							<li><a href="../Paginas/aAudiencias.php" target="contenido">Audiencias</a></li>
-							<li><a href="../Paginas/aDenuncias.php" target="contenido">Denuncias</a></li>
-						</ul>
-					</li>
 					<li><a href="#">Consolidados</a>
 						<ul>
 							<li><a href="../Paginas/.php" target="contenido">Diario</a></li>
@@ -188,172 +291,6 @@ function menuCompleto()
 						</ul>
 					</li>
 				</ul>
-				
-				<!--Top Drop Down Menu 5 HTML-->						
-				<ul id="ddsubmenu5" class="ddsubmenustyle">
-					<li><a href="../Paginas/.php" target="contenido">Ingresar Nuevo</a></li>
-					<li><a href="../Paginas/.php" target="contenido">Modificar Existente</a></li>
-					<li><a href="../Paginas/.php" target="contenido">Eliminar</a></li>
-					<li><a href="../Paginas/busquedas.php" target="contenido">Buscar</a></li>
-				</ul>
-		';
-	}
-	
-/*-------------------------------------------------------------------------------------------------------------------------------- 
-	funci贸n: Men煤 Asistente o secretaria
-	Descripci贸n:Funci贸n que muestra el men煤 de usuario con acceso asistente o secretaria
-	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
-	Modificado: 
-	
-	Par谩metros entrada: ---
-	Salida: ---
---------------------------------------------------------------------------------------------------------------------------------*/
-	
-function menuAsistSecr()
-	{
-
-		echo '
-							<div id="ddtopmenubar" class="mattblackmenu">
-								<ul>
-									<li><a href="../Paginas/centroAuten.php" target="contenido">Principal</a></li>
-									<li><a href="#" rel="ddsubmenu1">Comunicaciones</a></li>
-									<li><a href="#" rel="ddsubmenu2">Asignaciones</a></li>
-									<li><a href="#" rel="ddsubmenu3">Consultas</a></li>
-									<!--  <li><a href="#" rel="ddsubmenu4">Reportes y Estad铆sticas</a></li>-->
-									<li><a href="../Paginas/logout.php" target="contenido">Salir</a></li>
-								</ul>
-							</div>
-								
-								<li><a href="#">Entrantes:</a>
-									<ul>
-										<li><a href="../Paginas/entrantes.php" target="contenido">Nueva Comunicaci贸n</a></li>
-										<li><a href="../Paginas/.php" target="contenido">Respuesta</a></li>
-									</ul>
-								</li>
-								<li><a href="../Paginas/salientes.php" target="contenido">Saliente</a></li>
-							</ul>
-							
-							<!--Top Drop Down Menu 2 HTML-->						
-							<ul id="ddsubmenu2" class="ddsubmenustyle">
-								<li><a href="#">Pendientes</a>
-									<ul>
-										<li><a href="../Paginas/CheckAsignaciones.php" target="contenido">Asignaciones</a></li>
-									</ul>
-								</li>
-							</ul>
-							
-							<!--Top Drop Down Menu 3 HTML-->		
-							<ul id="ddsubmenu3" class="ddsubmenustyle">
-								<li><a href="../Paginas/Expediente.php" target="contenido">Expediente</a></li>
-								<li><a href="#">Buscar Comunicacion</a>
-									<ul>
-										<li><a href="../Paginas/busquedas.php" target="contenido">Por Tipo</a></li>
-										<li><a href="../Paginas/busquedas.php" target="contenido">Por Remitente</a></li>
-										<li><a href="../Paginas/busquedas.php" target="contenido">Por Destinatario</a></li>
-										<li><a href="../Paginas/busquedas.php" target="contenido">Por Nivel de Prioridad</a></li>
-									</ul>
-								</li>
-							</ul>
-							
-							<!--Top Drop Down Menu 4 HTML-->		
-							<ul id="ddsubmenu4" class="ddsubmenustyle">
-								<li><a href="#">Consolidados</a>
-									<ul>
-										<li><a href="../Paginas/.php" target="contenido">Diario</a></li>
-										<li><a href="../Paginas/.php" target="contenido">Mensual</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Informes</a>
-									<ul>
-										<li><a href="../Paginas/.php" target="contenido">Expediente de Denuncias</a></li>
-										<li><a href="../Paginas/.php" target="contenido">Origen de las Comunicaciones</a></li>
-									</ul>
-								</li>
-							</ul>
-		';
-	}
-	
-/*-------------------------------------------------------------------------------------------------------------------------------- 
-	funci贸n: Men煤 Asistente o secretaria
-	Descripci贸n:Funci贸n que muestra el men煤 de usuario con acceso asistente o secretaria
-	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
-	Modificado: 
-	
-	Par谩metros entrada: ---
-	Salida: ---
---------------------------------------------------------------------------------------------------------------------------------*/
-	
-function menuEAudiecias()
-	{
-
-		echo '
-							<div id="ddtopmenubar" class="mattblackmenu">
-								<ul>
-									<li><a href="../Paginas/centroAuten.php" target="contenido">Principal</a></li>
-									<li><a href="#" rel="ddsubmenu1">Comunicaciones</a></li>
-									<li><a href="#" rel="ddsubmenu2">Asignaciones</a></li>
-									<li><a href="#" rel="ddsubmenu3">Consultas</a></li>
-									<li><a href="#" rel="ddsubmenu4">Reportes y Estadisticas</a></li>
-									<li><a href="../Paginas/logout.php" target="contenido">Salir</a></li>
-								</ul>
-							</div>
-							
-							<!--Top Drop Down Menu 1 HTML-->						
-							<ul id="ddsubmenu1" class="ddsubmenustyle">
-								
-								<li><a href="#">Entrantes:</a>
-									<ul>
-										<li><a href="../Paginas/entrantes.php" target="contenido">Nueva Comunicaci贸n</a></li>
-										<li><a href="../Paginas/.php" target="contenido">Respuesta</a></li>
-									</ul>
-								</li>
-								<li><a href="../Paginas/salientes.php" target="contenido">Saliente</a></li>
-							</ul>
-							
-							<!--Top Drop Down Menu 2 HTML-->						
-							<ul id="ddsubmenu2" class="ddsubmenustyle">
-								<li><a href="#">Pendientes</a>
-									<ul>
-										<li><a href="../Paginas/CheckAsignaciones.php" target="contenido">Asignaciones</a></li>
-										<li><a href="../Paginas/.php" target="contenido">Respuestas a Enviadas</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Audiencias</a>
-									<ul>
-										<li><a href="../Paginas/audienciasFechas.php" target="contenido">Concertar Fecha</a></li>
-										<li><a href="../Paginas/audienciasResumen.php" target="contenido">Cargar Directriz PostAudiencia</a></li>
-									</ul>								
-								</li>
-							</ul>
-							
-							<!--Top Drop Down Menu 3 HTML-->		
-							<ul id="ddsubmenu3" class="ddsubmenustyle">
-								<li><a href="../Paginas/Expediente.php" target="contenido">Expediente</a></li>
-								<li><a href="#">Buscar Comunicacion</a>
-									<ul>
-										<li><a href="../Paginas/busquedas.php" target="contenido">Por Tipo</a></li>
-										<li><a href="../Paginas/busquedas.php" target="contenido">Por Remitente</a></li>
-										<li><a href="../Paginas/busquedas.php" target="contenido">Por Destinatario</a></li>
-										<li><a href="../Paginas/busquedas.php" target="contenido">Por Nivel de Prioridad</a></li>
-									</ul>
-								</li>
-							</ul>
-							
-							<!--Top Drop Down Menu 4 HTML-->		
-							<ul id="ddsubmenu4" class="ddsubmenustyle">
-								<li><a href="#">Consolidados</a>
-									<ul>
-										<li><a href="../Paginas/.php" target="contenido">Diario</a></li>
-										<li><a href="../Paginas/.php" target="contenido">Mensual</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Informes</a>
-									<ul>
-										<li><a href="../Paginas/.php" target="contenido">Expediente de Denuncias</a></li>
-										<li><a href="../Paginas/.php" target="contenido">Origen de las Comunicaciones</a></li>
-									</ul>
-								</li>
-							</ul>
 		';
 	}
 	
@@ -445,5 +382,4 @@ function menuEGacetas()
 							</ul>
 		';
 	}
-
 ?>

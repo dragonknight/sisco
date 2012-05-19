@@ -37,16 +37,16 @@
 				include ("./Base/head.html");
 			?>
 			<body>
+<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- --> 
+			 
+		    	<div id="fade" class="overlay"></div>
+				<div id="light" class="modal">
+		    	</div>
+			   
 				<div id="Contenedor">
 					<?php 
 						include ("./Base/cabecera.html");
 					?>
-			<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- --> 
-			 
-			    	<div id="fade" class="overlay"></div>
-					<div id="light" class="modal">
-			    	</div>
-			<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- -->
 					
 					<div id="Menu">
 						<?php 
@@ -94,17 +94,15 @@
 							include ("./plantillas.php");
 						?>
 						<div id="formUser">
-							<h3>Registrar Comunicación Entrante</h3><br>
-							<div id="gaceta">
-								<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
-									<?php
-										gaceta('Gaceta', 'G', 'Entrante', 'E');
-									?>
+							<h3>Comunicaciones por Procesar:</h3><br>
+							<div id="cEstandar">
+								<form id="asignar" action="javascript:void(null);" onsubmit="buscaXAsig();">
 									<br />
-									<br />
-									<input id="submitButton" type="submit" value="Ingresar"/>
+									<input id="submitButton" type="submit" value="Cargar"/>
 								</form>
 								<div id="Error">
+								</div>
+								<div id="Resultados">
 								</div>
 							</div>
 						</div>

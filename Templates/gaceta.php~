@@ -95,14 +95,14 @@
 						?>
 						<div id="formUser">
 							<h3>Registrar Comunicación Entrante</h3><br>
-							<div id="audiencia">
+							<div id="gaceta">
 								<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php
 										gaceta('Gaceta', 'G', 'Entrante', 'E');
 									?>
 									<br />
+									<br />
 									<input id="submitButton" type="submit" value="Ingresar"/>
-									Error: <input name="validaError" id="validaError"  type="text" size="5" readonly="readonly"><br /><br />
 								</form>
 								<div id="Error">
 								</div>

@@ -90,8 +90,8 @@ tablas:
 	- 3 = Audiencia               | Con o sin soporte (Carta), se puede solicitar hablar con el Secretario General y estas solicitudes se tramitan por esta via
 	- 4 = Invitación              | Carta,
 	- 5 = Denuncia                | Con o sin soporte (Carta),cualquier comunicación que sea recibida pero cuya respuesta no se encuentra dentro de las obligaciones de la Secretaria, 
-				      | si ya ha sido presentada al organismos correspondiente y no ha sido procesada por este, ingresa a la Secretaria como una denuncia y es obligacion
-				      | solicitar al organo o ente encargado una respuesta por escrito asi como explicación de porque no se habia presentado antes.
+				                     | si ya ha sido presentada al organismos correspondiente y no ha sido procesada por este, ingresa a la Secretaria como una denuncia y es obligacion
+				                     | solicitar al organo o ente encargado una respuesta por escrito asi como explicación de porque no se habia presentado antes.
 
 * tipoTransaccion: tabla para almacenar los tipos de transaccion definidos en el sistema, estos se usan para la bitacora (log) del sistema, quedando OBLIGATORIAMENTE de la siguiente manera:
 	- 1  = Inserción de datos;
@@ -106,6 +106,14 @@ tablas:
 	- 10 = Llamada a una URL Restringida (intento de escalar privilegios);
 	- 11 = Cierre de sesion de usuario;
 	- 12 = Llamada a URL (Acceso a una de las opciones del sistema.);
+
+* statusCom: Tabla para almacenar los status de la comunicación;
+	-1 = En proceso
+	-2 = Asignada
+	-3 = Esperando Respuesta
+	-4 = Respuesta Recibida No Satisfactoria
+	-5 = Respuesta Recibida Satisfactoria
+	-6 = Procesada
 
 Reiniciando los indices:
 

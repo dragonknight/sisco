@@ -8,8 +8,13 @@
 	$xajax->registerFunction("ValidaTextSimp");
 	$xajax->registerFunction("ValidaTextComp");
 	$xajax->registerFunction("ValidaNumeros");
+	$xajax->registerFunction("ValidaUsuario");
+	$xajax->registerFunction("ValidaContra");
 	$xajax->registerFunction("ValidaEmail");
 	$xajax->registerFunction("ValidaCedula");
 	$xajax->registerFunction("guardaUsuario");
 	$xajax->registerFunction("comEntrante");
+	$xajax->registerFunction("buscaComu");
+	$xajax->registerFunction("buscaExp")
+	$xajax->registerFunction("buscaXAsig")
 ?>

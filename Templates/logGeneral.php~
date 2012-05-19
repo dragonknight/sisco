@@ -1,50 +1,145 @@
 <!-- “This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.“. -->
-<?php
+<?php 
 	session_start();
+	if(!empty($_SESSION['usuario']))
+	{ 
+		/* La función empty() devuelve verdadero si el argumento posee un valor vacío, 
+		al usar !empty() devuelve verdadero no solo si la variable fue declarada sino 
+		además si contiene algún valor no nulo. 
+		*/ 
+		require("xajaxDeclaraciones.php"); //Invoco el archivo de declaración de Funciones
+		$xajax->printJavascript('../Libs/xajax/');
+		
+		//Ejecuto el calculo del tiempo de la sesión, para hacerla caducar de ser necesario:
+		$ultimaTrans = $_SESSION["Acceso"]; //registro la variable de la ultima transacción hecha
+	   $ahora = date("Y-n-j H:i:s"); //registro la hora actual
+   	$tiempo_transcurrido = (strtotime($ahora)-strtotime($ultimaTrans)); //calculo el tiempo transcurrido
+    	
+    	//comparamos el tiempo transcurrido
+     	if($tiempo_transcurrido >= $_SESSION["maxTemp"]) 
+     	{
+     		//si paso mas tiempo del indicado para caducar la sesión entonces invoco el js de cerrar sesión
+?>   	 
+      	<script type="text/javascript">
+				logOut();
+			</script>
+<?php	
+    	}
+    	else
+    	{
+    		$_SESSION["ultimoAcceso"] = $ahora;
+   	} 
 ?>
-	<div id="resumenTit">
-		<h2>Log General del Sistema:</h2>
-	</div>
-	<div id="resumenCont">
-		<h4>Bitacora :</h4>
-<?php
-	include ("./funciones.php");
-	$resumen = consulta('*','bitacora','','idTransaccion');
-	$i = $resumen[1]-1;
-?>
-	<div id="izq">
-		<?php echo 'Número de entradas en el log: '. $resumen[1] . '<br /><br />'; ?>
-	</div>
-	<div id="bitCol1">
-		<strong> Nº: </strong><br />
-	</div>
-	<div id="bitCol2">
-		<strong> Tipo: </strong><br />
-	</div>
-	<div id="bitCol3">
-		<strong> Detalle: </strong><br />
-	</div>
-	<div id="bitCol4">
-		<strong> IP: </strong><br />
-	</div>
-	<div id="bitCol5">
-		<strong> Fecha: </strong><br />
-	</div>
-<?php
-		echo ' <div id="bitCol1"> ';
-		echo 		$resumen[0][$i][0];
-		echo '</div>';
-		echo ' <div id="bitCol2"> ';
-		echo 		$resumen[0][$i][1];
-		echo '</div>';
-		echo ' <div id="bitCol3"> ';
-		echo 		$resumen[0][$i][2];
-		echo '</div>';
-		echo ' <div id="bitCol4"> ';
-		echo 		$resumen[0][$i][3];
-		echo '</div>';
-		echo ' <div id="bitCol5"> ';
-		echo 		$resumen[0][$i][4];
-		echo '</div>';
-		$i= $i-1;
-?>
+		<!-- “This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.“. -->
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+			<?php 
+				include ("./Base/head.html");
+			?>
+			<body>
+				<div id="Contenedor">
+					<?php 
+						include ("./Base/cabecera.html");
+					?>
+			<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- --> 
+			 
+			    	<div id="fade" class="overlay"></div>
+					<div id="light" class="modal">
+			    	</div>
+			<!-- ------------------------------------------------------- ventana modal ------------------------------------------------------- -->
+					
+					<div id="Menu">
+						<?php 
+							//incluyo el archivo de menu's (menu.php)
+							include ("./menu.php");
+			
+							if($_SESSION['idCargo']==0) //administrador
+							{							
+								menuAdministrador();
+							}
+							if($_SESSION['idCargo']==1) //secretario general
+							{							
+								menuCompleto();
+							}
+							if($_SESSION['idCargo']==2) //coordinador
+							{							
+								menuCompleto();
+							}
+							if($_SESSION['idCargo']==3) //encargado gacetas
+							{							
+								menuGacetas();
+							}
+							if($_SESSION['idCargo']==4) //encargado audiencias
+							{							
+								menuAudiencias();
+							}
+							if($_SESSION['idCargo']==5) //asistentes
+							{							
+								menuAsistSecr();
+							}
+							if($_SESSION['idCargo']==6) //secretarias
+							{							
+								menuAsistSecr();
+							}
+							if($_SESSION['idCargo']==7) //recepcionistas
+							{							
+								menuRecepcionista();
+							}
+						?>
+					</div>
+					<div id="Contenido">
+						<div id="resumenTit">
+							<h2>Log General del Sistema:</h2>
+						</div>
+						<div id="resumenCont">
+							<h4>Bitacora :</h4>
+							<?php
+								include ("./funciones.php");
+								$resumen = consulta('*','bitacora','','idTransaccion');
+							?>
+							<div id="izq">
+								<?php echo 'Número de entradas en el log: '. $resumen[1] . '<br /><br />'; ?>
+							</div>
+							<div id="bitCol1">
+								<strong> Detalle: </strong><br />
+							</div>
+							<div id="bitCol2">
+								<strong> IP: </strong><br />
+							</div>
+							<div id="bitCol3">
+								<strong> Fecha: </strong><br />
+							</div>
+							<?php
+								for ($i=$resumen[1]-1;$i>=0;$i--)
+								{
+							?>
+									<div id="bitCol1">
+										<?php echo $resumen[0][$i][2]; ?> <br />
+									</div>
+									<div id="bitCol2">
+										<?php echo $resumen[0][$i][3]; ?> <br />
+									</div>
+									<div id="bitCol3">
+										<?php echo $resumen[0][$i][4]; ?> <br />
+									</div>
+							<?php	
+								}
+							?>	
+						</div>
+					</div>
+					<br>
+					<br>
+					<?php 
+						include ("./Base/powered.html");
+						include ("./Base/pie.html");
+					?>
+				</div>
+			</body>
+		</html>
+<?php		
+	}
+	else 
+	{
+		include ("./Base/paginaError.php");
+	}
+?>	

@@ -96,7 +96,7 @@
 							}
 							if($_SESSION['idCargo']==1) //secretario general
 							{							
-								include ("escAdmin.php");
+								include ("escCoord.php");
 							}
 							if($_SESSION['idCargo']==2) //coordinador
 							{							
@@ -104,19 +104,19 @@
 							}
 							if($_SESSION['idCargo']==3) //encargado gacetas
 							{
-								include ("escAdmin.php");				
+								include ("escGacetas");				
 							}	
 							if($_SESSION['idCargo']==4) //encargado audiencias
 							{							
-								include ("escAdmin.php");
+								include ("escAudiencias");
 							}
 							if($_SESSION['idCargo']==5) //asistentes
 							{							
-								include ("escAdmin.php");
+								include ("escAsistSecr.php");
 							}
 							if($_SESSION['idCargo']==6) //secretarias
 							{							
-								include ("escAdmin.php");
+								include ("escAsistSecr.php");
 							}
 							if($_SESSION['idCargo']==7) //recepcionistas
 							{							

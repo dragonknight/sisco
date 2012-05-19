@@ -120,5 +120,18 @@ function muestraTipPersona(valor)
 			document.getElementById("perNoNatural").style.display = "none";
 		}
 	} 
-	 
+}
+
+function activaCobAsig(valor) 
+{
+	if(valor.value=="Asignar") 
+	{
+		document.getElementById("funcionario").disabled="false";
+		xajax.$('submitButton').value="Asignar Comunicación";
+	}
+	else
+	{
+		document.getElementById("funcionario").disabled="true";
+		xajax.$('submitButton').value="Comunicación Procesada";
+	}
 }

@@ -107,6 +107,7 @@
 	margin-top: .9em;
 	clear: both;
 	text-align: center;
+	padding-bottom: 2em; 
 }
 /* base semi-transparente para el modal */
 .overlay
@@ -165,6 +166,22 @@
     -khtml-border-radius: 10px;
    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+   padding: .8em;
+}
+
+#formLogin input
+{
+	margin-top: .5em;
+}
+#loginCol1
+{
+	width:30%;
+   float: left;
+}
+#loginCol2
+{
+	width:70%;
+   float: left;
 }
 #Error
 {
@@ -190,11 +207,6 @@
 #ErrorLogin h2
 {
 	padding-top: .5em;
-	padding-bottom: .4em;
-}
-#datLogin
-{
-	padding-top: .8em;
 	padding-bottom: .4em;
 }
 /* -------------------------------------------------------- Estilo Desarrolladores --------------------------------------------- */
@@ -251,7 +263,7 @@
 #bitCol1
 {
 	clear: both;
-   width:60%;
+   width:50%;
    float: left;
 }
 #bitCol2
@@ -261,7 +273,7 @@
 }
 #bitCol3
 {
-   width:20%;
+   width:30%;
    float: left;
 }
 /* -------------------------------------------------------- Estilo Form Usuarios ------------------------------------------------- */
@@ -378,6 +390,11 @@
    width:25%;
    float: left;
    text-align: center;
+}
+/* -------------------------------------------------------- Estilo mensaje ------------------------------------------------------- */
+#mensaje
+{
+	margin: .8em;
 }
 /* -------------------------------------------------------- Estilo Powered ------------------------------------------------------- */
 #Powered

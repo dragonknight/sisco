@@ -11,8 +11,9 @@
 	<body>
 		<div id="fade" class="overlay"></div>
 		<div id="light" class="modal">
-	 		<p>Bienvenido al Sistema <br /><br />
-	 		<a href = "javascript:void(0)" onclick = "javascript:actuaLogin()">Aceptar</a></p>
+	 		<p id="mensaje">Bienvenido al Sistema <br /><br />
+	 			<a href = "javascript:void(0)" onclick = "javascript:actuaLogin()">Aceptar</a>
+	 		</p>
 	 	</div>
 		<div id="Contenedor">
 			<?php 

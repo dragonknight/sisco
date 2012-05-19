@@ -97,16 +97,20 @@
 							<form id="formIngUser" action="javascript:void(null);" onsubmit="ingUser();">
 								<h3>Crear nuevo usuario</h3><br>
 								<div id="userSel">
+									Seleccione persona o agrege una nueva: 
 									<?php combPersonas(); ?>
 								</div>
+								<br>
+								<hr>
 								<div id="nvaPersona" style="display:none">
 									<?php persona();?>
 									<br>
-									<?php direccion(); ?>
+									<?php direccion();?>
+									<br>
+									<hr>
 								</div>
 								<?php usuario();?>
 								<input id="submitButton" type="submit" value="Ingresar"/>
-								Error: <input name="validaError" id="validaError"  type="text" size="5" readonly="readonly"><br /><br />
 							</form>
 						</div>
 						<div id="Error">
