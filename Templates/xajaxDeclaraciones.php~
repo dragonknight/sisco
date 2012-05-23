@@ -15,6 +15,6 @@
 	$xajax->registerFunction("guardaUsuario");
 	$xajax->registerFunction("comEntrante");
 	$xajax->registerFunction("buscaComu");
-	$xajax->registerFunction("buscaExp")
-	$xajax->registerFunction("buscaXAsig")
+	$xajax->registerFunction("buscaExp");
+	$xajax->registerFunction("buscaXAsig");
 ?>

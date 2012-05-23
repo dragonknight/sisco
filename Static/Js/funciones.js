@@ -120,3 +120,9 @@ function activaCombAsig(valor, indice)
 		xajax.$('submitButton'+indice).value="Procesada";
 	}
 }
+function asignar(indice)
+{
+	alert("Se procesara el formulario, "+indice);
+	xajax_Asigna(xajax.getFormValues(indice));
+	return false;
+}

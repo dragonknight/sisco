@@ -109,14 +109,19 @@ function activaCombAsig(valor, indice)
 	{
 		alert("Seleccione el Usuario");
 		document.getElementById('funcionario'+indice).disabled=false;
-		document.getElementById('submitButton'+indice).disabled=true;
+		document.getElementById('submitButton'+indice).disabled=false;
 		xajax.$('submitButton'+indice).value="Asignar";
 	}
 	else
 	{
 		alert("La comunicación sera marcada como procesada");
 		document.getElementById('funcionario'+indice).disabled=true;
-		document.getElementById('submitButton'+indice).disabled=true;
+		document.getElementById('submitButton'+indice).disabled=false;
 		xajax.$('submitButton'+indice).value="Procesada";
 	}
+}
+function asignar(indice)
+{
+	alert("Se procesara el formulario, "+indice);
+	return false;
 }
