@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.7deb6
+-- version 3.3.7deb7
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 26-01-2012 a las 17:35:42
--- Versión del servidor: 5.1.49
--- Versión de PHP: 5.3.3-7+squeeze3
+-- Tiempo de generación: 08-05-2012 a las 12:39:24
+-- Versión del servidor: 5.1.61
+-- Versión de PHP: 5.3.3-7+squeeze8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -32,13 +32,83 @@ CREATE TABLE IF NOT EXISTS `bitacora` (
   `ip` varchar(15) COLLATE utf8_spanish2_ci DEFAULT NULL COMMENT 'ip del cliente que ejecuto la transaccion',
   `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idTransaccion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci COMMENT='Log del sistema sisco' AUTO_INCREMENT=836 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci COMMENT='Log del sistema sisco' AUTO_INCREMENT=71 ;
 
 --
 -- Volcar la base de datos para la tabla `bitacora`
 --
 
-
+INSERT INTO `bitacora` (`idTransaccion`, `tipoTransaccion`, `detalle`, `ip`, `fecha`) VALUES
+(1, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-05-06 13:32:06'),
+(2, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-05-06 13:42:15'),
+(3, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-05-06 13:42:28'),
+(4, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-05-06 13:44:25'),
+(5, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-05-06 13:44:41'),
+(6, 8, 'El usuario:  cerro sesión en Sisco', '127.0.0.1', '2012-05-06 22:08:18'),
+(7, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-05-06 22:08:31'),
+(8, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-05-06 22:25:03'),
+(9, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-05-06 22:25:25'),
+(10, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-05-06 22:27:05'),
+(11, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-05-06 22:27:23'),
+(12, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-05-06 22:42:46'),
+(13, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-05-06 22:43:15'),
+(14, 1, 'Se Agrego al usuario: ccastillo al Sisco', '127.0.0.1', '2012-05-06 23:08:08'),
+(15, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-05-06 23:08:41'),
+(16, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-05-07 11:13:09'),
+(17, 1, 'Se Agrego al usuario: fmora al Sisco', '127.0.0.1', '2012-05-07 11:15:25'),
+(18, 1, 'Se Agrego al usuario: ngladiz al Sisco', '127.0.0.1', '2012-05-07 11:22:02'),
+(19, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-05-07 11:23:51'),
+(20, 5, 'El usuario: fmora accedio al Sisco', '127.0.0.1', '2012-05-07 11:24:05'),
+(21, 1, 'El usuario: fmora. Ingreso la comunicación SG-E-E-2012-1 ', '127.0.0.1', '2012-05-07 11:44:16'),
+(22, 1, 'El usuario: fmora. Ingreso la comunicación SG-E-E-2012-2 ', '127.0.0.1', '2012-05-07 11:51:52'),
+(23, 8, 'El usuario: fmora cerro sesión en Sisco', '127.0.0.1', '2012-05-07 12:10:00'),
+(24, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-07 12:10:32'),
+(25, 5, 'El usuario: fmora accedio al Sisco', '127.0.0.1', '2012-05-07 12:10:55'),
+(26, 7, 'Intento de escalar privilegios', '127.0.0.1', '2012-05-07 13:30:44'),
+(27, 5, 'El usuario: fmora accedio al Sisco', '127.0.0.1', '2012-05-07 13:30:59'),
+(28, 5, 'El usuario: fmora accedio al Sisco', '127.0.0.1', '2012-05-07 16:20:04'),
+(29, 8, 'El usuario: fmora cerro sesión en Sisco', '127.0.0.1', '2012-05-07 16:53:50'),
+(30, 5, 'El usuario: fmora accedio al Sisco', '127.0.0.1', '2012-05-07 16:54:30'),
+(31, 8, 'El usuario: fmora cerro sesión en Sisco', '127.0.0.1', '2012-05-07 16:55:48'),
+(32, 5, 'El usuario: fmora accedio al Sisco', '127.0.0.1', '2012-05-07 16:56:07'),
+(33, 7, 'Intento de escalar privilegios', '127.0.0.1', '2012-05-07 18:18:41'),
+(34, 6, 'Intento de Login con Credenciales Invalidas', '127.0.0.1', '2012-05-07 18:19:03'),
+(35, 5, 'El usuario: fmora accedio al Sisco', '127.0.0.1', '2012-05-07 18:19:18'),
+(36, 8, 'El usuario: fmora cerro sesión en Sisco', '127.0.0.1', '2012-05-07 18:27:31'),
+(37, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-07 18:27:57'),
+(38, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-07 18:43:56'),
+(39, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-07 18:45:30'),
+(40, 8, 'El usuario: ngladiz cerro sesión en Sisco', '127.0.0.1', '2012-05-07 19:26:02'),
+(41, 5, 'El usuario: fmora accedio al Sisco', '127.0.0.1', '2012-05-07 19:26:18'),
+(42, 8, 'El usuario: fmora cerro sesión en Sisco', '127.0.0.1', '2012-05-07 19:32:14'),
+(43, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-07 19:33:58'),
+(44, 7, 'Intento de escalar privilegios', '127.0.0.1', '2012-05-07 23:08:43'),
+(45, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-07 23:09:01'),
+(46, 8, 'El usuario: ngladiz cerro sesión en Sisco', '127.0.0.1', '2012-05-07 23:18:25'),
+(47, 6, 'Intento de Login con Credenciales Invalidas', '127.0.0.1', '2012-05-07 23:18:48'),
+(48, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-07 23:19:03'),
+(49, 8, 'El usuario: ngladiz cerro sesión en Sisco', '127.0.0.1', '2012-05-07 23:20:55'),
+(50, 5, 'El usuario: fmora accedio al Sisco', '127.0.0.1', '2012-05-07 23:21:06'),
+(51, 1, 'El usuario: fmora. Ingreso la comunicación SG-E-E-2012-3 ', '127.0.0.1', '2012-05-07 23:23:48'),
+(52, 8, 'El usuario: fmora cerro sesión en Sisco', '127.0.0.1', '2012-05-07 23:23:56'),
+(53, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-07 23:24:11'),
+(54, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-08 00:14:55'),
+(55, 1, 'Se Agrego al usuario: warias al Sisco', '127.0.0.1', '2012-05-08 00:29:23'),
+(56, 8, 'El usuario: ngladiz cerro sesión en Sisco', '127.0.0.1', '2012-05-08 00:31:14'),
+(57, 6, 'Intento de Login con Credenciales Invalidas', '127.0.0.1', '2012-05-08 00:31:28'),
+(58, 5, 'El usuario: warias accedio al Sisco', '127.0.0.1', '2012-05-08 00:32:08'),
+(59, 7, 'Intento de escalar privilegios', '127.0.0.1', '2012-05-08 10:52:51'),
+(60, 5, 'El usuario: admin accedio al Sisco', '127.0.0.1', '2012-05-08 10:53:32'),
+(61, 8, 'El usuario: admin cerro sesión en Sisco', '127.0.0.1', '2012-05-08 10:54:58'),
+(62, 5, 'El usuario: fmora accedio al Sisco', '127.0.0.1', '2012-05-08 10:55:27'),
+(63, 8, 'El usuario: fmora cerro sesión en Sisco', '127.0.0.1', '2012-05-08 10:57:00'),
+(64, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-08 10:57:18'),
+(65, 8, 'El usuario: ngladiz cerro sesión en Sisco', '127.0.0.1', '2012-05-08 11:16:23'),
+(66, 5, 'El usuario: fmora accedio al Sisco', '127.0.0.1', '2012-05-08 11:16:38'),
+(67, 8, 'El usuario: fmora cerro sesión en Sisco', '127.0.0.1', '2012-05-08 11:23:21'),
+(68, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-08 11:23:41'),
+(69, 7, 'Intento de escalar privilegios', '127.0.0.1', '2012-05-08 12:30:25'),
+(70, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-08 12:30:40');
 
 -- --------------------------------------------------------
 
@@ -51,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `caracterCom` (
   `nombre` varchar(35) NOT NULL,
   `descripcion` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Tabla para almacenar los diferentes caracteres de la comunic' AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Tabla para almacenar los diferentes caracteres de la comunic' AUTO_INCREMENT=5 ;
 
 --
 -- Volcar la base de datos para la tabla `caracterCom`
@@ -60,7 +130,8 @@ CREATE TABLE IF NOT EXISTS `caracterCom` (
 INSERT INTO `caracterCom` (`id`, `nombre`, `descripcion`) VALUES
 (1, 'Solicitud', ''),
 (2, 'Notificación', ''),
-(3, 'Circular', '');
+(3, 'Circular', ''),
+(4, 'Respuesta', 'Respuesta a Comunicación');
 
 -- --------------------------------------------------------
 
@@ -4209,6 +4280,7 @@ CREATE TABLE IF NOT EXISTS `comunicaciones` (
   `prioridad` varchar(5) NOT NULL,
   `Resumen` varchar(250) NOT NULL,
   `tDirec` varchar(10) NOT NULL COMMENT 'Marca de Comunicacion Entrante o Saliente',
+  `Status` int(2) NOT NULL,
   `tCom` varchar(10) NOT NULL COMMENT 'Tipo de Comunicacion',
   PRIMARY KEY (`numInterno`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Tabla para registrar el Movimiento de todas las Comunicacion';
@@ -4217,6 +4289,10 @@ CREATE TABLE IF NOT EXISTS `comunicaciones` (
 -- Volcar la base de datos para la tabla `comunicaciones`
 --
 
+INSERT INTO `comunicaciones` (`numInterno`, `tProced`, `idProced`, `nComun`, `fecha`, `sintesis`, `caracter`, `prioridad`, `Resumen`, `tDirec`, `Status`, `tCom`) VALUES
+('SG-E-E-2012-1', 1, '1123456', '', '07/05/2012', 'Solicitud de Materiales de vivienda', 1, '1', 'identico', 'Entrante', 1, 'Estandar'),
+('SG-E-E-2012-2', 2, 'J-31503202-3', '', '07/05/2012', 'Propuesta de FormaciÃ³n', 2, '3', 'identico', 'Entrante', 1, 'Estandar'),
+('SG-E-E-2012-3', 1, '1123456', '', '07/05/2012', 'Solicitud de informaciÃ³n sobre comunicacion anterior', 1, '1', 'identico', 'Entrante', 1, 'Estandar');
 
 -- --------------------------------------------------------
 
@@ -4512,6 +4588,8 @@ CREATE TABLE IF NOT EXISTS `noNat` (
 -- Volcar la base de datos para la tabla `noNat`
 --
 
+INSERT INTO `noNat` (`id`, `nombre`, `tipo`, `telefono`, `correo`, `direccion`, `pais`, `ciudad`, `municipio`, `parroquia`) VALUES
+('J-31503202-3', 'FormarVenezuela', 0, 2147483647, 'formar07@gmail.com', 'Valencia, frente al Big low center', 'VEN', '354', 'VEN', 'VEN');
 
 -- --------------------------------------------------------
 
@@ -4538,6 +4616,12 @@ CREATE TABLE IF NOT EXISTS `personas` (
 -- Volcar la base de datos para la tabla `personas`
 --
 
+INSERT INTO `personas` (`cedula`, `apellidos`, `nombres`, `sexo`, `telefono`, `correo`, `direccion`, `pais`, `ciudad`, `municipio`, `parroquia`) VALUES
+('17533453', 'Carlos', 'Castillo', 'M', 2147483647, 'castilloc185@gmail.com', 'Av Universidad, Sector Andres Eloy', 'VEN', '253', 'VEN', 'VEN'),
+('17522456', 'Mora', 'Fabiola', 'F', 2147483647, 'morayfabiola@gmail.com', 'Av Fernandez PeÃ±a, Ejido', 'VEN', '253', 'VEN', 'VEN'),
+('6059666', 'Nino', 'Gladiz', 'F', 2147483647, '', 'Av Universidad, Sector Andres Eloy', 'VEN', '253', 'VEN', 'VEN'),
+('1123456', 'Mora', 'Leonardo', 'M', 0, '', '', '', '', '', ''),
+('14456987', 'Arias', 'Wilbelis', 'F', 2147483647, 'warias@gmail.com', 'El palmo Ejido', 'VEN', '253', 'VEN', 'VEN');
 
 -- --------------------------------------------------------
 
@@ -4576,4 +4660,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`idPersona`, `idCargo`, `login`, `password`) VALUES
-('1', 0, 'admin', '4dm1n');
+('0', 0, 'admin', '4dm1n'),
+('14456987', 6, 'warias', 'w4r14s'),
+('17522456', 7, 'fmora', 'fm0r4'),
+('17533453', 0, 'ccastillo', 'c4rl0s'),
+('6059666', 2, 'ngladiz', 'ngl4d1z');

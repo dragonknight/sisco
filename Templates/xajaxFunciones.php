@@ -631,22 +631,22 @@
 		while($fila = mysql_fetch_array($result,MYSQL_BOTH))
 		{
 			$txt = $txt."<br /> <hr /> <br />";
-			$txt = $txt ."<form id=\"procesa\" action=\"javascript:void(null);\" onsubmit=\"procesar();\">";
-				$txt = $txt."Numero ".$i;
-				$txt = $txt."<div>ID SISCO: ".$fila[0]."</div>";
-				$txt = $txt."<div>Solicitante: ". $fila[2]."</div>";
-				$txt = $txt."<div>Sintesis: ".$fila[5]."</div>";
-				$txt = $txt."<div>Fecha: ".$fila[4]."</div>";
-				$txt = $txt."<div>Direccionalidad: ".$fila[9]."</div>";
-				$txt = $txt ."<div>Tipo: ".$fila[11]."</div>";
+			$txt = $txt ."<form id='procesa".$i."' action='javascript:void(null);' onsubmit='procesar();'>";
+				$txt = $txt."Numero: <input name='num".$i."' type='text' id='num".$i."' value=".$i." readonly='readonly'><br />";
+				$txt = $txt."ID SISCO: <input name='idSisco".$i."' type='text' id='idSisco".$i."' value=".$fila[0]." readonly='readonly'><br />";
+				$txt = $txt."<div>Solicitante: <input name='solicitante".$i."' type='text' id='solicitante".$i."' value=".$fila[2]." readonly='readonly'><br />";
+				$txt = $txt."<div>Sintesis: <input name='sintesis".$i."' type='text' id='sintesis".$i."' value=".$fila[5]." readonly='readonly'><br />";
+				$txt = $txt."<div>Fecha: <input name='fecha".$i."' type='text' id='fecha".$i."' value=".$fila[4]." readonly='readonly'><br />";
+				$txt = $txt."<div>Direccionalidad: <input name='direccional".$i."' type='text' id='direccional".$i."' value=".$fila[9]." readonly='readonly'><br />";
+				$txt = $txt ."<div>Tipo: <input name='tipo".$i."' type='text' id='tipo".$i."' value=".$fila[11]." readonly='readonly'><br />";
 				$txt = $txt ."<fieldset>";
 					$txt = $txt ."<legend>Opciones</legend>";
 					//Agrego la opcion para asignar la comunicación
 					$txt = $txt ."<br />";
-					$txt = $txt ."<input type=\"radio\" name=\"Procesar\" value=\"A\" onclick=\"activaCombAsig(this)\" /> Asignar a: ";
+					$txt = $txt ."<input type='radio' name='Procesar".$i."' value='A' onclick='activaCombAsig(this)' /> Asignar a: ";
 					//Inicializo el combo para asignar a personal
-					$txt = $txt ."<select name=\"funcionario\" id=\"funcionario\"  disabled=\"true\">";
-					$txt = $txt ."<option value=\"0\"> --Seleccione Funcionario-- </option>";
+					$txt = $txt ."<select name='funcionario' id='funcionario'  disabled='true'>";
+					$txt = $txt ."<option value='0'> --Seleccione Funcionario-- </option>";
 					// Ejecuto una consulta para determinar a quienes puedo asignar la comunicación
 					$query2 = "select  * from usuarios where idCargo = 3 || idCargo =4 || idCargo =5 || idCargo =6 order by idCargo";
 					$result2 = mysql_query($query2,$con) or die("Error al realizar la consulta: ");
@@ -656,9 +656,9 @@
 					}
 					$txt = $txt ."</select> <br />";
 					//Agrego la opcion para finalizar comunicación
-					$txt = $txt ."<input type=\"radio\" name=\"Procesar\" value=\"P\" onclick=\"activaCombAsig(this)\" /> Marcar como Procesada ";
+					$txt = $txt ."<input type='radio' name='Procesar".$i."' value='P' onclick='activaCombAsig(this)' /> Marcar como Procesada ";
 					$txt = $txt ."<br /><br />";
-					$txt = $txt ."<input id=\"submitButton".$i."\" type=\"submit\" value=\"Procesar\" disabled=\"false;\" />";
+					$txt = $txt ."<input id='submitButton".$i."' type='submit' value='Procesar' disabled='false' />";
 					$txt = $txt ."<br /><br />";
 				$txt = $txt ."</fieldset>";
 				$i = $i+1;

@@ -120,3 +120,7 @@ Reiniciando los indices:
 	Tabla bitacora 		idTransaccion
 	Tabla caracterCom	id
 
+Bugs Conocidos:
+	Se sabe que existe actualmente un error en las funciones Xajax, que impide retornar caracteres especiales (acentuados), no se ha trabajado el porque de esta situación y se a ignorado
+totalmente la situación en pro de terminar el desarrollo
+
