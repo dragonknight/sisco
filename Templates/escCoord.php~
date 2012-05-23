@@ -5,7 +5,7 @@
 			</p>
 		</div>
 		<div id="resumenTit">
-			<h2>Recibidas:</h2>
+			<h2>Recibidas Pendientes:</h2>
 		</div>
 		<div id="resumenCont">
 <?php
@@ -129,3 +129,4 @@
 				<?php echo $trpHoy[0]; ?>
 			</div>
 		</div>
+		<br />

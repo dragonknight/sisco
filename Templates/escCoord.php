@@ -5,7 +5,7 @@
 			</p>
 		</div>
 		<div id="resumenTit">
-			<h2>Recibidas:</h2>
+			<h2>Recibidas Pendientes:</h2>
 		</div>
 		<div id="resumenCont">
 <?php
@@ -43,7 +43,7 @@
 		</div>
 		<br />
 		<div id="resumenTit">
-			<h2>Asignadas:</h2>
+			<h2>Recibidas Asignadas:</h2>
 		</div>
 		<div id="resumenCont">
 			<div id="rCol1">

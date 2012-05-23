@@ -681,7 +681,26 @@
 	function Asigna($formAsig, $bandera)
 	{
 		$objResponse = new xajaxResponse();
-		$objResponse->alert("Se va a procesar la comunicacion ".$formAsig['idSisco'.$bandera]);
+		$con = conectar();
+		mysql_select_db("sisco", $con);
+		if ($formAsig['Procesar'.$bandera] =="A") //Si la comunicación se marco para ser asignada
+		{
+			$objResponse->alert("Se va a asignar la comunicacion ".$formAsig['idSisco'.$bandera]);
+			// Modifico el estatus de la comunicación en la tabla comunicaciones
+			$query="UPDATE comunicaciones set Status = 2 where numInterno='".$formAsig['idSisco'.$bandera]."'";
+			$result = mysql_query($query) or die("Error al ejecutar el query");
+			// Cargo la asignación en la tabla de asignaciones
+			$query2 = "insert into asignaciones (numInterno, Usuario, statusAsig) values ('" .$formAsig['idSisco'.$bandera]. "','" .$formAsig['funcionario'.$bandera]. "',2)";
+			mysql_query($query2) or die("Error al realizar la consulta: ". mysql_error());
+		}
+		else // si la comunicación se marco como procesada
+		{
+			$objResponse->alert("Se marco como procesada la comunicacion ".$formAsig['idSisco'.$bandera]);
+			// Modificico el estatus de la comunicación en la tabla comunicaciones
+			$query="UPDATE comunicaciones set Status = 6 where numInterno='".$formAsig['idSisco'.$bandera]."'";
+			$result = mysql_query($query) or die("Error al ejecutar el query");
+		}
+		//Recargo la pagina de asignaciones...
 		return $objResponse;
 	}
 
