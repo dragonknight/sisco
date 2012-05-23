@@ -101,8 +101,10 @@ function buscaXAsig()
 {
 	xajax_buscaXAsig(xajax.getFormValues("asignar"));
 }
-function activaCombAsig(valor) 
+function activaCombAsig(valor, indice) 
 {
+	alert(valor);
+	alert(indice);
 	if(valor.value=="A") 
 	{
 		alert("Seleccione el Usuario");

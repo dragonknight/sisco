@@ -643,7 +643,7 @@
 					$txt = $txt ."<legend>Opciones</legend>";
 					//Agrego la opcion para asignar la comunicación
 					$txt = $txt ."<br />";
-					$txt = $txt ."<input type='radio' name='Procesar' value='A' onclick='activaCombAsig(this)' /> Asignar a: ";
+					$txt = $txt ."<input type='radio' name='Procesar".$i."' value='A' onclick='activaCombAsig(this.value, this.id)' /> Asignar a: ";
 					//Inicializo el combo para asignar a personal
 					$txt = $txt ."<select name='funcionario' id='funcionario'  disabled='true'>";
 					$txt = $txt ."<option value='0'> --Seleccione Funcionario-- </option>";
@@ -656,7 +656,7 @@
 					}
 					$txt = $txt ."</select> <br />";
 					//Agrego la opcion para finalizar comunicación
-					$txt = $txt ."<input type='radio' name='Procesar' value='P' onclick='activaCombAsig(this)' /> Marcar como Procesada ";
+					$txt = $txt ."<input type='radio' name='Procesar".$i."' value='P' onclick='activaCombAsig(this.value, this.id)' /> Marcar como Procesada ";
 					$txt = $txt ."<br /><br />";
 					$txt = $txt ."<input id='submitButton".$i."' type='submit' value='Procesar' disabled='false' />";
 					$txt = $txt ."<br /><br />";
