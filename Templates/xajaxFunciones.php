@@ -631,7 +631,7 @@
 		while($fila = mysql_fetch_array($result,MYSQL_BOTH))
 		{
 			$txt = $txt."<br /> <hr /> <br />";
-			$txt = $txt ."<form id='procesa".$i."' action='javascript:void(null);' onsubmit='asignar(this.id);'>";
+			$txt = $txt ."<form id='".$i."' action='javascript:void(null);' onsubmit='asignar(this.id);'>";
 				$txt = $txt."Numero: <input name='num".$i."' type='text' id='num".$i."' value=".$i." readonly='readonly'><br />";
 				$txt = $txt."ID SISCO: <input name='idSisco".$i."' type='text' id='idSisco".$i."' value=".$fila[0]." readonly='readonly'><br />";
 				$txt = $txt."<div>Solicitante: <input name='solicitante".$i."' type='text' id='solicitante".$i."' value=".$fila[2]." readonly='readonly'><br />";
@@ -678,10 +678,10 @@
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function Asigna($formAsig)
+	function Asigna($formAsig, $bandera)
 	{
 		$objResponse = new xajaxResponse();
-		$objResponse->alert("Se va a procesar la comunicacion ".$formAsig['idSisco1']);
+		$objResponse->alert("Se va a procesar la comunicacion ".$formAsig['idSisco'.$bandera]);
 		return $objResponse;
 	}
 

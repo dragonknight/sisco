@@ -123,6 +123,6 @@ function activaCombAsig(valor, indice)
 function asignar(indice)
 {
 	alert("Se procesara el formulario, "+indice);
-	xajax_Asigna(xajax.getFormValues(indice));
+	xajax_Asigna(xajax.getFormValues(indice),indice);
 	return false;
 }
