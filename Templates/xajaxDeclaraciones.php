@@ -17,5 +17,6 @@
 	$xajax->registerFunction("buscaComu");
 	$xajax->registerFunction("buscaExp");
 	$xajax->registerFunction("buscaXAsig");
+	$xajax->registerFunction("consultAsig");
 	$xajax->registerFunction("Asigna");
 ?>

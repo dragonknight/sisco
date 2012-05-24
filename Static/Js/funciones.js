@@ -126,3 +126,8 @@ function asignar(indice)
 	xajax_Asigna(xajax.getFormValues(indice),indice);
 	return false;
 }
+function consultAsig()
+{
+	alert("llamando a la funcion xajax de asignar");
+	xajax_consultAsig(xajax.getFormValues("consultar"));
+}

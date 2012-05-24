@@ -1,11 +1,11 @@
 <?php
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Menú no autentificado
-	Descripción: Función que muestra el menú de usuario previa autenticación en el sistema.
+	funciÃ³n: MenÃº no autentificado
+	DescripciÃ³n: FunciÃ³n que muestra el menÃº de usuario previa autenticaciÃ³n en el sistema.
 	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
 	Modificado: 
 	
-	Parámetros entrada: ---
+	ParÃ¡metros entrada: ---
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
@@ -24,12 +24,12 @@
 		}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Menú administrador
-	Descripción: Función que muestra el menú del usuario Administrador (previa autenticación en el sistema).
+	funciÃ³n: MenÃº administrador
+	DescripciÃ³n: FunciÃ³n que muestra el menÃº del usuario Administrador (previa autenticaciÃ³n en el sistema).
 	Desarrollador: Carlos Castillo, menu extraido de http://www.dynamicdrive.com 
 	Modificado: 
 	
-	Parámetros entrada: ---
+	ParÃ¡metros entrada: ---
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
@@ -56,12 +56,12 @@
 		';
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Menú Recepcionista
-	Descripción: Función que muestra el menú de usuario con acceso recepcionista.
+	funciÃ³n: MenÃº Recepcionista
+	DescripciÃ³n: FunciÃ³n que muestra el menÃº de usuario con acceso recepcionista.
 	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
 	Modificado: 
 	
-	Parámetros entrada: ---
+	ParÃ¡metros entrada: ---
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
@@ -79,10 +79,10 @@
 					
 						<!--Top Drop Down Menu 1 HTML-->						
 						<ul id="ddsubmenu1" class="ddsubmenustyle">
-							<li><a href="./cEstandar.php" target="contenido">Comunicaci�n Est�ndar</a>
+							<li><a href="./cEstandar.php" target="contenido">Comunicación Estándar</a>
 							<li><a href="./gaceta.php" target="contenido">Gaceta</a></li>
 							<li><a href="./audiencia.php" target="contenido">Audiencia</a></li>
-							<li><a href="./invitacion.php" target="contenido">Invitaci�n</a></li>
+							<li><a href="./invitacion.php" target="contenido">Invitación</a></li>
 							<li><a href="./denuncia.php" target="contenido">Denuncia</a></li>
 							<li><a href="./buscar.php" target="contenido">Buscar</a></li>							
 						</ul>
@@ -90,12 +90,12 @@
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Menú completo
-	Descripción:Función que muestra el menú de usuario completo en el sistema (secretario general o coordinadora).
+	funciÃ³n: MenÃº completo
+	DescripciÃ³n:FunciÃ³n que muestra el menÃº de usuario completo en el sistema (secretario general o coordinadora).
 	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
 	Modificado: 
 	
-	Parámetros entrada: ---
+	ParÃ¡metros entrada: ---
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
@@ -119,10 +119,10 @@ function menuCompleto()
 					
 					<li><a href="#">Entrantes:</a>
 						<ul id="ddsubmenu1" class="ddsubmenustyle">
-							<li><a href="./cEstandar.php" target="contenido">Comunicaci�n Est�ndar</a>
+							<li><a href="./cEstandar.php" target="contenido">Comunicación Estándar</a>
 							<li><a href="./gaceta.php" target="contenido">Gaceta</a></li>
 							<li><a href="./audiencia.php" target="contenido">Audiencia</a></li>
-							<li><a href="./invitacion.php" target="contenido">Invitaci�n</a></li>
+							<li><a href="./invitacion.php" target="contenido">Invitación</a></li>
 							<li><a href="./denuncia.php" target="contenido">Denuncia</a></li>						
 						</ul>
 					</li>
@@ -151,12 +151,12 @@ function menuCompleto()
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Menú Asistente o secretaria
-	Descripción:Función que muestra el menú de usuario con acceso asistente o secretaria
+	funciÃ³n: MenÃº Asistente o secretaria
+	DescripciÃ³n:FunciÃ³n que muestra el menÃº de usuario con acceso asistente o secretaria
 	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
 	Modificado: 
 	
-	Parámetros entrada: ---
+	ParÃ¡metros entrada: ---
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
@@ -168,21 +168,29 @@ function menuAsistSecr()
 					<ul>
 						<li><a href="Autentificado.php" target="contenido">Principal</a></li>
 						<li><a href="#" rel="ddsubmenu1">Comunicaciones</a></li>
-						<li><a href="./asignar.php" target="contenido">Asignaciones</a></li>
-						<li><a href="#" rel="ddsubmenu2">Consultas</a></li>
+						<li><a href="#" rel="ddsubmenu2">Asignaciones</a></li>
+						<li><a href="#" rel="ddsubmenu3">Consultas</a></li>
 						<li><a href="javascript:logOut()">Salir</a></li>
 					</ul>
 				</div>
 			
 				<!--Top Drop Down Menu 1 HTML-->						
 				<ul id="ddsubmenu1" class="ddsubmenustyle">
-					
 					<li><a href="#">Entrantes:</a>
 						<ul id="ddsubmenu1" class="ddsubmenustyle">
-							<li><a href="./cEstandar.php" target="contenido">Comunicaci�n Est�ndar</a>
+							<li><a href="./cEstandar.php" target="contenido">Comunicación Estándar</a>
 							<li><a href="./gaceta.php" target="contenido">Gaceta</a></li>
 							<li><a href="./audiencia.php" target="contenido">Audiencia</a></li>
-							<li><a href="./invitacion.php" target="contenido">Invitaci�n</a></li>
+							<li><a href="./invitacion.php" target="contenido">Invitación</a></li>
+							<li><a href="./denuncia.php" target="contenido">Denuncia</a></li>						
+						</ul>
+					</li>
+					<li><a href="#">Salientes:</a>
+						<ul id="ddsubmenu1" class="ddsubmenustyle">
+							<li><a href="./cEstandar.php" target="contenido">Comunicación Estándar</a>
+							<li><a href="./gaceta.php" target="contenido">Gaceta</a></li>
+							<li><a href="./audiencia.php" target="contenido">Audiencia</a></li>
+							<li><a href="./invitacion.php" target="contenido">Invitación</a></li>
 							<li><a href="./denuncia.php" target="contenido">Denuncia</a></li>						
 						</ul>
 					</li>
@@ -190,6 +198,12 @@ function menuAsistSecr()
 				
 				<!--Top Drop Down Menu 2 HTML-->		
 				<ul id="ddsubmenu2" class="ddsubmenustyle">
+					<li><a href="./consulAsig.php" target="contenido">Consultar</a></li>
+					<li><a href="./expediente.php" target="contenido">Reportar</a></li>
+				</ul>
+				
+				<!--Top Drop Down Menu 3 HTML-->		
+				<ul id="ddsubmenu3" class="ddsubmenustyle">
 					<li><a href="./expediente.php" target="contenido">Expediente</a></li>
 					<li><a href="#">Buscar Comunicacion</a>
 						<ul>
@@ -206,12 +220,12 @@ function menuAsistSecr()
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Menú Asistente o secretaria
-	Descripción:Función que muestra el menú de usuario con acceso asistente o secretaria
+	funciÃ³n: MenÃº Asistente o secretaria
+	DescripciÃ³n:FunciÃ³n que muestra el menÃº de usuario con acceso asistente o secretaria
 	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
 	Modificado: 
 	
-	Parámetros entrada: ---
+	ParÃ¡metros entrada: ---
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
@@ -235,7 +249,7 @@ function menuEAudiecias()
 					
 					<li><a href="#">Entrantes:</a>
 						<ul>
-							<li><a href="../Paginas/entrantes.php" target="contenido">Nueva Comunicación</a></li>
+							<li><a href="../Paginas/entrantes.php" target="contenido">Nueva ComunicaciÃ³n</a></li>
 							<li><a href="../Paginas/.php" target="contenido">Respuesta</a></li>
 						</ul>
 					</li>
@@ -290,12 +304,12 @@ function menuEAudiecias()
 	}
 	
 /*-------------------------------------------------------------------------------------------------------------------------------- 
-	función: Menú Asistente o secretaria
-	Descripción:Función que muestra el menú de usuario con acceso asistente o secretaria
+	funciÃ³n: MenÃº Asistente o secretaria
+	DescripciÃ³n:FunciÃ³n que muestra el menÃº de usuario con acceso asistente o secretaria
 	Desarrollador: Carlos Castillo, menu de http://www.dynamicdrive.com 
 	Modificado: 
 	
-	Parámetros entrada: ---
+	ParÃ¡metros entrada: ---
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
@@ -319,14 +333,14 @@ function menuEGacetas()
 								
 								<li><a href="#">Entrantes:</a>
 									<ul>
-										<li><a href="../Paginas/entrantes.php" target="contenido">Nueva Comunicación</a></li>
+										<li><a href="../Paginas/entrantes.php" target="contenido">Nueva ComunicaciÃ³n</a></li>
 										<li><a href="../Paginas/.php" target="contenido">Respuesta</a></li>
 									</ul>
 								</li>
 								<li><a href="#">Salientes:</a>
 									<ul>
-										<li><a href="../Paginas/salientes.php" target="contenido">Nueva Comunicación</a></li>
-										<li><a href="../Paginas/.php" target="contenido">Redirección</a></li>
+										<li><a href="../Paginas/salientes.php" target="contenido">Nueva ComunicaciÃ³n</a></li>
+										<li><a href="../Paginas/.php" target="contenido">RedirecciÃ³n</a></li>
 									</ul>
 								</li>
 							</ul>
