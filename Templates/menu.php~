@@ -126,6 +126,15 @@ function menuCompleto()
 							<li><a href="./denuncia.php" target="contenido">Denuncia</a></li>						
 						</ul>
 					</li>
+					<li><a href="#">Salientes:</a>
+						<ul id="ddsubmenu1" class="ddsubmenustyle">
+							<li><a href="./salienteCEstandar.php" target="contenido">Comunicación Estándar</a>
+							<li><a href="./salienteGaceta.php" target="contenido">Gaceta</a></li>
+							<li><a href="./salienteAudiencia.php" target="contenido">Audiencia</a></li>
+							<li><a href="./salienteInvitacion.php" target="contenido">Invitación</a></li>
+							<li><a href="./salienteDenuncia.php" target="contenido">Denuncia</a></li>						
+						</ul>
+					</li>
 				</ul>
 				
 				<!--Top Drop Down Menu 2 HTML-->						
@@ -187,7 +196,7 @@ function menuAsistSecr()
 					</li>
 					<li><a href="#">Salientes:</a>
 						<ul id="ddsubmenu1" class="ddsubmenustyle">
-							<li><a href="./sailenteCEstandar.php" target="contenido">Comunicación Estándar</a>
+							<li><a href="./salienteCEstandar.php" target="contenido">Comunicación Estándar</a>
 							<li><a href="./salienteGaceta.php" target="contenido">Gaceta</a></li>
 							<li><a href="./salienteAudiencia.php" target="contenido">Audiencia</a></li>
 							<li><a href="./salienteInvitacion.php" target="contenido">Invitación</a></li>
