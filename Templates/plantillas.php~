@@ -167,7 +167,7 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	function Direcc( $tCom, $inic, $direc, $inicD)
 	{
-		$comunicacion = cuenta_reg("comunicaciones","numInterno","tCom = '".$tCom."' && tDirec = 'Entrante'");
+		$comunicacion = cuenta_reg("comunicaciones", "tCom = '".$tCom."' && tDirec = 'Entrante'");
 		$comunicacion = $comunicacion[0]+1;
 ?>
 		<strong>Datos de la Comunicación</strong><br /><br />
@@ -192,11 +192,25 @@
 		Direcc($tCom, $inic, $direc, $inicD);
 ?>
 		<br />
-		Procedencia de la comunicación:<br /><br />
+		<?php
+		if ($direc=="Entrante")
+		{
+		?>
+			Procedencia de la comunicación:<br /><br />
+			<?php 
+				tpersona();
+				perNatural();
+				perNoNatural();
+		}
+		else
+		{
+		?>
+			Destinatario de la comunicación:<br /><br />
 		<?php 
-			tpersona();
-			perNatural();
-			perNoNatural();
+				tpersona();
+				perNatural();
+				perNoNatural();
+		}
 		?>
 		<hr>
 		<br />

@@ -187,11 +187,11 @@ function menuAsistSecr()
 					</li>
 					<li><a href="#">Salientes:</a>
 						<ul id="ddsubmenu1" class="ddsubmenustyle">
-							<li><a href="./cEstandar.php" target="contenido">Comunicación Estándar</a>
-							<li><a href="./gaceta.php" target="contenido">Gaceta</a></li>
-							<li><a href="./audiencia.php" target="contenido">Audiencia</a></li>
-							<li><a href="./invitacion.php" target="contenido">Invitación</a></li>
-							<li><a href="./denuncia.php" target="contenido">Denuncia</a></li>						
+							<li><a href="./salienteCEstandar.php" target="contenido">Comunicación Estándar</a>
+							<li><a href="./salienteGaceta.php" target="contenido">Gaceta</a></li>
+							<li><a href="./salienteAudiencia.php" target="contenido">Audiencia</a></li>
+							<li><a href="./salienteInvitacion.php" target="contenido">Invitación</a></li>
+							<li><a href="./salienteDenuncia.php" target="contenido">Denuncia</a></li>						
 						</ul>
 					</li>
 				</ul>

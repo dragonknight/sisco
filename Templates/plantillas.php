@@ -192,11 +192,25 @@
 		Direcc($tCom, $inic, $direc, $inicD);
 ?>
 		<br />
-		Procedencia de la comunicación:<br /><br />
+		<?php
+		if ($direc=="Entrante")
+		{
+		?>
+			Procedencia de la comunicación:<br /><br />
+			<?php 
+				tpersona();
+				perNatural();
+				perNoNatural();
+		}
+		else
+		{
+		?>
+			Destinatario de la comunicación:<br /><br />
 		<?php 
-			tpersona();
-			perNatural();
-			perNoNatural();
+				tpersona();
+				perNatural();
+				perNoNatural();
+		}
 		?>
 		<hr>
 		<br />
@@ -322,11 +336,25 @@
 		Direcc($tCom, $inic, $direc, $inicD);
 ?>
 		<br />
-		Procedencia de la comunicación:<br /><br />
+		<?php
+		if ($direc=="Entrante")
+		{
+		?>
+			Procedencia de la comunicación:<br /><br />
+			<?php 
+				tpersona();
+				perNatural();
+				perNoNatural();
+		}
+		else
+		{
+		?>
+			Destinatario de la comunicación:<br /><br />
 		<?php 
-			tpersona();
-			perNatural();
-			perNoNatural();
+				tpersona();
+				perNatural();
+				perNoNatural();
+		}
 		?>
 		<hr>
 		<br />
@@ -385,11 +413,25 @@
 		Direcc($tCom, $inic, $direc, $inicD);
 ?>
 		<br />
-		Procedencia de la comunicación:<br /><br />
+		<?php
+		if ($direc=="Entrante")
+		{
+		?>
+			Procedencia de la comunicación:<br /><br />
+			<?php 
+				tpersona();
+				perNatural();
+				perNoNatural();
+		}
+		else
+		{
+		?>
+			Destinatario de la comunicación:<br /><br />
 		<?php 
-			tpersona();
-			perNatural();
-			perNoNatural();
+				tpersona();
+				perNatural();
+				perNoNatural();
+		}
 		?>
 		<hr>
 		<br />
@@ -447,11 +489,25 @@
 		Direcc($tCom, $inic, $direc, $inicD);
 ?>
 		<br />
-		Procedencia de la comunicación:<br /><br />
+		<?php
+		if ($direc=="Entrante")
+		{
+		?>
+			Procedencia de la comunicación:<br /><br />
+			<?php 
+				tpersona();
+				perNatural();
+				perNoNatural();
+		}
+		else
+		{
+		?>
+			Destinatario de la comunicación:<br /><br />
 		<?php 
-			tpersona();
-			perNatural();
-			perNoNatural();
+				tpersona();
+				perNatural();
+				perNoNatural();
+		}
 		?>
 		<hr>
 		<br />
