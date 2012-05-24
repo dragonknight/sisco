@@ -23,7 +23,13 @@ function comEntrante()
 	xajax_comEntrante(xajax.getFormValues("comEntrante"));
 	return false;
 }
-		
+function comSaliente()
+{
+	xajax.$('submitButton').disabled=true;
+	xajax.$('submitButton').value="Espere";
+	xajax_comSaliente(xajax.getFormValues("comSaliente"));
+	return false;
+}		
 function llamar_codigo(archivo,id_capa)
 {
 	xajax_CambiaPagina(archivo,id_capa);

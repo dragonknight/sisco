@@ -98,7 +98,7 @@
 							<div id="gaceta">
 								<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php
-										gaceta('Gaceta', 'G', 'Saliente', 'E');
+										gaceta('Gaceta', 'G', 'Saliente', 'S');
 									?>
 									<br />
 									<br />

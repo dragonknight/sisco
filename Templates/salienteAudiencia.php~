@@ -98,7 +98,7 @@
 							<div id="audiencia">
 								<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php
-										audiencia('Audiencia', 'A', 'Entrante', 'E');
+										audiencia('Audiencia', 'A', 'Saliente', 'E');
 									?>
 									<br />
 									<br />

@@ -549,6 +549,55 @@
 		$objResponse->redirect("./autentificado.php",2);
 		return $objResponse;
 	}
+	
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: comSaliente
+	Descripción:Función usada para agregar comunicaciones en la bd.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada:
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function comSaliente($formComunicacion)
+	{	
+		// Determinamos el tipo de persona que entrega
+		// ---> Determinamos si se selecciono una persona o se agrego una nueva:
+		
+		if ($formComunicacion["cTipPersona"]=="1") // Persona Natural
+		{
+			if ($formComunicacion["comboPersonas"]=="0") // Se agrego una nueva persona
+			{
+				$id = $formComunicacion['Cedula'];
+				$persona = guardaPersona($formComunicacion);
+			}
+		}
+		elseif($formComunicacion["cTipPersona"]=="2") // Persona Jurídica
+		{
+			if ($formComunicacion["comboPersonasNoNat"]=="0") // Se agrego una nueva persona
+			{
+				$id = $formComunicacion['Id'];
+				$persona = guardaPersonaNoNat($formComunicacion);
+			}
+		}
+		$con = conectar();
+		mysql_select_db("sisco", $con);
+		
+		// Almacenamos los detalles de la comunicacion
+		$sql = "insert into comunicaciones (numInterno, tProced, idProced, nComun, fecha, sintesis, caracter, prioridad, Resumen, tDirec, Status, tCom) values ('" . $formComunicacion['numInterno'] . "','" . $formComunicacion['cTipPersona'] . "','" . $id . "','" . $formComunicacion['NumCom'] . "','" . $formComunicacion['Fecha'] . "','" . $formComunicacion['Sintesis'] . "','" . $formComunicacion['Caracter'] . "','" . $formComunicacion['Prioridad'] . "','" . $formComunicacion['Resumen'] . "','" . $formComunicacion['Via'] . "', '1','" . $formComunicacion['tipCom'] . "')";
+		mysql_query($sql) or die("Error al realizar la consulta: ". mysql_error());
+		
+		// Registramos la Transaccion en la Bitacora
+		$bitacora= Bitacora("El usuario: ".$_SESSION['usuario'].". Ingreso la comunicación ".$formComunicacion['numInterno']." ",'1');
+		mysql_close($con);
+
+		$objResponse = new xajaxResponse();
+		$objResponse->alert("Datos Agregados.");
+		$objResponse->assign("submitButton","value","Ingresar");
+		$objResponse->assign("submitButton","disabled",false);
+		$objResponse->redirect("./autentificado.php",2);
+		return $objResponse;
+	}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: comEntrante
@@ -729,7 +778,6 @@
 			$txt = $txt."Numero: <input name='num".$i."' type='text' id='num".$i."' value=".$i." readonly='readonly'><br />";
 			$txt = $txt."ID SISCO: <input name='idSisco".$i."' type='text' id='idSisco".$i."' value=".$fila[2]." readonly='readonly'><br />";			
 			$txt = $txt."<div>Fecha: <input name='fecha".$i."' type='text' id='fecha".$i."' value=".$fila[1]." readonly='readonly'><br />";
-			$txt = $txt ."<br /><br />";
 			$i = $i+1;
 		}
 	 	$objResponse->Assign("Resultados","innerHTML",$txt);

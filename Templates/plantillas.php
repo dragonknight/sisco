@@ -268,10 +268,22 @@
 		Direcc($tCom, $inic, $direc, $inicD);
 ?>
 		<br />
-		Procedencia de la comunicación:<br /><br />
 		<?php
-			combPersonasNoNat();
-		 ?>
+		if ($direc=="Entrante")
+		{
+		?>
+			Procedencia de la comunicación:<br /><br />
+			<?php 
+				combPersonasNoNat();
+		}
+		else
+		{
+		?>
+			Destinatario de la comunicación:<br /><br />
+		<?php 
+				combPersonasNoNat();
+		}
+		?>
 		 <div id="nvaPersonaNoNat" style="display:none">
 			<?php
 				ente();
