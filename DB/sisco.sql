@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 08-05-2012 a las 12:39:24
+-- Tiempo de generación: 28-05-2012 a las 09:52:22
 -- Versión del servidor: 5.1.61
 -- Versión de PHP: 5.3.3-7+squeeze8
 
@@ -22,9 +22,34 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `asignaciones`
+--
+
+DROP TABLE IF EXISTS `asignaciones`;
+CREATE TABLE IF NOT EXISTS `asignaciones` (
+  `idAsignacion` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador de Asignaciones',
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `numInterno` varchar(25) NOT NULL,
+  `Usuario` varchar(25) NOT NULL,
+  `statusAsig` int(11) NOT NULL,
+  PRIMARY KEY (`idAsignacion`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Registro de asignación de tareas' AUTO_INCREMENT=3 ;
+
+--
+-- Volcar la base de datos para la tabla `asignaciones`
+--
+
+INSERT INTO `asignaciones` (`idAsignacion`, `fecha`, `numInterno`, `Usuario`, `statusAsig`) VALUES
+(1, '2012-05-23 16:38:41', 'SG-E-E-2012-1', '14456987', 2),
+(2, '2012-05-23 19:12:36', 'SG-E-E-2012-2', '14456987', 2);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `bitacora`
 --
 
+DROP TABLE IF EXISTS `bitacora`;
 CREATE TABLE IF NOT EXISTS `bitacora` (
   `idTransaccion` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id para la tabla',
   `tipoTransaccion` int(2) DEFAULT NULL COMMENT 'id para el tipo de entrada en el log',
@@ -32,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `bitacora` (
   `ip` varchar(15) COLLATE utf8_spanish2_ci DEFAULT NULL COMMENT 'ip del cliente que ejecuto la transaccion',
   `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idTransaccion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci COMMENT='Log del sistema sisco' AUTO_INCREMENT=71 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci COMMENT='Log del sistema sisco' AUTO_INCREMENT=92 ;
 
 --
 -- Volcar la base de datos para la tabla `bitacora`
@@ -108,7 +133,28 @@ INSERT INTO `bitacora` (`idTransaccion`, `tipoTransaccion`, `detalle`, `ip`, `fe
 (67, 8, 'El usuario: fmora cerro sesión en Sisco', '127.0.0.1', '2012-05-08 11:23:21'),
 (68, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-08 11:23:41'),
 (69, 7, 'Intento de escalar privilegios', '127.0.0.1', '2012-05-08 12:30:25'),
-(70, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-08 12:30:40');
+(70, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-08 12:30:40'),
+(71, 6, 'Intento de Login con Credenciales Invalidas', '127.0.0.1', '2012-05-23 00:07:52'),
+(72, 5, 'El usuario: fmora accedio al Sisco', '127.0.0.1', '2012-05-23 00:08:00'),
+(73, 8, 'El usuario: fmora cerro sesión en Sisco', '127.0.0.1', '2012-05-23 00:08:18'),
+(74, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-23 00:08:37'),
+(75, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-23 13:18:34'),
+(76, 8, 'El usuario: ngladiz cerro sesión en Sisco', '127.0.0.1', '2012-05-23 13:35:26'),
+(77, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-23 13:37:18'),
+(78, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-23 16:29:48'),
+(79, 8, 'El usuario: ngladiz cerro sesión en Sisco', '127.0.0.1', '2012-05-23 16:55:32'),
+(80, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-23 16:56:23'),
+(81, 7, 'Intento de escalar privilegios', '127.0.0.1', '2012-05-23 19:09:10'),
+(82, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-23 19:09:28'),
+(83, 8, 'El usuario: ngladiz cerro sesión en Sisco', '127.0.0.1', '2012-05-23 19:16:07'),
+(84, 5, 'El usuario: ngladiz accedio al Sisco', '127.0.0.1', '2012-05-23 19:17:19'),
+(85, 8, 'El usuario:  cerro sesión en Sisco', '127.0.0.1', '2012-05-24 00:31:35'),
+(86, 5, 'El usuario: warias accedio al Sisco', '127.0.0.1', '2012-05-24 14:32:25'),
+(87, 8, 'El usuario: warias cerro sesión en Sisco', '127.0.0.1', '2012-05-24 15:47:29'),
+(88, 5, 'El usuario: warias accedio al Sisco', '127.0.0.1', '2012-05-24 15:48:16'),
+(89, 8, 'El usuario: warias cerro sesión en Sisco', '127.0.0.1', '2012-05-24 15:51:17'),
+(90, 5, 'El usuario: warias accedio al Sisco', '127.0.0.1', '2012-05-24 15:51:41'),
+(91, 8, 'El usuario:  cerro sesión en Sisco', '127.0.0.1', '2012-05-25 12:24:47');
 
 -- --------------------------------------------------------
 
@@ -116,6 +162,7 @@ INSERT INTO `bitacora` (`idTransaccion`, `tipoTransaccion`, `detalle`, `ip`, `fe
 -- Estructura de tabla para la tabla `caracterCom`
 --
 
+DROP TABLE IF EXISTS `caracterCom`;
 CREATE TABLE IF NOT EXISTS `caracterCom` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(35) NOT NULL,
@@ -139,6 +186,7 @@ INSERT INTO `caracterCom` (`id`, `nombre`, `descripcion`) VALUES
 -- Estructura de tabla para la tabla `cargos`
 --
 
+DROP TABLE IF EXISTS `cargos`;
 CREATE TABLE IF NOT EXISTS `cargos` (
   `idCargo` int(11) NOT NULL,
   `Cargo` varchar(35) NOT NULL,
@@ -166,6 +214,7 @@ INSERT INTO `cargos` (`idCargo`, `Cargo`, `Descripcion`) VALUES
 -- Estructura de tabla para la tabla `City`
 --
 
+DROP TABLE IF EXISTS `City`;
 CREATE TABLE IF NOT EXISTS `City` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Name` char(35) NOT NULL DEFAULT '',
@@ -4269,6 +4318,7 @@ INSERT INTO `City` (`ID`, `Name`, `CountryCode`, `District`, `Population`) VALUE
 -- Estructura de tabla para la tabla `comunicaciones`
 --
 
+DROP TABLE IF EXISTS `comunicaciones`;
 CREATE TABLE IF NOT EXISTS `comunicaciones` (
   `numInterno` varchar(35) NOT NULL COMMENT 'N''umero Interno de la Comunicaci''on',
   `tProced` int(11) NOT NULL COMMENT 'Tipo de Persona que Entrega',
@@ -4290,9 +4340,9 @@ CREATE TABLE IF NOT EXISTS `comunicaciones` (
 --
 
 INSERT INTO `comunicaciones` (`numInterno`, `tProced`, `idProced`, `nComun`, `fecha`, `sintesis`, `caracter`, `prioridad`, `Resumen`, `tDirec`, `Status`, `tCom`) VALUES
-('SG-E-E-2012-1', 1, '1123456', '', '07/05/2012', 'Solicitud de Materiales de vivienda', 1, '1', 'identico', 'Entrante', 1, 'Estandar'),
-('SG-E-E-2012-2', 2, 'J-31503202-3', '', '07/05/2012', 'Propuesta de FormaciÃ³n', 2, '3', 'identico', 'Entrante', 1, 'Estandar'),
-('SG-E-E-2012-3', 1, '1123456', '', '07/05/2012', 'Solicitud de informaciÃ³n sobre comunicacion anterior', 1, '1', 'identico', 'Entrante', 1, 'Estandar');
+('SG-E-E-2012-1', 1, '1123456', '', '07/05/2012', 'Solicitud de Materiales de vivienda', 1, '1', 'identico', 'Entrante', 2, 'Estandar'),
+('SG-E-E-2012-2', 2, 'J-31503202-3', '', '07/05/2012', 'Propuesta de FormaciÃ³n', 2, '3', 'identico', 'Entrante', 2, 'Estandar'),
+('SG-E-E-2012-3', 1, '1123456', '', '07/05/2012', 'Solicitud de informaciÃ³n sobre comunicacion anterior', 1, '1', 'identico', 'Entrante', 6, 'Estandar');
 
 -- --------------------------------------------------------
 
@@ -4300,6 +4350,7 @@ INSERT INTO `comunicaciones` (`numInterno`, `tProced`, `idProced`, `nComun`, `fe
 -- Estructura de tabla para la tabla `Country`
 --
 
+DROP TABLE IF EXISTS `Country`;
 CREATE TABLE IF NOT EXISTS `Country` (
   `Code` char(3) NOT NULL DEFAULT '',
   `Name` char(52) NOT NULL DEFAULT '',
@@ -4570,6 +4621,7 @@ INSERT INTO `Country` (`Code`, `Name`, `Continent`, `Region`, `SurfaceArea`, `In
 -- Estructura de tabla para la tabla `noNat`
 --
 
+DROP TABLE IF EXISTS `noNat`;
 CREATE TABLE IF NOT EXISTS `noNat` (
   `id` varchar(35) NOT NULL,
   `nombre` varchar(50) NOT NULL,
@@ -4597,6 +4649,7 @@ INSERT INTO `noNat` (`id`, `nombre`, `tipo`, `telefono`, `correo`, `direccion`, 
 -- Estructura de tabla para la tabla `personas`
 --
 
+DROP TABLE IF EXISTS `personas`;
 CREATE TABLE IF NOT EXISTS `personas` (
   `cedula` varchar(8) NOT NULL DEFAULT '0',
   `apellidos` varchar(35) NOT NULL,
@@ -4629,6 +4682,7 @@ INSERT INTO `personas` (`cedula`, `apellidos`, `nombres`, `sexo`, `telefono`, `c
 -- Estructura de tabla para la tabla `tipoNoNat`
 --
 
+DROP TABLE IF EXISTS `tipoNoNat`;
 CREATE TABLE IF NOT EXISTS `tipoNoNat` (
   `id` int(2) NOT NULL,
   `nombre` varchar(75) NOT NULL,
@@ -4647,6 +4701,7 @@ CREATE TABLE IF NOT EXISTS `tipoNoNat` (
 -- Estructura de tabla para la tabla `usuarios`
 --
 
+DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `idPersona` varchar(8) COLLATE utf8_spanish2_ci NOT NULL,
   `idCargo` int(2) NOT NULL,
