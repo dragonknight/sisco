@@ -134,6 +134,5 @@ function asignar(indice)
 }
 function consultAsig()
 {
-	alert("llamando a la funcion xajax de asignar");
 	xajax_consultAsig(xajax.getFormValues("consultar"));
 }
