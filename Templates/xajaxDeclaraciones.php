@@ -20,4 +20,5 @@
 	$xajax->registerFunction("buscaXAsig");
 	$xajax->registerFunction("consultAsig");
 	$xajax->registerFunction("Asigna");
+	$xajax->registerFunction("combCiudad");
 ?>

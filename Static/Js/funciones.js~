@@ -15,7 +15,12 @@ function ingUser()
 	xajax_guardaUsuario(xajax.getFormValues("formIngUser"));
 	return false;
 }
-
+function cargaCiudades(pais)
+{
+	alert(pais);
+	document.getElementById('Ciudad').disabled=false;
+	xajax_combCiudad(pais);
+}
 function comEntrante()
 {
 	xajax.$('submitButton').disabled=true;
@@ -27,7 +32,7 @@ function comSaliente()
 {
 	xajax.$('submitButton').disabled=true;
 	xajax.$('submitButton').value="Espere";
-	xajax_comEntrante(xajax.getFormValues("comSaliente"));
+	xajax_comSaliente(xajax.getFormValues("comSaliente"));
 	return false;
 }		
 function llamar_codigo(archivo,id_capa)
@@ -109,8 +114,6 @@ function buscaXAsig()
 }
 function activaCombAsig(valor, indice) 
 {
-	alert(valor);
-	alert(indice);
 	if(valor=="A") 
 	{
 		alert("Seleccione el Usuario");

@@ -434,7 +434,7 @@
 		mysql_select_db("sisco", $con);
 		
 		// ingresamos a la B.D. los detalles de la persona:
-		$sql = "insert into noNat (id, nombre, tipo, telefono, correo, direccion, pais, ciudad, municipio, parroquia) values ('" . $formUsuario["Id"] . "','" . $formUsuario["Nombre"] . "','" . $formUsuario["TipoPersonaNNat"] . "','" . $formUsuario["Telefono"] . "','" . $formUsuario["Correo"] . "','" . $formUsuario["Direccion"] . "','" . $formUsuario["Pais"] . "','" . $formUsuario["Ciudad"] . "','" . $formUsuario["Municipio"] . "','" . $formUsuario["Parroquia"] . "')";
+		$sql = "insert into noNat (id, nombre, tipo, telefono, correo, direccion, pais, ciudad) values ('" . $formUsuario["Id"] . "','" . $formUsuario["Nombre"] . "','" . $formUsuario["TipoPersonaNNat"] . "','" . $formUsuario["Telefono"] . "','" . $formUsuario["Correo"] . "','" . $formUsuario["Direccion"] . "','" . $formUsuario["Pais"] . "','" . $formUsuario["Ciudad"] . "')";
 		mysql_query($sql) or die("Error al realizar la inserción ". mysql_error());
 	}
 	
@@ -453,7 +453,7 @@
 		mysql_select_db("sisco", $con);
 		
 		// ingresamos a la B.D. los detalles de la persona:
-		$sql = "insert into personas (cedula, apellidos, nombres, sexo, telefono, correo, direccion, pais, ciudad, municipio, parroquia) values ('" . $formUsuario["Cedula"] . "','" . $formUsuario["Apellidos"] . "','" . $formUsuario["Nombres"] . "','" . $formUsuario["Sexo"] . "','" . $formUsuario["Telefono"] . "','" . $formUsuario["Correo"] . "','" . $formUsuario["Direccion"] . "','" . $formUsuario["Pais"] . "','" . $formUsuario["Ciudad"] . "','" . $formUsuario["Municipio"] . "','" . $formUsuario["Parroquia"] . "')";
+		$sql = "insert into personas (cedula, apellidos, nombres, sexo, telefono, correo, direccion, pais, ciudad) values ('" . $formUsuario["Cedula"] . "','" . $formUsuario["Apellidos"] . "','" . $formUsuario["Nombres"] . "','" . $formUsuario["Sexo"] . "','" . $formUsuario["Telefono"] . "','" . $formUsuario["Correo"] . "','" . $formUsuario["Direccion"] . "','" . $formUsuario["Pais"] . "','" . $formUsuario["Ciudad"] . "')";
 		mysql_query($sql) or die("Error al realizar la inserción ". mysql_error());
 	}
 
@@ -784,7 +784,34 @@
 	 	$objResponse->assign("submitButton","value","Actualizar");
 		return $objResponse;
 	}
-
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: comEntrante
+	Descripción:Función usada para agregar comunicaciones en la bd.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada:
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function combCiudad($idPais)
+	{
+		$objResponse = new xajaxResponse();
+		$con = conectar();
+		mysql_select_db("sisco", $con);
+		$query="SELECT * FROM City where CountryCode = '".$idPais."'";
+		$objResponse->alert($query);
+		$txt = "";
+		$result = mysql_query($query) or die("Error al realizar la consulta");
+		$txt = $txt ."<select name='ciudad' id='ciudad'>";
+		$txt = $txt ."<option value=' '> --Seleccione Ciudad-- </option>";
+		while($opciones = mysql_fetch_array($result,MYSQL_BOTH))
+		{
+			$txt = $txt ."<option value=".$opciones[0].">".$opciones[3]."</option>";
+		}
+		$txt = $txt ."</select>";
+	 	$objResponse->Assign("ciudad","innerHTML",$txt);
+		return $objResponse;
+	}
 
 /*--------------------------------------------------- Disparador de salida -----------------------------------------------------*/
 

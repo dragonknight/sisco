@@ -14,6 +14,7 @@
 	$xajax->registerFunction("ValidaCedula");
 	$xajax->registerFunction("guardaUsuario");
 	$xajax->registerFunction("comEntrante");
+	$xajax->registerFunction("comSaliente");
 	$xajax->registerFunction("buscaComu");
 	$xajax->registerFunction("buscaExp");
 	$xajax->registerFunction("buscaXAsig");

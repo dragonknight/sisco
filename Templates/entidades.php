@@ -85,29 +85,13 @@
 		<div id="direccion">
 			<h4>Localidad:</h4><br>
 			<div id="pais">
-				<select id="Pais" name="Pais"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
+				<select id="Pais" name="Pais" onchange="cargaCiudades(this.value)">
 					<option value=""> -- Seleccione Pais -- </option>
 					<?php combo('*','Country','','Name'); ?>
 				</select>
 								
 			</div>
 			<div id="ciudad">
-				<select id="Ciudad" name="Ciudad"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
-					<option value=""> -- Seleccione Ciudad -- </option>
-					<?php combo('*','City','','Name'); ?>
-				</select>
-			</div>
-			<div id="municipio">
-				<select id="Municipio" name="Municipio"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
-					<option value=""> -- Seleccione Municipio -- </option>
-					<?php combo('*','Country','','Name'); ?>
-				</select>
-			</div>
-			<div id="parroquia">
-				<select id="Parroquia" name="Parroquia"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
-					<option value=""> -- Seleccione Parroquia -- </option>
-					<?php combo('*','Country','','Name'); ?>
-				</select>
 			</div>
 			<div id="comDir">
 				Dirección: <input type="text" name="Direccion" id="Direccion" value="" size="40"> <br />

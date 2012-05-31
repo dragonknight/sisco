@@ -15,7 +15,11 @@ function ingUser()
 	xajax_guardaUsuario(xajax.getFormValues("formIngUser"));
 	return false;
 }
-
+function cargaCiudades(pais)
+{
+	alert(pais);
+	xajax_combCiudad(pais);
+}
 function comEntrante()
 {
 	xajax.$('submitButton').disabled=true;
@@ -109,8 +113,6 @@ function buscaXAsig()
 }
 function activaCombAsig(valor, indice) 
 {
-	alert(valor);
-	alert(indice);
 	if(valor=="A") 
 	{
 		alert("Seleccione el Usuario");
