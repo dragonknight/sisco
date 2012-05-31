@@ -770,7 +770,6 @@
 		$query="SELECT * FROM asignaciones where Usuario = ".$_SESSION['idUsuario'];
 		$result = mysql_query($query) or die("Error al realizar la consulta");
 		$i=1;
-		$objResponse->alert("query ".$query);
 		$txt= "";
 		while($fila = mysql_fetch_array($result,MYSQL_BOTH))
 		{
