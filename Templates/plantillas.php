@@ -250,7 +250,7 @@
 			Resumen:<br />
 		</div>
 		<div id="rCol4">
-			<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
+			<input type="text" name="Resumen" id="Resumen" value="" size="20" /><br />
 		</div>
 <?php
 	}
@@ -407,7 +407,7 @@
 			Resumen:<br />
 		</div>
 		<div id="usrCol4">
-			<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />
 		</div>
 <?php
 	}
@@ -483,7 +483,7 @@
 			Resumen:<br />
 		</div>
 		<div id="usrCol4">
-			<input type="text" name="Resumen" id="Resumen" value="Indique aquí todos los datos de la Invitación" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			<input type="text" name="Resumen" id="Resumen" value="Indique aquí todos los datos de la Invitación" size="20" /> <br />
 		</div>
 <?php
 	}
@@ -559,7 +559,7 @@
 			Resumen: (Relate acá todos los hechos)<br />
 		</div>
 		<div id="usrCol4">
-			<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />
 		</div>
 <?php
 	}

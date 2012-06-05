@@ -683,7 +683,7 @@
 			$txt = $txt ."<form id='".$i."' action='javascript:void(null);' onsubmit='asignar(this.id);'>";
 				$txt = $txt."Numero: <input name='num".$i."' type='text' id='num".$i."' value=".$i." readonly='readonly'><br />";
 				$txt = $txt."ID SISCO: <input name='idSisco".$i."' type='text' id='idSisco".$i."' value=".$fila[0]." readonly='readonly'><br />";
-				$txt = $txt."<div>Solicitante: <input name='solicitante".$i."' type='text' id='solicitante".$i."' value=".$fila[2]." readonly='readonly'><br />";
+				$txt = $txt."<div>Solicitante: <input name='solicitante".$i."' type='text' id='solicitante".$i."' value='".$fila[2]."' readonly='readonly'><br />";
 				$txt = $txt."<div>Sintesis: <input name='sintesis".$i."' type='text' id='sintesis".$i."' value=".$fila[5]." readonly='readonly'><br />";
 				$txt = $txt."<div>Fecha: <input name='fecha".$i."' type='text' id='fecha".$i."' value=".$fila[4]." readonly='readonly'><br />";
 				$txt = $txt."<div>Direccionalidad: <input name='direccional".$i."' type='text' id='direccional".$i."' value=".$fila[9]." readonly='readonly'><br />";
