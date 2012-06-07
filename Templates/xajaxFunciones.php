@@ -515,20 +515,28 @@
 		// Determinamos el tipo de persona que entrega
 		// ---> Determinamos si se selecciono una persona o se agrego una nueva:
 		
-		if ($formComunicacion["cTipPersona"]=="1") // Persona Natural
+		if ($formComunicacion["cTipPersona"]=="1") 					// Persona Natural
 		{
-			if ($formComunicacion["comboPersonas"]=="0") // Se agrego una nueva persona
+			if ($formComunicacion["comboPersonas"]=="0") 			// Se agrego una nueva persona
 			{
 				$id = $formComunicacion['Cedula'];
 				$persona = guardaPersona($formComunicacion);
 			}
+			else																	// Si se selecciono una persona
+			{
+				$id = $formComunicacion['comboPersonas'];
+			}
 		}
-		elseif($formComunicacion["cTipPersona"]=="2") // Persona Jurídica
+		elseif($formComunicacion["cTipPersona"]=="2") 				// Persona Jurídica
 		{
-			if ($formComunicacion["comboPersonasNoNat"]=="0") // Se agrego una nueva persona
+			if ($formComunicacion["comboPersonasNoNat"]=="0") 		// Se agrego una nueva persona
 			{
 				$id = $formComunicacion['Id'];
 				$persona = guardaPersonaNoNat($formComunicacion);
+			}
+			else																	// Si se selecciono una persona
+			{
+				$id = $formComunicacion['comboPersonasNoNat'];
 			}
 		}
 		$con = conectar();
@@ -564,20 +572,28 @@
 		// Determinamos el tipo de persona que entrega
 		// ---> Determinamos si se selecciono una persona o se agrego una nueva:
 		
-		if ($formComunicacion["cTipPersona"]=="1") // Persona Natural
+		if ($formComunicacion["cTipPersona"]=="1") 					// Persona Natural
 		{
-			if ($formComunicacion["comboPersonas"]=="0") // Se agrego una nueva persona
+			if ($formComunicacion["comboPersonas"]=="0") 			// Se agrego una nueva persona
 			{
 				$id = $formComunicacion['Cedula'];
 				$persona = guardaPersona($formComunicacion);
 			}
+			else																	// Si se selecciono una persona
+			{
+				$id = $formComunicacion['comboPersonas'];
+			}
 		}
-		elseif($formComunicacion["cTipPersona"]=="2") // Persona Jurídica
+		elseif($formComunicacion["cTipPersona"]=="2") 				// Persona Jurídica
 		{
-			if ($formComunicacion["comboPersonasNoNat"]=="0") // Se agrego una nueva persona
+			if ($formComunicacion["comboPersonasNoNat"]=="0") 		// Se agrego una nueva persona
 			{
 				$id = $formComunicacion['Id'];
 				$persona = guardaPersonaNoNat($formComunicacion);
+			}
+			else																	// Si se selecciono una persona
+			{
+				$id = $formComunicacion['comboPersonasNoNat'];
 			}
 		}
 		$con = conectar();
