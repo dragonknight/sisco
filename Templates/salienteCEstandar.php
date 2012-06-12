@@ -94,7 +94,7 @@
 							include ("./plantillas.php");
 						?>
 						<div id="formUser">
-							<h3>Registrar Comunicación Entrante</h3><br>
+							<h3>Registrar Comunicacion Saliente</h3><br>
 							<div id="cEstandar">
 								<form id="comSaliente" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php

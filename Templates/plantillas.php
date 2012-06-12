@@ -167,7 +167,7 @@
 --------------------------------------------------------------------------------------------------------------------------------*/
 	function Direcc( $tCom, $inic, $direc, $inicD)
 	{
-		$comunicacion = cuenta_reg("comunicaciones", "tCom = '".$tCom."' && tDirec = 'Entrante'");
+		$comunicacion = cuenta_reg("comunicaciones", "tCom = '".$tCom."' && tDirec = '".$direc."'");
 		$comunicacion = $comunicacion[0]+1;
 ?>
 		<strong>Datos de la Comunicación</strong><br /><br />
@@ -250,7 +250,7 @@
 			Resumen:<br />
 		</div>
 		<div id="rCol4">
-			<input type="text" name="Resumen" id="Resumen" value="" size="20" /><br />
+			<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
 		</div>
 <?php
 	}
@@ -407,7 +407,7 @@
 			Resumen:<br />
 		</div>
 		<div id="usrCol4">
-			<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />
+			<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
 		</div>
 <?php
 	}
@@ -483,7 +483,7 @@
 			Resumen:<br />
 		</div>
 		<div id="usrCol4">
-			<input type="text" name="Resumen" id="Resumen" value="Indique aquí todos los datos de la Invitación" size="20" /> <br />
+			<input type="text" name="Resumen" id="Resumen" value="Indique aquí todos los datos de la Invitación" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
 		</div>
 <?php
 	}
@@ -559,7 +559,7 @@
 			Resumen: (Relate acá todos los hechos)<br />
 		</div>
 		<div id="usrCol4">
-			<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />
+			<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
 		</div>
 <?php
 	}
