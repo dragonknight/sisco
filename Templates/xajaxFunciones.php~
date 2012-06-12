@@ -552,7 +552,6 @@
 
 		$objResponse = new xajaxResponse();
 		$objResponse->alert("Datos Agregados.");
-		$objResponse->alert($sql);
 		$objResponse->assign("submitButton","value","Ingresar");
 		$objResponse->assign("submitButton","disabled",false);
 		$objResponse->redirect("./autentificado.php",2);

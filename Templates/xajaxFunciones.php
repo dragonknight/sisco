@@ -689,7 +689,7 @@
 		$objResponse = new xajaxResponse();
 		$con = conectar();
 		mysql_select_db("sisco", $con);
-		$query="SELECT * FROM comunicaciones where Status = 1";
+		$query="SELECT * FROM comunicaciones where Status = 1 && tDirec = 'Entrante' ";
 		$result = mysql_query($query) or die("Error al realizar la consulta");
 		$i=1;
 		$txt= "";
