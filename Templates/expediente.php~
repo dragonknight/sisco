@@ -94,7 +94,7 @@
 							include ("./plantillas.php");
 						?>
 						<div id="formUser">
-							<h3>Buscar Expediente</h3><br>
+							<h3>Buscar Comunicación</h3><br>
 							<div id="cEstandar">
 								<form id="expediente" action="javascript:void(null);" onsubmit="buscaExp();">
 									<div>									
