@@ -96,7 +96,7 @@
 						<div id="formUser">
 							<h3>Registrar Comunicación Entrante</h3><br>
 							<div id="audiencia">
-								<form id="comSaliente" action="javascript:void(null);" onsubmit="comEntrante();">
+								<form id="comunicacion" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php
 										audiencia('Audiencia', 'A', 'Saliente', 'E');
 									?>

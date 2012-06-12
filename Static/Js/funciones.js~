@@ -18,7 +18,6 @@ function ingUser()
 function cargaCiudades(pais)
 {
 	alert(pais);
-	document.getElementById('Ciudad').disabled=false;
 	xajax_combCiudad(pais);
 }
 function comEntrante()
@@ -137,6 +136,5 @@ function asignar(indice)
 }
 function consultAsig()
 {
-	alert("llamando a la funcion xajax de asignar");
 	xajax_consultAsig(xajax.getFormValues("consultar"));
 }
