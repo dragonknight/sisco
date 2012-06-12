@@ -102,7 +102,7 @@
 									</div>
 									<br />
 									<div>
-										<input type="text" name="cedula" id="cedula" value="" size="20">
+										<input type="text" name="comunicacion" id="comunicacion" value="" size="20">
 									</div>
 									<br />
 									<input id="submitButton" type="submit" value="Buscar"/>

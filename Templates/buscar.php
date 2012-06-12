@@ -98,7 +98,7 @@
 							<div id="cEstandar">
 								<form id="comunic" action="javascript:void(null);" onsubmit="buscaComu();">
 									<div>									
-										Cedula de Identidad:
+										Numero de Comunicación:
 									</div>
 									<br />
 									<div>
