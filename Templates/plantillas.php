@@ -214,45 +214,87 @@
 		?>
 		<hr>
 		<br />
-		<div id="rCol1">
-			Nº Comunicación<br />
-		</div>
-		<div id="rCol2">
-			<input type="text" name="NumCom" id="NumCom" value="" size="20" /><br />
-		</div>
-		<div id="rCol3">
-			Fecha:<br />
-		</div>
-		<div id="rCol4">
-			<input type="text" name="Fecha" id="Fecha" size="20" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" /><br />
-		</div>
-		<div id="rCol1">
-			Sintesis:<br />
-		</div>
-		<div id="rCol2">
-			<input type="text" name="Sintesis" id="Sintesis" value="" size="20" /><br />
-		</div>
-		<div id="rCol3">
-			Caracter:<br />
-		</div>
-		<div id="rCol4">
-			<!-- Combo Caracter -->
-			<?php caracterCom(); ?>
-		</div>
-		<div id="rCol1">
-			Prioridad:<br />
-		</div>
-		<div id="rCol2">
-			<!-- Combo Prioridades -->
-			<?php combPrioridad(); ?>
-		</div><br />
-		<div id="rCol3">
-			Resumen:<br />
-		</div>
-		<div id="rCol4">
-			<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
-		</div>
+		<?php
+		if ($direc=="Entrante")
+		{
+		?>
+			<div id="rCol1">
+				Nº Comunicación<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="NumCom" id="NumCom" value="" size="20" /><br />
+			</div>
+			<div id="rCol3">
+				Fecha:<br />
+			</div>
+			<div id="rCol4">
+				<input type="text" name="Fecha" id="Fecha" size="20" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" /><br />
+			</div>
+			<div id="rCol1">
+				Sintesis:<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" /><br />
+			</div>
+			<div id="rCol3">
+				Caracter:<br />
+			</div>
+			<div id="rCol4">
+				<!-- Combo Caracter -->
+				<?php caracterCom(); ?>
+			</div>
+			<div id="rCol1">
+				Prioridad:<br />
+			</div>
+			<div id="rCol2">
+				<!-- Combo Prioridades -->
+				<?php combPrioridad(); ?>
+			</div><br />
+			<div id="rCol3">
+				Resumen:<br />
+			</div>
+			<div id="rCol4">
+				<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
+			</div>
+		<?php 
+		}
+		else 
+		{
+		?>
+			<div id="rCol1">
+				Fecha:<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="Fecha" id="Fecha" size="20" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" /><br />
+			</div>
+			<div id="rCol1">
+				Sintesis:<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" /><br />
+			</div>
+			<div id="rCol3">
+				Caracter:<br />
+			</div>
+			<div id="rCol4">
+				<!-- Combo Caracter -->
+				<?php caracterCom(); ?>
+			</div>
+			<div id="rCol1">
+				Prioridad:<br />
+			</div>
+			<div id="rCol2">
+				<!-- Combo Prioridades -->
+				<?php combPrioridad(); ?>
+			</div><br />
+			<div id="rCol3">
+				Resumen:<br />
+			</div>
+			<div id="rCol4">
+				<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
+			</div>		
 <?php
+		}
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: gacetas
@@ -296,43 +338,83 @@
 		<br>
 		<hr>
 		<br>
-		<div id="usrCol1">
-			Nº Comunicación<br />
-		</div>
-		<div id="usrCol2">
-			<input type="text" name="NumCom" id="NumCom" value="" size="20" /><br />
-		</div>
-		<div id="usrCol3">
-			Fecha:<br />
-		</div>
-		<div id="usrCol4">	
-			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" /><br />
-		</div>
-		<div id="usrCol1">
-			Sintesis:<br />
-		</div>
-		<div id="usrCol2">
-			<input type="text" name="" id="" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
-		</div>
-		<div id="usrCol3">
-			Caracter:<br />
-		</div>
-		<div id="usrCol4">
-			<?php caracterCom(); ?><br />
-		</div>
-		<div id="usrCol1">
-			Prioridad:<br />
-		</div>
-		<div id="usrCol2">
-			<?php combPrioridad(); ?><br />
-		</div>
-		<div id="usrCol3">
-			<br />
-		</div>
-		<div id="usrCol4">
-			<br />
-		</div>
+		<?php
+		if ($direc=="Entrante")
+		{
+		?>
+			<div id="rCol1">
+				Nº Comunicación<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="NumCom" id="NumCom" value="" size="20" /><br />
+			</div>
+			<div id="rCol3">
+				Fecha:<br />
+			</div>
+			<div id="rCol4">	
+				<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" /><br />
+			</div>
+			<div id="rCol1">
+				Sintesis:<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="" id="" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
+			</div>
+			<div id="rCol3">
+				Caracter:<br />
+			</div>
+			<div id="rCol4">
+				<?php caracterCom(); ?><br />
+			</div>
+			<div id="rCol1">
+				Prioridad:<br />
+			</div>
+			<div id="rCol2">
+				<?php combPrioridad(); ?><br />
+			</div>
+			<div id="rCol3">
+				<br />
+			</div>
+			<div id="rCol4">
+				<br />
+			</div>
+		<?php
+		}
+		else 
+		{
+		?>
+			<div id="rCol1">
+				Fecha:<br />
+			</div>
+			<div id="rCol2">	
+				<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" /><br />
+			</div>
+			<div id="rCol1">
+				Sintesis:<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="" id="" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
+			</div>
+			<div id="rCol3">
+				Caracter:<br />
+			</div>
+			<div id="rCol4">
+				<?php caracterCom(); ?><br />
+			</div>
+			<div id="rCol1">
+				Prioridad:<br />
+			</div>
+			<div id="rCol2">
+				<?php combPrioridad(); ?><br />
+			</div>
+			<div id="rCol3">
+				<br />
+			</div>
+			<div id="rCol4">
+				<br />
+			</div>
 <?php
+		}
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: audiencia
@@ -370,46 +452,89 @@
 		?>
 		<hr>
 		<br />
-		<div id="usrCol1">
-			Nº Comunicación: <br />
-		</div>
-		<div id="usrCol2">
-			<input type="text" name="NumCom" id="" size="20" /> <br />
-		</div>
-		<div id="usrCol3">
-			Fecha:<br />
-		</div>
-		<div id="usrCol4">	
-			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
-		</div>
-		<br />
-		<div id="usrCol1">
-			Sintesis:<br />
-		</div>
-		<div id="usrCol2">
-			<input type="text" name="Sintesis" id="Sintesis" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
-		</div>
-		<div id="usrCol3">
-			Caracter:<br />
-		</div>
-		<div id="usrCol4">
-			<!-- Combo Caracter -->
-			<?php caracterCom(); ?>
-		</div>
-		<div id="usrCol1">
-			Prioridad:<br />
-		</div>
-		<div id="usrCol2">
-			<!-- Combo Prioridades -->
-			<?php combPrioridad(); ?><br />
-		</div>
-		<div id="usrCol3">
-			Resumen:<br />
-		</div>
-		<div id="usrCol4">
-			<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
-		</div>
+		<?php
+		if ($direc=="Entrante")
+		{
+		?>
+			<div id="rCol1">
+				Nº Comunicación: <br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="NumCom" id="" size="20" /> <br />
+			</div>
+			<div id="rCol3">
+				Fecha:<br />
+			</div>
+			<div id="rCol4">	
+				<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
+			</div>
+			<br />
+			<div id="rCol1">
+				Sintesis:<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			</div>
+			<div id="rCol3">
+				Caracter:<br />
+			</div>
+			<div id="rCol4">
+				<!-- Combo Caracter -->
+				<?php caracterCom(); ?>
+			</div>
+			<div id="rCol1">
+				Prioridad:<br />
+			</div>
+			<div id="rCol2">
+				<!-- Combo Prioridades -->
+				<?php combPrioridad(); ?><br />
+			</div>
+			<div id="rCol3">
+				Resumen:<br />
+			</div>
+			<div id="rCol4">
+				<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			</div>
+		<?php
+		}
+		else 
+		{
+		?>
+			<div id="rCol1">
+				Fecha:<br />
+			</div>
+			<div id="rCol2">	
+				<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
+			</div>
+			<br />
+			<div id="rCol1">
+				Sintesis:<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			</div>
+			<div id="rCol3">
+				Caracter:<br />
+			</div>
+			<div id="rCol4">
+				<!-- Combo Caracter -->
+				<?php caracterCom(); ?>
+			</div>
+			<div id="rCol1">
+				Prioridad:<br />
+			</div>
+			<div id="rCol2">
+				<!-- Combo Prioridades -->
+				<?php combPrioridad(); ?><br />
+			</div>
+			<div id="rCol3">
+				Resumen:<br />
+			</div>
+			<div id="rCol4">
+				<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			</div>
 <?php
+		}
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: invitacion
@@ -447,45 +572,93 @@
 		?>
 		<hr>
 		<br />
-		<div id="usrCol1">
-			Nº Comunicación<br />
-		</div>
-		<div id="usrCol2">
-			<input type="text" name="NumCom" id="NumCom" value="" size="20" /> <br />
-		</div>
-		<div id="usrCol3">
-			Fecha:<br />
-		</div>
-		<div id="usrCol4">		
-			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
-		</div>
-		<div id="usrCol1">
-			Sintesis:<br />
-		</div>
-		<div id="usrCol2">
-			<input type="text" name="Sintesis" id="Sintesis" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
-		</div>
-		<div id="usrCol3">
-			Caracter:<br />
-		</div>
-		<div id="usrCol4">
-			<!-- Combo Caracter -->
-			<?php caracterCom(); ?><br />
-		</div>
-		<div id="usrCol1">
-			Prioridad:<br />
-		</div>
-		<div id="usrCol2">
-			<!-- Combo Prioridades -->
-			<?php combPrioridad(); ?><br />
-		</div>
-		<div id="usrCol3">
-			Resumen:<br />
-		</div>
-		<div id="usrCol4">
-			<input type="text" name="Resumen" id="Resumen" value="Indique aquí todos los datos de la Invitación" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
-		</div>
+		<?php
+		if ($direc=="Entrante")
+		{
+		?>
+			<div id="rCol1">
+				Nº Comunicación<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="NumCom" id="NumCom" value="" size="20" /> <br />
+			</div>
+			<div id="rCol3">
+				Fecha:<br />
+			</div>
+			<div id="rCol4">		
+				<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
+			</div>
+			<div id="rCol1">
+				Sintesis:<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			</div>
+			<div id="rCol3">
+				Caracter:<br />
+			</div>
+			<div id="rCol4">
+				<!-- Combo Caracter -->
+				<?php caracterCom(); ?><br />
+			</div>
+			<div id="rCol1">
+				Prioridad:<br />
+			</div>
+			<div id="rCol2">
+				<!-- Combo Prioridades -->
+				<?php combPrioridad(); ?><br />
+			</div>
+			<div id="rCol3">
+				Resumen:<br />
+			</div>
+			<div id="rCol4">
+				<input type="text" name="Resumen" id="Resumen" value="Indique aquí todos los datos de la Invitación" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			</div>
+		<?php
+		}
+		else 
+		{
+		?>
+			<div id="rCol1">
+				Nº Comunicación<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="NumCom" id="NumCom" value="" size="20" /> <br />
+			</div>
+			<div id="rCol3">
+				Fecha:<br />
+			</div>
+			<div id="rCol4">		
+				<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
+			</div>
+			<div id="rCol1">
+				Sintesis:<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			</div>
+			<div id="rCol3">
+				Caracter:<br />
+			</div>
+			<div id="rCol4">
+				<!-- Combo Caracter -->
+				<?php caracterCom(); ?><br />
+			</div>
+			<div id="rCol1">
+				Prioridad:<br />
+			</div>
+			<div id="rCol2">
+				<!-- Combo Prioridades -->
+				<?php combPrioridad(); ?><br />
+			</div>
+			<div id="rCol3">
+				Resumen:<br />
+			</div>
+			<div id="rCol4">
+				<input type="text" name="Resumen" id="Resumen" value="Indique aquí todos los datos de la Invitación" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			</div>
 <?php
+		}
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------- 
 	función: cEstandar
@@ -523,44 +696,86 @@
 		?>
 		<hr>
 		<br />
-		<div id="usrCol1">
-			Nº Comunicación<br />
-		</div>
-		<div id="usrCol2">
-			<input type="text" value="Si la hay" name="NumCom" id="NumCom" value="" size="20" /> <br />
-		</div>
-		<div id="usrCol3">
-			Fecha:<br />
-		</div>
-		<div id="usrCol4">		
-			<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
-		</div>
-		<div id="usrCol1">
-			Sintesis:<br />
-		</div>
-		<div id="usrCol2">
-			<input type="text" name="Sintesis" id="" value="Sintesis" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
-		</div>
-		<div id="usrCol3">
-			Caracter:<br />
-		</div>
-		<div id="usrCol4">
-			<!-- Combo Caracter -->
-			<?php caracterCom(); ?><br />
-		</div>
-		<div id="usrCol1">
-			Prioridad:<br />
-		</div>
-		<div id="usrCol2">
-			<!-- Combo Prioridades -->
-			<?php combPrioridad(); ?><br />
-		</div>
-		<div id="usrCol3">
-			Resumen: (Relate acá todos los hechos)<br />
-		</div>
-		<div id="usrCol4">
-			<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
-		</div>
+		<?php
+		if ($direc=="Entrante")
+		{
+		?>
+			<div id="rCol1">
+				Nº Comunicación<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" value="Si la hay" name="NumCom" id="NumCom" value="" size="20" /> <br />
+			</div>
+			<div id="rCol3">
+				Fecha:<br />
+			</div>
+			<div id="rCol4">		
+				<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
+			</div>
+			<div id="rCol1">
+				Sintesis:<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="Sintesis" id="" value="Sintesis" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			</div>
+			<div id="rCol3">
+				Caracter:<br />
+			</div>
+			<div id="rCol4">
+				<!-- Combo Caracter -->
+				<?php caracterCom(); ?><br />
+			</div>
+			<div id="rCol1">
+				Prioridad:<br />
+			</div>
+			<div id="rCol2">
+				<!-- Combo Prioridades -->
+				<?php combPrioridad(); ?><br />
+			</div>
+			<div id="rCol3">
+				Resumen: (Relate acá todos los hechos)<br />
+			</div>
+			<div id="rCol4">
+				<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			</div>
+		<?php
+		}
+		else 
+		{
+		?>
+			<div id="rCol1">
+				Fecha:<br />
+			</div>
+			<div id="rCol2">		
+				<input type="text" name="Fecha" id="Fecha" value="<?php echo date ("d/m/Y"); ?>" readonly="readonly" size="20" />
+			</div>
+			<div id="rCol1">
+				Sintesis:<br />
+			</div>
+			<div id="rCol2">
+				<input type="text" name="Sintesis" id="" value="Sintesis" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			</div>
+			<div id="rCol3">
+				Caracter:<br />
+			</div>
+			<div id="rCol4">
+				<!-- Combo Caracter -->
+				<?php caracterCom(); ?><br />
+			</div>
+			<div id="rCol1">
+				Prioridad:<br />
+			</div>
+			<div id="rCol2">
+				<!-- Combo Prioridades -->
+				<?php combPrioridad(); ?><br />
+			</div>
+			<div id="rCol3">
+				Resumen: (Relate acá todos los hechos)<br />
+			</div>
+			<div id="rCol4">
+				<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+			</div>
 <?php
+		}
 	}
 ?>
