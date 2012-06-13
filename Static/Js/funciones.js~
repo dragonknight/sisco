@@ -24,7 +24,7 @@ function comEntrante()
 {
 	xajax.$('submitButton').disabled=true;
 	xajax.$('submitButton').value="Espere";
-	xajax_comEntrante(xajax.getFormValues("comEntrante"));
+	xajax_comEntrante(xajax.getFormValues("comunicacion"));
 	return false;
 }
 function comSaliente()

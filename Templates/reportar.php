@@ -96,7 +96,7 @@
 						<div id="formUser">
 							<h3>Reportar comunicación Procesada:</h3><br>
 							<div id="cEstandar">
-								<form id="consultar" action="javascript:void(null);" onsubmit="consultAsig();">
+								<form id="consultar" action="javascript:void(null);" onsubmit="consultAsig2();">
 									<br />
 									<input id="submitButton" type="submit" value="Cargar"/>
 								</form>

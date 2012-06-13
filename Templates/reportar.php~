@@ -94,7 +94,7 @@
 							include ("./plantillas.php");
 						?>
 						<div id="formUser">
-							<h3>Comunicaciones Asignadas pendientes de Procesar:</h3><br>
+							<h3>Reportar comunicación Procesada:</h3><br>
 							<div id="cEstandar">
 								<form id="consultar" action="javascript:void(null);" onsubmit="consultAsig();">
 									<br />
