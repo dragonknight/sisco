@@ -130,7 +130,6 @@ function activaCombAsig(valor, indice)
 }
 function asignar(indice)
 {
-	alert("Se procesara el formulario, "+indice);
 	xajax_Asigna(xajax.getFormValues(indice),indice);
 	return false;
 }
@@ -141,4 +140,13 @@ function consultAsig()
 function consultAsig2()
 {
 	xajax_consultAsig2(xajax.getFormValues("consultar"));
+}
+function procesada()
+{
+	xajax_procesada(xajax.getFormValues("consultar"));
+}
+function procesada(indice)
+{
+	xajax_procesada(xajax.getFormValues(indice));
+	return false;
 }

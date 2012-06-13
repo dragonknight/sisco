@@ -790,7 +790,7 @@
 			$txt = $txt."<br /> <hr /> <br />";
 			$txt = $txt."Numero: <input name='num".$i."' type='text' id='num".$i."' value=".$i." readonly='readonly'><br />";
 			$txt = $txt."ID SISCO: <input name='idSisco".$i."' type='text' id='idSisco".$i."' value=".$fila[2]." readonly='readonly'><br />";			
-			$txt = $txt."<div>Fecha: <input name='fecha".$i."' type='text' id='fecha".$i."' value=".$fila[1]." readonly='readonly'><br />";
+			$txt = $txt."<div>Fecha: <input name='fecha".$i."' type='text' id='fecha".$i."' value=".$fila[1]."><br />";
 			$i = $i+1;
 		}
 	 	$objResponse->Assign("Resultados","innerHTML",$txt);
@@ -819,10 +819,12 @@
 		while($fila = mysql_fetch_array($result,MYSQL_BOTH))
 		{
 			$txt = $txt."<br /> <hr /> <br />";
-			$txt = $txt."Numero: <input name='num".$i."' type='text' id='num".$i."' value=".$i." readonly='readonly'><br />";
-			$txt = $txt."ID SISCO: <input name='idSisco".$i."' type='text' id='idSisco".$i."' value=".$fila[2]." readonly='readonly'><br />";			
-			$txt = $txt."<div>Fecha: <input name='fecha".$i."' type='text' id='fecha".$i."' value=".$fila[1]." readonly='readonly'><br />";
-			$txt = $txt ."<input id='submitButton".$i."' type='submit' value='Procesada' disabled='true'/>";
+			$txt = $txt ."<form id='".$i."' action='javascript:void(null);' onsubmit='procesada(this.id);'>";
+				$txt = $txt."Numero: <input name='num".$i."' type='text' id='num".$i."' value=".$i." readonly='readonly'><br />";
+				$txt = $txt."ID SISCO: <input name='idSisco".$i."' type='text' id='idSisco".$i."' value=".$fila[2]." readonly='readonly'><br />";			
+				$txt = $txt."<div>Fecha: <input name='fecha".$i."' type='text' id='fecha".$i."' value=".$fila[1]." readonly='readonly'><br />";
+				$txt = $txt ."<input id='submitButton".$i."' type='submit' value='Procesada' disabled='true'/>";
+			$txt = $txt ."</form>";
 			$i = $i+1;
 		}
 	 	$objResponse->Assign("Resultados","innerHTML",$txt);
@@ -858,7 +860,27 @@
 	 	$objResponse->Assign("ciudad","innerHTML",$txt);
 		return $objResponse;
 	}
-
+	
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: comEntrante
+	Descripción:Función usada para agregar comunicaciones en la bd.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada:
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function Procesada($formAsig)
+	{
+		$objResponse = new xajaxResponse();
+		$con = conectar();
+		mysql_select_db("sisco", $con);
+		// Modificico el estatus de la comunicación en la tabla comunicaciones
+		$query="UPDATE comunicaciones set Status = 6 where numInterno='".$formAsig['idSisco'.$bandera]."'";
+		$result = mysql_query($query) or die("Error al ejecutar el query");
+		}
+		return $objResponse;
+	}
 /*--------------------------------------------------- Disparador de salida -----------------------------------------------------*/
 
 	require("xajaxDeclaraciones.php");
