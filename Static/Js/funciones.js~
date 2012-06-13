@@ -147,6 +147,6 @@ function procesada()
 }
 function procesada(indice)
 {
-	xajax_procesada(xajax.getFormValues(indice),indice);
+	xajax_procesada(xajax.getFormValues(indice));
 	return false;
 }

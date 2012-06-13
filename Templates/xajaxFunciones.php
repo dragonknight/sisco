@@ -812,7 +812,7 @@
 		$objResponse = new xajaxResponse();
 		$con = conectar();
 		mysql_select_db("sisco", $con);
-		$query="SELECT * FROM asignaciones where Usuario = ".$_SESSION['idUsuario'];
+		$query="SELECT * FROM asignaciones where Usuario = ".$_SESSION['idUsuario']."statusAsig = 2";
 		$result = mysql_query($query) or die("Error al realizar la consulta");
 		$i=1;
 		$txt= "";
@@ -823,7 +823,7 @@
 				$txt = $txt."Numero: <input name='num".$i."' type='text' id='num".$i."' value=".$i." readonly='readonly'><br />";
 				$txt = $txt."ID SISCO: <input name='idSisco".$i."' type='text' id='idSisco".$i."' value=".$fila[2]." readonly='readonly'><br />";			
 				$txt = $txt."<div>Fecha: <input name='fecha".$i."' type='text' id='fecha".$i."' value=".$fila[1]." readonly='readonly'><br />";
-				$txt = $txt ."<input id='submitButton".$i."' type='submit' value='Procesada' disabled='true'/>";
+				$txt = $txt ."<input id='submitButton".$i."' type='submit' value='Procesada'/>";
 			$txt = $txt ."</form>";
 			$i = $i+1;
 		}
@@ -870,7 +870,7 @@
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function procesada($formAsig)
+	function procesada($formAsig, $bandera)
 	{
 		$objResponse = new xajaxResponse();
 		$con = conectar();
@@ -878,7 +878,8 @@
 		// Modificico el estatus de la comunicación en la tabla comunicaciones
 		$query="UPDATE comunicaciones set Status = 6 where numInterno='".$formAsig['idSisco'.$bandera]."'";
 		$result = mysql_query($query) or die("Error al ejecutar el query");
-		}
+		$query="UPDATE asignaciones set statusAsig = 6 where numInterno='".$formAsig['idSisco'.$bandera]."'";
+		$result = mysql_query($query) or die("Error al ejecutar el query");
 		return $objResponse;
 	}
 /*--------------------------------------------------- Disparador de salida -----------------------------------------------------*/
