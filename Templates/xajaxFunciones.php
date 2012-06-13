@@ -870,7 +870,7 @@
 	Salida: ---
 --------------------------------------------------------------------------------------------------------------------------------*/
 	
-	function Procesada($formAsig)
+	function procesada($formAsig)
 	{
 		$objResponse = new xajaxResponse();
 		$con = conectar();
