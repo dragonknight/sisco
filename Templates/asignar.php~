@@ -94,7 +94,7 @@
 							include ("./plantillas.php");
 						?>
 						<div id="formUser">
-							<h3>Comunicaciones por Asignar</h3><br>
+							<h3>Comunicaciones por Procesar:</h3><br>
 							<div id="cEstandar">
 								<form id="asignar" action="javascript:void(null);" onsubmit="buscaXAsig();">
 									<br />
