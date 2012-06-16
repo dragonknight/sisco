@@ -74,6 +74,28 @@ function incluir(opcion,pagina)
 {
 	xajax_Incluir(opcion,pagina);
 }
+function validaTextos(e)
+{
+	var key = window.event ? window.event.keyCode : e.which;
+	if ( key == 8 ) return true;
+   patron =/[A-Za-zñÑ\s]/;
+   te = String.fromCharCode(key);
+   return patron.test(te);
+}
+function soloLetras(e)
+{
+	var key = window.event ? window.event.keyCode : e.which;
+	if ( key == 8 ) return true;
+   patron =/[A-Za-zñÑ]/;
+   te = String.fromCharCode(key);
+   return patron.test(te);
+}
+function soloNumeros(e) 
+{
+	var keynum = window.event ? window.event.keyCode : e.which;
+	if ( keynum == 8 ) return true;
+	return /\d/.test(String.fromCharCode(keynum));
+}
 function validaTextComp(campo,valor)
 {
 	xajax_ValidaTextComp(campo,valor);

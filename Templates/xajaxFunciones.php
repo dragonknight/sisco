@@ -812,7 +812,7 @@
 		$objResponse = new xajaxResponse();
 		$con = conectar();
 		mysql_select_db("sisco", $con);
-		$query="SELECT * FROM asignaciones where Usuario = ".$_SESSION['idUsuario']."statusAsig = 2";
+		$query="SELECT * FROM asignaciones where Usuario = ".$_SESSION['idUsuario']." && statusAsig = 2";
 		$result = mysql_query($query) or die("Error al realizar la consulta");
 		$i=1;
 		$txt= "";
@@ -825,6 +825,37 @@
 				$txt = $txt."<div>Fecha: <input name='fecha".$i."' type='text' id='fecha".$i."' value=".$fila[1]." readonly='readonly'><br />";
 				$txt = $txt ."<input id='submitButton".$i."' type='submit' value='Procesada'/>";
 			$txt = $txt ."</form>";
+			$i = $i+1;
+		}
+	 	$objResponse->Assign("Resultados","innerHTML",$txt);
+	 	$objResponse->assign("submitButton","value","Actualizar");
+		return $objResponse;
+	}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: comEntrante
+	Descripción:Función usada para agregar comunicaciones en la bd.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada:
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function consultAsigList($formExp)
+	{
+		$objResponse = new xajaxResponse();
+		$con = conectar();
+		mysql_select_db("sisco", $con);
+		$query="SELECT * FROM asignaciones where statusAsig = 6";
+		$result = mysql_query($query) or die("Error al realizar la consulta");
+		$i=1;
+		$txt= "";
+		while($fila = mysql_fetch_array($result,MYSQL_BOTH))
+		{
+			$txt = $txt."<br /> <hr /> <br />";
+			$txt = $txt."Numero: <input name='num".$i."' type='text' id='num".$i."' value=".$i." readonly='readonly'><br />";
+			$txt = $txt."ID SISCO: <input name='idSisco".$i."' type='text' id='idSisco".$i."' value=".$fila[2]." readonly='readonly'><br />";			
+			$txt = $txt."<div>Fecha: <input name='fecha".$i."' type='text' id='fecha".$i."' value=".$fila[1]."><br />";
 			$i = $i+1;
 		}
 	 	$objResponse->Assign("Resultados","innerHTML",$txt);

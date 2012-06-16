@@ -144,6 +144,7 @@ function menuCompleto()
 				
 				<!--Top Drop Down Menu 3 HTML-->		
 				<ul id="ddsubmenu3" class="ddsubmenustyle">
+				   <li><a href="./asigCompletadas.php" target="contenido">Asignaciones Completadas</a></li>
 					<li><a href="./expediente.php" target="contenido">Expediente</a></li>
 					<li><a href="#">Buscar Comunicacion</a>
 						<ul>

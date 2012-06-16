@@ -259,7 +259,7 @@
 	function ValidaTextComp($campo,$valor)
 	{
 		$objResponse = new xajaxResponse();
-		if (!eregi("^[a-zA-ZñÑ0-9]{2,250}$", $valor))
+		if (!eregi("^[a-zA-ZñÑ0-9\s]{2,250}$", $valor))
 		{
 			$objResponse->alert("El valor ingresado no es valido");
 			$objResponse->assign($campo,"style.backgroundColor","#DE4A4A");
@@ -812,7 +812,41 @@
 		$objResponse = new xajaxResponse();
 		$con = conectar();
 		mysql_select_db("sisco", $con);
-		$query="SELECT * FROM asignaciones where Usuario = ".$_SESSION['idUsuario']."statusAsig = 2";
+		$query="SELECT * FROM asignaciones where Usuario = ".$_SESSION['idUsuario']." && statusAsig = 2";
+		$result = mysql_query($query) or die("Error al realizar la consulta");
+		$i=1;
+		$txt= "";
+		while($fila = mysql_fetch_array($result,MYSQL_BOTH))
+		{
+			$txt = $txt."<br /> <hr /> <br />";
+			$txt = $txt ."<form id='".$i."' action='javascript:void(null);' onsubmit='procesada(this.id);'>";
+				$txt = $txt."Numero: <input name='num".$i."' type='text' id='num".$i."' value=".$i." readonly='readonly'><br />";
+				$txt = $txt."ID SISCO: <input name='idSisco".$i."' type='text' id='idSisco".$i."' value=".$fila[2]." readonly='readonly'><br />";			
+				$txt = $txt."<div>Fecha: <input name='fecha".$i."' type='text' id='fecha".$i."' value=".$fila[1]." readonly='readonly'><br />";
+				$txt = $txt ."<input id='submitButton".$i."' type='submit' value='Procesada'/>";
+			$txt = $txt ."</form>";
+			$i = $i+1;
+		}
+	 	$objResponse->Assign("Resultados","innerHTML",$txt);
+	 	$objResponse->assign("submitButton","value","Actualizar");
+		return $objResponse;
+	}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- 
+	función: comEntrante
+	Descripción:Función usada para agregar comunicaciones en la bd.
+	Desarrollador: Carlos J. Castillo N. -- Castilloc185@gmail.com -- @dr4g0nkn1ght
+	
+	Parámetros entrada:
+	Salida: ---
+--------------------------------------------------------------------------------------------------------------------------------*/
+	
+	function consultAsigList($formExp)
+	{
+		$objResponse = new xajaxResponse();
+		$con = conectar();
+		mysql_select_db("sisco", $con);
+		$query="SELECT * FROM asignaciones where statusAsig = 6";
 		$result = mysql_query($query) or die("Error al realizar la consulta");
 		$i=1;
 		$txt= "";

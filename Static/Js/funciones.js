@@ -162,6 +162,10 @@ function consultAsig2()
 {
 	xajax_consultAsig2(xajax.getFormValues("consultar"));
 }
+function consultAsigList()
+{
+	xajax_consultAsigList(xajax.getFormValues("consultar"));
+}
 function procesada()
 {
 	xajax_procesada(xajax.getFormValues("consultar"));

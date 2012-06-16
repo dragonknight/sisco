@@ -208,7 +208,7 @@ function menuAsistSecr()
 				<!--Top Drop Down Menu 2 HTML-->		
 				<ul id="ddsubmenu2" class="ddsubmenustyle">
 					<li><a href="./consulAsig.php" target="contenido">Consultar</a></li>
-					<li><a href="./expediente.php" target="contenido">Reportar</a></li>
+					<li><a href="./reportar.php" target="contenido">Reportar</a></li>
 				</ul>
 				
 				<!--Top Drop Down Menu 3 HTML-->		
