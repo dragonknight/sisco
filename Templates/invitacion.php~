@@ -1,7 +1,7 @@
 <!-- “This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.“. -->
 <?php 
 	session_start();
-	if(!empty($_SESSION['usuario']))
+	if(!empty($_SESSION['usuario']) && $_SESSION['idCargo'] != 0)
 	{ 
 		/* La función empty() devuelve verdadero si el argumento posee un valor vacío, 
 		al usar !empty() devuelve verdadero no solo si la variable fue declarada sino 
@@ -96,7 +96,7 @@
 						<div id="formUser">
 							<h3>Registrar Comunicación Entrante</h3><br>
 							<div id="cEstandar">
-								<form id="comEntrante" action="javascript:void(null);" onsubmit="comEntrante();">
+								<form id="comunicacion" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php
 										invitacion('Invitación', 'I', 'Entrante', 'E');
 									?>

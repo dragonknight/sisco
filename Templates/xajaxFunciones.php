@@ -847,7 +847,6 @@
 		$con = conectar();
 		mysql_select_db("sisco", $con);
 		$query="SELECT * FROM City where CountryCode = '".$idPais."'";
-		$objResponse->alert($query);
 		$txt = "";
 		$result = mysql_query($query) or die("Error al realizar la consulta");
 		$txt = $txt ."<select name='ciudad' id='ciudad'>";

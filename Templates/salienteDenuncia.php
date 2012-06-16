@@ -16,7 +16,7 @@
    	$tiempo_transcurrido = (strtotime($ahora)-strtotime($ultimaTrans)); //calculo el tiempo transcurrido
     	
     	//comparamos el tiempo transcurrido
-     	if($tiempo_transcurrido >= $_SESSION["maxTemp"]) 
+     	if($tiempo_transcurrido >= $_SESSION["maxTemp"] && $_SESSION['idCargo'] != 0 || $_SESSION['idCargo'] != 7) 
      	{
      		//si paso mas tiempo del indicado para caducar la sesión entonces invoco el js de cerrar sesión
 ?>   	 

@@ -96,7 +96,7 @@
 						<div id="formUser">
 							<h3>Registrar Comunicacion Saliente</h3><br>
 							<div id="cEstandar">
-								<form id="comSaliente" action="javascript:void(null);" onsubmit="comEntrante();">
+								<form id="comunicacion" action="javascript:void(null);" onsubmit="comEntrante();">
 									<?php
 										cEstandar('Estandar', 'E', 'Saliente', 'S');
 									?>
