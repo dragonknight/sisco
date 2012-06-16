@@ -254,7 +254,7 @@
 				Resumen:<br />
 			</div>
 			<div id="rCol4">
-				<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
+				<input type="text" name="Resumen" id="Resumen" value="" size="20" /><br />
 			</div>
 		<?php 
 		}
@@ -291,7 +291,7 @@
 				Resumen:<br />
 			</div>
 			<div id="rCol4">
-				<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
+				<input type="text" name="Resumen" id="Resumen" value="" size="20" /><br />
 			</div>		
 <?php
 		}
@@ -358,7 +358,7 @@
 				Sintesis:<br />
 			</div>
 			<div id="rCol2">
-				<input type="text" name="" id="" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
+				<input type="text" name="" id="" value="" size="20" /><br />
 			</div>
 			<div id="rCol3">
 				Caracter:<br />
@@ -393,7 +393,7 @@
 				Sintesis:<br />
 			</div>
 			<div id="rCol2">
-				<input type="text" name="" id="" value="" size="20" onchange="validaTextComp(this.id, this.value )" /><br />
+				<input type="text" name="" id="" value="" size="20" /><br />
 			</div>
 			<div id="rCol3">
 				Caracter:<br />
@@ -473,7 +473,7 @@
 				Sintesis:<br />
 			</div>
 			<div id="rCol2">
-				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" /> <br />
 			</div>
 			<div id="rCol3">
 				Caracter:<br />
@@ -493,7 +493,7 @@
 				Resumen:<br />
 			</div>
 			<div id="rCol4">
-				<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+				<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />
 			</div>
 		<?php
 		}
@@ -511,7 +511,7 @@
 				Sintesis:<br />
 			</div>
 			<div id="rCol2">
-				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" /> <br />
 			</div>
 			<div id="rCol3">
 				Caracter:<br />
@@ -531,7 +531,7 @@
 				Resumen:<br />
 			</div>
 			<div id="rCol4">
-				<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+				<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />
 			</div>
 <?php
 		}
@@ -592,7 +592,7 @@
 				Sintesis:<br />
 			</div>
 			<div id="rCol2">
-				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" /> <br />
 			</div>
 			<div id="rCol3">
 				Caracter:<br />
@@ -612,7 +612,7 @@
 				Resumen:<br />
 			</div>
 			<div id="rCol4">
-				<input type="text" name="Resumen" id="Resumen" value="Indique aquí todos los datos de la Invitación" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+				<input type="text" name="Resumen" id="Resumen" value="Indique aquí todos los datos de la Invitación" size="20" /> <br />
 			</div>
 		<?php
 		}
@@ -635,7 +635,7 @@
 				Sintesis:<br />
 			</div>
 			<div id="rCol2">
-				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+				<input type="text" name="Sintesis" id="Sintesis" value="" size="20" /> <br />
 			</div>
 			<div id="rCol3">
 				Caracter:<br />
@@ -655,7 +655,7 @@
 				Resumen:<br />
 			</div>
 			<div id="rCol4">
-				<input type="text" name="Resumen" id="Resumen" value="Indique aquí todos los datos de la Invitación" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+				<input type="text" name="Resumen" id="Resumen" value="Indique aquí todos los datos de la Invitación" size="20" /> <br />
 			</div>
 <?php
 		}
@@ -716,7 +716,7 @@
 				Sintesis:<br />
 			</div>
 			<div id="rCol2">
-				<input type="text" name="Sintesis" id="" value="Sintesis" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+				<input type="text" name="Sintesis" id="" value="Sintesis" size="20"  /> <br />
 			</div>
 			<div id="rCol3">
 				Caracter:<br />
@@ -736,7 +736,7 @@
 				Resumen: (Relate acá todos los hechos)<br />
 			</div>
 			<div id="rCol4">
-				<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+				<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />
 			</div>
 		<?php
 		}
@@ -753,7 +753,7 @@
 				Sintesis:<br />
 			</div>
 			<div id="rCol2">
-				<input type="text" name="Sintesis" id="" value="Sintesis" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+				<input type="text" name="Sintesis" id="" value="Sintesis" size="20" /> <br />
 			</div>
 			<div id="rCol3">
 				Caracter:<br />
@@ -773,7 +773,7 @@
 				Resumen: (Relate acá todos los hechos)<br />
 			</div>
 			<div id="rCol4">
-				<input type="text" name="Resumen" id="Resumen" value="" size="20" onchange="validaTextComp(this.id, this.value )" /> <br />
+				<input type="text" name="Resumen" id="Resumen" value="" size="20" /> <br />
 			</div>
 <?php
 		}

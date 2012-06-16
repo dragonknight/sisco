@@ -29,13 +29,13 @@
 				Apellidos: 
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Apellidos" id="Apellidos" size="20" onchange="validaTextComp(this.id,this.value)"> <br />
+				<input type="text" name="Apellidos" id="Apellidos" size="20" onkeypress="return validaTextos(event);" onchange="validaTextComp(this.id,this.value)"> <br />
 			</div>
 			<div id="usrCol3">
 				Nombres:
 			</div>
 			<div id="usrCol4">
-				<input type="text" name="Nombres" id="Nombres" size="20" onchange="validaTextComp(this.id, this.value)"> <br />
+				<input type="text" name="Nombres" id="Nombres" size="20" onkeypress="return validaTextos(event);" onchange="validaTextComp(this.id, this.value)"> <br />
 			</div>
 			<div id="usrCol1">
 				Cédula:
@@ -92,10 +92,6 @@
 								
 			</div>
 			<div id="ciudad">
-				<select id="Ciudad" name="Ciudad" disabled="true">
-					<option value=""> -- Seleccione Ciudad -- </option>
-					<div id="opciones"></div>
-				</select>
 			</div>
 			<div id="comDir">
 				Dirección: <input type="text" name="Direccion" id="Direccion" value="" size="40"> <br />
@@ -124,7 +120,7 @@
 				Rif o Id: 
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Id" id="Id" value="" size="20"> <br />
+				<input type="text" name="Id" id="Id" value="" size="20" > <br />
 			</div>
 			<div id="usrCol3">
 				Nombre:
@@ -146,7 +142,7 @@
 				Telefono:
 			</div>
 			<div id="usrCol4">
-				<input type="text" name="Telefono" id="Telefono" value="" size="20" onchange="validaNumeros(this.id, this.value )"> <br />
+				<input type="text" name="Telefono" id="Telefono" value="" size="20" onkeypress="return soloNumeros(event);" onchange="validaNumeros(this.id, this.value )"> <br />
 			</div>
 			<div id="usrCol1">
 				Correo:
@@ -182,7 +178,7 @@
 				<option value=""> -- Seleccione cargo -- </option>
 				<?php combo('*','cargos','','idCargo'); ?>
 			</select> <br />
-			Usuario: <input type="text" name="usrLogin" id="usrLogin" size="20" onchange="validaUsuario(this.id, this.value )"> <br />
+			Usuario: <input type="text" name="usrLogin" id="usrLogin" size="20" onkeypress="return soloLetras(event);" onchange="validaUsuario(this.id, this.value )"> <br />
 			Contraseña: <input type="password" name="usrPassword" id="usrPassword" size="20">					
 		</div>
 <?php

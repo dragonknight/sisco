@@ -259,7 +259,7 @@
 	function ValidaTextComp($campo,$valor)
 	{
 		$objResponse = new xajaxResponse();
-		if (!eregi("^[a-zA-ZñÑ0-9]{2,250}$", $valor))
+		if (!eregi("^[a-zA-ZñÑ0-9\s]{2,250}$", $valor))
 		{
 			$objResponse->alert("El valor ingresado no es valido");
 			$objResponse->assign($campo,"style.backgroundColor","#DE4A4A");

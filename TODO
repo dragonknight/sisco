@@ -26,9 +26,9 @@ BD
 Programación:
 
 	* Mejorar la Funcion de Combos.
-	* Agregar Mensajes de Inserción.
 	* Mejorar la Validación:
 		- Mejorar las condiciones para error
+		- Agregar a la expresion regular de validacion de texto el caracter de espacio en blanco
 	* Completar el Ciclo de la Comunicación.
 	* Modificar el procedimiento de Guardar Usuario (el id puede ser por el combo o el tex asi que que eso debe pensarse como en guarda comunic).
 	* Agregar banderas de Verificación, que retornen las funciones y permitan adaptar los mensajes y las acciones del sistema (almacenamiento).
