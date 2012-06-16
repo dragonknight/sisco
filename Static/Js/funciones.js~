@@ -17,7 +17,6 @@ function ingUser()
 }
 function cargaCiudades(pais)
 {
-	alert(pais);
 	xajax_combCiudad(pais);
 }
 function comEntrante()

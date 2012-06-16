@@ -259,7 +259,7 @@
 	function ValidaTextComp($campo,$valor)
 	{
 		$objResponse = new xajaxResponse();
-		if (!eregi("^[a-zA-Z0-9]{2,250}$", $valor))
+		if (!eregi("^[a-zA-ZñÑ0-9]{2,250}$", $valor))
 		{
 			$objResponse->alert("El valor ingresado no es valido");
 			$objResponse->assign($campo,"style.backgroundColor","#DE4A4A");
@@ -345,7 +345,7 @@
 			$query="SELECT COUNT(*)FROM personas where cedula = ".$valor;
 			$result = mysql_query($query) or die("Error al realizar la consulta: ".mysql_error());
 	 		$cuantos = mysql_fetch_array($result);
-	 		if ($cuantos[0]>1)
+	 		if ($cuantos[0]>0)
 	 		{
 				$objResponse->alert("La cedula ya se encuantra en el sistema");
 				$objResponse->assign($campo,"style.backgroundColor","#DE4A4A");
