@@ -42,6 +42,7 @@
 						<li><a href="Autentificado.php" target="contenido">Principal</a></li>	
 						<li><a href="#" rel="ddsubmenu1">Logs</a></li>
 						<li><a href="#" rel="ddsubmenu2">Usuarios</a></li>
+						<li><a href="../Manuales/SISCOSG.pdf" target="contenido">Manual de Usuario</a></li>
 						<li><a href="javascript:logOut()">Salir</a></li>
 					</ul>
 				</div>
@@ -73,6 +74,7 @@
 							<ul>
 								<li><a href="Autentificado.php" target="contenido">Principal</a></li>
 								<li><a href="#" rel="ddsubmenu1">Comunicaciones</a></li>
+								<li><a href="../Manuales/SISCOSG.pdf" target="contenido">Manual de Usuario</a></li>
 								<li><a href="javascript:logOut()">Salir</a></li>
 							</ul>
 						</div>
@@ -110,6 +112,7 @@ function menuCompleto()
 						<li><a href="#" rel="ddsubmenu2">Operaciones</a></li>
 						<li><a href="#" rel="ddsubmenu3">Consultas</a></li>
 						<li><a href="#" rel="ddsubmenu4">Usuarios</a></li>
+						<li><a href="../Manuales/SISCOSG.pdf" target="contenido">Manual de Usuario</a></li>
 						<li><a href="javascript:logOut()">Salir</a></li>
 					</ul>
 				</div>
@@ -180,6 +183,7 @@ function menuAsistSecr()
 						<li><a href="#" rel="ddsubmenu1">Comunicaciones</a></li>
 						<li><a href="#" rel="ddsubmenu2">Asignaciones</a></li>
 						<li><a href="#" rel="ddsubmenu3">Consultas</a></li>
+						<li><a href="../Manuales/SISCOSG.pdf" target="contenido">Manual de Usuario</a></li>
 						<li><a href="javascript:logOut()">Salir</a></li>
 					</ul>
 				</div>
@@ -250,6 +254,7 @@ function menuEAudiecias()
 						<li><a href="#" rel="ddsubmenu2">Asignaciones</a></li>
 						<li><a href="#" rel="ddsubmenu3">Consultas</a></li>
 						<li><a href="#" rel="ddsubmenu4">Reportes y Estadisticas</a></li>
+						<li><a href="../Manuales/SISCOSG.pdf" target="contenido">Manual de Usuario</a></li>
 						<li><a href="../Paginas/logout.php" target="contenido">Salir</a></li>
 					</ul>
 				</div>
@@ -334,6 +339,7 @@ function menuEGacetas()
 									<li><a href="#" rel="ddsubmenu2">Asignaciones</a></li>
 									<li><a href="#" rel="ddsubmenu3">Consultas</a></li>
 									<li><a href="#" rel="ddsubmenu4">Reportes y Estadisticas</a></li>
+									<li><a href="../Manuales/SISCOSG.pdf" target="contenido">Manual de Usuario</a></li>
 									<li><a href="../Paginas/logout.php" target="contenido">Salir</a></li>
 								</ul>
 							</div>

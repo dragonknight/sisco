@@ -88,8 +88,7 @@
 						?>
 					</div>
 					<div id="Contenido">
-						<?php 
-	
+						<?php
 							if($_SESSION['idCargo']==0) //administrador
 							{							
 								include ("escAdmin.php");
@@ -101,14 +100,6 @@
 							if($_SESSION['idCargo']==2) //coordinador
 							{							
 								include ("escCoord.php");
-							}
-							if($_SESSION['idCargo']==3) //encargado gacetas
-							{
-								include ("escGacetas");				
-							}	
-							if($_SESSION['idCargo']==4) //encargado audiencias
-							{							
-								include ("escAudiencias");
 							}
 							if($_SESSION['idCargo']==5) //asistentes
 							{							

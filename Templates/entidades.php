@@ -175,7 +175,7 @@
 			<h4>Datos del Usuario:</h4><br>
 			Cargo:
 			<select id="Cargo" name="Cargo"> <!-- hay que agregar el evento onchange="funcion()" para el combo ciudad -->
-				<option value=""> -- Seleccione cargo -- </option>
+				<option value="a"> -- Seleccione cargo -- </option>
 				<?php combo('*','cargos','','idCargo'); ?>
 			</select> <br />
 			Usuario: <input type="text" name="usrLogin" id="usrLogin" size="20" onkeypress="return soloLetras(event);" onchange="validaUsuario(this.id, this.value )"> <br />

@@ -41,7 +41,7 @@
 				Cédula:
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Cedula" id="Cedula" value="" size="20" onchange="validaCedula(this.id, this.value)"> <br />
+				<input type="text" name="Cedula" id="Cedula" value="" size="20" onkeypress="return soloNumeros(event);" onchange="validaCedula(this.id, this.value)"> <br />
 			</div>
 			<div id="usrCol3">
 				Sexo:
@@ -57,7 +57,7 @@
 				Teléfono:
 			</div>
 			<div id="usrCol2">
-				<input type="text" name="Telefono" id="Telefono" size="20" onchange="validaNumeros(this.id, this.value)"> <br />
+				<input type="text" name="Telefono" id="Telefono" size="20" onkeypress="return soloNumeros(event);" onchange="validaNumeros(this.id, this.value)"> <br />
 			</div>
 			<div id="usrCol3">
 				Correo:

@@ -611,7 +611,7 @@
 		$objResponse->alert("Datos Agregados.");
 		$objResponse->assign("submitButton","value","Ingresar");
 		$objResponse->assign("submitButton","disabled",false);
-		$objResponse->redirect("./autentificado.php",2);
+		$objResponse->redirect("./Autentificado.php",2);
 		return $objResponse;
 	}
 
